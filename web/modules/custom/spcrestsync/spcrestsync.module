@@ -1,0 +1,45 @@
+<?php
+/**
+ * @file
+ * Contains \Drupal\spcrestsync\Controller\spcrestsyncController.
+ */
+
+
+function spcrestsync_theme($existing, $type, $theme, $path) {
+
+	$variables = array(
+    'spcrestsync' => array(
+      'variables' => array(
+        'url' => NULL,
+        'limit' => NULL
+      ),
+      'template' => 'spcrestsync',
+    ),
+  );
+  return $variables;
+}
+
+function spcrestsync_preprocess_html(&$variables) {
+
+  $blocks = \Drupal\block\Entity\Block::loadMultiple();
+
+  $spcblocks = [];
+  foreach ($blocks as $key => $block) {
+    $settings = $block->get('settings');
+
+    if($settings["provider"] == "spcrestsync"){
+
+      //$block->getPluginId();
+      //kint($settings);
+      array_push($spcblocks, [$settings["spc_block_instance_id"], $settings["limit"], $settings["divisionid"]]);
+    }
+  }
+
+  $limit = 4;
+  $divisionid = NULL;
+
+  $variables['#attached']['library'][] = 'spcrestsync/general';
+  $variables['#attached']['drupalSettings']['spcblocks'] = $spcblocks;
+  $variables['#attached']['drupalSettings']['limit'] = $limit;
+  $variables['#attached']['drupalSettings']['divisionid'] = $divisionid;
+}

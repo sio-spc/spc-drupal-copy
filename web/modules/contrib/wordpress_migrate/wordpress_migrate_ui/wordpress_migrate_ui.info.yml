@@ -1,0 +1,15 @@
+name: 'WordPress Migration UI'
+description: 'Wizard UI for configuring WordPress imports into Drupal'
+type: module
+package: Migration
+# core: 8.x
+dependencies:
+  - ctools:ctools
+  - wordpress_migrate:wordpress_migrate
+  - migrate_tools:migrate_tools
+
+# Information added by Drupal.org packaging script on 2017-09-11
+version: '8.x-3.0-alpha2'
+core: '8.x'
+project: 'wordpress_migrate'
+datestamp: 1505144646

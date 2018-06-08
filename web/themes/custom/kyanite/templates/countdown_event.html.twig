@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * This file provides the template for the countdown event module block.
+ *
+ * Author: Mark Collins
+ */
+?>
+<div id="countdown-event-clock-holder">
+  <noscript>You must enable javascript in your browser to view the countdown.
+  </noscript>
+  {% if expired %}
+    <p class="countdown-event-expired">Event has been expired.</p>
+  {% else %}
+    <p>
+      <span id="label_msg">The 2017 Kyanite Policy Forum Starts In: </span>
+      <span id="countdownDays"></span>
+      <span class="countdownDisplay">DAYS</span>
+      <span id="countdownHrs"></span>
+      <span class="countdownDisplay">HRS</span>
+      <span id="countdownMins"></span>
+      <span class="countdownDisplay">MINS</span>
+      <span id="countdownSecs"></span>
+      <span class="countdownDisplay">SECS</span>
+    </p>
+  {% endif %}
+</div>

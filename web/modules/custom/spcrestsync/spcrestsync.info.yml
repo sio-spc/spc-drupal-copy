@@ -1,0 +1,6 @@
+name: SPC REST Sync
+description: 'block to display SPC feeds on external sites'
+package: Custom
+type: module
+version: 0.1
+core: 8.x

@@ -1,0 +1,16 @@
+spcrestsync.general:
+  label: 'General SPC REST Sync Block settings'
+  type: config_object
+  mapping:
+    url:
+      type: string
+      label: 'Source domain (URL)'
+    spc_block_instance_id:
+      type: string
+      label: 'Block Instance ID'
+    limit:
+      type: int
+      label: 'Limit (12 max)'
+    divisionid:
+      type: string
+      label: 'Division ID'

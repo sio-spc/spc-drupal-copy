@@ -1,0 +1,126 @@
+//http://osvaldas.info/flexbox-based-responsive-equal-height-blocks-with-javascript-fallback
+.topics-app{
+    .list{
+
+
+        width: 100%;
+        /*overflow: hidden;*/
+
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        align-items: stretch; //I added this one, to be safe
+
+/*
+        overflow: hidden; 
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+     
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+*/
+    }
+    .list-item{
+        $listItemPreferredWidth : 300px;
+        $listItemBaseFontSize: 3.6vw;
+		$listItemStartWidth: 100%;
+
+        $listItemDescriptionFontSize: 5vw;
+        /*font-size: $listItemBaseFontSize;*/
+
+        width: $listItemStartWidth;
+        @media (min-width: $listItemPreferredWidth * 2){
+            width: $listItemStartWidth/2;
+            font-size: $listItemBaseFontSize/2;
+            .topic-list-description{
+                font-size: $listItemDescriptionFontSize/2;
+            }
+        }
+        @media (min-width: $listItemPreferredWidth * 3){
+            width: $listItemStartWidth/3;
+            font-size: $listItemBaseFontSize/3;
+            .topic-list-description{
+                font-size: $listItemDescriptionFontSize/3;
+            }
+        }
+        
+        @media (min-width: $listItemPreferredWidth * 4){
+            width: $listItemStartWidth/4;
+            font-size: $listItemBaseFontSize/4;
+            .topic-list-description{
+                font-size: $listItemDescriptionFontSize/4;
+            }
+        }
+        
+        @media (min-width: $listItemPreferredWidth * 5){
+            width: $listItemStartWidth/5;
+            font-size: $listItemBaseFontSize/5;
+            .topic-list-description{
+				font-size: $listItemBaseFontSize/5;
+            }
+        } 
+
+        @media (min-width: $listItemPreferredWidth * 6){
+            width: $listItemStartWidth/6;
+            font-size: $listItemBaseFontSize/6;
+            .topic-list-description{
+				font-size: $listItemBaseFontSize/6;
+            }
+        } 
+        float: left;
+        padding: 0;//0.625rem; // 10
+
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+/*
+        width: 25%; 
+        float: left;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+*/
+    }
+    .list-item-inner{
+        width: 100%;
+        overflow: hidden;
+
+        //-webkit-box-shadow: 0 0.125rem 0.313rem rgba( 0, 0, 0, .2 ); /* 2 5 */
+        //box-shadow: 0 0.125rem 0.313rem rgba( 0, 0, 0, .2 ); /* 2 5 */
+    }
+}
+
+.cards:not(.partners){
+    .views-row{
+        .field-node-title, .field-field-list-title{
+
+            width: 100%;
+            @media (min-width: 300px){
+                font-size: 3.4vw !important;
+            }
+            @media (min-width: 480px){
+                font-size: 2.2vw !important;
+            }
+            
+            @media (min-width: 768px){
+                font-size: 1.3vw !important;
+            }
+            @media (min-width: 960px){
+                font-size: 1.08vw !important;
+            }
+        }
+        
+        
+       
+    }
+   
+
+
+}

@@ -1,0 +1,103 @@
+# Migration configuration
+id: zoom_en
+#langcode: 'en'
+label: Import English zoom
+migration_group: spc
+source:
+  plugin: csv
+  #default_lang: true
+  path: public://csv/zoom.csv
+  header_row_count: 1
+  keys:
+    - contentid
+  column_names:  #nid,title,body,teaser,author,created,theme,category,filename,filepath
+    0:
+      id: 'wordpress post id'
+    1:
+      title: 'title'
+    2:
+      bodycontent: 'Post body'
+    3:
+      bodyexcerpt: 'Excerpt'
+    4:
+      date: 'date'
+    5:
+      permalink: 'Permalink'
+    6: 
+      contentid: 'contentid'
+    7:
+      categories: 'Categories'
+    8: 
+      tags: 'Tags'
+    9:
+      city: 'city'
+    10:
+      featuredimage: 'featuredimage'
+    11:
+      featuredimagefile: 'featuredimagefile'
+  constants:
+    body_format: full_html
+    uid_root: 3
+    lang_en: 'en'
+    lang_fr: 'fr'
+    blogcategory: 97
+ids:
+  contentid:
+    type: string
+destination:
+  plugin: entity:node
+process:
+  type:
+    plugin: default_value
+    default_value: blog
+
+  uid: 'constants/uid_root'
+
+  title: title
+
+  'body/value': bodycontent
+  'body/summary': bodyexcerpt
+  'body/format': 'constants/body_format'
+
+  langcode: 
+    plugin: default_value
+    source: language
+    default_value: en
+  field_city_text: city
+
+  uid: 3
+  created:
+    plugin: callback
+    callable: strtotime
+    source: date
+  field_featured_image_url: featuredimage
+  'field_featured_image/target_id':
+      plugin: migration
+      migration: zoomimages_en
+      source: featuredimagefile
+  'field_featured_image/alt': title
+  field_blog_category: 'constants/blogcategory'
+  field_tags:
+   -
+    plugin: explode
+    delimiter: '|'
+    source: tags
+   -
+    plugin: migration
+    migration: spc_tags
+
+  field_categories:
+   -
+    plugin: explode
+    delimiter: '|'
+    source: categories
+   -
+    plugin: migration
+    migration: spc_categories
+
+migration_dependencies: 
+  optional:
+    - zoomimages_en
+    - spc_tags
+    - spc_categories
+dependencies: {}

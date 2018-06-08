@@ -1,0 +1,366 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the kyanite theme.
+ */
+
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds body classes if certain regions have content.
+ */
+function kyanite_preprocess_html(&$variables) {
+  // Add information about the number of sidebars..
+  if (!empty($variables['page']['sidebar_first'])) {
+    $variables['attributes']['class'][] = 'has-sidebar';
+  }
+  else {
+    $variables['attributes']['class'][] = 'no-sidebars';
+  }
+
+  if (!empty($variables['page']['featured_top'])) {
+    $variables['attributes']['class'][] = 'has-featured-top';
+  }
+
+
+  if (!empty($variables['page']['secondary_menu'])) {
+    $variables['attributes']['class'][] = 'has-explore';
+    $variables['attributes']['class'][] = 'explore-closed';
+  } else {
+    $variables['attributes']['class'][] = 'no-explore';
+  }
+
+
+  // add special library just for developers (administrator role)
+  $roles = \Drupal::currentUser()->getRoles();
+  if(in_array("administrator", $roles) || in_array("administrator1", $roles)) {
+    $variables['#attached']['library'][] = 'kyanite/dev';
+  }
+  $specialInfo = _kyanite_get_special_info();
+
+  if ($specialInfo['angular']){
+    $variables['attributes']['class'][] = 'fixed-header'; 
+    //$variables['attributes']['class'][] = 'skinny-fixed-header'; 
+    $variables['#attached']['library'][] = 'kyanite/topics'; // hmmm, with multiple angular apps this is a bit presumptuous...
+  }
+  if ($specialInfo['background_image']){
+       $variables['background_image'] = $specialInfo['background_image'];
+      $variables['attributes']['class'][] = 'fixed-header';
+  }
+  if ($specialInfo['color_scheme']){
+       $variables['color_scheme'] = $specialInfo['color_scheme'];
+  }
+
+}
+function _kyanite_string_starts_with($haystack, $needle) {
+    // search backwards starting from haystack length characters from the end
+    return $needle === "" || strrpos($haystack, $needle, -strlen($haystack)) !== false;
+}
+
+function _kyanite_get_special_info(){
+  static $specialInfo;
+  if ($specialInfo != null) return $specialInfo;
+  $specialInfo = array();
+  //set the defaults...
+//  $specialInfo['term'] = null;
+//  $specialInfo['term_name'] = null;
+//  $specialInfo['vocab'] = null;
+  $specialInfo['angular'] = false;
+  $specialInfo['background_image'] = '';
+  $specialInfo['color_scheme'] = '';
+  $specialInfo['route_name'] = \Drupal::request()->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_NAME);// == 'node.view'
+
+//$node_type = \Drupal::entityManager()->getStorage('node_type')->load($node->getType())->get('name');
+
+//  $currentContent = \Drupal::request()->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface)->getContent();
+
+
+
+/*
+  $requestURI = explode('/',$_SERVER['REQUEST_URI']);
+  if (COUNT($requestURI) > 1) {
+     $vocabName = strtolower($requestURI[1]);
+     $termName = COUNT($requestURI) > 2 ? $requestURI[2] : null;
+     switch($vocabName) {
+      case 'topics':
+        $specialInfo['angular'] = $vocabName;
+        $specialInfo['term_name'] = $termName;
+        break;
+     }
+  }
+  */
+
+
+  if($specialInfo['route_name']){
+    if (
+            _kyanite_string_starts_with($specialInfo['route_name'], 'plethoramap.')
+         || _kyanite_string_starts_with($specialInfo['route_name'], 'plethoratopics.')
+         || _kyanite_string_starts_with($specialInfo['route_name'], 'entity.node.canonical.plethoratopics.')
+     ) {
+        $specialInfo['angular'] = true;
+    }
+    /*
+    switch($specialInfo['route_name']){
+      case 'plethoramap.mapapp.member_map':
+      case 'plethoratopics.topicsapp.publications':
+      case "entity.node.canonical.plethoratopics.topicsapp.publications":
+        $specialInfo['angular'] = true;
+        break;
+    }
+    */
+
+    /*
+    $whichRoute = explode('.', $specialInfo['route_name'])[0];
+    switch($whichRoute){
+      case "plethoratopics":
+      case "plethoramap":
+        $specialInfo['angular'] = true;
+        break;
+
+    }
+    */
+  }
+
+  return $specialInfo;
+}
+function _kyanite_get_theme_info($entity){
+  $info = array('background_image' => NULL, 'color_scheme' => NULL);
+
+    if ($entity->field_theming){
+      foreach ($entity->field_theming as $key => $item){
+
+
+          $item = $item->value;
+         // $fcArray[$key];
+          $fc = \Drupal\field_collection\Entity\FieldCollectionItem::load($item);
+          foreach ($fc as $fckey => $field){
+            //dsm($fckey);
+            switch($fckey){
+              case "field_background_image":
+                $info['background_image'] = $field->entity->url();
+                break;
+              case "field_color_scheme":
+                $info['color_scheme'] = $field->value;
+//                    dsm($specialInfo['color_scheme']);
+                break;
+            }
+          }
+      }
+
+
+   }
+  return $info;
+}
+function kyanite_preprocess_taxonomy_term(&$variables) {
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function kyanite_preprocess_page_title(&$variables) {
+  // Since the title and the shortcut link are both block level elements,
+  // positioning them next to each other is much simpler with a wrapper div.
+  if (!empty($variables['title_suffix']['add_or_remove_shortcut']) && $variables['title']) {
+    // Add a wrapper div using the title_prefix and title_suffix render
+    // elements.
+    $variables['title_prefix']['shortcut_wrapper'] = array(
+      '#markup' => '<div class="shortcut-wrapper clearfix">',
+      '#weight' => 100,
+    );
+    $variables['title_suffix']['shortcut_wrapper'] = array(
+      '#markup' => '</div>',
+      '#weight' => -99,
+    );
+    // Make sure the shortcut link is the first item in title_suffix.
+    $variables['title_suffix']['add_or_remove_shortcut']['#weight'] = -100;
+  }
+}
+
+function kyanite_preprocess_page(&$variables){
+  if (\Drupal::moduleHandler()->moduleExists('bootstrap_library')) {
+    $library = theme_get_setting('bootstrap_barrio_library');
+    switch ($library) {
+      case 'cdn' :
+        $variables['#attached']['library'][] = 'bootstrap_library/bootstrap-cdn';
+        break;
+      case 'production':
+        $variables['#attached']['library'][] = 'bootstrap_library/bootstrap';
+        break;
+      case 'development':
+        $variables['#attached']['library'][] = 'bootstrap_library/bootstrap-dev';
+        break;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for maintenance-page.html.twig.
+ */
+function kyanite_preprocess_maintenance_page(&$variables) {
+  // By default, site_name is set to Drupal if no db connection is available
+  // or during site installation. Setting site_name to an empty string makes
+  // the site and update pages look cleaner.
+  // @see template_preprocess_maintenance_page
+  if (!$variables['db_is_active']) {
+    $variables['site_name'] = '';
+  }
+
+  // kyanite has custom styling for the maintenance page.
+  $variables['#attached']['library'][] = 'kyanite/maintenance_page';
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function kyanite_preprocess_node(&$variables) {
+  // Remove the "Add new comment" link on teasers or when the comment form is
+  // displayed on the page.
+
+  if ($variables['teaser'] || !empty($variables['content']['comments']['comment_form'])) {
+    unset($variables['content']['links']['comment']['#links']['comment-add']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for block.html.twig.
+ */
+function kyanite_preprocess_block(&$variables) {
+  // Add a clearfix class to system branding blocks.
+  if ($variables['plugin_id'] == 'system_branding_block') {
+    $variables['attributes']['class'][] = 'clearfix';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu.html.twig.
+ */
+function kyanite_preprocess_menu(&$variables) {
+  $variables['attributes']['class'][] = 'clearfix';
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ */
+function kyanite_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if ($variables['element']['#form_id'] == 'search_block_form') {
+    $suggestions[] = 'form__search_block_form';
+  }
+}
+
+/**
+ * Implements hook_form_alter() to add classes to the search form.
+ */
+function kyanite_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (in_array($form_id, ['search_block_form', 'search_form'])) {
+    $key = ($form_id == 'search_block_form') ? 'actions' : 'basic';
+    if (!isset($form[$key]['submit']['#attributes'])) {
+      $form[$key]['submit']['#attributes'] = new Attribute();
+    }
+    $form[$key]['submit']['#attributes']->addClass('search-form__submit');
+  }
+}
+
+
+
+/**
+ * Implements hook_preprocess_HOOK() for field templates.
+ */
+function kyanite_preprocess_field(&$variables) {
+  //disable quickedit, it is really slow because it loads ckeditor synchronously!!
+  if (isset($variables['attributes']['data-quickedit-field-id'])) {
+    unset($variables['attributes']['data-quickedit-field-id']);
+    \Drupal::logger('kyanite')->notice('Disabled quick edit for a field because this module slows down the site');
+  }
+}
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function kyanite_entity_view_alter(&$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  //disable quickedit, it is really slow because it loads ckeditor synchronously!!
+  if (isset($build['#attributes']['data-quickedit-entity-id'])) {
+    unset($build['#attributes']['data-quickedit-entity-id']);
+    \Drupal::logger('kyanite')->notice('Disabled quick edit for a view because this module slows down the site');
+  }
+}
+
+
+/*following is replaced with Current Page Crumb module: https://www.drupal.org/sandbox/gregboggs/2664958 */
+/*
+function kyanite_preprocess_breadcrumb(&$variables){
+
+    if(($node = \Drupal::routeMatch()->getParameter('node')) && $variables['breadcrumb']){
+// Adding the a divider of between home an the title of the page.
+        
+// Adding the title of the page in the breadcrumb
+        $variables['breadcrumb'][] = array(
+            'text' => $node->getTitle(),
+            'url' => $node->URL()
+        );
+
+    }
+    $view = views_get_current_view();
+
+    if(views_get_current_view()){
+      $variables['breadcrumb'][] = array(
+            'text' => "current view: ".print_r($view),
+            'url' => $view->URL()
+        );
+    }
+    if(($view = \Drupal::routeMatch()->getParameter('view')) && $variables['breadcrumb']){
+// Adding the a divider of between home an the title of the page.
+        
+// Adding the title of the page in the breadcrumb
+        $variables['breadcrumb'][] = array(
+            'text' => "a view title",
+            'url' => $view->URL()
+        );
+
+    }
+}*/
+
+/*function kyanite_page_attachments_alter(array &$page) {
+  
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($node) {
+    $nid = $node->nid->value;
+    if(isset($node->field_facebook_image->entity)){
+      $fbimage = $node->field_facebook_image->entity->url();//get facebook share image (PROBLEM !!!!!!!!!!!!!!!!)
+
+      if( !empty($fbimage) ){
+
+        $ogimage = array(
+          '#type' => 'html_tag',
+          '#tag' => 'meta',
+          '#attributes' => array(
+            //<meta property="og:image" content="http://119.9.104.241/sites/default/files/facebook-images/2016-05/maxresdefault.jpg" />
+
+            'name' => 'meta',
+            'property' => 'og:image',
+            'content' => $fbimage,
+          ),
+        );
+        $page['#attached']['html_head'][] = [$ogimage, 'meta'];//print facebook share image meta tag since the OpenGraph Meta module seems to not want to.
+      }
+    }
+
+  }
+  
+}*/
+
+function kyanite_theme_suggestions_block_alter(&$suggestions, $variables) {
+  //print_r($variables);
+  $content = $variables['elements']['content'];
+  if (isset($content['#block_content']) && $content['#block_content'] instanceof \Drupal\block_content\BlockContentInterface) {
+    $suggestions[] = 'block__' . $content['#block_content']->bundle();
+  }
+}
+function kyanite_js_alter(&$javascript, \Drupal\Core\Asset\AttachedAssetsInterface $assets) {
+  // Swap out jQuery to use an updated version of the library.
+  $javascript['core/assets/vendor/jquery/jquery.min.js']['data'] = drupal_get_path('theme', 'kyanite') . '/js/jquery-2.2.4.min.js';
+}
+

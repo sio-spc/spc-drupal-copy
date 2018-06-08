@@ -1,0 +1,355 @@
+$color-feature-fill: #f1eee9;
+$color-highlighted-feature-fill: $global-color-highlight;
+$color-highlighted-feature-fill-active: $global-color-highlight-alt;// #afaeaa;//$color-highlighted-feature-fill;
+$color-feature-stroke: #CCC;
+$color-feature-fill-active: #afaeaa;
+$color-feature-fill-hover: darken($color-feature-fill, 5%);
+$color-highlighted-feature-fill-active: $global-color-highlight-alt;
+$color-highlighted-feature-fill-hover: $color-highlighted-feature-fill-active;
+$color-highlighted-feature-fill-active-hover: lighten($color-highlighted-feature-fill-active, 5%);
+$color-equator-stroke: #ccc;
+$color-graticule-stroke: #bbb;
+$color-tooltip-bg: #fff;
+$color-tooltip-text: #222;
+$color-tooltip-text-shadow: #f5f5f5;
+$color-tooltip-box-shadow: #a6a6a6;
+$color-background: #eff8ff;
+//$color-background-border: #CCC;
+//$color-outside-map-bg: #CCC;
+$color-frame-border: #333;
+$color-map-border-top: $global-color-highlight;
+$color-pin-point: rgba(255,255,255,.2);
+$color-pin-point-hover: rgba(255,255,255,.7);
+$color-pin-point-stroke: #fff;
+$color-pin-icon: rgba(255, 204, 0, .7);
+$color-pin-icon-hover: rgba(255, 204, 0, 1);
+
+/*********************************************************************************/
+/* HACK */
+/* todo: move this section to theme, since it's not really angular's domain... */
+#block-membermapcontentbelowthemap {
+    padding: 2em;
+    max-width: 960px;
+    margin: 0 auto;
+}
+div.layout-content {
+  background: white;
+}
+/*********************************************************************************/
+#plethora-map {
+  position: relative;
+  border-bottom: 0.5vh solid $color-map-border-top;
+  body[data-plethoramap-layout="columns"] & {
+    @media (min-width: $global-map-desktop-view-breakpoint){
+      display: flex;
+    }
+    border-bottom: none;
+  }
+}
+#plethora-map-feature-wrapper {
+  height: 100%;
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+  * {
+    pointer-events: auto;
+  }
+  .plethora-map-feature-detail{
+    h2{
+      margin-top: 0;
+      margin-bottom: 0;
+      text-align: center;
+      background-color: #ffca00;
+      color: #333;
+      display: block;
+    }
+    ul{
+      padding: 0;
+    }
+  }
+  @media (min-width: $global-map-desktop-view-breakpoint){
+    position: absolute;
+    body[data-plethoramap-layout="columns"] & { position: relative; }
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  width: 100%;
+  @media (min-width: $global-map-desktop-view-breakpoint){
+    margin: 1em;
+    body[data-plethoramap-layout="columns"] & { margin: 0 .5em 0 .5em; }
+    width: 50%;
+    min-width: 30em;
+    max-width: 40em;
+  }
+  @media (min-width: 1000px){
+    width: 20%;
+  }
+}
+body[data-plethoramap-layout="columns"] {
+ .autocomplete-component {
+   .autocomplete-suggestions ul {
+    background: #197fba;
+    width: 100%;
+   }
+   input {
+     border: none !important;
+   }
+ }
+}
+#plethora-map-container {
+  margin-right: .5em;
+  @media (max-width: $global-map-desktop-view-breakpoint - 1){
+     visibility: hidden;
+     position: absolute;
+     z-index: -1;
+     width: 100vw;
+     height: 100vh;
+     top: -100vh;
+     left: -100vw;
+     z-index: -999;
+     &, & * {
+        pointer-events: none !important;
+     }
+  }
+  @media (min-width: $global-map-desktop-view-breakpoint){
+    body[data-plethoramap-layout="columns"] & { width: 80%; }
+  }
+  overflow: hidden;
+  position: relative;
+  background: $color-background;
+  rect.background {
+    fill: transparent;
+  }
+  svg {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  &.framed {
+    margin:5px;
+    border:1px solid $color-frame-border;
+    border-radius: 4px;
+    height:100%;
+    overflow:hidden;
+  }
+  .point-wrapper {
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+  }
+  .zoomed-in .point-wrapper {
+    opacity: 1;
+  }
+  .pin {
+      pointer-events:auto;
+      cursor: pointer;
+     .point {
+		transition: fill .5s;
+		fill: $color-pin-point;
+		stroke-width: 1px;
+		stroke: $color-pin-point-stroke;
+        //fill: $color-pin-point;
+     }
+	 .text, .icon {
+		transition: fill .5s, opacity .5s;
+	 }
+	 .text {
+		alignment-baseline: hanging;
+		dominant-baseline: hanging;
+		text-anchor: end;
+		fill: #000;
+		opacity: 0;
+		pointer-events: none;
+	 }
+	 .icon {
+		text-anchor: middle;
+		fill: $color-pin-icon;
+		text-shadow: 0.05em 0.05em rgba(0,0,0,.4);
+	 }
+	 &:hover {
+		 .point {
+			fill: $color-pin-point-hover;
+		 }
+		 .icon {
+			fill: $color-pin-icon-hover !important;/* to be overwritten with another important only! */
+		 }
+		 .text {
+			//fill: #000;
+			//font-weight: bold;
+			opacity: 1;
+		}
+	 }
+       &.active {
+		.icon {
+			fill: red;
+		}
+       }
+  }
+  
+  .feature {
+      fill: $color-feature-fill;
+	  transition: fill .5s, stroke 2s;
+      &.highlighted {
+
+        cursor: pointer;
+        
+        fill: $color-highlighted-feature-fill;
+        &.active, &.active:hover, &.active.hover {
+          fill: $color-highlighted-feature-fill-active;
+        }
+      }
+      stroke: $color-feature-stroke;
+      stroke-width: 1px;
+  }
+
+  .feature:hover, .feature.hover{
+  /*  stroke: #000;
+    stroke-width: 1.5px;
+    */
+    fill: $color-feature-fill-hover;
+    &.highlighted {
+      fill: $color-highlighted-feature-fill-hover;
+    }
+  }
+  .feature.active{
+      fill: $color-feature-fill-active;
+      &:hover,&.hover {
+        fill: $color-feature-fill-active;
+      }
+      &.highlighted {
+        fill: $color-highlighted-feature-fill-active;
+        &:hover,&.hover {
+          fill: $color-highlighted-feature-fill-active-hover;
+        }
+      }
+
+  }
+
+  .point-wrapper .text{
+    font-size:8px;
+  }
+  .hidden { 
+    display: none; 
+  }
+  div.tooltip {
+    white-space: nowrap;
+    @media(max-width: $global-map-desktop-view-breakpoint - 1){
+      display: none !important;
+    }
+    @media(min-width: $global-map-desktop-view-breakpoint){
+      color: $color-tooltip-text; 
+      background: $color-tooltip-bg; 
+      padding: .5em; 
+      text-shadow: $color-tooltip-text-shadow 0 1px 0;
+      border-radius: 2px; 
+      box-shadow: 0px 0px 2px 0px $color-tooltip-box-shadow; 
+      opacity: 0.9; 
+      position: absolute;
+      z-index: 10;
+    }
+  }
+  .graticule {
+    fill: none;
+    stroke: $color-graticule-stroke;
+    stroke-width: .5px;
+    stroke-opacity: .5;
+  }
+
+  .equator {
+    stroke: $color-equator-stroke;
+    stroke-width: 1px;
+  }
+}
+#plethora-map-debug {
+    position: fixed;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    bottom: 0px;
+    right: 0px;
+    padding: .5em;
+    overflow: auto;
+    max-height: 10em;
+}
+
+
+#plethora-map-debug {
+    display: table;
+}
+#plethora-map-debug dl{
+    display: table-row;
+}
+#plethora-map-debug dl > *{
+    display: table-cell;
+    padding: .2em;
+}
+
+.feature-detail-layer {
+    fill: #034003;
+    stroke: #00d002;
+    stroke-width: 1px;
+    cursor: pointer;
+}
+/*
+.feature-detail-layer .FR {
+    fill: #cad6ee;
+    stroke: #848194;
+    stroke-width: 1px;
+}*/
+.debug-shapes-layer .debug {
+    stroke: red;
+    fill: none;
+}
+path.feature.show-detail {
+    visibility: hidden;
+}
+#plethora-map-feature-wrapper .member-content a
+{
+ &:hover, &:focus, &:active {
+     color: black;
+     text-decoration: none;
+ }
+}
+
+.plethora-map-feature-detail-member-details .field-item-label {
+    display: inline-block;
+}
+.plethora-map-feature-detail-member-details .field-item,
+.plethora-map-feature-detail-member-details .field-items {
+    display: inline-block;
+}
+
+.node--type-member-listing.node--view-mode-teaser > div {
+    display: table;
+}
+.node--type-member-listing.node--view-mode-teaser > div > * {
+    display: table-row;
+}
+.node--type-member-listing.node--view-mode-teaser > div > .field-title {
+ display: table-caption;   
+}
+.node--type-member-listing.node--view-mode-teaser>div>.field-title>* {
+    display: block;
+}
+.node--type-member-listing.node--view-mode-teaser > div > * > * {
+    display: table-cell;
+    padding-right: 2em;
+    border-bottom: 1px solid #ccc;
+}
+
+.node--type-member-listing.node--view-mode-teaser > div > * > .field-item-label::after {
+     content: ":";
+}
+.plethora-map-feature-detail-member-details {
+    list-style-type: none;
+    margin: 0 1em 1em 1em;
+    overflow: hidden;
+}
+#plethora-map-hide-on-mobile {
+ display: none;
+ @media (min-width: $global-map-desktop-view-breakpoint){
+   display: block;
+ }
+}

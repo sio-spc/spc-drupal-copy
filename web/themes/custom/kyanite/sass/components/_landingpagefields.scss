@@ -1,0 +1,216 @@
+
+
+.view-mode-small_card{
+	
+	
+	
+	.field-field-short-title-caption, .field-field-list-title, .field-field-list-title-alternate, .field-type-datetime, .field-node-post-date, .field-node-title, .views-field-title{
+		padding: 5%;
+		display: block;
+		margin-top:0;
+		line-height: 1.2em;
+		display: block;
+	}
+	.field-node-title{
+		display: none;
+	}
+	.field-field-short-title-caption{
+		padding-bottom:0;
+		color: #666;
+	}
+}
+.view-mode-small_card {
+	.views-row{
+		.kyanite-views-row-inner{
+			background-color: #fcfcf5; //not applying this style to cards, because the background would sit behind the flip
+		}
+	}
+
+}
+.view-mode-small_card, .cards{
+	img{
+		display: block;
+	}
+	.field-field-list-title, .field-field-list-title-alternate, .field-node-title, .views-field-title{
+		line-height:1.2em;/*was .9em*/
+		color: #000;
+		padding-top: 10px;
+		color: #000;
+		font-weight: bold;
+	}
+	.field-type-image, .views-field-view-taxonomy-term{
+		background-color: #fff;
+		display: block;
+		a{
+			display: block;
+		}
+		img{
+			display: block;
+		}
+		border-bottom: 1px solid #f0eec9;
+	}
+		
+}
+.field-field-landing-page-items-upcomin, .field-field-landing-page-items{
+	position: relative;
+	.field-item{
+		text-align: center;
+	}
+	.contextual{
+		z-index:1000;
+		position: absolute;
+		top:0;
+		right:0;
+		.trigger{
+			right:0;
+			z-index: 1100;
+		}
+	}
+
+}
+
+.field-field-landing-page-items-upcomin, .field-field-landing-page-items, .cardstyling, .cards{
+	@media (max-width:479px){
+		margin-top: 3em;
+	}
+	@media (min-width:480px){
+		margin-top: gutter();
+	}
+	img{
+		width: 100%;
+		height: auto;
+	}
+	> .field-items, .kyanite-views-rows{
+		> .field-item, .views-row{
+			@media (min-width:480px){
+				/*margin-bottom: gutter();*/ /*gutter was not working right in Firefox*/
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+.field-field-landing-page-items-upcomin, .field-field-landing-page-items, .cards{
+	> .field-items, .kyanite-views-rows{
+
+		@media (min-width:480px){
+			@include flexbox();
+		}
+
+		> .field-item, .views-row{
+			.field-field-publicationfile{
+				display: none;
+			}
+			.field-node-post-date, .field-field-event-date{
+				margin-bottom: 0;
+			}
+			
+			@media (max-width:479px){
+				margin-bottom: 3em;
+				.field-field-short-title-caption, .field-node-post-date, .field-field-event-date{
+					font-size: 1em;
+				}
+				.field-field-list-title, .field-field-list-title-alternate, .field-node-title{
+					font-size: 1.2em;
+				}
+			}
+			@media (min-width:480px) and (max-width: 767px){
+				@include span(6 of 12);
+				&:nth-child(2n+2){
+					margin-right:0;
+				}
+				.field-field-short-title-caption, .field-node-post-date, .field-field-event-date{
+					font-size: 1em;
+				}
+				.field-field-list-title, .field-field-list-title-alternate, .field-node-title, .views-field-title{
+					font-size: 1.2em;
+				}
+			}
+			@media (min-width:768px){
+				@include span(3 of 12);
+				&:nth-child(4n+4){
+					margin-right:0;
+				}
+				.field-field-short-title-caption, .field-node-post-date, .field-field-event-date{
+					font-size: 1em;
+				}
+				.field-field-list-title, .field-field-list-title-alternate, .field-node-title, .views-field-title{
+					font-size: 1.2em;
+				}
+			}
+			@media (min-width:960px){
+				.field-field-short-title-caption, .field-node-post-date, .field-field-event-date{
+					font-size: 1em;
+				}
+				.field-field-list-title, .field-field-list-title-alternate, .field-node-title, .views-field-title{
+					font-size: .8em;
+				}
+			}
+			
+		}
+	}
+	&.card-3col{
+		> .field-items, .kyanite-views-rows{
+			@media (min-width:960px){
+				.field-field-short-title-caption, .field-node-post-date, .field-field-event-date{
+					font-size: 1.2em;
+				}
+				.field-field-list-title, .field-field-list-title-alternate, .field-node-title, .views-field-title{
+					font-size: 1em;
+				}
+			}
+		}
+	}
+	&.card-4col{
+		> .field-items, .kyanite-views-rows{
+			@media (min-width:960px){
+				.field-field-short-title-caption, .field-node-post-date, .field-field-event-date{
+					font-size: 1em;
+				}
+				.field-field-list-title, .field-field-list-title-alternate, .field-node-title, .views-field-title{
+					font-size: .8em;
+				}
+			}
+		}
+	}
+	&.card-3col > .field-items > .field-item, &.card-3col .views-row{
+		
+		@media (min-width:768px){
+			@include span(4 of 12);
+			&:nth-child(2n+2){
+				margin-right: 1.69492%;
+			}
+			&:nth-child(3n+3){
+				margin-right:0;
+			}
+			&:nth-child(3n+3){
+				margin-right:0;
+			}
+			&:nth-child(4n+4){
+				margin-right: 1.69492%;
+			}
+			
+		}
+	}
+}
+
+
+.field-field-card-caption-background-co, .field-field-landing-page-layout, .cards .field-field-list-description, .views-field-field-card-caption-background-co{
+	display: none;
+}
+.cards{/*formerly: .views-element-container .cards*/
+	.views-row, .field-item{
+		position: relative;
+		//overflow: hidden;
+		
+		.kyanite-views-row-inner{
+			height:100%;
+			& > a{
+				display: block;
+			}
+		}
+		
+	}
+}
+.kyanitepublicationnid{
+	display: none;
+}

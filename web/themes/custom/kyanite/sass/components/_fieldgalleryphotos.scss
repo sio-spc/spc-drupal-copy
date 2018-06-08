@@ -1,0 +1,13 @@
+.field-field-gallery-photos{
+	> .field-items{
+		@include flexbox();
+		> .field-item{
+			width: 25%;
+			img{
+				width: 100%;
+				max-width: 100%;
+				height:auto;
+			}
+		}
+	}
+}

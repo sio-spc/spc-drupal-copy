@@ -1,0 +1,138 @@
+.path-search{/*search page / results*/
+	#main{
+
+		h2{
+			clear: both;
+		}
+
+		ol{
+			clear: both;
+			margin: 0;
+			padding: 0;
+			li{
+				list-style: none;
+				list-style-type: none;
+				margin-bottom: 3em;
+			}
+		}
+
+		nav.pager{
+			    border-top: 4px solid #ccc;
+			    padding-top: 1em;
+			    margin-top: 3em;
+			    text-align: center;
+			ul.pager__items{
+				padding: 0;
+				margin: 0;
+				display: inline-block;
+				li{
+					list-style: none;
+					list-style-type: none;
+					display: inline-block;
+					margin-right: 1em;
+					&.is-active{
+						font-weight: bold;
+					}
+					a{
+						text-decoration: none;
+						&:hover{
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	#search-form{
+		clear: both;
+		.form-item.form-item-type-digital-library-item{
+			display: none;
+		}
+		.container-inline.form-wrapper{
+			position: relative;
+			display: block;
+			float: left;
+			clear: both;
+		}
+		input#edit-keys{
+			padding-right: 50px;
+			width: 100%;
+		}
+		.form-item label[for='edit-keys']{
+			display: none;
+		}
+		input{
+			font-size: 2em;
+		}
+		.form-item, .searchsubmit{
+			display: inline-block;
+		}
+		.searchsubmit{
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			#edit-submit{
+				display: none;
+			}
+			&::after{
+			    content: $fa-var-search;
+			    display: inline-block;
+			    font: normal normal normal 2em/1 FontAwesome;
+			    color: #ccc;
+			    text-rendering: auto;
+			    -webkit-font-smoothing: antialiased;
+			    -moz-osx-font-smoothing: grayscale;
+			    cursor: pointer;
+			    &:hover{
+			    	color: $global-color-highlight;
+			    }
+			}
+			&:hover::after{
+				color: $global-color-highlight;
+			}
+		}
+		.search-help-link{
+			display: block;
+			margin-top: 1em;
+			margin-bottom: 1em;
+			float: left;
+			clear: both;
+		}
+		.search-advanced{
+			clear: both;
+			border-bottom: 4px solid #ccc;
+		    padding-bottom: 2em;
+			margin-bottom: 2em;
+			summary{
+				cursor: pointer;
+			}
+			fieldset{
+				border-color: $global-color-highlight;
+				border-style: solid;
+				border-width: 1px;
+				margin-top:1em;
+				legend{
+					font-weight: bold;
+					color: $global-color-highlight;
+				}
+				fieldset{
+					border: none;
+					margin-top:0;
+					legend{
+						color: #666;
+					}
+				}
+			}
+			#edit-submit--2{
+				background-color: $global-color-highlight;
+			    color: #fff;
+			    border: none;
+			    padding: .5em 1em;
+			    font-size: .8em;
+			    text-transform: uppercase;
+			    margin-top: 1em;
+			    cursor: pointer;
+			}
+		}
+	}
+}

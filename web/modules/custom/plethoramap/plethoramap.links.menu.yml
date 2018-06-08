@@ -1,0 +1,8 @@
+plethoramap.settings:
+  title: 'Plethora Map Module Settings'
+  description: 'Manage Plethora Map module settings for your site'
+  parent: system.admin_config_development
+  route_name: plethoramap.settings
+  weight: 100
+  #If menu_name is omitted, the "Tools" menu will be used.
+  menu_name: devel 

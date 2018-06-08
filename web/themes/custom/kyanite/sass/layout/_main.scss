@@ -1,0 +1,98 @@
+#maincontainer{
+    clear: both;
+}
+#main {
+  .layout-content > div{
+    position: relative;
+  }
+	@include clearfix();
+	padding-top: 1em;
+	padding-bottom: 4em;
+  @media (min-width: $bp-mobile-max){
+
+  }
+  @media (min-width: $bp-tablet-min){
+    max-width: 95%;
+  }
+  @media (min-width: $bp-desktop-min){
+    max-width: 70%;
+  }
+  margin-left: auto;
+  margin-right: auto;
+/*    min-height: Calc(100vh - 331px); //magic numbers are no good... but this at least gets it to look good in desktop with light content.  331px should ideally be the header + footer height.  That's ok though, we have a JS solution for this
+    min-height: 2262px; */
+    transition: background-color $global-color-scheme-change-duration, color $global-color-scheme-change-duration;    
+    @media (max-width: $bp-mobile-max){
+    	padding-left: 1em;
+    	padding-right: 1em;
+    }
+}
+
+/*
+body:not(.path-frontpage):not(.path-events):not(.page-node-type-event){
+  #main{
+    @media(min-width: $bp-desktop-min){
+      max-width: 70%;
+    }
+  }
+}*/
+body:not(.path-frontpage){
+    #main{
+        /*padding-top: 3em;
+        padding-top: 3vw;*/
+        margin:0 auto;
+        
+        $curbp: 1200px;
+        $curfont: 100%;
+        $boxscale: 1.2;
+
+        input[type=checkbox],
+        input[type=radio]
+        {
+            margin: 1em;
+        }
+        font-size: 1em;
+        @media (min-width: 960px){
+          font-size: 1.25vw;
+        }
+
+          /*@media (max-width: $bp-mobile-max) and (orientation: portrait){
+            font-size: 1em;
+          }
+          @media (max-width: $bp-mobile-max) and (orientation: landscape){
+            font-size: .5em;
+          }
+          @media (min-width: $bp-tablet-min){
+            font-size: 1em;
+          }*/
+        /*@for $i from 1 through 50 {
+            @media(min-width: $curbp){
+                font-size: $curfont;
+
+                input[type=checkbox],
+                input[type=radio]
+                {
+                  
+                  -ms-transform: scale($boxscale); 
+                  -moz-transform: scale($boxscale); 
+                  -webkit-transform: scale($boxscale); 
+                  -o-transform: scale($boxscale); 
+                  transform: scale($boxscale);
+                }
+            }
+            $boxscale: $boxscale + 0.1;
+            $curbp: $curbp + 100;
+            $curfont: $curfont + 10;
+        }*/
+    }
+}
+body.color-scheme-dark{
+	#maincontainer {
+		background-color: $global-color-main-bg-dark;
+	}
+}
+body.has-background-image {
+	#maincontainer {
+		background: none;
+	}
+}

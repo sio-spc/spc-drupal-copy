@@ -1,0 +1,57 @@
+/* ---------- General Layout ---------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/print\.scss}line{font-family:\000034}}
+body,
+input,
+textarea,
+select {
+  color: #000;
+  background: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/print\.scss}line{font-family:\0000311}}
+body.two-sidebars,
+body.sidebar-first,
+body.sidebar-second,
+body {
+  width: 640px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/print\.scss}line{font-family:\0000317}}
+#sidebar-first,
+#sidebar-second,
+.navigation,
+#toolbar,
+.site-footer,
+.tabs,
+.shortcut-action {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/print\.scss}line{font-family:\0000326}}
+.one-sidebar .main-content,
+.two-sidebars .main-content {
+  width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/print\.scss}line{font-family:\0000330}}
+.featured-bottom {
+  width: 960px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/print\.scss}line{font-family:\0000336}}
+.featured-bottom-first,
+.featured-bottom-second,
+.featured-bottom-third {
+  width: 250px;
+}
+
+/* ---------- Node Pages ---------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/print\.scss}line{font-family:\0000344}}
+#comments .title,
+#comments form,
+.comment-forbidden {
+  display: none;
+}

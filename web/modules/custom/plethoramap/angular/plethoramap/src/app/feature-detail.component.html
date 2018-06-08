@@ -1,0 +1,21 @@
+<div class="plethora-map-feature-detail" [class.loading]="loading">
+	<ul *ngIf="!loading">
+		<li *ngFor="let listing of listings" [class.has-member-listing-image]="listing.image" >
+			<div class="member-listing-image" *ngIf="listing.image" [innerHTML]="listing.image"></div>
+			<div class="member-listing-info">
+				<div class="member-listing-link" *ngIf="listing.link" [innerHTML]="listing.link"></div>
+				<h2 class="member-listing-title" *ngIf="listing.title">{{listing.title}}</h2>
+				<div class="member-type" *ngIf="listing.memberType">{{listing.memberType}}</div>
+				<div class="member-content" *ngIf="listing.memberContent" [innerHTML]="listing.memberContent"></div>
+				<!-- <div class="member-listing-external-links" *ngIf="listing.externalLinks" [innerHTML]="listing.externalLinks"></div> -->
+			</div>
+		</li>
+	</ul>
+	<strong *ngIf="featureNotFound">{{lang.featureNotFoundMessage}}</strong>
+	<div class="loading-message" *ngIf="loading">{{lang.loadingListings}}</div>
+</div>
+<ul class="plethora-map-feature-detail-member-details" *ngIf="!loading">
+    <li *ngFor="let listing of listings">
+       <div  *ngIf="listing.memberContentDetails" [innerHTML]="listing.memberContentDetails" ></div>
+    </li>
+</ul>

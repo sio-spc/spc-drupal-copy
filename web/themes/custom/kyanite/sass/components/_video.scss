@@ -1,0 +1,29 @@
+.field-field-video, .paragraph--type--videos{
+	.field-items, > .paragraph__column{
+		@include flexbox();
+		justify-content: flex-start;
+	}
+	.field-items > .field-item, > .paragraph__column > div{
+		@media(min-width: 480px){
+			width: 42%;
+			margin-right: 8%;
+		}
+		@media(min-width: 768px){
+			width: 28%;
+			margin-right: 5.33333%;
+		}
+		@media(min-width: 960px){
+			width: 22%;
+			margin-right: 3%;
+		}
+		.field-field-video-title{
+			padding-top: .5em;
+			text-align: center;
+			font-weight: bold;
+			font-size: 1em;
+			line-height: 1.2em;
+			display: block;
+		}
+		margin-bottom: 1em;
+	}
+}

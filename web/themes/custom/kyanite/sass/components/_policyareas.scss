@@ -1,0 +1,61 @@
+.policy-areas{
+	.views-row{
+		display: block;
+		clear: both;
+		margin-bottom: 2em;
+		&.tid-118{/*other*/
+			.card-front {
+				background-color: #b93069;
+			}
+			.views-field-title{
+				color: #fff;
+			}
+		}
+		h2{
+			margin-top: 0;
+		}
+		.views-field-field-image{
+			/*@media (max-width: 767px){
+				display: none;
+			}
+			@media (min-width: 768px){
+				display: block;
+				position: relative;
+				box-sizing: border-box;
+				float: left;
+				width: 20%;
+				padding-right:1em;
+				text-align: center;
+				img{
+					display: inline-block;
+				}
+			}*/
+			
+		}
+		.views-field-nothing{
+			padding-left:5%;
+			padding-right: 5%;
+			display: block;
+			position: relative;
+			box-sizing: border-box;
+			text-align: center;
+			@media (min-width: 768px){
+				/*float: left;
+				width: 80%;
+				*/
+			}
+		}
+		.views-field-field-policy-brief-overview{
+			display: none;
+		}
+	}
+}
+.taxonomy-term.vocabulary-policy-initiatives{
+	.field-field-image{
+		@media (min-width: 560px){//corresponds to D8 Responsive Images' Narrow breakpoint
+			float: right;
+			margin-left: 2em;
+			margin-bottom: 2em;
+		}
+	}
+}

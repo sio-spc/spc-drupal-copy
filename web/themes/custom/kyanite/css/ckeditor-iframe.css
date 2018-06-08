@@ -1,0 +1,32 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/ckeditor-iframe\.scss}line{font-family:\000031}}
+img {
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+@media (min-width: 640px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/ckeditor-iframe\.scss}line{font-family:\000038}}
+  .cke_widget_image.align-left, .cke_widget_image.align-right {
+    max-width: 40% !important;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/ckeditor-iframe\.scss}line{font-family:\0000313}}
+.cke_widget_image.align-left {
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/ckeditor-iframe\.scss}line{font-family:\0000317}}
+.cke_widget_image.align-right {
+  margin-left: 1em;
+  margin-left: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/ckeditor-iframe\.scss}line{font-family:\0000321}}
+.cke_widget_image.align-center {
+  text-align: center;
+  margin: auto;
+  display: block;
+}

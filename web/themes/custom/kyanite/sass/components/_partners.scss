@@ -1,0 +1,25 @@
+.partners.cards{
+	.views-row{
+		.kyanite-views-row-inner{
+			/*background-color: $global-color-highlight;*/
+			/*background-color: #D6A841;*/
+			background-color: #768ca0;
+			.field-field-p-external-links{
+				display: none;
+			}
+			.field-type-image{
+				border: 2px solid #768ca0;
+			}
+			.field-field-description{
+				display: none;
+			}
+			.view-mode-small_card{
+				.field-node-title{
+					display: block;
+					color: #fff;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

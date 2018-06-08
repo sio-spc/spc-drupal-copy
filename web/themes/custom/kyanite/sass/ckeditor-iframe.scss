@@ -1,0 +1,25 @@
+img{
+	width: auto!important;
+	max-width: 100%!important;
+	height: auto!important;
+	
+}
+
+.cke_widget_image.align-left, .cke_widget_image.align-right{
+  @media (min-width: 640px){
+    max-width: 40%!important;
+  }
+}
+.cke_widget_image.align-left{
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+.cke_widget_image.align-right{
+	margin-left: 1em;
+	margin-left: 1em;
+}
+.cke_widget_image.align-center{
+	text-align: center;
+    margin: auto;
+    display: block;
+}

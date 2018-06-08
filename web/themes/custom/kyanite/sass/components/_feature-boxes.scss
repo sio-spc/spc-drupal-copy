@@ -1,0 +1,167 @@
+.feature-boxes {
+	margin: 0;
+	padding: 0;
+
+	> li {
+		> a{
+			display: block;
+			h2, p{
+				color: #fff;
+				text-decoration: none;
+				&:hover{
+					text-decoration: none;
+					color: #fff;
+				}
+			}
+		}
+		@media (max-width: $bp-mobile-max){
+			margin-top: 1em;
+			margin-bottom: 1em;
+			
+			h2{
+				font-weight: bold;
+			}
+			
+			&.kyanite-policy-leadership{
+				&, a, a:hover{
+					text-decoration: none;
+					&, *{
+						color: #334e7b;
+					}
+				}
+			}
+			&.flexible{
+				&, a, a:hover{
+					text-decoration: none;
+					&, *{
+						color: #b7a803;
+					}
+				}
+			}
+		}
+		position: relative;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		@media (min-width: $bp-tablet-min){
+			&.kyanite-policy-leadership{
+				border-right: 2px solid #fff;
+			}
+			&.flexible{
+				border-left: 2px solid #fff;
+			}
+		}
+		p {
+			
+			@media (max-width: 699px){
+				font-size: 1.2em;
+			}
+			@media (min-width: 700px) and (max-width: 1149px){
+				font-size: 1.2em;
+			}
+			
+			@media (min-width: 1150px){
+				font-size: 1em;
+			}
+		}
+		.longtext {
+			p {
+				font-size: 1em;
+				@media (min-width: $bp-desktop-min){
+					font-size: 1em;
+				}
+
+			}
+		}
+		.extralongtext {
+			p {
+				font-size: 0.9em;
+				@media (min-width: $bp-desktop-min){
+					font-size: 0.9em;
+				}
+				@media (min-width: 1100px){
+					font-size: 1em;
+				}
+
+			}
+		}
+		line-height: normal;
+		color: #FFF;
+		overflow: hidden;
+		h2 {
+			font-size: 1.5em;
+			letter-spacing: 2px;
+			margin-top: 0;
+		}
+		img {
+			@media (max-width: $bp-mobile-max){
+				display: none;
+			}
+			@media (min-width: $bp-tablet-min){
+			    display: block;
+			    top: 0;
+			    left: 0;
+		    	width: 100%;
+		    	height: auto;
+			    z-index: 0;
+			}
+		}
+		.content {
+			@media (max-width: $bp-mobile-max){
+			}
+			@media (min-width: $bp-tablet-min){
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				padding: 2em;
+			}
+			width: 100%;
+			padding-bottom: 0; // avoids unnecessary scrollbars sometimes.
+		    max-height: 100%;
+		    overflow: hidden;
+		}
+	}
+
+	@include container();
+	@media (min-width: $bp-tablet-min){
+
+		// based on the number of total children, you can apply different styles: 
+		// http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/
+		@for $i from 2 through 10 {
+			$cols : $i;
+			@if $i == 6 { $cols : 3; } 
+			@else if $i == 7 { $cols : 3; } 
+			@else if $i == 8 { $cols : 4; } 
+			@else if $i == 9 { $cols : 3; } 
+			@else if $i == 10 { $cols : 5; } 
+
+			@include with-layout($cols 0 fluid float inside) {
+				  > li:first-child:nth-last-child(#{$i}),
+				  > li:first-child:nth-last-child(#{$i}) ~ li {
+			  		width: 100%/$cols;
+					width: Calc(100%/#{$cols}); // this avoids rounding errors for browser that support this.
+					float: left;
+
+
+				  } 
+
+			}
+		}
+	}
+}
+
+//now some region based sugar
+@media (min-width: $bp-tablet-min){
+	.layout-highlighted2 .feature-boxes {   
+	    transition: all 1s 0.5s;
+	    max-height: 0;
+	    overflow: hidden;
+	    &.scrolled-into-view {
+			max-height: 200vh;
+			/*margin-top: 3vh;*/
+		    margin-bottom: 3vh;
+		    box-shadow: 0 0 3vh #888888;
+		}
+	}
+}

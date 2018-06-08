@@ -1,0 +1,140 @@
+$search-block-form-font-size : 1.3em;
+$search-block-form-scroll-down-factor : 1/1.3;
+$search-block-form-font-size-scrolled-down: $search-block-form-scroll-down-factor * $search-block-form-font-size;
+$search-block-form-line-height : 1.8em;
+$search-block-form-left-padding: 0.1em;
+$search-block-form-text-color: #bfbfbf;
+$search-block-form-text-color-focused: #333;
+$search-block-icon-color-hover: $global-color-hover;
+$search-block-icon-left-padding: 0.3em;
+$search-block-icon-right-padding: 0.3em;
+$search-block-extra-buffer: 0.01em; // extra gap between the text and icon, especially important for the "x" button that some browsers have to delete the text from the text field.
+
+$search-block-form-icon-size : 1.5em;
+//$search-block-form-icon-size-scrolled-down : $search-block-form-icon-size * $search-block-form-scroll-down-factor;
+
+#block-kyanite-search, .searchbox, 
+#block-kyanite-search-fixed, .searchbox-fixed{
+	margin-top: 4px;
+    padding-right: 3rem;
+    padding-left: 1rem;
+	@media (min-width: $bp-tablet-min){
+		text-align: right;
+	}
+	@media (max-width: $bp-mobile-max){
+	    position: absolute;
+	    top: 0.5em;
+	    right: $global-mobile-search-right-offset;
+	}
+	h2, .form-actions {
+		display: none;
+	}
+	input[type=search]{
+		font-size: $search-block-form-font-size;
+
+	    line-height: $search-block-form-line-height;
+	    height: $search-block-form-line-height; // IE does not adjust the height automatically when line height changes...
+	    padding-right: $search-block-extra-buffer + $search-block-form-icon-size + $search-block-icon-left-padding + $search-block-icon-right-padding;
+	    padding-left: $search-block-form-left-padding;
+		@media (min-width: $bp-tablet-min){
+			width: 7.5em;
+			transition: width 0.5s;
+			-ms-transition: none; //oh IE, why do you plague me so?
+		}
+		@media (max-width: $bp-mobile-max){
+			//display: block;
+			//width: 100%;
+			position: relative;
+		    z-index: 1;
+	    	transition: width 0.5s, border 0.5s;
+		    width: 45px;
+		    border: transparent;
+		}
+		@media (min-width: $bp-desktop-big-min){
+			width: 10vw;
+
+		}
+	    &:focus {
+	    	outline: none;
+			box-shadow: 0px 0px 3px $global-color-hover;
+
+			@media (max-width: $bp-mobile-max){
+			    z-index: 2; // hides the little search icon
+			    padding-right: 0; //no more padding needed to accomodate the search icon
+		    	width: Calc(100vw - 150px);
+		    	border: 1px solid #CCC;
+			}
+			@media (min-width: $bp-tablet-min){
+				width: 100%;
+			}
+	    }
+	}
+	form {
+		position: relative;
+	}
+	form, form * {
+		color: $search-block-form-text-color;
+	}
+	form input:focus {
+		color: $search-block-form-text-color-focused;
+	}
+/*
+	@media (min-width: $bp-tablet-min){
+		form, form * {
+			//display: inline-block;
+			color: $search-block-form-text-color;
+		}
+		form input:focus {
+			color: $search-block-form-text-color-focused;
+		}
+
+	}
+*/
+	form::after{
+	    content: $fa-var-search;
+	    display: inline-block;
+	    font-style: normal;
+	    font-variant: normal;
+	    font-weight: normal;
+	    font-family: FontAwesome;
+	    text-rendering: auto;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    position: absolute;
+	    padding-right: $search-block-icon-right-padding;
+	    padding-left: $search-block-icon-left-padding;
+	    top: 0;
+	    right: 0;
+	    z-index: 1;
+	    pointer-events: none;
+	}
+	form:hover::after{
+		color: $search-block-icon-color-hover;
+	}
+	input[type=search],
+	form::after{
+	    padding-top: 0;
+	    padding-bottom: 0;
+	}
+	form::after{
+		font-size: $search-block-form-icon-size;
+		line-height: $search-block-form-icon-size; // not sure how to get it to center without a number like this 
+	}
+}
+
+/*
+@media (min-width: $bp-tablet-min){
+	.scrolled-down, .fixed-header{
+		.search-block-form {
+			input[type=search]{
+				font-size: $search-block-form-font-size-scrolled-down;
+			}
+			form::after{
+				font-size: $search-block-form-icon-size-scrolled-down;
+				//line-height: 123%; // not sure how to get it to center without a number like this 
+			}
+		}
+
+	}
+}
+*/

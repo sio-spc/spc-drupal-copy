@@ -1,0 +1,124 @@
+#block-views-block-featured-articles-block-1{
+	
+	.kyanite-views-rows{
+		@media (min-width: 480px){
+			@include boxshadow();
+			@include flexbox();
+		}
+		padding: 5px 0;
+		.views-row{
+
+			padding: 1em;
+			padding: 1vw;
+
+			@media (max-width:479px){
+				margin-bottom: 3em;
+			}
+
+			@media (min-width:480px) and (max-width: 959px){
+				@include span(6 of 12);
+				width: 50%;
+				margin: 0;
+			}
+
+			@media (min-width: 960px){
+				@include span(3 of 12);
+				width: 25%;
+				margin:0;
+				padding: 1.5%;
+				padding: 1.5vw;
+
+
+				
+				&:nth-child(4n+1){
+					border-right: 1px solid #ccc;
+				}
+				&:nth-child(4n+2){
+					border-right: 1px solid #ccc;
+				}
+				&:nth-child(4n+3){
+					border-right: 1px solid #ccc;
+				}
+				&:nth-child(4n+4){
+					border-right: 1px solid transparent;
+				}
+			}
+			a, &:hover, &:hover *{
+				color: #000;
+				text-decoration: none;
+			}
+			a:hover{
+				img{
+					opacity: .5;
+				}
+				.views-field-title h3{
+					color: #999;
+				}
+			}
+			.views-field-nothing{
+				color: #999;
+				font-size: .8em;
+			}
+			.views-field-title, .views-field-field-headline{
+				h3{
+					color: #000;
+					font-weight: bold;
+					font-size: 1.2em;
+					line-height: 1.2em;
+				}
+			}
+			.views-field-body{
+				font-size: .8em;
+			}
+		}
+	}
+}
+#block-views-block-featured-articles-block-2{
+	
+	.kyanite-views-rows{
+		@media (min-width: 480px){
+			@include boxshadow();
+			@include flexbox();
+		}
+		padding: 5px 0;
+		.views-row{
+
+			padding: 1em;
+			padding: 1vw;
+
+			@media (max-width:479px){
+				margin-bottom: 3em;
+			}
+
+			@media (min-width:480px) and (max-width: 959px){
+				@include span(6 of 12);
+				width: 50%;
+				margin: 0;
+			}
+
+			@media (min-width: 960px){
+				@include span(3 of 12);
+				width: 50%;
+				margin:0;
+				padding: 1.5%;
+				padding: 1.5vw;
+			}
+			
+			.views-field-nothing{
+				color: #999;
+				font-size: .8em;
+			}
+			.views-field-title, .views-field-field-headline{
+				h3{
+					color: #000;
+					font-weight: bold;
+					font-size: 1.2em;
+					line-height: 1.2em;
+				}
+			}
+			.views-field-body{
+				font-size: .8em;
+			}
+		}
+	}
+}

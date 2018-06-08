@@ -1,0 +1,159 @@
+$global-font-family: 'PT Sans', sans-serif; // "Helvetica Neue", Helvetica, Arial, sans-serif;
+$global-color-text: #3b3b3b;
+$global-color-text-dark: #FFF;
+$global-color-link: #069;
+$global-color-link-dark: #0071b3;
+// header
+$global-logo-orig-width : 240px;
+$global-logo-orig-height : 98px;
+$global-logo-aspect-ratio : $global-logo-orig-height / $global-logo-orig-width;
+$global-logo-width-desktop : 200px;
+$global-logo-height-desktop : $global-logo-aspect-ratio * $global-logo-width-desktop;
+$global-logo-width-desktop-big : 12vw;
+$global-logo-height-desktop-big : $global-logo-aspect-ratio * $global-logo-width-desktop-big;
+$global-fixed-logo-width-desktop-big: 7vw;
+
+
+//$global-logo-width-desktop-scrolled-down : 64px;
+//$global-logo-height-desktop-scrolled-down : $global-logo-aspect-ratio * $global-logo-width-desktop-scrolled-down;
+//$global-logo-width-desktop-big-scrolled-down : 3em;
+//$global-logo-height-desktop-big-scrolled-down : $global-logo-aspect-ratio * $global-logo-width-desktop-big-scrolled-down;
+$global-logo-width-tablet : 120px;
+$global-logo-height-tablet : $global-logo-aspect-ratio * $global-logo-width-tablet;
+$global-logo-width-tablet-scrolled-down : 48px;
+$global-logo-height-tablet-scrolled-down : $global-logo-aspect-ratio * $global-logo-width-tablet-scrolled-down;
+$global-logo-width-mobile : 120px;
+$global-logo-height-mobile : $global-logo-aspect-ratio * $global-logo-width-mobile;
+//$global-logo-width-mobile-scrolled-down : 48px;
+//$global-logo-height-mobile-scrolled-down : $global-logo-aspect-ratio * $global-logo-width-mobile-scrolled-down;
+
+$global-scrolled-down-explore-gap-tablet-px : 8px;
+$global-scrolled-down-explore-gap-desktop-px : 12px;
+
+//$global-explore-button-width-scrolled-down : 24px;
+//$global-scrolled-down-menu-gap-left-px : 8px + 24px; //extra 24px needed... not sure why
+
+$global-color-header-bg: #FFF;
+$global-color-header-bg-dark: #000;
+$global-header-padding-top-mobile: 5px; //must be pixels to allow for adjustments for the explore menu top...
+$global-header-padding-bottom-mobile: $global-header-padding-top-mobile; // should probably just match the top padding...
+$global-header-padding-top-tablet: 7px; //must be pixels to allow for adjustments for the explore menu top...
+$global-header-padding-bottom-tablet: $global-header-padding-top-tablet; // should probably just match the top padding...
+$global-header-padding-top-desktop: 15px; //must be pixels to allow for adjustments for the explore menu top...
+$global-header-padding-bottom-desktop: $global-header-padding-top-desktop; // should probably just match the top padding...
+$global-header-padding-top-desktop-big: 1vw; 
+$global-header-padding-bottom-desktop-big: $global-header-padding-top-desktop-big; // should probably just match the top padding...
+
+/*
+$global-header-padding-top-mobile-scrolled-down: 0; //must be pixels to allow for adjustments for the explore menu top...
+$global-header-padding-bottom-mobile-scrolled-down: $global-header-padding-top-mobile-scrolled-down; // should probably just match the top padding...
+$global-header-padding-top-tablet-scrolled-down: 0; //must be pixels to allow for adjustments for the explore menu top...
+$global-header-padding-bottom-tablet-scrolled-down: $global-header-padding-top-tablet-scrolled-down; // should probably just match the top padding...
+$global-header-padding-top-desktop-scrolled-down: 0; //must be pixels to allow for adjustments for the explore menu top...
+$global-header-padding-bottom-desktop-scrolled-down: $global-header-padding-top-desktop-scrolled-down; // should probably just match the top padding...
+$global-header-padding-top-big-scrolled-down: 0;
+$global-header-padding-bottom-big-scrolled-down: $global-header-padding-top-big-scrolled-down; // should probably just match the top padding...
+*/
+
+
+$global-explore-button-height-desktop: 28px;
+$global-explore-button-height-tablet: $global-explore-button-height-desktop;
+$global-explore-button-height-desktop-big: 2vw;
+//$global-explore-button-height-desktop-scrolled-down: 28px;
+//$global-explore-button-height-desktop-big-scrolled-down: 28px;
+//$global-explore-button-height-tablet-scrolled-down: $global-explore-button-height-desktop-scrolled-down;
+
+// main menu
+$global-color-main-menu-bg: #fff;
+$global-color-main-menu-bg-dark: #fff;
+$global-color-main-menu-links: #069;
+$global-color-main-menu-links-dark: #00476a;
+$global-color-main-menu-hover: #1db4c4;
+$global-color-main-menu-hover-dark: #1db4c4;
+$global-color-main-menu-lines: #999;
+$global-color-main-menu-lines-dark: #999;
+//general
+$global-color-scheme-change-duration: 0.5s;
+$global-top-line-height: 3px; //the horizontal line right below the body
+$global-color-top-line-border: #CCC;
+$global-color-top-line-border-dark: #CCC;
+$global-color-hover: #1db4c4;
+$global-color-hover-dark: #069;
+$global-color-highlight: #1db4c4;
+$global-color-highlight-dark: #069;
+$global-color-highlight-contrast: #FFF; // color for text if the background is the highlight color, or vice versa
+$global-color-highlight-contrast-dark: #FFF; // color for text if the background is the highlight color, or vice versa
+$global-color-highlight-contrast2: #000; //another color that contrasts with the highlight color
+$global-color-highlight-contrast2-dark: #000; //another color that contrasts with the highlight color
+$global-color-highlight-alt: #0071b3;
+$global-color-highlight-alt-dark: #0071b3;
+$global-color-search-border: #9f9f9f;
+$global-color-search-border-dark: #9f9f9f;
+
+//main
+$global-color-main-bg: #f8f8f9;
+$global-color-main-bg-dark: rgb(10,10,10);
+//footer 
+$global-color-footer-text: #fff;
+$global-color-footer-text-dark: #d6dbe2;
+
+$global-color-footer-background: #d6dbe2;
+$global-color-footer-background-dark: #333333;
+$global-color-footer-links: #fff;
+$global-color-footer-links-dark: #CCC;
+//explore
+$global-color-explore-link: #333;
+$global-color-explore-link-dark: #333;
+$global-color-explore-bg: rgba(255,255,255,0.9);
+$global-color-explore-bg-dark: rgba(255,255,255,0.9);
+$global-color-explore-bg-hover: rgba(255,255,255,0.9);
+$global-color-explore-bg-hover-dark: rgba(255,255,255,0.9);
+$global-color-explore-content-bg: transparent;
+$global-color-explore-content-bg-dark: transparent;
+$global-color-explore-content-bg-hover: #FFF; //the 'content' is just the area of the explore div that has the content
+$global-color-explore-content-bg-hover-dark: #FFF; //the 'content' is just the area of the explore div that has the content
+$global-color-explore-lines: #CCC;
+$global-color-explore-lines-dark: #CCC;
+$global-color-explore-separator-default: #EEE; // initially the separator lines between items in the explore menu zone is a lighter color
+$global-color-explore-separator-default-dark: #EEE; // initially the separator lines between items in the explore menu zone is a lighter color
+$global-color-explore-shadow: #888;
+$global-color-explore-shadow-dark: #888;
+$global-color-explore-content-bg-mobile: #FFF;
+$global-color-explore-content-bg-mobile-dark: #FFF;
+//breadcrumbs
+$global-color-layout-breadcrumb-bg: #A9A9A9;
+$global-color-layout-breadcrumb-bg-dark: #A9A9A9;
+$global-color-layout-breadcrumb-separator: #EFEFEF;
+$global-color-layout-breadcrumb-separator-dark: #EFEFEF;
+$global-color-layout-breadcrumb-links: #FFF;
+$global-color-layout-breadcrumb-links-dark: #FFF;
+$global-color-blockquote-bg: #F7F7F7;
+$global-color-blockquote-bg-dark: #333;
+$global-color-blockquote-bg-dark-with-bgimage: rgba(100,100,100,0.8);
+$global-color-blockquote-quote: #BBB;
+$global-color-blockquote-quote-dark: #666;
+$global-color-highlighted-bg: #000;
+$global-color-highlighted-bg-dark: #FFF;
+$global-color-highlighted: #FFF;
+$global-color-highlighted-dark: #000;
+$global-color-fixed-header-bg: rgba(255,255,255,0.95);
+$global-color-fixed-header-bg-dark: rgba(255,255,255,0.8);
+//<breakpoints>
+$bp-mobile-max: 699px;
+$bp-tablet-min: $bp-mobile-max + 1;
+$bp-tablet-max: 979px;
+$bp-desktop-min: $bp-tablet-max + 1;
+$bp-desktop-big-min: 1400px;
+//</breakpoints>
+// other
+$global-desktop-footer-height: 74px;
+
+
+$global-mobile-search-right-offset: 50px;
+$global-layout-logo-explore-direction: right;
+$global-layout-logo-direction: left;
+$global-mobile-explore-text-visible: false;
+
+$bottomborder: 4px solid $global-color-highlight;
+
+$global-card-flip-speed: 0.6s;

@@ -1,0 +1,54 @@
+base:
+  version: 1.x
+  js:
+    js/jquery.mobile.custom.js: {}
+    js/kyanite.js: {}
+    js/flexbox-fallback.js: {}
+    js/jquery-rwdimagemaps/jquery.rwdImageMaps.min.js: {}
+    https://use.fontawesome.com/5e31b527ca.js: {}
+    js/colorbox/jquery.colorbox-min.js: {}
+    js/jquery.equalheights.js: {}
+  css:
+    base:
+      https://fonts.googleapis.com/css?family=PT+Sans:400,700italic,700,400italic&subset=latin,latin-ext: { type: external, minified: true }
+      css/base.css: {}
+    component: 
+      css/components.css: {}
+    layout:
+      css/layout.css: {}
+    theme:
+      css/colors.css: {}
+      css/print.css: { media: print }
+      js/colorbox/example1/colorbox.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+
+messages:
+  version: VERSION
+  css:
+    component:
+      css/components/messages.css: { preprocess: false }
+
+maintenance_page:
+  version: VERSION
+  css:
+    theme:
+      css/maintenance-page.css: {}
+  dependencies:
+    - system/maintenance
+    - kyanite/base
+
+topics:
+  version: VERSION
+  js:
+    js/topics.js: {}
+  css:
+    theme:
+      css/angular-apps/topics/topics.css: {}
+    
+dev:
+  version: VERSION
+  js:
+    js/dev-helper.js: {}

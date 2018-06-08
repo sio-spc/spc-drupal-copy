@@ -1,0 +1,6 @@
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/editor\.scss}line{font-family:\000031}}
+  img[data-align="left"], img[data-align="right"] {
+    max-width: 40% !important;
+  }
+}

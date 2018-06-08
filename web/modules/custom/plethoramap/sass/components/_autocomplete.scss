@@ -1,0 +1,282 @@
+$alpha-bg: 0.9;
+$color-button-bg: rgba(#FFF, $alpha-bg);
+$color-button-text: #333;
+$color-matched-text:#000;
+
+
+$color-clear-button-text: #FFF;
+$color-clear-button-bg: transparent;
+$color-clear-button-text-hover: #FFF;
+$color-clear-button-bg-hover: $global-color-highlight;
+
+$color-button-active-bg: rgba($global-color-highlight, $alpha-bg);
+$color-button-active-text: #FFF;
+$color-active-matched-text: #000;///#000;
+
+$color-button-hover-bg: rgba($global-color-highlight-alt, $alpha-bg);
+$color-button-hover-text: #FFF;
+$color-hover-matched-text: #000;///#000;
+
+$color-input-bg: rgba($global-color-highlight-alt, $alpha-bg);
+$color-input-text: #FFF;
+$color-input-placeholder: #EFEFEF;
+$color-input-border: transparent;
+$color-input-border-focus: #FFF;
+
+$input-border-width: 3px;
+$color-no-results-message: red;
+$color-no-results-message-bg: rgba(#FFF,$alpha-bg);
+$color-selection-bg: $global-color-highlight;
+
+$color-suggestions-border-bottom-mobile: $global-color-highlight;
+
+$color-submit-button-bg: $global-color-highlight;
+$color-submit-button-text: #FFF;
+
+.autocomplete-component {
+	position: relative;
+	.autocomplete-submit-button {
+		pointer-events: none;
+		position: absolute;
+		z-index: -9;
+	    top: 0;
+	    bottom: 0;
+	    right: 0;
+		text-indent: -99999px;
+		display: block;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+		opacity: 0;
+		border: none;
+		&:focus {
+			background: $color-submit-button-bg;
+			color: $color-submit-button-text;
+		    width: auto;
+		    height: auto;
+		    position: absolute;
+		    opacity: 1;
+		    z-index: 1;
+		    text-indent: 0;
+	    	padding: 2px;
+			@media (min-width: $global-map-desktop-view-breakpoint){
+			    right: $input-border-width;
+			    top: $input-border-width;
+		    	bottom: $input-border-width;
+			}
+		}
+	}
+	.autocomplete-no-results-message {
+		color: $color-no-results-message;
+		font-size: 80%;
+	    .text {
+	    	display: none;
+	    }
+		@media (max-width: $global-map-desktop-view-breakpoint - 1){
+			position: absolute;
+			z-index: 1;
+		    .text.mobile {
+	    		display: block;
+				padding: 0.25em;
+				background: $color-no-results-message-bg;
+				border-bottom: 1px solid $color-no-results-message;
+				border-right: 1px solid $color-no-results-message;
+		    }
+		}
+		@media (min-width: $global-map-desktop-view-breakpoint){
+		    height: 0;
+		    position: relative;
+		    overflow: visible;
+			padding-left: $input-border-width;
+			padding-right: $input-border-width;
+		    .text.desktop {
+	    		display: block;
+				padding: 0.5em;
+				background: $color-no-results-message-bg;
+				border: 1px solid $color-no-results-message;
+		    }
+		}
+	}
+	input {
+
+	    &::selection {
+		  background: $color-selection-bg; /* WebKit/Blink Browsers */
+		}
+		&::-moz-selection {
+		  background: $color-selection-bg; /* Gecko Browsers */
+		}
+
+		color: $color-input-text;
+		background: $color-input-bg;
+		border: none;
+		transition: all 0.2s;
+		border-radius: 0;
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+		padding: 0.5em 0.4em;
+		margin: 0;
+		font-size: 110%;
+		&:focus {
+			outline: none;
+		}
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  color: $color-input-placeholder;
+
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  color: $color-input-placeholder;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+		  color: $color-input-placeholder;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  color: $color-input-placeholder;
+		}
+		@media (min-width: $global-map-desktop-view-breakpoint){
+			border: $input-border-width solid $color-input-border;
+			&:focus {
+				border-color: $color-input-border-focus;
+			}
+		}
+		@media (max-width: 639px){
+			    max-width: 70%;
+			    margin: auto;
+			    font-size: 1.5em;
+			    margin-top: 1.5em;
+		}
+		@media (min-width: 640px) and (max-width: 979px){/* map is hidden < 980px*/
+			    max-width: 50%;
+			    margin: auto;
+			    font-size: 1.5em;
+			    margin-top: 1.5em;
+		}
+	}
+	&.has-clear-button {
+		input {
+			padding-right: 2em;
+		}
+	}
+	button.autocomplete-clear {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    bottom: 0;
+	    width: 2.5em;
+		@media (min-width: $global-map-desktop-view-breakpoint){
+		    right: $input-border-width;
+		    top: $input-border-width;
+	    	bottom: $input-border-width;
+		}
+	    -webkit-appearance: none;
+	    background: $color-clear-button-bg;
+	    color: $color-clear-button-text;
+	    border: none;
+	    text-indent: -99999px;
+	    display: inline-block;
+	    font: normal normal normal 14px/1 FontAwesome;
+	    font-size: inherit;
+	    text-rendering: auto;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    cursor: pointer;
+	    outline: none !important;
+	    transition: all 0.2s;
+	    padding: 0;
+	    margin: 0;
+	    
+	    &:hover, &:focus {
+	    	background: $color-clear-button-bg-hover;
+	    	color: $color-clear-button-text-hover;
+	    }
+
+	    &::after {
+		    content: "\f00d";
+		    text-indent: 0;
+		    display: block;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    font-size: 1.5em;
+		    width: 100%;
+		    height: 100%;
+		    text-align: center;
+		    line-height: 1.7em;
+		}
+	}
+	.autocomplete-suggestions {
+		z-index: 1;
+
+		@media (max-width: $global-map-desktop-view-breakpoint - 1){
+			position: absolute;
+			ul {
+				border-bottom: 3px solid $color-suggestions-border-bottom-mobile;
+			}
+		}
+		@media (min-width: $global-map-desktop-view-breakpoint){
+			position: relative;
+			top: -$input-border-width;
+		}
+
+		ul {
+			display: block !important;
+			margin: 0 !important;
+			padding: 0 !important;
+			@media (min-width: $global-map-desktop-view-breakpoint){
+		    	border-left: $input-border-width solid transparent;
+			}
+
+			max-height: 70vh;
+			overflow: auto; 
+			position: absolute;
+			z-index: 1;
+		    min-width: 25em;
+		}
+		li {
+			list-style-type: none !important;
+			margin: 0 !important;
+			padding: 0 !important;
+		}
+		button {
+			background: $color-button-bg;
+			color: $color-button-text;
+			cursor: pointer;
+			padding: 0.25em;
+			font-size: 110%;
+			margin: 0;
+			border-radius: 0;
+			border: none;
+			width: 100%;
+			display: block;
+			box-sizing: border-box;
+			text-align: left;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			strong {
+				color: $color-matched-text;
+			}
+			&:hover, &:focus {
+				background: $color-button-hover-bg;
+				color: $color-button-hover-text;
+				strong {
+					color: $color-hover-matched-text;
+				}
+			}
+			&.active {
+				background: #ffcc00;
+				color: #000;
+				strong {
+					color: $color-active-matched-text;
+				}
+			}
+			> p {
+			    display: inline;
+			    font-size: small;
+			    &::before {
+			    	content: " - ";
+			    }
+			}
+		}
+
+	}
+}

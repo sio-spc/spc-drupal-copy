@@ -1,0 +1,23 @@
+/*
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+@media all and (min-width: $bp-desktop-min){
+	.layout-container {
+	  min-height: 100%;
+	  // equal to footer height 
+	  margin-bottom: -$global-desktop-footer-height; 
+	}
+	.layout-container:after {
+	  content: "";
+	  display: block;
+	}
+	.site-footer, .layout-container:after {
+	  height: $global-desktop-footer-height; 
+	}
+
+}
+*/

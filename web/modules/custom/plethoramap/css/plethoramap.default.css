@@ -1,0 +1,875 @@
+/* line 3, ../sass/components/_map-loader.scss */
+.map-loader,
+.map-loader:before,
+.map-loader:after {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+/* line 12, ../sass/components/_map-loader.scss */
+.map-loader:before,
+.map-loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+
+/* line 18, ../sass/components/_map-loader.scss */
+.map-loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+/* line 23, ../sass/components/_map-loader.scss */
+.map-loader {
+  color: rgba(0, 0, 0, 0.5);
+  text-indent: -9999em;
+  margin: 88px auto;
+  margin-bottom: 100vh;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+/* line 36, ../sass/components/_map-loader.scss */
+.map-loader:after {
+  left: 1.5em;
+}
+
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+/* line 36, ../sass/components/_autocomplete.scss */
+.autocomplete-component {
+  position: relative;
+}
+/* line 38, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-submit-button {
+  pointer-events: none;
+  position: absolute;
+  z-index: -9;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-indent: -99999px;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  border: none;
+}
+/* line 52, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-submit-button:focus {
+  background: #1db4c4;
+  color: #FFF;
+  width: auto;
+  height: auto;
+  position: absolute;
+  opacity: 1;
+  z-index: 1;
+  text-indent: 0;
+  padding: 2px;
+}
+@media (min-width: 980px) {
+  /* line 52, ../sass/components/_autocomplete.scss */
+  .autocomplete-component .autocomplete-submit-button:focus {
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+  }
+}
+/* line 69, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-no-results-message {
+  color: red;
+  font-size: 80%;
+}
+/* line 72, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-no-results-message .text {
+  display: none;
+}
+@media (max-width: 979px) {
+  /* line 69, ../sass/components/_autocomplete.scss */
+  .autocomplete-component .autocomplete-no-results-message {
+    position: absolute;
+    z-index: 1;
+  }
+  /* line 78, ../sass/components/_autocomplete.scss */
+  .autocomplete-component .autocomplete-no-results-message .text.mobile {
+    display: block;
+    padding: 0.25em;
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid red;
+    border-right: 1px solid red;
+  }
+}
+@media (min-width: 980px) {
+  /* line 69, ../sass/components/_autocomplete.scss */
+  .autocomplete-component .autocomplete-no-results-message {
+    height: 0;
+    position: relative;
+    overflow: visible;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  /* line 92, ../sass/components/_autocomplete.scss */
+  .autocomplete-component .autocomplete-no-results-message .text.desktop {
+    display: block;
+    padding: 0.5em;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid red;
+  }
+}
+/* line 100, ../sass/components/_autocomplete.scss */
+.autocomplete-component input {
+  color: #FFF;
+  background: rgba(0, 113, 179, 0.9);
+  border: none;
+  transition: all 0.2s;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.4em;
+  margin: 0;
+  font-size: 110%;
+}
+/* line 102, ../sass/components/_autocomplete.scss */
+.autocomplete-component input::selection {
+  background: #1db4c4;
+  /* WebKit/Blink Browsers */
+}
+/* line 105, ../sass/components/_autocomplete.scss */
+.autocomplete-component input::-moz-selection {
+  background: #1db4c4;
+  /* Gecko Browsers */
+}
+/* line 120, ../sass/components/_autocomplete.scss */
+.autocomplete-component input:focus {
+  outline: none;
+}
+/* line 123, ../sass/components/_autocomplete.scss */
+.autocomplete-component input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #EFEFEF;
+}
+/* line 127, ../sass/components/_autocomplete.scss */
+.autocomplete-component input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #EFEFEF;
+}
+/* line 130, ../sass/components/_autocomplete.scss */
+.autocomplete-component input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #EFEFEF;
+}
+/* line 133, ../sass/components/_autocomplete.scss */
+.autocomplete-component input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #EFEFEF;
+}
+@media (min-width: 980px) {
+  /* line 100, ../sass/components/_autocomplete.scss */
+  .autocomplete-component input {
+    border: 3px solid transparent;
+  }
+  /* line 138, ../sass/components/_autocomplete.scss */
+  .autocomplete-component input:focus {
+    border-color: #FFF;
+  }
+}
+@media (max-width: 639px) {
+  /* line 100, ../sass/components/_autocomplete.scss */
+  .autocomplete-component input {
+    max-width: 70%;
+    margin: auto;
+    font-size: 1.5em;
+    margin-top: 1.5em;
+  }
+}
+@media (min-width: 640px) and (max-width: 979px) {
+  /* line 100, ../sass/components/_autocomplete.scss */
+  .autocomplete-component input {
+    /* map is hidden < 980px*/
+    max-width: 50%;
+    margin: auto;
+    font-size: 1.5em;
+    margin-top: 1.5em;
+  }
+}
+/* line 156, ../sass/components/_autocomplete.scss */
+.autocomplete-component.has-clear-button input {
+  padding-right: 2em;
+}
+/* line 160, ../sass/components/_autocomplete.scss */
+.autocomplete-component button.autocomplete-clear {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 2.5em;
+  -webkit-appearance: none;
+  background: transparent;
+  color: #FFF;
+  border: none;
+  text-indent: -99999px;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+  outline: none !important;
+  transition: all 0.2s;
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 980px) {
+  /* line 160, ../sass/components/_autocomplete.scss */
+  .autocomplete-component button.autocomplete-clear {
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+  }
+}
+/* line 188, ../sass/components/_autocomplete.scss */
+.autocomplete-component button.autocomplete-clear:hover, .autocomplete-component button.autocomplete-clear:focus {
+  background: #1db4c4;
+  color: #FFF;
+}
+/* line 193, ../sass/components/_autocomplete.scss */
+.autocomplete-component button.autocomplete-clear::after {
+  content: "\f00d";
+  text-indent: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5em;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 1.7em;
+}
+/* line 207, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-suggestions {
+  z-index: 1;
+}
+@media (max-width: 979px) {
+  /* line 207, ../sass/components/_autocomplete.scss */
+  .autocomplete-component .autocomplete-suggestions {
+    position: absolute;
+  }
+  /* line 212, ../sass/components/_autocomplete.scss */
+  .autocomplete-component .autocomplete-suggestions ul {
+    border-bottom: 3px solid #1db4c4;
+  }
+}
+@media (min-width: 980px) {
+  /* line 207, ../sass/components/_autocomplete.scss */
+  .autocomplete-component .autocomplete-suggestions {
+    position: relative;
+    top: -3px;
+  }
+}
+/* line 221, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-suggestions ul {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-height: 70vh;
+  overflow: auto;
+  position: absolute;
+  z-index: 1;
+  min-width: 25em;
+}
+@media (min-width: 980px) {
+  /* line 221, ../sass/components/_autocomplete.scss */
+  .autocomplete-component .autocomplete-suggestions ul {
+    border-left: 3px solid transparent;
+  }
+}
+/* line 235, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-suggestions li {
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* line 240, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-suggestions button {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  cursor: pointer;
+  padding: 0.25em;
+  font-size: 110%;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  text-align: left;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+/* line 255, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-suggestions button strong {
+  color: #000;
+}
+/* line 258, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-suggestions button:hover, .autocomplete-component .autocomplete-suggestions button:focus {
+  background: rgba(0, 113, 179, 0.9);
+  color: #FFF;
+}
+/* line 261, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-suggestions button:hover strong, .autocomplete-component .autocomplete-suggestions button:focus strong {
+  color: #000;
+}
+/* line 265, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-suggestions button.active {
+  background: #ffcc00;
+  color: #000;
+}
+/* line 268, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-suggestions button.active strong {
+  color: #000;
+}
+/* line 272, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-suggestions button > p {
+  display: inline;
+  font-size: small;
+}
+/* line 275, ../sass/components/_autocomplete.scss */
+.autocomplete-component .autocomplete-suggestions button > p::before {
+  content: " - ";
+}
+
+/*********************************************************************************/
+/* HACK */
+/* todo: move this section to theme, since it's not really angular's domain... */
+/* line 30, ../sass/components/_app.scss */
+#block-membermapcontentbelowthemap {
+  padding: 2em;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* line 35, ../sass/components/_app.scss */
+div.layout-content {
+  background: white;
+}
+
+/*********************************************************************************/
+/* line 39, ../sass/components/_app.scss */
+#plethora-map {
+  position: relative;
+  border-bottom: 0.5vh solid #1db4c4;
+}
+/* line 42, ../sass/components/_app.scss */
+body[data-plethoramap-layout="columns"] #plethora-map {
+  border-bottom: none;
+}
+@media (min-width: 980px) {
+  /* line 42, ../sass/components/_app.scss */
+  body[data-plethoramap-layout="columns"] #plethora-map {
+    display: flex;
+  }
+}
+
+/* line 49, ../sass/components/_app.scss */
+#plethora-map-feature-wrapper {
+  height: 100%;
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+/* line 54, ../sass/components/_app.scss */
+#plethora-map-feature-wrapper * {
+  pointer-events: auto;
+}
+/* line 58, ../sass/components/_app.scss */
+#plethora-map-feature-wrapper .plethora-map-feature-detail h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  background-color: #ffca00;
+  color: #333;
+  display: block;
+}
+/* line 66, ../sass/components/_app.scss */
+#plethora-map-feature-wrapper .plethora-map-feature-detail ul {
+  padding: 0;
+}
+@media (min-width: 980px) {
+  /* line 49, ../sass/components/_app.scss */
+  #plethora-map-feature-wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  /* line 72, ../sass/components/_app.scss */
+  body[data-plethoramap-layout="columns"] #plethora-map-feature-wrapper {
+    position: relative;
+  }
+}
+@media (min-width: 980px) {
+  /* line 49, ../sass/components/_app.scss */
+  #plethora-map-feature-wrapper {
+    margin: 1em;
+    width: 50%;
+    min-width: 30em;
+    max-width: 40em;
+  }
+  /* line 80, ../sass/components/_app.scss */
+  body[data-plethoramap-layout="columns"] #plethora-map-feature-wrapper {
+    margin: 0 .5em 0 .5em;
+  }
+}
+@media (min-width: 1000px) {
+  /* line 49, ../sass/components/_app.scss */
+  #plethora-map-feature-wrapper {
+    width: 20%;
+  }
+}
+
+/* line 91, ../sass/components/_app.scss */
+body[data-plethoramap-layout="columns"] .autocomplete-component .autocomplete-suggestions ul {
+  background: #197fba;
+  width: 100%;
+}
+/* line 95, ../sass/components/_app.scss */
+body[data-plethoramap-layout="columns"] .autocomplete-component input {
+  border: none !important;
+}
+
+/* line 100, ../sass/components/_app.scss */
+#plethora-map-container {
+  margin-right: .5em;
+  overflow: hidden;
+  position: relative;
+  background: #eff8ff;
+}
+@media (max-width: 979px) {
+  /* line 100, ../sass/components/_app.scss */
+  #plethora-map-container {
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    top: -100vh;
+    left: -100vw;
+    z-index: -999;
+  }
+  /* line 111, ../sass/components/_app.scss */
+  #plethora-map-container, #plethora-map-container * {
+    pointer-events: none !important;
+  }
+}
+@media (min-width: 980px) {
+  /* line 116, ../sass/components/_app.scss */
+  body[data-plethoramap-layout="columns"] #plethora-map-container {
+    width: 80%;
+  }
+}
+/* line 121, ../sass/components/_app.scss */
+#plethora-map-container rect.background {
+  fill: transparent;
+}
+/* line 124, ../sass/components/_app.scss */
+#plethora-map-container svg {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+/* line 130, ../sass/components/_app.scss */
+#plethora-map-container.framed {
+  margin: 5px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  height: 100%;
+  overflow: hidden;
+}
+/* line 137, ../sass/components/_app.scss */
+#plethora-map-container .point-wrapper {
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+/* line 142, ../sass/components/_app.scss */
+#plethora-map-container .zoomed-in .point-wrapper {
+  opacity: 1;
+}
+/* line 145, ../sass/components/_app.scss */
+#plethora-map-container .pin {
+  pointer-events: auto;
+  cursor: pointer;
+}
+/* line 148, ../sass/components/_app.scss */
+#plethora-map-container .pin .point {
+  transition: fill .5s;
+  fill: rgba(255, 255, 255, 0.2);
+  stroke-width: 1px;
+  stroke: #fff;
+}
+/* line 155, ../sass/components/_app.scss */
+#plethora-map-container .pin .text, #plethora-map-container .pin .icon {
+  transition: fill .5s, opacity .5s;
+}
+/* line 158, ../sass/components/_app.scss */
+#plethora-map-container .pin .text {
+  alignment-baseline: hanging;
+  dominant-baseline: hanging;
+  text-anchor: end;
+  fill: #000;
+  opacity: 0;
+  pointer-events: none;
+}
+/* line 166, ../sass/components/_app.scss */
+#plethora-map-container .pin .icon {
+  text-anchor: middle;
+  fill: rgba(255, 204, 0, 0.7);
+  text-shadow: 0.05em 0.05em rgba(0, 0, 0, 0.4);
+}
+/* line 172, ../sass/components/_app.scss */
+#plethora-map-container .pin:hover .point {
+  fill: rgba(255, 255, 255, 0.7);
+}
+/* line 175, ../sass/components/_app.scss */
+#plethora-map-container .pin:hover .icon {
+  fill: #ffcc00 !important;
+  /* to be overwritten with another important only! */
+}
+/* line 178, ../sass/components/_app.scss */
+#plethora-map-container .pin:hover .text {
+  opacity: 1;
+}
+/* line 185, ../sass/components/_app.scss */
+#plethora-map-container .pin.active .icon {
+  fill: red;
+}
+/* line 191, ../sass/components/_app.scss */
+#plethora-map-container .feature {
+  fill: #f1eee9;
+  transition: fill .5s, stroke 2s;
+  stroke: #CCC;
+  stroke-width: 1px;
+}
+/* line 194, ../sass/components/_app.scss */
+#plethora-map-container .feature.highlighted {
+  cursor: pointer;
+  fill: #1db4c4;
+}
+/* line 199, ../sass/components/_app.scss */
+#plethora-map-container .feature.highlighted.active, #plethora-map-container .feature.highlighted.active:hover, #plethora-map-container .feature.highlighted.active.hover {
+  fill: #0071b3;
+}
+/* line 207, ../sass/components/_app.scss */
+#plethora-map-container .feature:hover, #plethora-map-container .feature.hover {
+  /*  stroke: #000;
+    stroke-width: 1.5px;
+    */
+  fill: #e7e2d9;
+}
+/* line 212, ../sass/components/_app.scss */
+#plethora-map-container .feature:hover.highlighted, #plethora-map-container .feature.hover.highlighted {
+  fill: #0071b3;
+}
+/* line 216, ../sass/components/_app.scss */
+#plethora-map-container .feature.active {
+  fill: #afaeaa;
+}
+/* line 218, ../sass/components/_app.scss */
+#plethora-map-container .feature.active:hover, #plethora-map-container .feature.active.hover {
+  fill: #afaeaa;
+}
+/* line 221, ../sass/components/_app.scss */
+#plethora-map-container .feature.active.highlighted {
+  fill: #0071b3;
+}
+/* line 223, ../sass/components/_app.scss */
+#plethora-map-container .feature.active.highlighted:hover, #plethora-map-container .feature.active.highlighted.hover {
+  fill: #0081cd;
+}
+/* line 230, ../sass/components/_app.scss */
+#plethora-map-container .point-wrapper .text {
+  font-size: 8px;
+}
+/* line 233, ../sass/components/_app.scss */
+#plethora-map-container .hidden {
+  display: none;
+}
+/* line 236, ../sass/components/_app.scss */
+#plethora-map-container div.tooltip {
+  white-space: nowrap;
+}
+@media (max-width: 979px) {
+  /* line 236, ../sass/components/_app.scss */
+  #plethora-map-container div.tooltip {
+    display: none !important;
+  }
+}
+@media (min-width: 980px) {
+  /* line 236, ../sass/components/_app.scss */
+  #plethora-map-container div.tooltip {
+    color: #222;
+    background: #fff;
+    padding: .5em;
+    text-shadow: #f5f5f5 0 1px 0;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px 0px #a6a6a6;
+    opacity: 0.9;
+    position: absolute;
+    z-index: 10;
+  }
+}
+/* line 253, ../sass/components/_app.scss */
+#plethora-map-container .graticule {
+  fill: none;
+  stroke: #bbb;
+  stroke-width: .5px;
+  stroke-opacity: .5;
+}
+/* line 260, ../sass/components/_app.scss */
+#plethora-map-container .equator {
+  stroke: #ccc;
+  stroke-width: 1px;
+}
+
+/* line 265, ../sass/components/_app.scss */
+#plethora-map-debug {
+  position: fixed;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  bottom: 0px;
+  right: 0px;
+  padding: .5em;
+  overflow: auto;
+  max-height: 10em;
+}
+
+/* line 278, ../sass/components/_app.scss */
+#plethora-map-debug {
+  display: table;
+}
+
+/* line 281, ../sass/components/_app.scss */
+#plethora-map-debug dl {
+  display: table-row;
+}
+
+/* line 284, ../sass/components/_app.scss */
+#plethora-map-debug dl > * {
+  display: table-cell;
+  padding: .2em;
+}
+
+/* line 289, ../sass/components/_app.scss */
+.feature-detail-layer {
+  fill: #034003;
+  stroke: #00d002;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+/*
+.feature-detail-layer .FR {
+    fill: #cad6ee;
+    stroke: #848194;
+    stroke-width: 1px;
+}*/
+/* line 301, ../sass/components/_app.scss */
+.debug-shapes-layer .debug {
+  stroke: red;
+  fill: none;
+}
+
+/* line 305, ../sass/components/_app.scss */
+path.feature.show-detail {
+  visibility: hidden;
+}
+
+/* line 310, ../sass/components/_app.scss */
+#plethora-map-feature-wrapper .member-content a:hover, #plethora-map-feature-wrapper .member-content a:focus, #plethora-map-feature-wrapper .member-content a:active {
+  color: black;
+  text-decoration: none;
+}
+
+/* line 316, ../sass/components/_app.scss */
+.plethora-map-feature-detail-member-details .field-item-label {
+  display: inline-block;
+}
+
+/* line 319, ../sass/components/_app.scss */
+.plethora-map-feature-detail-member-details .field-item,
+.plethora-map-feature-detail-member-details .field-items {
+  display: inline-block;
+}
+
+/* line 324, ../sass/components/_app.scss */
+.node--type-member-listing.node--view-mode-teaser > div {
+  display: table;
+}
+
+/* line 327, ../sass/components/_app.scss */
+.node--type-member-listing.node--view-mode-teaser > div > * {
+  display: table-row;
+}
+
+/* line 330, ../sass/components/_app.scss */
+.node--type-member-listing.node--view-mode-teaser > div > .field-title {
+  display: table-caption;
+}
+
+/* line 333, ../sass/components/_app.scss */
+.node--type-member-listing.node--view-mode-teaser > div > .field-title > * {
+  display: block;
+}
+
+/* line 336, ../sass/components/_app.scss */
+.node--type-member-listing.node--view-mode-teaser > div > * > * {
+  display: table-cell;
+  padding-right: 2em;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 342, ../sass/components/_app.scss */
+.node--type-member-listing.node--view-mode-teaser > div > * > .field-item-label::after {
+  content: ":";
+}
+
+/* line 345, ../sass/components/_app.scss */
+.plethora-map-feature-detail-member-details {
+  list-style-type: none;
+  margin: 0 1em 1em 1em;
+  overflow: hidden;
+}
+
+/* line 350, ../sass/components/_app.scss */
+#plethora-map-hide-on-mobile {
+  display: none;
+}
+@media (min-width: 980px) {
+  /* line 350, ../sass/components/_app.scss */
+  #plethora-map-hide-on-mobile {
+    display: block;
+  }
+}
+
+/* line 8, ../sass/components/_feature-detail.scss */
+.plethora-map-feature-detail {
+  padding: 0;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 10px 10px 31px -1px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 10px 10px 31px -1px rgba(0, 0, 0, 0.43);
+  box-shadow: 10px 10px 31px -1px rgba(0, 0, 0, 0.43);
+}
+@media (max-width: 979px) {
+  /* line 8, ../sass/components/_feature-detail.scss */
+  .plethora-map-feature-detail {
+    border-bottom: 1px solid #0071b3;
+  }
+}
+@media (min-width: 980px) {
+  /* line 8, ../sass/components/_feature-detail.scss */
+  .plethora-map-feature-detail {
+    margin-top: 1em;
+    max-height: 75%;
+    overflow: auto;
+  }
+}
+/* line 22, ../sass/components/_feature-detail.scss */
+.plethora-map-feature-detail .member-listing-image {
+  text-align: center;
+}
+/* line 25, ../sass/components/_feature-detail.scss */
+.plethora-map-feature-detail > ul {
+  padding: 0;
+  margin: 0;
+  display: table;
+  width: 100%;
+}
+/* line 30, ../sass/components/_feature-detail.scss */
+.plethora-map-feature-detail > ul > li {
+  display: table-row;
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 2em;
+  padding: 0.5em;
+  background: rgba(255, 255, 255, 0.8);
+}
+/* line 37, ../sass/components/_feature-detail.scss */
+.plethora-map-feature-detail > ul > li > * {
+  display: table-cell;
+  padding: 0;
+  padding-bottom: 0;
+}
+/* line 42, ../sass/components/_feature-detail.scss */
+.plethora-map-feature-detail > ul > li .member-listing-image {
+  vertical-align: top;
+}
+/* line 44, ../sass/components/_feature-detail.scss */
+.plethora-map-feature-detail > ul > li .member-listing-image img {
+  max-width: none;
+}
+/* line 48, ../sass/components/_feature-detail.scss */
+.plethora-map-feature-detail > ul > li .images img {
+  display: block;
+  width: 100% !important;
+  height: auto;
+}
+/* line 53, ../sass/components/_feature-detail.scss */
+.plethora-map-feature-detail > ul > li .member-listing-info {
+  vertical-align: top;
+}
+/* line 56, ../sass/components/_feature-detail.scss */
+.plethora-map-feature-detail > ul > li h2.member-listing-title {
+  margin-top: 0;
+  padding: 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #666;
+}
+/* line 63, ../sass/components/_feature-detail.scss */
+.plethora-map-feature-detail > ul > li .member-type {
+  display: inline-block;
+  padding: 0.2em 0.8em;
+  background: #0071b3;
+  color: #FFF;
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}

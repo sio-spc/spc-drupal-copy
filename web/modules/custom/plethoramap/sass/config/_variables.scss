@@ -1,0 +1,41 @@
+$global-color-text: #3b3b3b;
+$global-color-text-dark: #FFF;
+$global-color-link: #0071b3;
+$global-color-link-dark: #0071b3;
+//general
+$global-color-hover: #1db4c4;
+$global-color-hover-dark: #1db4c4;
+$global-color-highlight: #1db4c4;
+$global-color-highlight-dark: #1db4c4;
+$global-color-highlight-alt: #0071b3;
+$global-color-highlight-alt-dark: #0071b3;
+$global-color-highlight-contrast: #FFF; // color for text if the background is the highlight color, or vice versa
+$global-color-highlight-contrast-dark: #FFF; // color for text if the background is the highlight color, or vice versa
+$global-color-highlight-contrast2: #000; //another color that contrasts with the highlight color
+$global-color-highlight-contrast2-dark: #000; //another color that contrasts with the highlight color
+
+//main
+$global-color-main-bg: #f8f8f9;
+$global-color-main-bg-dark: rgb(10,10,10);
+//breadcrumbs
+$global-color-blockquote-bg: #F7F7F7;
+$global-color-blockquote-bg-dark: #333;
+$global-color-blockquote-bg-dark-with-bgimage: rgba(100,100,100,0.8);
+$global-color-blockquote-quote: #BBB;
+$global-color-blockquote-quote-dark: #666;
+$global-color-highlighted-bg: #000;
+$global-color-highlighted-bg-dark: #FFF;
+$global-color-highlighted: #FFF;
+$global-color-highlighted-dark: #000;
+//<breakpoints>
+$bp-mobile-max: 699px;
+$bp-tablet-min: $bp-mobile-max + 1;
+$bp-tablet-max: 979px;
+$bp-desktop-min: $bp-tablet-max + 1;
+$global-map-desktop-view-breakpoint: $bp-desktop-min;
+//</breakpoints>
+
+$global-color-admin-links-bg: $global-color-highlight;
+$global-color-admin-links-text: #FFF;
+
+

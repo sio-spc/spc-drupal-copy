@@ -1,0 +1,5 @@
+img[data-align="left"], img[data-align="right"]{
+  @media (min-width: 768px){
+    max-width: 40%!important;
+  }
+}

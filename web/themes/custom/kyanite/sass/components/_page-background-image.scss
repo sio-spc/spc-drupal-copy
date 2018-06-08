@@ -1,0 +1,17 @@
+.page-background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -100;
+    transition: transform 0.8s;
+}
+.page-background-image.trans-in {
+	transform: scale(1.2);
+}
+.page-background-image.trans-out {
+	transform: scale(2);
+}

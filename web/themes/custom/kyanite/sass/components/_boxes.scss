@@ -1,0 +1,68 @@
+/*.field-field-boxes, .field-field-bottom-boxes{
+	.field-items{
+		@media (min-width: 640px){
+			@include flexbox();
+			flex-flow: row wrap;
+			justify-content: space-between;
+		}
+
+		.field-item{
+			margin-bottom: 2em;
+			@media (min-width: 640px){
+
+				width: 45%;
+				&:nth-child(2n+1){
+					padding-right: 1em;
+				}
+				&:nth-child(2n+2){
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+	&.box-3col{
+		.field-items{
+			@media (min-width: 768px){
+				.field-item{
+					width: 30%;
+					&:nth-child(3n+1){
+						padding-left:0;
+						padding-right: .5em;
+					}
+					&:nth-child(3n+2){
+						padding-left: .5em;
+						padding-right: .5em;
+					}
+					&:nth-child(3n+3){
+						padding-left: .5em;
+						padding-right:0;
+					}
+				}
+			}
+		}
+	}
+	&.box-4col{
+		.field-items{
+			@media (min-width: 960px){
+				.field-item{
+					width: 22%;
+					&:nth-child(3n+1){
+						padding-left:0;
+						padding-right: .5em;
+					}
+					&:nth-child(3n+2), &:nth-child(3n+3){
+						padding-left: .5em;
+						padding-right: .5em;
+					}
+					&:nth-child(3n+4){
+						padding-left: .5em;
+						padding-right:0;
+					}
+				}
+			}
+		}
+	}
+}
+.field-field-box-columns, .field-field-bottom-box-columns{
+	display: none;
+}*/

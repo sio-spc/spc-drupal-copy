@@ -1,0 +1,178 @@
+
+
+
+.responsive-fullwidth-slideshow { // we should be able to do better than .skin-default -- let's look for alternatives...
+	position: relative;  //important for safari to position other elements properly
+	overflow: hidden; //if you add too much text, too bad...
+	width: 100%;
+	color: white;
+	.views_slideshow_cycle_teaser_section {
+		margin: 0 auto;
+	}
+	.views-slideshow-controls-top {
+	    position: absolute;
+	    z-index: 100; // 
+	    left: 0;
+	    right: 0;
+	    top: 0;
+	    bottom: 0;
+	}
+	.views_slideshow_slide_counter {
+		position: absolute;
+		right: 1em;
+		bottom: 0.5em;
+	    font-size: 0.7vw;
+	    opacity: 0;
+	    transition: opacity 0.5s;
+	}
+	.views_slideshow_slide  {
+		.views-field-title { 
+	//perhaps this should be the alt text of the image.  However, if this field is present in the view, let's style it so it appears bottom left
+		    position: absolute;
+		    left: 1em;
+		    bottom: 0.5em;
+		    font-size: 2vw;
+		    a {
+		    	color: white;
+		    }
+		    p {
+		    	margin: 0;
+		    }
+		    opacity: 0;
+		    transition: opacity 0.5s;
+		}
+
+		.views-field-field-slide-text {
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    font-size: 3.7vw;
+		    text-align: center;
+		    &.has-content-wrapper { //this class gets added by js (or something...) to allow for vertical centering approach
+		    	top: 0;
+		    	height: 100%;
+		    	> .field-content {
+		    		display: table;
+		    		height: 100%;
+		    		width: 100%;
+		    		> .content-wrapper {
+		    			display: table-cell;
+		    			vertical-align: middle;
+		    			p {
+		    				display: inline-block;
+		    			}
+		    		}
+		    	}
+		    }
+		    &:not(.has-content-wrapper) {
+		    	top: 42%;
+		    }
+		    a {
+		    	color: white;
+		    }
+		    p {
+		    	margin: 0;
+		    }
+
+		    &.mediumtext { //added via js...
+			    font-size: 2vw;
+			    padding-right: 6vw;
+			    padding-left: 6vw;
+		    }
+		    &.longtext { //added via js...
+			    font-size: 1.5vw;
+			    padding-right: 12vw;
+			    padding-left: 12vw;
+			    text-align: left;
+			}
+		    &.extralongtext { //added via js...
+			    font-size: 1vw;
+		    }
+		}
+	}
+	.views_slideshow_controls_text {
+
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+
+		a {
+			//text-indent: -99999px;
+			display: inline-block;
+			font-size: 0;
+			text-decoration: none !important;
+		}
+		a::before  {
+		    display: inline-block;
+		    font: normal normal normal 40px/1 FontAwesome;
+		    text-rendering: auto;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		    width: 1em;
+		    vertical-align: middle;
+		    transform: scale(0.9);
+		    position: absolute;
+		    color: white;
+		    opacity: 0.5;
+	    	transition: transform 0.5s, opacity 0.5s;
+
+		}
+		a:hover::before, a:focus::before, a:active::before  {
+			transform: scale(1.2);
+			opacity: 0.9;
+		}
+		.views_slideshow_controls_text_previous a::before {
+	    	content: $fa-var-chevron-left;
+		    left: 0;
+		    top: 50%;
+		}
+		.views_slideshow_controls_text_next a::before {
+	    	content: $fa-var-chevron-right;
+		    right: 0;
+		    top: 50%;
+		}
+		.views_slideshow_controls_text_pause {
+		    a::before {
+	    		font-size: 60px;
+			    top: 10px;
+			    right: 10px;
+			    margin: 0;
+			    padding: 0;
+	    	}
+	    	&.views-slideshow-controls-text-status-play a::before {
+	    		content: $fa-var-pause;
+
+	    	}
+	    	&.views-slideshow-controls-text-status-pause a::before {
+	    		content: $fa-var-play;
+			}
+		}
+	    opacity: 0;
+	    transition: opacity 0.5s;
+	}
+
+	//show all the stuff we've got hidden by default, like next/back icons and title / page count
+	// show it upon hovering over the slideshow
+	&:hover  {
+		
+		.views_slideshow_slide .views-field-title, .views_slideshow_controls_text, .views_slideshow_slide_counter  { 
+		    opacity: 1;
+		}
+	}
+
+
+	//now to make this sucker responsive:
+	.views_slideshow_slide img {
+	    width: 100%;
+	    height: auto;
+	}
+	.views_slideshow_cycle_teaser_section, .views_slideshow_slide {
+		//JS is setting the width directly, this is nonsense. let the screen decide.
+	    width: 100% !important;
+	    height: auto !important;
+	    //for the height, we have to rely on a JS hack...
+	}
+}
+

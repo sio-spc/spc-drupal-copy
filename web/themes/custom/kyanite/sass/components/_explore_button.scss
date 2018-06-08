@@ -1,0 +1,212 @@
+.explore-button{
+    transition: opacity .5s;
+    .fixed-header-is-fixed.explore-closed #explore & {
+	opacity: 0;
+	pointer-events: none !important;
+    }
+    font-size: 1.3em;
+    line-height: 1.8em;
+    height: 1.8em;
+    background: transparent;
+
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    padding-left: 1em; //this is to roughly center the icon with the icons in the menu below it.
+    @media (max-width: $bp-mobile-max){
+    	padding-bottom: 1em; // only doing this on mobile, otherwise the line above the first menu item no longer aligns!
+	}
+    margin: 0;
+    display: inline-block;
+    white-space: nowrap;
+
+	.text{
+    	font-size: .8em;
+    	line-height: normal;
+	    display: inline-block;
+	    vertical-align: middle;
+	    position: relative;
+	    transition: left 0.5s, max-width 0.5s;
+	    max-width: 100vw;
+	    /*text-indent: 0.5em;*/
+	    margin-right: .5em;
+	    
+	    vertical-align: middle;
+	    @media (max-width: $bp-mobile-max) {
+	    	//global-mobile-explore-text-visible: $global-mobile-explore-text-visible;
+	    	@if $global-mobile-explore-text-visible == false {
+		    	text-indent: -99999px;
+		    	left: -999999px;
+		    	position: absolute;
+		    }
+		}
+	}
+	&::after{
+		content: $fa-var-navicon;
+	    font: normal normal normal 2em/1 FontAwesome;
+		width: 1em;
+	    text-rendering: auto;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    display: inline-block;
+	    vertical-align: middle;
+	    transition: transform 0.5s;
+	}
+
+
+    color: #9da1a4;
+	&:hover, &:active, &:focus {
+		color: $global-color-hover;
+		outline: none;
+	}
+	transition: color 0.2s;
+}
+body.explore-open {
+	.explore-button{
+		color: #4c6686;
+		&:hover {
+			color: $global-color-hover; //you'll only see this color if you first click somewhere else to remove the focus, and then hover
+		}
+		&:active, &:focus {
+			color: #4c6686;
+		}
+		/* &::after{
+			content: $fa-var-close;
+		} */
+	}
+}
+body.explore-open.explore-animating-first-half, 
+body.explore-closed.explore-animating-second-half,  
+body.explore-closed{
+	.explore-button{
+		&::after{
+			content: $fa-var-navicon;
+		}
+	}
+}
+body.explore-closed.explore-animating-first-half,  
+body.explore-open.explore-animating-second-half,  
+body.explore-open {
+	.explore-button{
+		&::after{
+			content: $fa-var-close;
+		}
+	}
+}
+body.explore-animating-first-half {
+	.explore-button{
+		&::after{
+			padding: 0 !important;
+		}
+	}
+}
+body.explore-open.explore-animating-first-half {
+	.explore-button{
+		&::after{
+			transform: scaleX(0);
+		}
+	}
+}
+body.explore-open.explore-animating-second-half, body.explore-open {
+	.explore-button{
+		&::after{
+			transform: scaleX(1);
+		}
+	}
+}
+
+
+
+body.explore-closed.explore-animating-first-half {
+	.explore-button{
+		&::after{
+			transform: scaleX(0);
+		}
+	}
+}
+body.explore-closed.explore-animating-second-half, body.explore-closed {
+	.explore-button{
+		&::after{
+			transform: scaleX(1);
+		}
+	}
+}
+body.no-explore {
+	#explore, .explore-button, .layout-secondary-menu {
+		display: none !important; // usually this should not show up at all, but maybe we'll want a way to hide the explore menu by adding a class
+	}
+}
+/*
+@media (min-width: $bp-tablet-min){
+	.fixed-header {
+		.explore-button{
+			padding-top: $global-top-line-height; //to account for this being gone...
+		}
+	}
+}
+*/
+
+.explore-button-fixed { //this is a clone of explore-button
+	position: relative;
+	@media (max-width: $bp-desktop-big-min){
+		margin-top: 6px;
+	}
+	@media (min-width: $bp-desktop-big-min){
+		/*font-size: 1vw;*/
+	}
+	.text {
+		text-indent: -99999px;
+		left: -999999px;
+		position: absolute;
+	}
+}
+
+// MOBILE ONLY
+
+
+.explore-button { 
+	@media (max-width: $bp-mobile-max){
+		transition: padding 0.5s, background-color 0.5s, color 0.5s;
+	    z-index: 999999;
+	    padding-top: 0.8em;
+	    padding-right: 0.8em;
+	    position: fixed;
+	    line-height: 1.8em;
+	    height: 1.8em;
+		@if $global-layout-logo-explore-direction == right{
+			right: 0;
+		}
+		else {
+			left: 0;
+		}
+	    //float: $global-layout-logo-explore-direction;
+	    //position: relative;
+	    //z-index: 1;
+	}
+	/*@media (min-width: $bp-desktop-min){
+		line-height: 2.4em;
+		height: 2.4em;
+		vertical-align: middle;
+	}*/
+	@media (min-width: $bp-desktop-big-min){
+		/*line-height: 2.8em;
+		height: 2.8em;
+		vertical-align: middle;*/
+		margin-top: .3em;
+	}
+}
+
+.scrolled-down {
+	@media (max-width: $bp-mobile-max){
+		.explore-button { 
+	    	padding: 0.5em;
+	    	background-color: rgba(0,0,0, 0.5);
+	    	color: white !important;
+	    	&.touching {
+	    		background-color: rgba(0,0,0,1);
+
+	    	}
+		}
+	}
+}
+

@@ -1,0 +1,15 @@
+name: 'Geofield Map'
+description: 'Map Widget, Formatter and Views integration for Geofields.'
+package: Field types
+dependencies:
+  - drupal:geofield
+
+# core: 8.x
+type: module
+configure: geofield_map.settings
+
+# Information added by Drupal.org packaging script on 2018-03-11
+version: '8.x-1.44'
+core: '8.x'
+project: 'geofield_map'
+datestamp: 1520809691

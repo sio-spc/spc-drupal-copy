@@ -1,0 +1,83 @@
+#block-socialmedia {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    .field-body{
+    	margin: 0 auto;
+    }
+	 > div:not(.contextual) {
+    	display: table;
+    	@media (max-width: $bp-mobile-max){
+    		margin: 0 auto;
+    	}
+	 	> ul {
+		 	display: table-row;
+		 	li {
+			    list-style-type: none;
+			    margin: 0;
+			    padding-left: 0.25em;
+			    padding-right: 0.25em;
+			    display: table-cell;
+			    a {
+			    	display: block;
+			    	img {
+					    width: 32px;
+					    height: auto;
+					    display: block;
+			    	}
+			    	&:focus {
+			    		outline: none;
+			    	}
+			    }
+
+			}
+		 }
+	}
+}
+// extra flourish, a little 2px line below each icon
+#block-socialmedia > div:not(.contextual) > ul li a {
+	position: relative;
+	&:hover::after, &:focus::after, &:active::after {
+	    border-bottom-color: #CCC;
+	    left: 0;
+	    right: 0;
+	}
+	&::after {
+	    content: " ";
+	    border-bottom: 2px solid transparent;
+	    height: 0;
+	    left: 50%;
+	    right: 50%;
+	    position: absolute;
+	    bottom: -5px;
+	    transition: border-bottom-color 0.2s, left 0.2s, right 0.2s;
+	}
+}
+//special considerations when placed in the secondary menu
+//.layout-secondary-menu {
+	#block-socialmedia {
+		//margin-bottom: 3em;
+		> div:not(.contextual) > ul li:first-of-type {
+			    padding-left: 1em;
+		}
+		.field-body ul{
+			font-size: 1.3em;
+			padding-left: 1em;
+			li{
+				list-style-type: none;
+				list-style: none;
+				display: inline-block;
+				margin-right: 10px;
+				img{
+					width: 37px;
+					height: auto;
+					//background-color: #fff;
+				}
+			}
+		}
+	}
+//}
+
+.subscribe-button-inner{
+	position: relative;
+	top: -5px;
+}

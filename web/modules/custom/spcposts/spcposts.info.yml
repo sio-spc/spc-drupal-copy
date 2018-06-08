@@ -1,0 +1,38 @@
+name: SPC Posts importer
+description: 'import CSV data from wp posts'
+package: Custom
+type: module
+version: 0.1
+core: 8.x
+#libraries:
+#  - plethoramap/base
+dependencies:
+  - drupal:migrate_source_csv
+  - drupal:migrate
+  - drupal:migrate_plus
+  - drupal:migrate_tools
+
+config_devel:
+ install:
+   - migrate_plus.migration.news_en
+   - migrate_plus.migration.news_fr
+   - migrate_plus.migration.featured_image_en
+   - migrate_plus.migration.featured_image_fr
+   - migrate_plus.migration.speeches_en
+   - migrate_plus.migration.speeches_fr
+   - migrate_plus.migration.speechimages_en
+   - migrate_plus.migration.speechimages_fr
+   - migrate_plus.migration.zoom_en
+   - migrate_plus.migration.zoom_fr
+   - migrate_plus.migration.zoomimages_en
+   - migrate_plus.migration.zoomimages_fr
+   - migrate_plus.migration.spc_tags
+   - migrate_plus.migration.spc_categories
+   - migrate_plus.migration.postsother_en
+   - migrate_plus.migration.postsother_fr
+   - migrate_plus.migration.postsother_images_en
+   - migrate_plus.migration.postsother_images_fr
+   - migrate_plus.migration.pages_en
+   - migrate_plus.migration.pages_fr
+   - migrate_plus.migration.pages_aliases_en
+   - migrate_plus.migration.pages_aliases_fr

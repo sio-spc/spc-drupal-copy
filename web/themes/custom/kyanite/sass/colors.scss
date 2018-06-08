@@ -1,0 +1,62 @@
+@import "init";
+a,
+.link {
+  color: $global-color-link;
+}
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: $global-color-hover;
+}
+a:active,
+.link:active {
+  color: $global-color-hover;
+}
+
+/* ---------- Color Form ----------- */
+
+[dir="rtl"] .color-form .color-palette {
+  margin-left: 0;
+  margin-right: 20px;
+}
+[dir="rtl"] .color-form .form-item label {
+  float: right;
+}
+[dir="rtl"] .color-form .color-palette .lock {
+  right: -20px;
+  left: 0;
+}
+
+.layout-primary-menu {
+    background-color: $global-color-main-menu-bg;
+    transition: background $global-color-scheme-change-duration;
+	a {
+		color: $global-color-main-menu-links;
+		transition: color $global-color-scheme-change-duration;
+	}
+}
+
+body.has-background-image{
+	.layout-breadcrumb {
+		background: none;
+		border-bottom: 1px solid rgba(0,0,0,0.5);
+	}
+}
+body.color-scheme-dark{
+	.layout-breadcrumb {
+		background: $global-color-layout-breadcrumb-bg-dark;
+	}
+	.layout-primary-menu {
+	    background-color: $global-color-main-menu-bg-dark;
+		a {
+			color: $global-color-main-menu-links-dark;
+		}
+	}
+	&.has-background-image {
+		.layout-breadcrumb {
+			background: none;
+			border-bottom: 1px solid rgba(255,255,255,0.5);
+		}
+	}
+}

@@ -1,0 +1,62 @@
+body.divisionsite:not(.division-sdp) .langswitcherblock{
+	@media (max-width: 959px){
+		display: none!important;
+	}
+}
+body.divisionsite{
+	#explore{
+		@media (min-width: 700px){
+			top: 50px!important;
+		}
+	}
+	#header > .region-header > div:nth-child(2), .frieze{
+		@media (max-width: 699px){
+			position: relative;
+			margin-top: 1em;
+			right: 0;
+		}
+	}
+	.divisioniconsheader.spcgrid > .item-list > ul{
+		justify-content: center;
+	}
+	.frieze{
+		text-align: center;
+		.layout-primary-menu{
+			display: inline-block;
+		}
+		.divisioniconsheader .item-list li{
+			&.active{
+				background-color: #5cbec7;
+				-webkit-border-radius: 6px;
+				-moz-border-radius: 6px;
+				border-radius: 6px;
+			}
+			a.active{
+				opacity: .4;
+			}
+		}
+		@media (min-width: 700px){
+			padding-right: 8em!important;
+		    padding-left: 1em!important;
+		}
+	}
+	.headertitle{
+		font-size: 2em;
+		text-align: center;
+		.field-body{
+			padding-bottom: 0;
+		}
+	}
+	.layout-primary-menu .superfishdropdown{
+		> ul, ul.sf-menu.sf-style-white{
+			> li {
+					font-size: 1.4vw;
+				}
+		}
+	}
+	&.path-cces{
+		h1{
+			text-align: center;
+		}
+	}
+}

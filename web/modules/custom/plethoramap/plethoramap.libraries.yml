@@ -1,0 +1,14 @@
+base:
+  version: VERSION
+  js:
+    angular/plethoramap/dist/inline.bundle.js: {minified: true}
+    angular/plethoramap/dist/polyfills.bundle.js: {minified: true}
+#    angular/plethoramap/dist/styles.bundle.js: {minified: true}
+#    angular/plethoramap/dist/vendor.bundle.js: {minified: true}
+    angular/plethoramap/dist/main.bundle.js: {minified: true}
+#    https://d3js.org/d3.geo.projection.v0.min.js: {type: external, minified: true}
+#    https://d3js.org/topojson.v1.min.js: {type: external, minified: true}
+  css:
+    base:
+        css/plethoramap.default.css: {}
+        angular/plethoramap/dist/styles.bundle.css: {minified: true}

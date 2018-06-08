@@ -1,0 +1,61 @@
+.kyanite-image-caption-button-block{
+	position: relative;
+	display: block;
+	.field-field-image{
+		display: block;
+		position: relative;
+		overflow: hidden;
+		img{
+			display: block;
+			width: 100%;
+			max-width: none;
+			-webkit-transition: all 250ms ease-in-out;
+		    -moz-transition: all 250ms ease-in-out;
+		    -ms-transition: all 250ms ease-in-out;
+		    -o-transition: all 250ms ease-in-out;
+			transition: all 250ms ease-in-out;
+			&:hover{
+				-moz-transform:scale(1.08);
+				-o-transform:scale(1.08);
+				-ms-transform:scale(1.08);
+				-webkit-transform:scale(1.08);
+				transform:scale(1.08);
+				opacity: .8;
+			}
+		}
+	}
+	.caption-and-button{
+		position: absolute;
+		bottom: 20px;
+		display: block;
+		width: 100%;
+		text-align: center;
+		.field-field-caption{
+			font-size: 3em;
+			color: #fff;
+			font-weight: bold;
+			text-shadow: 0px 0px 0.3em #000;
+		}
+		.field-field-button{
+			padding-top: 1em;
+			padding-bottom: 2em;
+			font-size: 1em;
+			a, .captionbutton{
+				display: inline-block;
+				background-color: $global-color-hover;
+				color: #fff;
+				text-transform: uppercase;
+				padding: .5em 2em;
+				font-weight: bold;
+				-webkit-border-radius: 6px;
+				-moz-border-radius: 6px;
+				border-radius: 6px;
+				transition: all 0.2s ease-in-out;
+				&:hover{
+					text-decoration: none;
+					background-color: #069;
+				}
+			}
+		}
+	}
+}

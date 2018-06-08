@@ -1,0 +1,75 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/angular-apps\/topics\/topics\.scss}line{font-family:\000032}}
+.kyanite-banner-block, #block-introtextforpublications {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/angular-apps\/topics\/topics\.scss}line{font-family:\000035}}
+#block-introtextforpublications {
+  text-align: center;
+  padding: 1em 10%;
+  background-color: #fff;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/angular-apps\/topics\/topics\.scss}line{font-family:\0000310}}
+.layout-breadcrumb {
+  display: none !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/angular-apps\/topics\/topics\.scss}line{font-family:\0000313}}
+.layout-content {
+  max-width: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/angular-apps\/topics\/topics\.scss}line{font-family:\0000318}}
+body:not(.path-frontpage) #main {
+  max-width: none !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/angular-apps\/topics\/topics\.scss}line{font-family:\0000321}}
+#block-kyanite-kyanite-block-9 {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/angular-apps\/topics\/topics\.scss}line{font-family:\0000324}}
+.site-footer {
+  padding-bottom: 2em !important;
+  /*
+  	* {
+  	    line-height: normal;
+  	}
+  	*/
+}
+
+@media (max-width: 879px) {
+  /* mobile view for topics, leave room for fixed height footer */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/angular-apps\/topics\/topics\.scss}line{font-family:\0000336}}
+  .site-footer {
+    padding-bottom: 3em !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/angular-apps\/topics\/topics\.scss}line{font-family:\0000339}}
+  #main {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/angular-apps\/topics\/topics\.scss}line{font-family:\0000343}}
+  .layout-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/angular-apps\/topics\/topics\.scss}line{font-family:\0000349}}
+#main {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/spc\/html\/drupal-composer-build\/web\/themes\/custom\/kyanite\/sass\/angular-apps\/topics\/topics\.scss}line{font-family:\0000356}}
+h1.topic-title .topic-download-button {
+  font-family: "PT Sans", sans-serif;
+}

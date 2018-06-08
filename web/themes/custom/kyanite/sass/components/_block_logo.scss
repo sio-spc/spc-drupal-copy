@@ -1,0 +1,87 @@
+#logo-fixed { // this is really a partial clone of #block-logo
+	img {
+		display: block;
+		width: $global-logo-width-mobile;
+		height: auto; // $global-logo-height-mobile;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		@media (min-width: $bp-desktop-big-min){
+			width: $global-fixed-logo-width-desktop-big;
+			margin-top: 0.5vw;
+			margin-bottom: 0.5vw;
+		}
+	}
+}
+#block-kyanite-branding {
+	text-align: $global-layout-logo-direction;
+	position: relative;
+
+	@media (min-width: $bp-tablet-min){
+		text-align: center;
+	}
+	@media (max-width: $bp-mobile-max){
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+	@media (max-width: $bp-tablet-max){
+		margin-top:4px;
+	}
+
+	a,
+	a.link {
+	  transition: all 0.5s;
+	  text-decoration: none;
+	  border-bottom: none;
+	  display: inline-block;
+	  position: relative;
+	}
+	a:hover,
+	a:active,
+	a:focus,
+	.link:hover,
+	.link:active,
+	.link:focus {
+	  text-decoration: none;
+	  border-bottom: none;
+	}
+
+	img {
+		//transition: all 0.5s;
+		max-width: none;
+		max-height: none;
+		width: $global-logo-width-mobile;
+		//height: $global-logo-height-mobile;
+		margin-top:0;
+		@media(min-width: $bp-tablet-min){
+			width: $global-logo-width-tablet;
+			//height: $global-logo-height-tablet;
+		}
+		@media(min-width: $bp-desktop-min){
+			width: $global-logo-width-desktop;
+			//height: $global-logo-height-desktop;
+		}
+		@media(min-width: $bp-desktop-big-min){
+			width: $global-logo-width-desktop-big;
+			//height: $global-logo-height-desktop;
+		}
+	}
+	p {
+		margin: 0;
+		padding: 0;
+		line-height: 0;
+	}
+}
+.divisionsite #block-kyanite-branding{
+	display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: $bp-mobile-max){
+	.explore-open {
+		#block-kyanite-branding {
+			display: none; 
+		}
+	}
+}

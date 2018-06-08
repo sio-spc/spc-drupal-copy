@@ -1,0 +1,144 @@
+{
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/drupal-scaffold": "^2.2",
+        "drupal/address": "1.x-dev",
+        "drupal/addtocalendar": "^3.1",
+        "drupal/admin_toolbar": "1.x-dev",
+        "drupal/better_exposed_filters": "^3.0@alpha",
+        "drupal/block_class": "^1.0@alpha",
+        "drupal/bootstrap_library": "^1.10",
+        "drupal/captcha": "1.0-beta1",
+        "drupal/ckeditor_entity_link": "1.0-alpha2",
+        "drupal/color_field": "2.0-rc2",
+        "drupal/colorbox": "1.4",
+        "drupal/config_devel": "1.2",
+        "drupal/config_update": "1.5",
+        "drupal/context_active_trail": "^1.0@RC",
+        "drupal/core": "8.5.3",
+        "drupal/devel": "^1.2",
+        "drupal/easy_breadcrumb": "1.6",
+        "drupal/entityqueue": "1.0-alpha7",
+        "drupal/exclude_node_title": "1.0-beta1",
+        "drupal/field_group": "^1.0",
+        "drupal/filefield_paths": "1.0-beta1",
+        "drupal/fitvids": "1.0",
+        "drupal/flexslider": "2.0-beta1",
+        "drupal/geofield_map": "^1.44",
+        "drupal/geolocation": "^1.11",
+        "drupal/image_effects": "^2.0",
+        "drupal/imce": "1.x-dev",
+        "drupal/inline_responsive_images": "2.1",
+        "drupal/link_target": "^1.2",
+        "drupal/menu_block": "1.x-dev",
+        "drupal/menu_trail_by_path": "1.1",
+        "drupal/metatag": "1.4.0",
+        "drupal/migrate_devel": "1.x-dev",
+        "drupal/migrate_manifest": "1.7",
+        "drupal/migrate_source_csv": "2.0",
+        "drupal/migrate_tools": "4.0-beta3",
+        "drupal/pathauto": "1.0",
+        "drupal/recaptcha": "2.2.0",
+        "drupal/redirect": "1.0",
+        "drupal/restui": "^1.15",
+        "drupal/scheduler": "1.0",
+        "drupal/search404": "1.x-dev",
+        "drupal/simple_social_icons": "2.x-dev",
+        "drupal/superfish": "1.2",
+        "drupal/title_field_for_manage_display": "^1.0",
+        "drupal/video_embed_field": "1.5",
+        "drupal/views_bulk_edit": "2.0-beta4",
+        "drupal/views_bulk_operations": "2.0",
+        "drupal/views_field_formatter": "1.7",
+        "drupal/views_field_view": "1.0-beta2",
+        "drupal/views_infinite_scroll": "1.x-dev",
+        "drupal/viewsreference": "2.0-alpha4",
+        "drupal/webform": "5.0-rc3",
+        "drupal/wordpress_migrate": "3.0-alpha2",
+        "drupal/wp_migrate": "1.1.0",
+        "drupal/wysiwyg_linebreaks": "1.9",
+        "drush/drush": "^9.2",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3"
+    },
+    "require-dev": {
+        "webflo/drupal-core-require-dev": "~8.4"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "7.0.25"
+        }
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "scripts": {
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/core": {
+                "Entity Links fields does not have translation support - https://www.drupal.org/project/drupal/issues/2877994": "https://www.drupal.org/files/issues/2018-03-20/2877994-15.patch",
+                "Entity Links fields does not have translation support - https://www.drupal.org/project/drupal/issues/2877994#comment-12539299": "https://www.drupal.org/files/issues/2018-03-22/2877994-19.patch",
+                "HTML head has alternate hreflang links to unpublished translations - https://www.drupal.org/project/drupal/issues/2521782": "https://www.drupal.org/files/issues/2018-03-14/drupal-alternate_hreflang_unpublished_with_test-2521782-57.patch",
+                "The Views integration Datetime Range fields should extend the views integration for regular Datetime fields - https://www.drupal.org/node/2786577": "https://www.drupal.org/files/issues/2786577-270_0.patch",
+                "View output is not used for entityreference options - https://www.drupal.org/project/drupal/issues/2174633#comment-12518942": "https://www.drupal.org/files/issues/2018-03-09/drupal-use_view_output_for_entityreference_options-2174633-206.patch"
+            },
+            "drupal/imce": {
+                "Make IMCE work with managed files": "https://www.drupal.org/files/issues/2018-03-20/imce-managed-2762473-30.patch",
+        		"IMCE image caption support - https://www.drupal.org/project/imce/issues/2850277#comment-12540407": "https://www.drupal.org/files/issues/2018-03-23/2850277-IMCE-caption-support-12.patch"
+            },
+            "drupal/address": {
+                "make some address fields optional": "https://www.drupal.org/files/issues/2514126-146.field-behavior-settings.patch"
+            },
+            "drupal/menu_block": {
+                "Add option to show block if menu tree contains no links - https://www.drupal.org/project/menu_block/issues/2757215#comment-12606721": "https://www.drupal.org/files/issues/2018-05-08/menu_block-hide_block_if_no_links-2757215-9.patch"
+            }
+        }
+    }
+}

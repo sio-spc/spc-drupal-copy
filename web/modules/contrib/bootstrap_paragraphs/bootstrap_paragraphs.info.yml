@@ -1,0 +1,20 @@
+name: Bootstrap Paragraphs
+type: module
+description: A suite of Paragraph bundles made with the Boostrap framework.
+core: 8.x
+package: Paragraphs
+dependencies:
+  - block
+  - entity_reference_revisions
+  - field
+  - file
+  - filter
+  - image
+  - link
+  - options
+  - paragraphs
+  - system
+  - text
+  - user
+  - views
+  - viewsreference

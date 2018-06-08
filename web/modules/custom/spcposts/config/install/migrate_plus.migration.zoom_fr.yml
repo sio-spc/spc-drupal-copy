@@ -1,0 +1,109 @@
+# Migration configuration
+id: zoom_fr
+#langcode: 'fr'
+label: Import French zoom
+migration_group: spc
+source:
+  plugin: csv
+  #the csv file below is identical to the English data.csv
+  path: public://csv/zoom_fr.csv
+  header_row_count: 1
+  keys:
+   - contentid
+  column_names:  
+    0:
+      id: 'wordpress post id'
+    1:
+      title: 'title'
+    2:
+      bodycontent: 'Post body'
+    3:
+      bodyexcerpt: 'Excerpt'
+    4:
+      date: 'date'
+    5:
+      permalink: 'Permalink'
+    6: 
+      contentid: 'contentid'
+    7:
+      categories: 'Categories'
+    8: 
+      tags: 'Tags'
+    9:
+      city: 'city'
+    10:
+      featuredimage: 'featuredimage'
+    11:
+      featuredimagefile: 'featuredimagefile'
+  constants:
+    body_format: full_html
+    uid_root: 3
+    lang_fr: 'en'
+    lang_fr: 'fr'
+    blogcategory: 97
+ids:
+  contentid:
+    type: string
+destination:
+  plugin: entity:node
+  # Important! Create translations for existing nodes.
+  translations: true
+process:
+# Attach the translation to the already-migrated node.
+ nid:
+    plugin: migration
+    source: contentid
+    migration: zoom_en
+ content_translation_source: constants/lang_en
+ type:
+    plugin: default_value
+    default_value: blog
+ uid: 'constants/uid_root'
+ title: title
+ langcode: 
+    plugin: default_value
+    source: language
+    default_value: fr
+ field_city_text: city
+ 'body/value': bodycontent
+ 'body/summary': bodyexcerpt
+ 'body/format': 'constants/body_format'
+ uid: 3
+ created:
+  - plugin: callback
+    callable: strtotime
+    source: date
+ field_featured_image_url: featuredimage
+ 'field_featured_image/target_id':
+      plugin: migration
+      migration: zoomimages_fr
+      source: featuredimagefile
+ 'field_featured_image/alt': title
+ field_blog_category: 'constants/blogcategory'
+
+ field_tags:
+   -
+    plugin: explode
+    delimiter: '|'
+    source: tags
+   -
+    plugin: migration
+    migration: spc_tags
+
+ field_categories:
+   -
+    plugin: explode
+    delimiter: '|'
+    source: categories
+   -
+    plugin: migration
+    migration: spc_categories
+
+migration_dependencies:
+  optional:
+    - zoomimages_fr
+    - spc_tags
+    - spc_categories
+  required:
+    - zoom_en
+dependencies: {}

@@ -1,0 +1,29 @@
+#block-kyanite-breadcrumbs {
+	nav { //scoping to nav, otherwise you get contextual links area.
+		ol {/*removed ul here, since the nav contains only an ol*/
+			display: block;
+			margin: 0;
+			padding: 0;
+		    padding:.5em;
+		    @media (max-width: $bp-mobile-max){
+			    padding-left: 1em;
+			    padding-right: 1em;
+		    }
+		}
+		li {
+			display: inline;
+			list-style-type: none;
+
+			&::after {
+				content: " > ";
+				color: $global-color-layout-breadcrumb-separator;
+			}
+			&:last-of-type::after {
+				content: "";
+			}
+		}
+		a {
+			color: $global-color-layout-breadcrumb-links;
+		}
+	}
+}

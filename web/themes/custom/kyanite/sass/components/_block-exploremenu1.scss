@@ -1,0 +1,52 @@
+$explore-menu-icon-transform: scale(0.9);
+$explore-menu-hover-icon-transform: scale(1.2);
+#block-exploremenu1  {
+    a{
+		font-family: "PT Sans",sans-serif;
+		&::before  {
+			display: inline-block;
+			font: normal normal normal 1.3em/1 FontAwesome;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			margin-right: 1em;
+			width: 1em;
+			vertical-align: middle;
+			transition: transform 0.05s;
+			transform: $explore-menu-icon-transform;
+		}
+		&:hover::before {
+            transform: $explore-menu-hover-icon-transform;
+        }
+        &.menu-gender::before {
+			content: " ";
+			background-image: url(../images/gender-equality.png);
+			background-size: 23px auto;
+			width: 23px;
+			height: 23px;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+		&.menu-climate::before {
+	    	content: " ";
+		    background-image: url(../images/climate-action-icon.png);
+		    background-size: 23px auto;
+		    width: 23px;
+		    height: 23px;
+		    background-repeat: no-repeat;
+		    position: relative;
+	    }
+		&.menu-maya::before {
+		    content: " ";
+		    background-image: url(../images/maya-declaration-sprite.png);
+		    background-size: 23px auto;
+		    width: 23px;
+		    height: 23px;
+		    background-repeat: no-repeat;
+		    position: relative;
+	    }
+	    &.menu-gender:hover::before, &.menu-climate:hover::before, &.menu-maya:hover::before  {
+			background-position: 0 -23px;
+		}
+	}
+}

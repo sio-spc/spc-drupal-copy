@@ -1,0 +1,26 @@
+// general scrollbar styles
+
+//WEBKIT:
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-button, 
+::-webkit-scrollbar-track, 
+::-webkit-scrollbar-track-piece,     
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-corner,
+::-webkit-resizer                
+{ background: transparent;}
+::-webkit-scrollbar-thumb  {
+	background: #CCC;
+}
+body {
+
+	&::-webkit-scrollbar-track:vertical  {
+		border-left: 1px solid #CCC;
+	}
+	&::-webkit-scrollbar-track:horizontal  {
+		border-top: 1px solid #CCC;
+	}
+}

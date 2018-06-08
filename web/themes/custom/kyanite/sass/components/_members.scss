@@ -1,0 +1,73 @@
+.member-list{/*view*/
+	.views-row{
+		.views-field-field-memberimages img{
+			width: 8vw;
+			min-width: 50px;
+			max-width:100px;
+			height:auto;
+			float: left;
+			display: block;
+			position: relative;
+			margin-right: 2vw;
+			margin-right: 1em;
+		}
+		margin-bottom: 2em;
+		@media (min-width:768px){
+			width: 45%;
+			display: block;
+			position: relative;
+			float: left;
+			&:nth-child(odd){
+				margin-right: 5%;
+			}
+			&:nth-child(even){
+				margin-left: 5%;
+			}
+		}
+	}
+}
+.path-members{
+	#maincontainer main{
+		max-width: none;
+	}
+	#block-membermapcontentbelowthemap{
+		max-width: 960px;
+	}
+}
+.page-node-type-member-listing .node.node--type-member-listing{/* individual member node */
+	fieldset legend{
+		display: none;
+	}
+	> div{/* container div */
+		@media (min-width: 678px){
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			fieldset{
+				width: 45%;
+			}
+		}
+	}
+	> div > div, .fieldset-wrapper > div{/* fields, both within and outside fieldsets */
+		margin-bottom: .5em;
+	}
+	.field-item-label{
+		&::after{
+			content: ": ";
+		}
+	}
+	.field-item-label, , .field-items, .field-item{
+		display: inline;
+	}
+	.field-items .field-item{
+		&::after{
+			content: ", ";
+		}
+		&:last-child::after{
+			content: none;
+		}
+	}
+	.field-field-memberimages{
+		margin-bottom: 2em;
+	}
+}

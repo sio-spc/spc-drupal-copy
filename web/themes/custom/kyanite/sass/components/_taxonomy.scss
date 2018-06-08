@@ -1,0 +1,24 @@
+#views-exposed-form-taxonomy-term-page-1{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	clear: both;
+	.js-form-item > label, .js-form-item > div{
+		float: left;
+		margin-right: 1em;
+		&.bef-links > div{
+			display: inline;
+			margin-left: .5em;
+			margin-right: .5em;
+			.bef-link-active{
+				font-weight: bold;
+			}
+		}
+	}
+	#edit-actions{
+		clear: both;
+	}
+	
+}
+.views-infinite-scroll-content-wrapper{
+	clear: both;
+}

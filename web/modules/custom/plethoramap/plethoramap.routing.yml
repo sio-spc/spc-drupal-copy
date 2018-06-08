@@ -1,0 +1,44 @@
+route_callbacks:
+  - '\Drupal\plethoramap\Routing\Routes::routes'
+
+
+plethoramap.settings:
+  path: '/admin/structure/plethoramap/settings'
+  defaults:
+    _form: '\Drupal\plethoramap\Form\SettingsForm'
+    _title: 'Plethora Map Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+
+entity.plethoramap.collection:
+  path: '/admin/config/system/plethoramap/apps'
+  defaults:
+    _entity_list: 'plethoramap'
+    _title: 'plethoramapAppEntity Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.plethoramap.add_form:
+  path: '/admin/config/system/plethoramap/apps/add'
+  defaults:
+    _entity_form: 'plethoramap.add'
+    _title: 'Add Plethora Map App'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.plethoramap.edit_form:
+  path: '/admin/config/system/plethoramap/apps/{plethoramap}'
+  defaults:
+    _entity_form: 'plethoramap.edit'
+    _title: 'Edit Plethora Map App'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.plethoramap.delete_form:
+  path: '/admin/config/system/plethoramap/apps/{plethoramap}/delete'
+  defaults:
+    _entity_form: 'plethoramap.delete'
+    _title: 'Delete Plethora Map App'
+  requirements:
+    _permission: 'administer site configuration'

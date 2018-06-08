@@ -1,0 +1,5 @@
+entity.plethoramap.add_form:
+  route_name: 'entity.plethoramap.add_form'
+  title: 'Add an Plethora Map Application'
+  appears_on:
+    - entity.plethoramap.collection

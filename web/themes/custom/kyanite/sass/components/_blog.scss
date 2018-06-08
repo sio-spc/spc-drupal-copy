@@ -1,0 +1,107 @@
+//http://osvaldas.info/flexbox-based-responsive-equal-height-blocks-with-javascript-fallback
+.page-node-type-blog{
+	#block-views-block-blog-block{
+		@include bordertop();
+	}
+}
+.feed-subscribe{
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	z-index:10;
+	a, a:hover, a:link, a:visited{
+		display: inline-block;
+		background-color:$global-color-highlight;
+		color: #fff;
+		padding: .5em 2em;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+}
+
+.blog{
+	&.page{
+		max-width: 640px;
+		display: block;
+		margin: auto;
+		.views-infinite-scroll-content-wrapper{
+			@include flexbox();
+			> div {
+				width: 100%;
+			}
+			
+	    }
+		.views-row{
+			margin-bottom:5em;
+			display: block;
+			position: relative;
+			width: 100%;
+		}
+		.views-field-field-blog-image{
+			display: block;
+			text-align: center;
+			width: 100%;
+			img{
+				display: block;
+				max-width: 100%;
+				height: auto!important;
+				border: 1px solid #ccc;
+			}
+		}
+		.views-field-nothing{
+			h2{
+				font-size: 1.5em;
+				line-height: 1.2em;
+				display: block;
+			}
+			display: block;
+			width: 100%;
+			.blogdate{
+				color: #666;
+			}
+			.policy-area, .newsregion{
+				color: $global-color-highlight;
+				margin-left: 2em;
+			}
+		}
+		.wp-caption-text{
+			display: none;
+		}
+	}
+	&.block{
+		.views-row{
+			margin-bottom: 3em;
+			.views-field-title{
+				a{
+					font-weight: bold;
+				}
+			}
+			.views-field-field-blog-image{
+				float: right;
+				padding-left: 2em;
+			}
+			clear: both;
+		}
+	}
+}
+
+.authorname{
+	display: none;
+}
+.path-executive-director-reflections #block-kyanite-page-title h1{
+	text-align: center;
+}
+.field-field-hide-featured-image{
+	display: none;
+}
+.field-field-city{
+	display: inline;
+	div{
+		display: inline;
+		border-right: 2px solid #ccc;
+	    padding-right: .75em;
+	    margin-right: .5em;
+	}
+}

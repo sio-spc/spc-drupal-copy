@@ -1,0 +1,28 @@
+.page-node-type-resource{
+	.node--view-mode-full > div{
+		& > .group-left, & > .group-right{
+			display: block;
+			@media (max-width: 639px){
+				width: 100%;
+				float: none;
+			}
+		}
+		& > .group-left{
+			@media (min-width: 640px){
+				float: left;
+				width: 40%;
+				margin-right: 5%;
+			}
+		}
+		& > .group-right{
+			@media (min-width: 640px){
+				float: left;
+				width: 55%;
+			}
+		}
+		clear: both;
+	}
+}
+#block-views-block-resources-block-2{
+	padding-top: 3em;
+}

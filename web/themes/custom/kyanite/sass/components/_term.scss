@@ -1,0 +1,19 @@
+.path-taxonomy{
+	#block-kyanite-page-title{
+		@media (max-width: $bp-mobile-max){
+			text-align: center;
+		}
+		.field-field-division-icon{
+			&, div{
+				@media (min-width: $bp-tablet-min){
+					display: inline;
+				}
+			}
+		}
+		h1{
+			@media (min-width: $bp-tablet-min){
+				display: inline;
+			}
+		}
+	}
+}

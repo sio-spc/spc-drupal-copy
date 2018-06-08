@@ -1,0 +1,20 @@
+#block-breadcrumbs{
+	clear: both;
+}
+.layout-breadcrumb{
+	nav{
+		ol{
+			> li{
+				display: inline-block;
+				&::after{
+					content: "›";
+				}
+				&:last-child{
+					&::after{
+						content: none;
+					}
+				}
+			}
+		}
+	}
+}

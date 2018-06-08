@@ -1,0 +1,12 @@
+name: Plethora Map
+description: 'Provides a way to create any number of maps, such as the "member map", by providing configuration for the data.'
+package: Custom
+type: module
+version: 0.1
+core: 8.x
+configure: plethoramap.settings
+#libraries:
+#  - plethoramap/base
+dependencies:
+  - drupal:serialization
+  - drupal:rest

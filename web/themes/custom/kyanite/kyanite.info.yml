@@ -1,0 +1,29 @@
+name: Kyanite Theme
+description: 'A slick theme by Plethora Design'
+package: Custom
+type: theme
+version: 0.1
+core: 8.x
+#base theme: false
+libraries:
+  - kyanite/base
+regions:
+  topbar: 'Top Bar'
+  header: 'Header'
+  sidebar_first: 'Sidebar'
+  content_66_33: 'Two Columns: 2/3 and 1/3'
+  content: 'Content'
+  bottom_content_66_33: 'Bottom Two Columns: 2/3 and 1/3'
+  footer_prefix: 'Before Footer'
+  footer: 'Footer'
+  primary_menu: 'Primary Menu'
+  secondary_menu: 'Explore Menu'
+  breadcrumb: 'Breadcrumb'
+  highlighted: 'Highlighted'
+  highlighted2: 'Highlighted 2 (content width)'
+  bottom: 'Bottom'
+  fixed_header_left: 'Fixed Header: Left'
+  fixed_header_right: 'Fixed Header: Right'
+  region_for_paragraphs: 'Region for Paragraphs - Important: do not move or delete these blocks!'
+ckeditor_stylesheets:
+  - css/ckeditor-iframe.css

@@ -1,0 +1,43 @@
+plethoramap.plethoramap.*:
+  type: config_entity
+  label: 'Plethora Map App config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    doc_title:
+        type: label
+        label: 'Document Title'
+    html_head:
+        type: text
+        label: 'Header HTML'
+    label:
+        type: label
+        label: 'Label'
+    rooturl:
+        type: label
+        label: 'Root URL'
+    dataurl_features:
+        type: label
+        label: 'Data URL: Features'
+    dataurl_feature:
+        type: label
+        label: 'Data URL: Feature Detail'
+    dataurl_pins:
+        type: label
+        label: 'Data URL: Pins'
+    options:
+        type: text
+        label: 'Options'
+    apptext:
+      label: 'Plethora Map Application Text'
+      type: sequence
+      sequence:
+        type: mapping
+        mapping:
+          id:
+            label: 'Key'
+            type: label
+          value:
+            label: 'Value'
+            type: label

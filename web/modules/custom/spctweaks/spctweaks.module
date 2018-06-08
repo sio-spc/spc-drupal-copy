@@ -1,0 +1,9 @@
+<?php
+/**
+ * Implements hook_ckeditor_css_alter().
+ *
+ * Injects our CSS sheets anytime CKEditor has loaded.
+ *
+ * @param array $css
+ * @param Drupal\editor\Entity\Editor $editor
+ */

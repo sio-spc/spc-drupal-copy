@@ -1,0 +1,73 @@
+//http://osvaldas.info/flexbox-based-responsive-equal-height-blocks-with-javascript-fallback
+.page-node-type-news{
+	.field-field-external-links,
+	.field-field-related-content{
+		margin-top: 1em;
+	}
+	.taggedas{
+		margin-top: 1em;
+	}
+}
+.news{
+	&.page{
+		max-width: 640px;
+		display: block;
+		margin: auto;
+		.views-infinite-scroll-content-wrapper{
+			@include flexbox();
+	    }
+		.views-row{
+			margin-bottom:5em;
+			display: block;
+			position: relative;
+			width: 100%;
+		}
+		/*.views-field-field-newsimage, .views-field-nothing{
+			display: block;
+			float: left;
+		}*/
+		.views-field-field-newsimage{
+			display: block;
+			text-align: center;
+			width: 100%;
+			img{
+				display: block;
+				max-width: 100%;
+				height: auto!important;
+				border: 1px solid #ccc;
+			}
+		}
+		.views-field-nothing{
+			h2{
+				font-size: 1.5em;
+				line-height: 1.2em;
+				display: block;
+			}
+			display: block;
+			width: 100%;
+			
+			.policy-area, .newsregion{
+				color: $global-color-highlight;
+				margin-left: 2em; 
+			}
+		}
+	}
+	&.headlines{
+		.views-row{
+			margin-bottom: 3em;
+			.views-field-title{
+				a{
+					font-weight: bold;
+				}
+			}
+			.views-field-field-newsimage{
+				float: right;
+				padding-left: 2em;
+			}
+			clear: both;
+		}
+	}
+}
+#block-views-block-news-headlines{
+	@include bordertop();
+}

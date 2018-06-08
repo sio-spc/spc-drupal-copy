@@ -1,0 +1,47 @@
+id: speechimages_fr
+migration_group: spc
+label: Image importer
+source:
+  constants:
+    source_base_path: 'public://wordpressfeatured/source'
+    uri_file: 'public://wordpressfeatured/images/speeches'
+  plugin: csv
+  track_changes: true
+  path: 'public://csv/speeches.csv'
+  header_row_count: 1
+  keys:
+    - featuredimagefile
+  column_names:
+    11:
+      featuredimagefile: 'featuredimagefile'
+
+process:
+  source_full_path:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/source_base_path
+        - featuredimagefile
+    -
+      plugin: urlencode
+  uri_file:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/uri_file
+        - featuredimagefile
+    -
+      plugin: urlencode
+  filename: featuredimagefile
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_full_path'
+      - '@uri_file'
+destination:
+  plugin: 'entity:file'
+migration_dependencies:
+  required: {  }
+  optional: {  }

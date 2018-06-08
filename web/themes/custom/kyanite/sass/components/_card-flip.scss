@@ -1,0 +1,251 @@
+$card-flip-speed: 1s;
+$ie-visibility-hack-speed: 0.34 * $card-flip-speed;
+// <FUNCTIONALITY> 
+.card {
+  display: block;
+  position: relative;
+  outline: none !important;
+  z-index: 1;
+  transition: z-index 0s $card-flip-speed; //this is the transition when flipping back to the front
+  &:hover, &:focus {
+    z-index: 2;
+    transition: none; //this is the transition when flipping to the back
+  }
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+    -ms-perspective: 1000px;
+
+}
+.card-content {
+  width: 100%;
+  height: 100%;
+
+    transition: $card-flip-speed ease-out;
+    -webkit-transition: $card-flip-speed ease-out;
+    -moz-transition: $card-flip-speed ease-out;
+    -o-transition: $card-flip-speed ease-out;
+    -ms-transition: $card-flip-speed ease-out;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+
+    /* content backface is visible so that static content still appears */
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    -moz-backface-visibility: visible;
+    -o-backface-visibility: visible;
+    -ms-backface-visibility: visible;
+
+}
+.card.flipped .card-content {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+}
+.card.vertical.flipped .card-content {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+}
+.card-content .card-static {
+    /* Half way through the card flip, rotate static content to 0 degrees */
+    transition: 0s linear $ie-visibility-hack-speed;
+    -webkit-transition: 0s linear $ie-visibility-hack-speed;
+    -moz-transition: 0s linear $ie-visibility-hack-speed;
+    -o-transition: 0s linear $ie-visibility-hack-speed;
+    -ms-transition: 0s linear $ie-visibility-hack-speed;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+}
+.card.vertical .card-content .card-static {
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+}
+
+.card.flipped .card-content .card-static {
+    /* Half way through the card flip, rotate static content to -180 degrees -- to negate the flip and unmirror the static content */
+    transition: 0s linear $ie-visibility-hack-speed;
+    -webkit-transition: 0s linear $ie-visibility-hack-speed;
+    -moz-transition: 0s linear $ie-visibility-hack-speed;
+    -o-transition: 0s linear $ie-visibility-hack-speed;
+    -ms-transition: 0s linear $ie-visibility-hack-speed;
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+}
+.card.vertical.flipped .card-content .card-static {
+    transform: rotateX(-180deg);
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    -o-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+}
+
+
+.card .card-content .card-front, .card .card-content .card-back {
+    /* Backface visibility works great for all but IE. As such, we mark the backface visible in IE and manage visibility ourselves */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.card .card-content .card-front, .card.flipped .card-content .card-front {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+}
+.card.vertical .card-content .card-front, .card.vertical.flipped .card-content .card-front {
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+}
+
+.card .card-content .card-back, .card.flipped .card-content .card-back {
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+}
+
+.card.vertical .card-content .card-back, .card.vertical.flipped .card-content .card-back {
+    transform: rotateX(-180deg);
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    -o-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+}
+
+.card .card-content .card-front, .card.flipped .card-content .card-back {
+    /* IE Hack. Halfway through the card flip, set visibility. Keep other browsers visible throughout the card flip. */
+    animation: stayvisible $card-flip-speed both;
+    -webkit-animation: stayvisible $card-flip-speed both;
+    -moz-animation: stayvisible $card-flip-speed both;
+    -o-animation: stayvisible $card-flip-speed both;
+    -ms-animation: donothing $card-flip-speed;
+    -ms-transition: visibility 0s linear $ie-visibility-hack-speed;
+    visibility: visible;
+}
+.card.flipped .card-content .card-front, .card .card-content .card-back {
+    /* IE Hack. Halfway through the card flip, set visibility. Keep other browsers visible throughout the card flip. */
+    animation: stayvisible $card-flip-speed both;
+    -webkit-animation: stayvisible $card-flip-speed both;
+    -moz-animation: stayvisible $card-flip-speed both;
+    -o-animation: stayvisible $card-flip-speed both;
+    -ms-animation: donothing $card-flip-speed;
+    -ms-transition: visibility 0s linear $ie-visibility-hack-speed;
+    visibility: hidden;
+}
+@keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-webkit-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-moz-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-o-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-ms-keyframes donothing { 0% { } 100% { } }
+
+
+
+// </FUNCTIONALITY>
+
+// <DESIGN>
+$color-tile-box-bg: #fcfcf5;
+$color-tile-box-shadow: #888;
+$color-tile-box-shadow-dark: rgba(255,255,255,0.5);
+$color-tile-box-shadow-hover: #888;
+$color-tile-box-shadow-hover-dark: rgba(255,255,255,0);
+$color-tile-box-back: darken($global-color-highlight-alt, 10%);////rgba(75,101,134,1);
+$color-view-button-box-shadow: rgba(darken($color-tile-box-back, 10%), 0.8);
+$color-view-button-bg: $global-color-highlight;
+$color-view-button-text: #FFF;
+$color-view-button-bg-hover: #FFF;
+$color-view-button-text-hover: #000;
+
+.card-front {
+    background-color: $color-tile-box-bg;
+    box-shadow: 0px 0px 0.5em $color-tile-box-shadow;
+    height: 100%;
+    overflow: hidden;
+    cursor: default;
+}
+.card-back {
+    overflow: hidden;
+    background-color: $color-tile-box-back;
+    padding: 1em;
+    color: #FFF;
+    cursor: default;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    cursor: default;
+    .view-button {
+        display: block;
+        text-align: center;
+        transition: all $card-flip-speed;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+
+        background: -moz-linear-gradient(top, rgba($color-tile-box-back, 0) 0%, $color-tile-box-back 100%);
+        background: -webkit-linear-gradient(top, rgba($color-tile-box-back, 0) 0%,$color-tile-box-back 100%);
+        background: linear-gradient(to bottom, rgba($color-tile-box-back, 0) 0%,$color-tile-box-back 100%);
+    }
+    .view-button-text {
+        color: $color-view-button-text;
+        background-color: $color-view-button-bg;
+        border: none;
+        font-size: 100%;
+        pointer-events: auto;
+        padding: 0.5em 2em;
+        margin-bottom: 2em;
+        display: inline-block;
+        transition: all 0.2s;
+        text-transform: uppercase;
+        box-shadow: 0.3em 0.3em 0px $color-view-button-box-shadow; //#3b4f6a;
+        font-weight: bold;
+        letter-spacing: 1px;
+        cursor: pointer;
+        &:hover{
+            background: $color-view-button-bg-hover;
+            color: $color-view-button-text-hover;
+        }
+    }
+}
+figure.card-content {
+    margin: 0;
+    padding: 0;
+}
+/* </DESIGN> */

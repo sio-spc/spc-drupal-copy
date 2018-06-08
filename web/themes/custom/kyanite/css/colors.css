@@ -1,0 +1,90 @@
+/* No files to import found in library/**\/* */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/Library\/lib\/ruby\/gems\/2\.3\.0\/gems\/susy-2\.2\.14\/sass\/susy\/language\/susy\/_box-sizing\.scss}line{font-family:\0000321}}
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+$global-header-padding-top-mobile-scrolled-down: 0; //must be pixels to allow for adjustments for the explore menu top...
+$global-header-padding-bottom-mobile-scrolled-down: $global-header-padding-top-mobile-scrolled-down; // should probably just match the top padding...
+$global-header-padding-top-tablet-scrolled-down: 0; //must be pixels to allow for adjustments for the explore menu top...
+$global-header-padding-bottom-tablet-scrolled-down: $global-header-padding-top-tablet-scrolled-down; // should probably just match the top padding...
+$global-header-padding-top-desktop-scrolled-down: 0; //must be pixels to allow for adjustments for the explore menu top...
+$global-header-padding-bottom-desktop-scrolled-down: $global-header-padding-top-desktop-scrolled-down; // should probably just match the top padding...
+$global-header-padding-top-big-scrolled-down: 0;
+$global-header-padding-bottom-big-scrolled-down: $global-header-padding-top-big-scrolled-down; // should probably just match the top padding...
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\000032}}
+a,
+.link {
+  color: #069;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\000036}}
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: #1db4c4;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\0000312}}
+a:active,
+.link:active {
+  color: #1db4c4;
+}
+
+/* ---------- Color Form ----------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\0000319}}
+[dir="rtl"] .color-form .color-palette {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\0000323}}
+[dir="rtl"] .color-form .form-item label {
+  float: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\0000326}}
+[dir="rtl"] .color-form .color-palette .lock {
+  right: -20px;
+  left: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\0000331}}
+.layout-primary-menu {
+  background-color: #fff;
+  transition: background 0.5s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\0000334}}
+.layout-primary-menu a {
+  color: #069;
+  transition: color 0.5s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\0000341}}
+body.has-background-image .layout-breadcrumb {
+  background: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\0000347}}
+body.color-scheme-dark .layout-breadcrumb {
+  background: #A9A9A9;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\0000350}}
+body.color-scheme-dark .layout-primary-menu {
+  background-color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\0000352}}
+body.color-scheme-dark .layout-primary-menu a {
+  color: #00476a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\0000357}}
+body.color-scheme-dark.has-background-image .layout-breadcrumb {
+  background: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}

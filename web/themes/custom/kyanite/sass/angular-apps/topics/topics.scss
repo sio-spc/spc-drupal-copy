@@ -1,0 +1,58 @@
+// this file provides theme-specific style overrides for the topics angular app
+.kyanite-banner-block, #block-introtextforpublications {
+        display: none; // hidden by default, app will call function to show
+}
+#block-introtextforpublications {
+	text-align: center; 
+	padding: 1em 10%; 
+	background-color: #fff;
+}
+.layout-breadcrumb {
+	display: none !important;
+}
+.layout-content {
+	max-width: none !important;
+	padding-left: 0 !important; // angular app will just have to add padding on its own
+	padding-right: 0 !important; // angular app will just have to add padding on its own
+}
+body:not(.path-frontpage) #main {
+	max-width: none !important;
+}
+#block-kyanite-kyanite-block-9 {
+	display: none;
+}
+.site-footer {
+    //font-size: smaller;
+    padding-bottom: 2em !important;
+/*
+	* {
+	    line-height: normal;
+	}
+	*/
+
+}
+@media(max-width: 879px){
+	/* mobile view for topics, leave room for fixed height footer */
+	.site-footer {
+		padding-bottom: 3em !important;
+	}
+	#main {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.layout-content {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+#main {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	border-top: none !important;
+	border-bottom: none !important;
+}
+
+h1.topic-title .topic-download-button{
+	font-family: "PT Sans", sans-serif;
+}

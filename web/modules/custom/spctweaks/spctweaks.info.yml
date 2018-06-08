@@ -1,0 +1,6 @@
+name: SPC Tweaks
+description: 'Module for custom SPC things'
+package: Custom
+type: module
+version: 0.1
+core: 8.x

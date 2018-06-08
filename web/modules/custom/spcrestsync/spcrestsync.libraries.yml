@@ -1,0 +1,7 @@
+general:
+  version: VERSION
+  js:
+    js/spcrestsync.js: {minified: true}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

@@ -1,0 +1,21 @@
+kyanite.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 980px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+kyanite.narrow:
+  label: narrow
+  mediaQuery: 'all and (min-width: 700px) and (max-width: 979px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+kyanite.mobile:
+  label: mobile
+  mediaQuery: 'all and (max-width:699px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x

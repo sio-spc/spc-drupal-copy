@@ -1,0 +1,77 @@
+# Migration configuration
+id: pages_fr
+#langcode: 'fr'
+label: Import French pages
+migration_group: spc
+source:
+  plugin: csv
+  #the csv file below is identical to the English data.csv
+  path: public://csv/pages-fr.csv
+  header_row_count: 1
+  keys:
+   - contentid
+  column_names:  
+    0:
+      id: 'id'
+    1:
+      title: 'Title'
+    2:
+      bodycontent: 'Post body'
+    3:
+      bodyexcerpt: 'Excerpt'
+    4:
+      date: 'date'
+    5:
+      permalink: 'Permalink'
+    6: 
+      contentid: 'WPML Translation ID'
+    7:
+      parentslug: 'Parent Slug'
+    8: 
+      slug: 'Slug'
+    9:
+      city: 'Geographical City'
+    10:
+      featuredimage: 'Image Featured'
+    11:
+      featuredimagefile: 'Image Filename'
+  constants:
+    body_format: full_html
+    uid_root: 3
+    lang_en: 'en'
+ids:
+  contentid:
+    type: string
+destination:
+  plugin: entity:node
+  # Important! Create translations for existing nodes.
+  translations: true
+process:
+# Attach the translation to the already-migrated node.
+ nid:
+    plugin: migration
+    source: contentid
+    migration: pages_en
+ content_translation_source: constants/lang_en
+ type:
+    plugin: default_value
+    default_value: page
+ uid: 'constants/uid_root'
+ title: title
+ langcode: 
+    plugin: default_value
+    source: language
+    default_value: fr
+ 'body/value': bodycontent
+ 'body/summary': bodyexcerpt
+ 'body/format': 'constants/body_format'
+ uid: 3
+ created:
+  - plugin: callback
+    callable: strtotime
+    source: date
+
+migration_dependencies:
+  required:
+    - pages_en
+dependencies: {}

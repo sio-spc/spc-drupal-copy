@@ -1,0 +1,57 @@
+//http://osvaldas.info/flexbox-based-responsive-equal-height-blocks-with-javascript-fallback
+
+/*.feed-subscribe{
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	z-index:10;
+	a, a:hover, a:link, a:visited{
+		display: inline-block;
+		background-color:$global-color-highlight;
+		color: #fff;
+		padding: .5em 2em;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+}*/
+.speeches{
+	&.page{
+		max-width: 640px;
+		display: block;
+		margin: auto;
+		.views-infinite-scroll-content-wrapper{
+			@include flexbox();
+	    }
+		.views-row{
+			margin-bottom:5em;
+			display: block;
+			position: relative;
+			width: 100%;
+		}
+		.views-field-field-list-image{
+			display: block;
+			text-align: center;
+			width: 100%;
+			img{
+				display: block;
+				max-width: 100%;
+				height: auto!important;
+				border: 1px solid #ccc;
+			}
+		}
+		.views-field-nothing{
+			h2{
+				font-size: 1.5em;
+				line-height: 1.2em;
+				display: block;
+			}
+			display: block;
+			width: 100%;
+			.blogdate{
+				color: #666;
+			}
+		}
+	}
+}

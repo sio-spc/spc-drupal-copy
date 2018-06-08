@@ -1,0 +1,204 @@
+.paragraph{
+	&.paragraph--type--bp-tabs{
+		> .paragraph__column{
+			.tab-content{
+				border: 1px solid #ccc;
+				border-top: 0;
+				background-color: #fff;
+				padding: 2em;
+			}
+		} 
+		ul.nav.nav-tabs{
+		background-color: #eee;
+			li{
+				position: relative;
+				top: 1px;
+				@media(max-width: 639px){
+					float: none;
+					display: block;
+					width: 100%;
+				}
+				a{
+					padding: .5em 2em;
+					color: #333;
+					text-decoration: none;
+					display: block;
+					&.active{
+						font-weight: bold;
+						color: #000;
+						background-color: #fff;
+						border: 1px solid #ccc;
+						border-bottom: none;
+					}
+				}
+			}
+		}
+	}
+	&.paragraph--type--bp-carousel{
+		.carousel-indicators{
+			li{
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				cursor: pointer;
+				background-color: $global-color-link;
+				&.active{
+					background-color: $global-color-main-menu-hover;
+				}
+			}
+		}
+	}
+	&.paragraph--type--bp-columns{
+		> .paragraph__column{
+			padding-bottom: 0;
+			> div{
+				padding-bottom: 3em;
+			}
+		}
+	}
+}
+.paragraph--bp-accordion--container{
+  .paragraph--type--bp-simple{
+    .field-type-text-long{
+      padding: 1em;
+    }
+  }
+}
+.paragraph--type--featured-content-slider{
+	.featuredcaption{
+		position: absolute;
+		bottom: 2em;
+		display: block;
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		text-align: center;
+		color: #fff;
+		z-index: 1;
+	}
+	.featuredgradient{
+		z-index: 0;
+		display: block;
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.8+100 */
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 ); /* IE6-9 */
+
+
+	}
+}
+.paragraph--type--gallery .field-field-gallery-image-file, .field-bp-image-field{
+	clear: both;
+	 > .field-items{/* for the gallery, not the individual image field*/
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.field-items > .field-item, &.field-type-image .colorbox{
+		img{
+			display: block;
+		}
+		figcaption, figcaption:hover, &:hover figcaption{
+			font-size: .8em;
+			color: #333;
+			text-align: center;
+			text-decoration: none;
+			padding: .25em;
+		}
+		.cboxElement{
+			position: relative;
+			display: block;
+		}
+	}
+	.field-items > .field-item{/* for the gallery images */
+		@media (max-width: 767px){
+			width: 40%;
+			margin-right: 10%;
+		}
+		@media (min-width: 768px){
+			width: 22%;
+			margin-right: 3%;
+		}
+		padding-bottom: 1em;
+	}
+}
+.field-bp-image-field{
+	text-align: center;
+	a{
+	  outline: none;
+	}
+}
+@mixin unevengallerystacked(){
+	.paragraph--type--gallery .field-field-gallery-image-file > .field-items{
+		display: block;
+		> .field-item{
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+}
+@mixin unevengallerylargerthumbnails(){
+	.paragraph--type--gallery .field-field-gallery-image-file > .field-items > .field-item{
+		width: 45%;
+		margin-right: 5%;
+	}
+}
+.paragraph--type--bp-columns-two-uneven{
+	.paragraph--type--bp-columns-two-uneven__2col-column1{
+		@include unevengallerystacked();
+	}
+	.paragraph--type--bp-columns-two-uneven__2col-column2{
+		@include unevengallerylargerthumbnails();
+	}
+
+	&.paragraph--style--60-40 > .paragraph__column, &.paragraph--style--40-60 > .paragraph__column{
+		@media (min-width: $bp-tablet-min){
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	@media (min-width: $bp-tablet-min){
+		&.paragraph--style--60-40 .paragraph--type--bp-columns-two-uneven__2col-column1, &.paragraph--style--40-60 .paragraph--type--bp-columns-two-uneven__2col-column2{
+			width: 55%;
+		}
+		&.paragraph--style--60-40 .paragraph--type--bp-columns-two-uneven__2col-column2, &.paragraph--style--40-60 .paragraph--type--bp-columns-two-uneven__2col-column1{
+			width: 35%;
+		}
+	}
+}
+.paragraph--type--bp-columns-three-uneven{
+	&.paragraph--style--25-50-25, &.paragraph--style--16-66-16{
+		.paragraph--type--bp-columns-three-uneven__3col-column1, .paragraph--type--bp-columns-three-uneven__3col-column3{
+			@include unevengallerystacked();
+		}
+		.paragraph--type--bp-columns-three-uneven__3col-column2{
+			@include unevengallerylargerthumbnails();
+		}
+	}
+	&.paragraph--style--25-25-50, &.paragraph--style--16-16-66{
+		.paragraph--type--bp-columns-three-uneven__3col-column1, .paragraph--type--bp-columns-three-uneven__3col-column2{
+			@include unevengallerystacked();
+		}
+		.paragraph--type--bp-columns-three-uneven__3col-column3{
+			@include unevengallerylargerthumbnails();
+		}
+	}
+	&.paragraph--style--50-25-25, &.paragraph--style--66-16-16{
+		.paragraph--type--bp-columns-three-uneven__3col-column2, .paragraph--type--bp-columns-three-uneven__3col-column3{
+			@include unevengallerystacked();
+		}
+		.paragraph--type--bp-columns-three-uneven__3col-column1{
+			@include unevengallerylargerthumbnails();
+		}
+	}
+}
+.spc-simple-paragraph-color > .paragraph.paragraph--color{
+	padding: 0 1em;
+	> .paragraph__column{
+		padding-top: .5em;
+	}
+}

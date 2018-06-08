@@ -1,0 +1,17 @@
+<div class="autocomplete-component" [class.has-clear-button]="showClearButton" >
+    <form (submit)="onSubmit($event)">
+      <div class="autocomplete-control">
+          <input #queryBox [title]="title" [placeholder]="placeholder" type="text" [(ngModel)]="queryNoHTML" [ngModelOptions]="{standalone: true}" (keyup)="onKeyUp($event)" (keydown)="onKeyDown($event)" />
+        <input type="submit" class="autocomplete-submit-button" [value]="submitButtonLabel" *ngIf="!showSuggestions" />
+        <button type="button" #clearButton *ngIf="showClearButton" class="autocomplete-clear" (click)="onClearButtonClick()">{{clearButtonLabel}}</button>
+      </div>
+    <div class="autocomplete-no-results-message" *ngIf="showNoResultsMessage" [innerHTML]="noResultsMessageWithTokens"></div>
+      <div class="autocomplete-suggestions" *ngIf="showSuggestions">
+          <ul>
+              <li *ngFor="let item of filteredList">
+                  <button [attr.type]="activeItem == item.value ? 'submit' : 'button'" (click)="select(item.value)" [class.active]="activeItem == item.value" [value]="item.value" [innerHTML]="item.label"></button>
+              </li>
+          </ul>
+      </div>
+    </form> 
+</div>

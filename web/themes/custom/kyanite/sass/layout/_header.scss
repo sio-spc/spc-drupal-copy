@@ -1,0 +1,341 @@
+.layout-container {
+		position: relative;
+		background-color: $global-color-header-bg; // in case of light content, this will get rid of white gap between main and footer
+}
+#header {
+	//border-bottom: 0 solid transparent;
+	transition: padding-top 0.5s, padding-bottom 0.5s;//, border-bottom 0.5s;
+	background-color: $global-color-header-bg;
+
+ 	@media (max-width: $bp-mobile-max){
+ 		.contextual {
+ 			display: none !important;
+ 		}
+ 	}
+ 	@media (min-width: $bp-tablet-min){
+		display: block;
+		//border-bottom: 1px solid #999;;
+	}
+	padding-top: $global-header-padding-top-mobile; 
+	padding-bottom: $global-header-padding-bottom-mobile;
+	@media (min-width: $bp-tablet-min){
+		padding-top: $global-header-padding-top-tablet; 
+		padding-bottom: $global-header-padding-bottom-tablet;
+		width: 80%;
+	}
+	@media (min-width: $bp-desktop-min){
+		padding-top: $global-header-padding-top-desktop; 
+		padding-bottom: $global-header-padding-bottom-desktop;
+		width: 87%;
+	}
+	@media (min-width: $bp-desktop-big-min){
+		padding-top: $global-header-padding-top-desktop-big; 
+		padding-bottom: $global-header-padding-bottom-desktop-big;
+		width: 88%;
+	}
+	> .region-header {
+		img{
+			border: none;
+		}
+		.explore-button-spacer {
+			display: none;
+		}
+
+		@media (max-width: 460px){
+			.langswitcherblock{
+				display: none; //hide language switcher for really small mobile.... need another way to switch language
+			}
+			
+		}
+        @media (max-width: $bp-mobile-max){
+			.langswitcherblock{
+				position: absolute;
+				top: 1em;
+				right: 25vw;
+			}
+		}
+ 		@media (min-width: $bp-tablet-min){
+			display: flex;
+			flex-direction: row;
+			> div {
+				display: flex;
+				vertical-align: top;
+				&:nth-child(2) {
+					flex-grow: 1;
+					padding-right: 1em;
+					display: flex;
+					flex-direction: row;
+					justify-content: flex-end;
+				}
+			}
+	  		> #block-logo {
+				width: 50%;
+	  		}
+	  		> .search-block-form {
+				/*@media (min-width: $bp-desktop-big-min){
+					font-size: 1vw; 
+				}*/
+	  		}
+		}
+	}
+
+	p {
+		// p tags in the header get injected by the drupal html editor - this messes with height, so let's clear that out...
+		margin: 0;
+		padding: 0;
+	}
+}
+body.divisionsite #header{
+	width: 100%!important;/* because the division sites have no explore menu */
+	padding-bottom: 0!important;
+	> .region-header > div:nth-child(2){
+		padding-right: 0;
+		justify-content: center;
+	}
+}
+
+/// fixed header stuff below...
+$toolbar-hide-duration : 0.5s;
+#toolbar-administration #toolbar-bar {
+	transition: all $toolbar-hide-duration;
+}
+body {
+	transition: padding-top $toolbar-hide-duration;
+}
+$fixed-header-height-tablet: 40px;
+$fixed-header-height-desktop: 50px;
+
+#fixed-header {
+    position: relative;
+    z-index: 4;
+    background: #FFF;
+    width: 100%;
+    .show-if-fixed {
+		display: none;
+    }
+}
+body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor{
+	width: 100%!important;
+	text-align: center;
+	@media (max-width: $bp-mobile-max){
+		display: block!important;
+		position: absolute;
+	    top: 1em;
+	    right: 1em;
+	    background: transparent;
+	    .layout-fixed-header{
+	    	display: inline-block;
+	    	.sf-accordion-toggle{
+	    		> a{
+		    		background: none;
+		    		border: none;
+		    		color: #333;
+		    		float: right;
+		    		font-size: 1.5em;
+		    		&.sf-expanded{
+		    			color: $global-color-main-menu-hover;
+		    		}
+		    		&::after{
+		    			right: -.05em;
+		    		}
+		    	}
+	    	}
+	    }
+	    .superfishdropdown{
+	    	font-size: 100%;
+	    	.sf-accordion{
+	    		background: #eee;
+	    		text-align: left;
+	    		font-size: .5em;
+    		    width: 20em;
+			    max-width: 100%;
+	    	}
+	    }
+	}
+	@media (min-width: $bp-tablet-min){
+		padding-right: 2%;
+	}
+}
+
+#fixed-header.fixed {
+    margin-top: 0 !important;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    .show-if-fixed {
+	display: block;
+    }
+}
+.superfishdropdown{
+	display: none;
+	@media (min-width: 768px){
+		display: block;
+	}
+}
+#fixed-header, #fixed-header-anchor{
+	display: none;
+	@media (min-width: $bp-tablet-min){
+		display: block;
+		text-align: right;
+		background: transparent;
+		body:not(.fixed-header-is-fixed) & {
+			width: auto;
+			float: right;
+			margin-right: 1rem;
+			margin-right: calc(1rem - .3em);
+		}
+	}
+	@media (min-width: $bp-desktop-min){
+		body:not(.fixed-header-is-fixed) & {
+			margin-top: -1.8em;
+		}
+	}
+}
+div#fixed-header {
+	@media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max){
+		font-size: 80%;
+	}
+	/*
+	&.fixed {
+		@media (min-width: $bp-desktop-min){
+			font-size: 90%;
+		}
+	}*/
+}
+.layout-fixed-header {
+	display: inline-block;
+	body.fixed-header-is-fixed & {
+		width: 100%;
+	}
+	.layout-fixed-header-content {
+		display: block;
+		position: relative;
+		body.fixed-header-is-fixed & {
+			width: 100%;
+			.layout-fixed-header-left {
+				flex-grow: 1;
+			}
+		}
+
+		.layout-fixed-header-right > * {
+			float: right;
+		}
+		.layout-fixed-header-left {
+			@include clearfix();
+			padding-left: .5em;
+			padding-right: 2vw;
+			& > * {
+				float: left;
+				display: block;
+			}
+		}
+		.layout-fixed-header-right {
+			@include clearfix();
+			padding-left: 1vw;
+			padding-right: 1vw;
+			& > * {
+				float: right;
+			}
+		}
+	}
+}
+@media (min-width: $bp-tablet-min){
+	// for non-mobile display, if this is a permanently fixed header (denoted by class fixed-header) we never show the regular header
+	.fixed-header #header{
+		display: none;
+	}
+}
+
+.scrolled-down, .fixed-header {
+	//this section is meant to hide the admin blocks
+	padding-top: 0 !important;
+	margin: 0 !important;  // if the admin toolbar is open and on the left, this should override that style. 
+
+	#toolbar-administration {
+
+		#toolbar-bar {
+			transform: scaleY(0);
+			opacity: 0;
+		}
+	}
+}
+
+.fixed-header-is-fixed, .fixed-header {
+	// styles for when the fixed header is fixed
+	.layout-primary-menu {
+		background: transparent;
+	}
+	#fixed-header {
+		background: $global-color-fixed-header-bg;
+		box-shadow: 0px 0px 20px #888;
+	}
+}
+.fixed-header {
+	//permanently fixed header...
+	&.skinny-fixed-header {
+		.layout-highlighted {
+			border-bottom-width: 1px !important;
+		}
+		#fixed-header {
+			font-size: 50%;
+			#logo-fixed {
+				img{
+					height: auto;
+					width: 50px;
+					margin-top: 2px;
+					margin-bottom: 2px;
+					border: none;
+					@media (min-width: $bp-desktop-big-min){
+						width: 3vw;
+						margin-top: 0.1vw;
+						margin-bottom: 0.1vw;
+
+					}
+				}
+			}
+			.explore-button-fixed {
+				margin-top: 13px;
+				@media (min-width: $bp-desktop-big-min){
+					margin-top: 0.2vw;
+				}
+			}
+		}
+
+	}
+}
+body.color-scheme-dark {
+	.layout-container {
+		background-color: $global-color-header-bg-dark;
+	}
+	&.scrolled-down, &.fixed-header {
+		.layout-container {
+			background: $global-color-fixed-header-bg-dark;
+		}
+	}
+}
+body.has-background-image {
+	.layout-container {
+		background: none;
+	}
+	&.scrolled-down, &.fixed-header {
+		.layout-container {
+			background: none;
+		}
+	}
+}
+.frieze{
+	.spcgrid > .item-list > ul > li{
+		margin-bottom: 0!important;
+	}
+}
+#headerborder{
+	height: 10px;
+    background-color: #eee;
+    position: relative;
+    display: block;
+    clear: both;
+    margin-bottom: 10px;
+}
+.path-frontpage #headerborder{
+	margin-bottom: 0;
+}

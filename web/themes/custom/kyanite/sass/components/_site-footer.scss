@@ -1,0 +1,69 @@
+.site-footer {
+	clear: both;
+	padding-top: 2em;
+	padding-bottom: 1em;
+	text-align: center;
+	overflow: hidden;
+	color: $global-color-footer-text;
+	background: $global-color-footer-background;
+	background-image: url(../images/footerbg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+	background-position-x: center;
+	background-position-y: bottom;
+	transition: color $global-color-scheme-change-duration, background $global-color-scheme-change-duration;
+	a {
+		font-weight: bold;
+		color: $global-color-footer-links;
+		border-bottom: none;
+	}
+	a:hover, a:focus, a:active {
+		color: $global-color-footer-links;
+		text-decoration: underline;
+		border-bottom: none;
+	}
+	nav > ul {
+		display: block;
+		padding: 0;
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		> li {
+			list-style-type: none;
+			@media (min-width: $bp-tablet-min){
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+			}
+			a {
+				margin: 0.5em;
+			}
+			ul {
+				display: none; //only one level please
+			}
+		}
+	}
+}
+
+.color-scheme-dark {
+	.site-footer {
+		color: $global-color-footer-text-dark;
+		background: $global-color-footer-background-dark;
+		a {
+			color: $global-color-footer-links-dark;
+		}
+		a:hover, a:focus, a:active {
+			color: $global-color-footer-links-dark;
+		}
+	}
+
+}
+
+body.has-background-image {
+	.site-footer {
+		background: none;
+		background-color:rgba(255,255,255,.498039);
+	}
+	
+}
