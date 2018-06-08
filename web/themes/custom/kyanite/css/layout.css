@@ -681,7 +681,7 @@ body.has-background-image.scrolled-down .layout-container, body.has-background-i
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\000034}}
-#main, #bottom {
+body:not(.context-resources) #main, .context-resources #block-pagetitle, .context-resources #block-kyanite-content, .bottom {
   overflow: hidden;
   *zoom: 1;
   padding-top: 1em;
@@ -693,24 +693,24 @@ body.has-background-image.scrolled-down .layout-container, body.has-background-i
   transition: background-color 0.5s, color 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\000035}}
-#main .layout-content > div, #bottom .layout-content > div {
+body:not(.context-resources) #main .layout-content > div, .context-resources #block-pagetitle .layout-content > div, .context-resources #block-kyanite-content .layout-content > div, .bottom .layout-content > div {
   position: relative;
 }
 @media (min-width: 700px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\000034}}
-  #main, #bottom {
+  body:not(.context-resources) #main, .context-resources #block-pagetitle, .context-resources #block-kyanite-content, .bottom {
     max-width: 95%;
   }
 }
 @media (min-width: 980px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\000034}}
-  #main, #bottom {
+  body:not(.context-resources) #main, .context-resources #block-pagetitle, .context-resources #block-kyanite-content, .bottom {
     max-width: 70%;
   }
 }
 @media (max-width: 699px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\000034}}
-  #main, #bottom {
+  body:not(.context-resources) #main, .context-resources #block-pagetitle, .context-resources #block-kyanite-content, .bottom {
     padding-left: 1em;
     padding-right: 1em;
   }

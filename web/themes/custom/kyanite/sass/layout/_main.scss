@@ -1,7 +1,7 @@
 #maincontainer{
     clear: both;
 }
-#main, #bottom{
+body:not(.context-resources) #main, .context-resources #block-pagetitle, .context-resources #block-kyanite-content, .bottom{
   .layout-content > div{
     position: relative;
   }
