@@ -1,7 +1,12 @@
 #maincontainer{
     clear: both;
 }
-body:not(.context-resources) #main, .context-resources #block-pagetitle, .context-resources #block-kyanite-content, .bottom{
+body:not(.context-resources) #main, 
+.context-resources #block-pagetitle, 
+.context-resources #block-kyanite-content, 
+.context-resources #block-kyanite-local-tasks, 
+.context-resources #block-views-block-resources-block-1 > div,
+.bottom{
   .layout-content > div{
     position: relative;
   }
