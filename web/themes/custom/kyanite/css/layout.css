@@ -716,67 +716,23 @@ body.has-background-image.scrolled-down .layout-container, body.has-background-i
   }
 }
 
-/*
-body:not(.path-frontpage):not(.path-events):not(.page-node-type-event){
-  #main{
-    @media(min-width: $bp-desktop-min){
-      max-width: 70%;
-    }
-  }
-}*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000331}}
 body:not(.path-frontpage) #main {
-  /*padding-top: 3em;
-  padding-top: 3vw;*/
   margin: 0 auto;
   font-size: 1em;
-  /*@media (max-width: $bp-mobile-max) and (orientation: portrait){
-    font-size: 1em;
-  }
-  @media (max-width: $bp-mobile-max) and (orientation: landscape){
-    font-size: .5em;
-  }
-  @media (min-width: $bp-tablet-min){
-    font-size: 1em;
-  }*/
-        /*@for $i from 1 through 50 {
-            @media(min-width: $curbp){
-                font-size: $curfont;
-
-                input[type=checkbox],
-                input[type=radio]
-                {
-                  
-                  -ms-transform: scale($boxscale); 
-                  -moz-transform: scale($boxscale); 
-                  -webkit-transform: scale($boxscale); 
-                  -o-transform: scale($boxscale); 
-                  transform: scale($boxscale);
-                }
-            }
-            $boxscale: $boxscale + 0.1;
-            $curbp: $curbp + 100;
-            $curfont: $curfont + 10;
-        }*/
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000338}}
 body:not(.path-frontpage) #main input[type=checkbox],
 body:not(.path-frontpage) #main input[type=radio] {
   margin: 1em;
 }
-@media (min-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000340}}
-  body:not(.path-frontpage) #main {
-    font-size: 1.25vw;
-  }
-}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000347}}
 body.color-scheme-dark #maincontainer {
   background-color: #0a0a0a;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000352}}
 body.has-background-image #maincontainer {
   background: none;
 }

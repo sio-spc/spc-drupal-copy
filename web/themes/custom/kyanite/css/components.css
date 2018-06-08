@@ -29,6 +29,29 @@ $global-header-padding-bottom-big-scrolled-down: $global-header-padding-top-big-
   display: block;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_backgroundcolors\.scss}line{font-family:\000032}}
+.path-frontpage #maincontainer #main #block-views-block-updates-block-1, .path-frontpage #maincontainer #main .layout-content-bottom-66-33 {
+  background-color: #e6f7f9;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_backgroundcolors\.scss}line{font-family:\000035}}
+.path-frontpage #maincontainer #main #block-views-block-updates-block-1 {
+  border-top: 1px solid #b6d5d8;
+  border-bottom: 1px solid #b6d5d8;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_backgroundcolors\.scss}line{font-family:\0000311}}
+.path-updates #headerborder {
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_backgroundcolors\.scss}line{font-family:\0000314}}
+.path-updates #maincontainer {
+  background-color: #e6f7f9;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_backgroundcolors\.scss}line{font-family:\0000316}}
+.path-updates #maincontainer #main {
+  margin-top: 0;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_bannerimages\.scss}line{font-family:\000031}}
 #block-kyanite-content .flexslider {
   margin: 0;
