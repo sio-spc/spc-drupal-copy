@@ -52,15 +52,11 @@ $global-header-padding-bottom-big-scrolled-down: $global-header-padding-top-big-
   margin-top: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_backgroundcolors\.scss}line{font-family:\0000321}}
-.context-resources #block-views-block-resources-block-1 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_backgroundcolors\.scss}line{font-family:\0000322}}
+.context-resources #block-views-block-resources-block-1, .context-resources .context-resources #block-views-block-resources-block-2 {
   background-color: #e6f7f9;
   border-top: 1px solid #b6d5d8;
   border-bottom: 1px solid #b6d5d8;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_backgroundcolors\.scss}line{font-family:\0000325}}
-.context-resources #block-views-block-resources-block-1 #headerborder {
-  margin-bottom: 0;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_bannerimages\.scss}line{font-family:\000031}}
