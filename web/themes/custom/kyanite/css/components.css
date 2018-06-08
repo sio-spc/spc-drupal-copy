@@ -58,6 +58,10 @@ $global-header-padding-bottom-big-scrolled-down: $global-header-padding-top-big-
   border-top: 1px solid #b6d5d8;
   border-bottom: 1px solid #b6d5d8;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_backgroundcolors\.scss}line{font-family:\0000327}}
+.context-resources #block-views-block-resources-block-2 {
+  border-top: 10px solid #ccc;
+}
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_bannerimages\.scss}line{font-family:\000031}}
 #block-kyanite-content .flexslider {
