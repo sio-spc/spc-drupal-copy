@@ -2830,9 +2830,10 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
     position: fixed;
     line-height: 1.8em;
     height: 1.8em;
+    top: -4px;
     right: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003180}}
   .explore-button else {
     left: 0;
   }
@@ -2848,13 +2849,13 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
 }
 
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003201}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003202}}
   .scrolled-down .explore-button {
     padding: 0.5em;
     background-color: rgba(0, 0, 0, 0.5);
     color: white !important;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003205}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003206}}
   .scrolled-down .explore-button.touching {
     background-color: black;
   }

@@ -173,6 +173,7 @@ body.no-explore {
 	    position: fixed;
 	    line-height: 1.8em;
 	    height: 1.8em;
+	    top: -4px;
 		@if $global-layout-logo-explore-direction == right{
 			right: 0;
 		}
