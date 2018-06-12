@@ -41,6 +41,9 @@ body:not(.context-resources) #main,
     	padding-right: 1em;
     }
 }
+.context-resources #block-pagetitle, .context-resources #block-kyanite-local-tasks{
+  padding-bottom: 0;
+}
 body:not(.path-frontpage){
     #main{
         margin:0 auto;
