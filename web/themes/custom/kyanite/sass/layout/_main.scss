@@ -1,6 +1,12 @@
 #maincontainer{
     clear: both;
 }
+#block-searchpublications{
+  padding-bottom:0;
+  p{
+    margin:0;
+  }
+}
 body:not(.context-resources) #main, 
 .context-resources #block-pagetitle, 
 .context-resources #block-kyanite-content, 
