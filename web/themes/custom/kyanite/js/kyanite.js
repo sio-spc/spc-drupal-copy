@@ -1152,6 +1152,11 @@
       $("#block-views-block-related-content-block-1").hide();//hide related content block if even the fallback view is empty
     }
   }
+  function bottomcontent(){
+    if($(".bottom").html().trim() == ""){
+      $(".bottom").hide();
+    }
+  }
 
   function paragraphtabs(){
     $(".paragraph.paragraph--type--bp-tabs ul.nav.nav-tabs li.active a").addClass("active");
@@ -1533,6 +1538,7 @@
 	$(document).ready(function(){
 
     frieze();
+    bottomcontent();
 
 // please do not try to optimize this by putting it into another document ready event handler
 		$('body').addClass('ready');
