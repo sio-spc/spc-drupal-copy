@@ -1147,7 +1147,7 @@
       lastlang = $(this).find(".relatedinner").attr("data-lang");
       lastlangnid = $(this).find(".relatedinner").attr("data-langnid");
     });
-    if($(".spcgrid.relatedcontent .item-list").text().trim() == ""){
+    if($(".spcgrid.relatedcontent .kyanite-views-rows").text().trim() == ""){
       $("#block-views-block-related-content-block-1").hide();//hide related content block if even the fallback view is empty
     }
   }
