@@ -687,6 +687,7 @@ body:not(.context-resources) #main,
 .context-resources #block-kyanite-local-tasks,
 .context-resources #block-views-block-resources-block-1 > div,
 .context-resources #block-views-block-resources-block-2 > div,
+.bottomfullwidth,
 .bottom {
   overflow: hidden;
   *zoom: 1;
@@ -698,13 +699,14 @@ body:not(.context-resources) #main,
       min-height: 2262px; */
   transition: background-color 0.5s, color 0.5s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000312}}
 body:not(.context-resources) #main .layout-content > div,
 .context-resources #block-pagetitle .layout-content > div,
 .context-resources #block-kyanite-content .layout-content > div,
 .context-resources #block-kyanite-local-tasks .layout-content > div,
 .context-resources #block-views-block-resources-block-1 > div .layout-content > div,
 .context-resources #block-views-block-resources-block-2 > div .layout-content > div,
+.bottomfullwidth .layout-content > div,
 .bottom .layout-content > div {
   position: relative;
 }
@@ -716,6 +718,7 @@ body:not(.context-resources) #main .layout-content > div,
   .context-resources #block-kyanite-local-tasks,
   .context-resources #block-views-block-resources-block-1 > div,
   .context-resources #block-views-block-resources-block-2 > div,
+  .bottomfullwidth,
   .bottom {
     max-width: 95%;
   }
@@ -728,6 +731,7 @@ body:not(.context-resources) #main .layout-content > div,
   .context-resources #block-kyanite-local-tasks,
   .context-resources #block-views-block-resources-block-1 > div,
   .context-resources #block-views-block-resources-block-2 > div,
+  .bottomfullwidth,
   .bottom {
     max-width: 70%;
   }
@@ -740,29 +744,30 @@ body:not(.context-resources) #main .layout-content > div,
   .context-resources #block-kyanite-local-tasks,
   .context-resources #block-views-block-resources-block-1 > div,
   .context-resources #block-views-block-resources-block-2 > div,
+  .bottomfullwidth,
   .bottom {
     padding-left: 1em;
     padding-right: 1em;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000338}}
 body:not(.path-frontpage) #main {
   margin: 0 auto;
   font-size: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000345}}
 body:not(.path-frontpage) #main input[type=checkbox],
 body:not(.path-frontpage) #main input[type=radio] {
   margin: 1em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000354}}
 body.color-scheme-dark #maincontainer {
   background-color: #0a0a0a;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000359}}
 body.has-background-image #maincontainer {
   background: none;
 }
