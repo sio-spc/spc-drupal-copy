@@ -687,7 +687,7 @@ body:not(.context-resources) #main,
 .context-resources #block-kyanite-local-tasks,
 .context-resources #block-views-block-resources-block-1 > div,
 .context-resources #block-views-block-resources-block-2 > div,
-.bottomfullwidth,
+.bottomfullwidth > div,
 .bottom {
   overflow: hidden;
   *zoom: 1;
@@ -706,7 +706,7 @@ body:not(.context-resources) #main .layout-content > div,
 .context-resources #block-kyanite-local-tasks .layout-content > div,
 .context-resources #block-views-block-resources-block-1 > div .layout-content > div,
 .context-resources #block-views-block-resources-block-2 > div .layout-content > div,
-.bottomfullwidth .layout-content > div,
+.bottomfullwidth > div .layout-content > div,
 .bottom .layout-content > div {
   position: relative;
 }
@@ -718,7 +718,7 @@ body:not(.context-resources) #main .layout-content > div,
   .context-resources #block-kyanite-local-tasks,
   .context-resources #block-views-block-resources-block-1 > div,
   .context-resources #block-views-block-resources-block-2 > div,
-  .bottomfullwidth,
+  .bottomfullwidth > div,
   .bottom {
     max-width: 95%;
   }
@@ -731,7 +731,7 @@ body:not(.context-resources) #main .layout-content > div,
   .context-resources #block-kyanite-local-tasks,
   .context-resources #block-views-block-resources-block-1 > div,
   .context-resources #block-views-block-resources-block-2 > div,
-  .bottomfullwidth,
+  .bottomfullwidth > div,
   .bottom {
     max-width: 70%;
   }
@@ -744,7 +744,7 @@ body:not(.context-resources) #main .layout-content > div,
   .context-resources #block-kyanite-local-tasks,
   .context-resources #block-views-block-resources-block-1 > div,
   .context-resources #block-views-block-resources-block-2 > div,
-  .bottomfullwidth,
+  .bottomfullwidth > div,
   .bottom {
     padding-left: 1em;
     padding-right: 1em;
