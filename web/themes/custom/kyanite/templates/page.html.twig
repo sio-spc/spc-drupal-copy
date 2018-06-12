@@ -149,10 +149,11 @@
   </main>
   </div>
 
-
+{% if page.bottom_fullwidth %}
   <div class="bottomfullwidth">
       {{ page.bottom_fullwidth }}
     </div>
+  {% endif %}
    
    <div class="bottom">
       {{ page.bottom }}
