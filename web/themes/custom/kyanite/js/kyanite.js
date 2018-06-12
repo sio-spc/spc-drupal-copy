@@ -1153,10 +1153,10 @@
     }
   }
   function bottomcontent(){
-    if($(".bottom > div").html().trim() == ""){
+    if(($(".bottom").html().trim() == "") || $(".bottom > div").html().trim() == ""){
       $(".bottom").hide();
     }
-    if($(".bottomfullwidth > div").html().trim() == ""){
+    if(($(".bottomfullwidth").html().trim() == "") || $(".bottomfullwidth > div").html().trim() == ""){
       $(".bottomfullwidth").hide();
     }
   }
