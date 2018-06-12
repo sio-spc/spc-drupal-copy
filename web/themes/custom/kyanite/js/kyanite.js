@@ -1156,6 +1156,9 @@
     if($(".bottom").html().trim() == ""){
       $(".bottom").hide();
     }
+    if($(".bottomfullwidth").html().trim() == ""){
+      $(".bottomfullwidth").hide();
+    }
   }
 
   function paragraphtabs(){
