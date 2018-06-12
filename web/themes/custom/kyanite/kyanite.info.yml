@@ -21,6 +21,7 @@ regions:
   breadcrumb: 'Breadcrumb'
   highlighted: 'Highlighted'
   highlighted2: 'Highlighted 2 (content width)'
+  bottom_fullwidth: 'Bottom Full-width'
   bottom: 'Bottom'
   fixed_header_left: 'Fixed Header: Left'
   fixed_header_right: 'Fixed Header: Right'
