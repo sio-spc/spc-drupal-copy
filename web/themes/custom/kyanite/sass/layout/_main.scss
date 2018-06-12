@@ -44,6 +44,9 @@ body:not(.context-resources) #main,
 .context-resources #block-pagetitle, .context-resources #block-kyanite-local-tasks{
   padding-bottom: 0;
 }
+.context-resources #block-pagetitle h1{
+  text-align: center;
+}
 body:not(.path-frontpage){
     #main{
         margin:0 auto;

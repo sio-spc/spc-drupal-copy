@@ -770,23 +770,28 @@ body:not(.context-resources) #main .layout-content > div,
   padding-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000347}}
+.context-resources #block-pagetitle h1 {
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000351}}
 body:not(.path-frontpage) #main {
   margin: 0 auto;
   font-size: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000358}}
 body:not(.path-frontpage) #main input[type=checkbox],
 body:not(.path-frontpage) #main input[type=radio] {
   margin: 1em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000367}}
 body.color-scheme-dark #maincontainer {
   background-color: #0a0a0a;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_main\.scss}line{font-family:\0000372}}
 body.has-background-image #maincontainer {
   background: none;
 }

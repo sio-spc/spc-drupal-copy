@@ -1149,7 +1149,7 @@
     });
     //consoleLog("relatedcontent count: " + $(".spcgrid.relatedcontent .views-row").length);
     if($(".spcgrid.relatedcontent .views-row").length < 1){
-      $("#block-views-block-related-content-block-1").hide();//hide related content block if even the fallback view is empty
+      $("#block-views-block-related-content-block-1").remove();//hide related content block if even the fallback view is empty
     }
   }
   function bottomcontent(){
@@ -1538,7 +1538,7 @@
 	$(document).ready(function(){
 
     frieze();
-    bottomcontent();
+    
 
 // please do not try to optimize this by putting it into another document ready event handler
 		$('body').addClass('ready');
@@ -1572,6 +1572,7 @@
     paragraphSimpleBackgroundColor();
 
     relatedContentView();
+    bottomcontent();
 
     superfishExplore();
     termTweaks();
