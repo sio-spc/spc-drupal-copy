@@ -5910,14 +5910,18 @@ body.has-background-image .site-footer {
   clear: both;
   padding-top: 1em;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003483}}
+#block-views-block-related-content-block-1 h2 {
+  text-align: center;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003484}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003487}}
 #block-views-block-members-grid-block-1 {
   margin: auto;
   margin-bottom: 5em;
 }
 @media (max-width: 979px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003484}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003487}}
   #block-views-block-members-grid-block-1 {
     /* map is hidden < 980px */
     padding-top: 0;
