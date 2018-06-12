@@ -149,15 +149,17 @@
   </main>
   </div>
 
-{% if page.bottom_fullwidth %}
+  {% if page.bottom_fullwidth %}
   <div class="bottomfullwidth">
       {{ page.bottom_fullwidth }}
     </div>
   {% endif %}
    
+   {% if page.bottom %}
    <div class="bottom">
       {{ page.bottom }}
-    </div>{# /.layout-content #}
+    </div>
+  {% endif %}
 
   {% if page.footer_prefix %}
     <div class="layout-footer-prefix" >
