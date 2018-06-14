@@ -1335,7 +1335,7 @@
     $("#block-kyanite-content").prepend("<a href='javascript:;' class='togglemapview viewlist'>"+viewlist+"</a>");
     $(".togglemapview").click(function(){
       $(".events .item-list, .events details, .togglemapview.viewmap, .togglemapview.viewlist").toggle();
-      if (window.matchMedia('(max-width: 699px)').matches) {//mobile
+      if (window.matchMedia('(max-width: 699px)').matches) {
         $(".layout-sidebar.mobile").toggle();
       }
       else{
