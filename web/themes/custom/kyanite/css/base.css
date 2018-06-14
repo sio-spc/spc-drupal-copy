@@ -113,21 +113,21 @@ h1,
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\0000375}}
   h1,
   .heading-a {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 }
 @media (max-width: 699px) and (orientation: landscape) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\0000375}}
   h1,
   .heading-a {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 }
 @media (min-width: 700px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\0000375}}
   h1,
   .heading-a {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\0000392}}
@@ -142,7 +142,7 @@ h2,
   margin: 1.0em 0 0.5em;
   font-weight: inherit;
   /*font-size: 1.143em;*/
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003103}}
@@ -151,7 +151,7 @@ h3,
   margin: 1.0em 0 0.5em;
   font-weight: inherit;
   /*font-size: 1.092em;*/
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003110}}
