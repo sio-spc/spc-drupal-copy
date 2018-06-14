@@ -2030,7 +2030,8 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003244}}
 .togglemapview {
-  display: block;
+  display: none;
+  /* let's hide this for now */
   color: #666;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003247}}
