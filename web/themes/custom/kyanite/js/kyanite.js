@@ -1325,13 +1325,15 @@
     });
   }
   function eventSidebarDisplay(){
-    if (window.matchMedia('(max-width: 699px)').matches) {
-      $(".layout-sidebar.mobile").show();
-      $(".layout-sidebar.desktop").hide();
-    }
-    else{
-      $(".layout-sidebar.desktop").show();
-      $(".layout-sidebar.mobile").hide();
+    if($(".eventmap").is(":hidden")){//map is not visible
+      if (window.matchMedia('(max-width: 699px)').matches) {
+        $(".layout-sidebar.mobile").show();
+        $(".layout-sidebar.desktop").hide();
+      }
+      else{
+        $(".layout-sidebar.desktop").show();
+        $(".layout-sidebar.mobile").hide();
+      }
     }
   }
   function eventMap(){
