@@ -1103,6 +1103,7 @@
     $(".updates .kyanite-views-row-inner, .relatedcontent .item-list li, .resources .kyanite-views-row-inner, .relatedcontent .kyanite-views-row-inner, .paragraphfeaturedcontent ul.slides li").each(function(){
 
       $(this).append($(this).find(".update-type-date"));
+      consoleLog("this update-type-date: " + $(this).find(".update-type-date").html());
       
       var thislink = $(this).find(".views-field-title a").attr("href");
       //$(this).find(".views-field-title a").hide();//hidden with css
