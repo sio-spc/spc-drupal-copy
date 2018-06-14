@@ -152,6 +152,7 @@
 		flex-flow: row wrap;
 		justify-content: space-between;
 		> .views-row, > li{/* refer to _front.scss to coordinate these breakpoints */
+			position: relative;
 			@media (max-width: 639px){
 				margin-bottom: 8vw;
 			}
@@ -490,4 +491,9 @@
 	@media (max-width: 979px){/* map is hidden < 980px */
 		padding-top: 0;
 	}
+}
+.update-type-date{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
