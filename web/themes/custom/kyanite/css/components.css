@@ -4591,6 +4591,14 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
 #block-views-block-partners-block-1 {
   padding-bottom: 3em;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_partners\.scss}line{font-family:\000033}}
+#block-views-block-partners-block-1 h3 {
+  margin-top: 5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_partners\.scss}line{font-family:\000035}}
+#block-views-block-partners-block-1 h3:first-child {
+  margin-top: 0;
+}
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_policyareas\.scss}line{font-family:\000032}}
 .policy-areas .views-row {
