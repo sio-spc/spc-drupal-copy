@@ -954,7 +954,7 @@
  
   var landingPageHeightsListening = false;
   
-  function homeTweaks(){
+  function resizeTweaks(){
     var ourworkimgheight = $("#block-ourwork img").height();
     consoleLog("ourwork img height: " + ourworkimgheight);
     if($(window).width() > 640){//tablet and desktop only please
@@ -963,6 +963,8 @@
     else{
       $("#block-twitter .field-body").height(ourworkimgheight*3);
     }
+
+    eventSidebarDisplay();
   }
   function removeContextualLinks($el){
     $el.removeAttr('data-quickedit-entity-id').removeClass("contextual-region")
@@ -1322,6 +1324,16 @@
 
     });
   }
+  function eventSidebarDisplay(){
+    if (window.matchMedia('(max-width: 699px)').matches) {
+        $(".layout-sidebar.mobile").show();
+        $(".layout-sidebar.desktop").hide();
+      }
+      else{
+        $(".layout-sidebar.desktop").show();
+        $(".layout-sidebar.mobile").hide();
+      }
+  }
   function eventMap(){
 
     var viewmap = "view map";
@@ -1335,14 +1347,7 @@
     $("#block-kyanite-content").prepend("<a href='javascript:;' class='togglemapview viewlist'>"+viewlist+"</a>");
     $(".togglemapview").click(function(){
       $(".events .item-list, .events details, .togglemapview.viewmap, .togglemapview.viewlist").toggle();
-      if (window.matchMedia('(max-width: 699px)').matches) {
-        $(".layout-sidebar.mobile").toggle();
-        $(".layout-sidebar.desktop").hide();
-      }
-      else{
-        $(".layout-sidebar.desktop").toggle();
-        $(".layout-sidebar.mobile").hide();
-      }
+      eventSidebarDisplay();
       $("main .layout-content").toggleClass("fullwidth");
       $("#block-kyanite-content, .togglemapview.viewlist, .events .views-exposed-form, .eventmap, #main").toggleClass("mapvisible");
     }
@@ -1363,7 +1368,7 @@
       eventsFilterTweaks();
       eventCardTweaks();
       langswitcher();
-      homeTweaks();
+      resizeTweaks();
       spcImportTweaks();
       speechesFilterTweaks();
       YouTubeModal();
@@ -1555,7 +1560,7 @@
     $("aside.layout-sidebar.mobile").removeClass("desktop");
   }
 
-  $(window).on("load scroll resize orientationchange", homeTweaks);
+  $(window).on("load scroll resize orientationchange", resizeTweaks);
   
 
 	$(document).ready(function(){
