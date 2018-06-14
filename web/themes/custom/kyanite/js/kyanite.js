@@ -1541,12 +1541,18 @@
     
   }
 
+  function eventPageInit(){
+    $("aside.layout-sidebar").clone().addClass("mobile").prependTo("#main");
+  }
+
   $(window).on("load scroll resize orientationchange", homeTweaks);
   
 
 	$(document).ready(function(){
 
     frieze();
+
+    eventPageInit();
     
 
 // please do not try to optimize this by putting it into another document ready event handler
