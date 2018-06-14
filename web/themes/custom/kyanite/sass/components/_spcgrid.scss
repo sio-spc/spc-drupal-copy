@@ -153,6 +153,9 @@
 		justify-content: space-between;
 		> .views-row, > li{/* refer to _front.scss to coordinate these breakpoints */
 			position: relative;
+			.kyanite-views-row-inner{
+				position: relative;
+			}
 			@media (max-width: 639px){
 				margin-bottom: 8vw;
 			}
