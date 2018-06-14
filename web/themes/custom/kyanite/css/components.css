@@ -1768,7 +1768,7 @@ body.has-sidebar.page-node-type-event #main {
   max-width: 95%;
 }
 
-@media (min-width: 699px) {
+@media (max-width: 699px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\000036}}
   body.has-sidebar.page-node-type-event .layout-sidebar.desktop, body.has-sidebar.path-events .layout-sidebar.desktop {
     display: none;

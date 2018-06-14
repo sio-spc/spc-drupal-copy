@@ -1,7 +1,7 @@
 body.has-sidebar.page-node-type-event #main{
 	max-width: 95%;
 }
-@media (min-width: $bp-mobile-max){
+@media (max-width: $bp-mobile-max){
 	body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 		.layout-sidebar.desktop{
 			display: none;
