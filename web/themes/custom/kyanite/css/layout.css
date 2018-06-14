@@ -699,8 +699,7 @@ body:not(.context-resources) #main,
 #block-searchpublications,
 .bottomfullwidth > div,
 .bottom {
-  overflow: hidden;
-  *zoom: 1;
+  /*@include clearfix();*/
   padding-top: 1em;
   padding-bottom: 1em;
   margin-left: auto;

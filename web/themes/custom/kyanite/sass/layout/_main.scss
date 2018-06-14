@@ -19,7 +19,7 @@ body:not(.context-resources) #main,
   .layout-content > div{
     position: relative;
   }
-	@include clearfix();
+	/*@include clearfix();*/
 	padding-top: 1em;
 	padding-bottom: 1em;
   @media (min-width: $bp-mobile-max){
