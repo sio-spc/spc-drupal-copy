@@ -9,9 +9,6 @@ body.has-sidebar.page-node-type-event #main{
 	}
 }
 @media (min-width: $bp-tablet-min){
-	.path-events h1{
-		display: none;
-	}
 	body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 		#main{
 			flex-direction: row-reverse; 
@@ -47,6 +44,9 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 			margin-bottom: 3em;
 		}
 	}
+}
+.path-events h1{
+	text-align: center;
 }
 .page-node-type-event{
 	.node{
