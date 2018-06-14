@@ -1109,7 +1109,7 @@
       else{
         $(this).wrapInner('<a href="'+thislink+'"></a>');
       }
-      $(this).find(".update-type-date").appendTo($(this));
+      $(this).append($(".update-type-date"));
     });
   }
   function relatedContentView(){
