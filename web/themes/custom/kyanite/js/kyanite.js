@@ -1542,7 +1542,9 @@
   }
 
   function eventPageInit(){
+    $("aside.layout-sidebar").addClass("desktop");
     $("aside.layout-sidebar").clone().addClass("mobile").appendTo("#main");
+    $("aside.layout-sidebar.mobile").removeClass("desktop");
   }
 
   $(window).on("load scroll resize orientationchange", homeTweaks);
