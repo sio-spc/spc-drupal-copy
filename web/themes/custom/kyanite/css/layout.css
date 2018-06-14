@@ -702,7 +702,7 @@ body:not(.context-resources) #main,
   overflow: hidden;
   *zoom: 1;
   padding-top: 1em;
-  padding-bottom: 4em;
+  padding-bottom: 1em;
   margin-left: auto;
   margin-right: auto;
   /*    min-height: Calc(100vh - 331px); //magic numbers are no good... but this at least gets it to look good in desktop with light content.  331px should ideally be the header + footer height.  That's ok though, we have a JS solution for this

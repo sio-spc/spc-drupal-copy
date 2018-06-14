@@ -21,7 +21,7 @@ body:not(.context-resources) #main,
   }
 	@include clearfix();
 	padding-top: 1em;
-	padding-bottom: 4em;
+	padding-bottom: 1em;
   @media (min-width: $bp-mobile-max){
 
   }
