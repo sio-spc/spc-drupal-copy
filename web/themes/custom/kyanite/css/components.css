@@ -5915,7 +5915,7 @@ body.has-background-image .site-footer {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003498}}
 .update-type-date {
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   width: 100%;
 }
 
