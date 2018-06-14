@@ -1334,7 +1334,13 @@
     $(".events details").after("<a href='javascript:;' class='togglemapview viewmap'>"+viewmap+"</a>");
     $("#block-kyanite-content").prepend("<a href='javascript:;' class='togglemapview viewlist'>"+viewlist+"</a>");
     $(".togglemapview").click(function(){
-      $(".events .item-list, .events details, .layout-sidebar:visible, .togglemapview.viewmap, .togglemapview.viewlist").toggle();
+      $(".events .item-list, .events details, .togglemapview.viewmap, .togglemapview.viewlist").toggle();
+      if (window.matchMedia('(max-width: 699px)').matches) {//mobile
+        $(".layout-sidebar.mobile").toggle();
+      }
+      else{
+        $(".layout-sidebar.desktop").toggle();
+      }
       $("main .layout-content").toggleClass("fullwidth");
       $("#block-kyanite-content, .togglemapview.viewlist, .events .views-exposed-form, .eventmap, #main").toggleClass("mapvisible");
     }
