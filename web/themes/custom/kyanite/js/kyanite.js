@@ -1101,6 +1101,9 @@
     consoleLog("function spcGridView");
     
     $(".updates .kyanite-views-row-inner, .relatedcontent .item-list li, .resources .kyanite-views-row-inner, .relatedcontent .kyanite-views-row-inner, .paragraphfeaturedcontent ul.slides li").each(function(){
+
+      $(this).append($(this).find(".update-type-date"));
+      
       var thislink = $(this).find(".views-field-title a").attr("href");
       //$(this).find(".views-field-title a").hide();//hidden with css
       if($(this).find("> a").length){
@@ -1109,7 +1112,7 @@
       else{
         $(this).wrapInner('<a href="'+thislink+'"></a>');
       }
-      $(this).append($(".update-type-date"));
+
     });
   }
   function relatedContentView(){
