@@ -954,7 +954,7 @@
  
   var landingPageHeightsListening = false;
   
-  function resizeTweaks(){
+  function homeTweaks(){
     var ourworkimgheight = $("#block-ourwork img").height();
     consoleLog("ourwork img height: " + ourworkimgheight);
     if($(window).width() > 640){//tablet and desktop only please
@@ -963,8 +963,6 @@
     else{
       $("#block-twitter .field-body").height(ourworkimgheight*3);
     }
-
-    eventSidebarDisplay();
   }
   function removeContextualLinks($el){
     $el.removeAttr('data-quickedit-entity-id').removeClass("contextual-region")
@@ -1324,18 +1322,6 @@
 
     });
   }
-  function eventSidebarDisplay(){
-    if($(".eventmap").attr("top") == "-10000px"){//map is not visible
-      if (window.matchMedia('(max-width: 699px)').matches) {
-        $(".layout-sidebar.mobile").show();
-        $(".layout-sidebar.desktop").hide();
-      }
-      else{
-        $(".layout-sidebar.desktop").show();
-        $(".layout-sidebar.mobile").hide();
-      }
-    }
-  }
   function eventMap(){
 
     var viewmap = "view map";
@@ -1348,16 +1334,7 @@
     $(".events details").after("<a href='javascript:;' class='togglemapview viewmap'>"+viewmap+"</a>");
     $("#block-kyanite-content").prepend("<a href='javascript:;' class='togglemapview viewlist'>"+viewlist+"</a>");
     $(".togglemapview").click(function(){
-
-      $(".events .item-list, .events details, .togglemapview.viewmap, .togglemapview.viewlist").toggle();
-
-      if (window.matchMedia('(max-width: 699px)').matches) {
-        $(".layout-sidebar.mobile").toggle();
-      }
-      else{
-        $(".layout-sidebar.desktop").toggle();
-      }
-      
+      $(".events .item-list, .events details, .layout-sidebar, .togglemapview.viewmap, .togglemapview.viewlist").toggle();
       $("main .layout-content").toggleClass("fullwidth");
       $("#block-kyanite-content, .togglemapview.viewlist, .events .views-exposed-form, .eventmap, #main").toggleClass("mapvisible");
     }
@@ -1378,7 +1355,7 @@
       eventsFilterTweaks();
       eventCardTweaks();
       langswitcher();
-      resizeTweaks();
+      homeTweaks();
       spcImportTweaks();
       speechesFilterTweaks();
       YouTubeModal();
@@ -1570,7 +1547,7 @@
     $("aside.layout-sidebar.mobile").removeClass("desktop");
   }
 
-  $(window).on("load scroll resize orientationchange", resizeTweaks);
+  $(window).on("load scroll resize orientationchange", homeTweaks);
   
 
 	$(document).ready(function(){
