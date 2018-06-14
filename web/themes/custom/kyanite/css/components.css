@@ -4596,8 +4596,8 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   margin-top: 5em;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_partners\.scss}line{font-family:\000035}}
-#block-views-block-partners-block-1 .partners h3:first-child {
-  margin-top: 0;
+#block-views-block-partners-block-1 .partners h3:first-of-type {
+  margin-top: 0 !important;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_policyareas\.scss}line{font-family:\000032}}

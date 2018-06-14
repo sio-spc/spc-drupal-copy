@@ -2,8 +2,8 @@
 	padding-bottom: 3em;
 	.partners h3{
 		margin-top: 5em;
-		&:first-child{
-			margin-top: 0;
+		&:first-of-type{
+			margin-top: 0!important;
 		}
 	}
 }
