@@ -1337,9 +1337,11 @@
       $(".events .item-list, .events details, .togglemapview.viewmap, .togglemapview.viewlist").toggle();
       if (window.matchMedia('(max-width: 699px)').matches) {
         $(".layout-sidebar.mobile").toggle();
+        $(".layout-sidebar.desktop").hide();
       }
       else{
         $(".layout-sidebar.desktop").toggle();
+        $(".layout-sidebar.mobile").hide();
       }
       $("main .layout-content").toggleClass("fullwidth");
       $("#block-kyanite-content, .togglemapview.viewlist, .events .views-exposed-form, .eventmap, #main").toggleClass("mapvisible");
