@@ -43,6 +43,9 @@
 			margin-top: -2em;
 			margin-top: -2.5vw;
 		}
+		.kyanite-views-row-inner a{
+			padding-bottom: 1em;
+		}
 	}
 	&.partners{
 		.item-list{
@@ -234,7 +237,6 @@
 			display: block;
 			position: relative;
 			height: 100%;
-			padding-bottom: 1em;
 			-webkit-transition: all 250ms ease-in-out;
 		    -moz-transition: all 250ms ease-in-out;
 		    -ms-transition: all 250ms ease-in-out;
