@@ -242,7 +242,7 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 	}
 }
 .togglemapview{
-	display: block;
+	display: none;/* let's hide this for now */
 	color: #666;
 	&:hover{
 		color: #000;
