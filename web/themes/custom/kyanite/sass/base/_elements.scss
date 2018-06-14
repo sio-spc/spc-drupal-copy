@@ -654,6 +654,9 @@ img.align-center, img.aligncenter, img[align="center"]{
   border-radius: 3px;
   transition: all 0.2s;
 }
+.more-link > a{
+  display: inline-block;
+}
 .field-field-this-is-a-link-to-an-image, .field-field-show-captions-under-the-th, .spcgrid.relatedcontent .views-field-title, .paragraph--bp-accordion--container .btn.btn-primary.bp-accordion--button, .paragraphfeaturedcontent .views-field-title, .spcgrid.updates .views-field-title, .spcgrid.resources .views-field-title{
   display: none;
 }
