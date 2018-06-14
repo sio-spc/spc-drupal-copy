@@ -1991,7 +1991,7 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
     min-width: 25%;
     max-width: 40%;
     background-color: #fff;
-    opacity: 1;
+    opacity: .9;
     transition: opacity 500ms ease 200ms;
     -webkit-transition: opacity 500ms ease 200ms;
     -ms-transition: opacity 500ms ease 200ms;
