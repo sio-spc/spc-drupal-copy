@@ -1,6 +1,13 @@
 body.has-sidebar.page-node-type-event #main{
 	max-width: 95%;
 }
+@media (min-width: $bp-mobile-max){
+	body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
+		.layout-sidebar.desktop{
+			display: none;
+		}
+	}
+}
 @media (min-width: $bp-tablet-min){
 	body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 		#main{
@@ -10,6 +17,9 @@ body.has-sidebar.page-node-type-event #main{
 			width: 33%;
 			padding-left: 0;
 			padding-right: 1em;
+			&.mobile{
+				display: none;
+			}
 		}
 		.layout-content {
 			width: 60%;
