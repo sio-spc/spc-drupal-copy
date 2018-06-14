@@ -232,6 +232,7 @@
 		a{
 			display: block;
 			position: relative;
+			height: 100%;
 			-webkit-transition: all 250ms ease-in-out;
 		    -moz-transition: all 250ms ease-in-out;
 		    -ms-transition: all 250ms ease-in-out;
@@ -495,7 +496,7 @@
 		padding-top: 0;
 	}
 }
-.update-type-date{
+.views-field-nothing-2{
 	position: absolute;
 	bottom: 5px;
 	width: 100%;
