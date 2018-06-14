@@ -1155,11 +1155,15 @@
     }
   }
   function bottomcontent(){
-    if(($(".bottom").html().trim() == "") || $(".bottom > div").html().trim() == ""){
-      $(".bottom").hide();
+    if($(".bottom").length){
+      if(($(".bottom").html().trim() == "") || $(".bottom > div").html().trim() == ""){
+        $(".bottom").hide();
+      }
     }
-    if(($(".bottomfullwidth").html().trim() == "") || $(".bottomfullwidth > div").html().trim() == ""){
-      $(".bottomfullwidth").hide();
+    if($(".bottomfullwidth").length){
+      if(($(".bottomfullwidth").html().trim() == "") || $(".bottomfullwidth > div").html().trim() == ""){
+        $(".bottomfullwidth").hide();
+      }
     }
   }
 
