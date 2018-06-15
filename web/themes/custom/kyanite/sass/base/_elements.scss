@@ -158,14 +158,13 @@ img {
   margin: 0;
   padding: 0 1em 1.2em; /* LTR */
   li{
-    /*list-style-position: inside;*/
     margin-bottom: .5em;
   }
 }
 .paragraph__column{
   .field-type-text-with-summary, .field-type-text-long{
     li{
-      list-style-position: inside;
+      list-style-position: outside;
     }
   }
 }
