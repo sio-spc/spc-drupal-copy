@@ -283,4 +283,7 @@ $color-submit-button-text: #FFF;
 
 p.autocomplete-instructions{
 	margin: 0;
+	.field-body{
+		padding-bottom: 0;
+	}
 }

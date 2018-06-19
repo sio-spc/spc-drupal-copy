@@ -378,6 +378,10 @@
 p.autocomplete-instructions {
   margin: 0;
 }
+/* line 286, ../sass/components/_autocomplete.scss */
+p.autocomplete-instructions .field-body {
+  padding-bottom: 0;
+}
 
 /*********************************************************************************/
 /* HACK */
