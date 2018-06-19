@@ -1548,7 +1548,7 @@
   }
 
   function memberDefaultInfo(){
-    $("p.autocomplete-instructions").html($(".kyanite-block.logoanimation"));
+    $("p.autocomplete-instructions").append($(".kyanite-block.logoanimation"));
   }
 
   $(window).on("load scroll resize orientationchange", homeTweaks);
