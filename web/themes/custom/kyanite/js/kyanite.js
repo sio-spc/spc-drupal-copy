@@ -1547,6 +1547,10 @@
     $("aside.layout-sidebar.mobile").removeClass("desktop");
   }
 
+  function memberDefaultInfo(){
+    $("p.autocomplete-instructions").html($(".kyanite-block.logoanimation"));
+  }
+
   $(window).on("load scroll resize orientationchange", homeTweaks);
   
 
@@ -1555,6 +1559,8 @@
     frieze();
 
     eventPageInit();
+
+    memberDefaultInfo();
     
 
 // please do not try to optimize this by putting it into another document ready event handler
