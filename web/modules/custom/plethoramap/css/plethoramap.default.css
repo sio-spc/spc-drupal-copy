@@ -374,6 +374,11 @@
   content: " - ";
 }
 
+/* line 284, ../sass/components/_autocomplete.scss */
+p.autocomplete-instructions {
+  margin: 0;
+}
+
 /*********************************************************************************/
 /* HACK */
 /* todo: move this section to theme, since it's not really angular's domain... */
