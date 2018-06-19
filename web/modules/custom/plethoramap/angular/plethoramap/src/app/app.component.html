@@ -1,4 +1,5 @@
-<h2 *ngIf="errorMessage">{{errorMessage}}</h2> <div id="plethora-map-feature-wrapper">
+<h2 *ngIf="errorMessage">{{errorMessage}}</h2> 
+<div id="plethora-map-feature-wrapper">
 	<autocomplete
 		[data]="featureOptionsForAutocomplete"
 		[placeholder]="lang.selectFeaturePlaceholder"
@@ -13,13 +14,16 @@
 		(valueChange)="autocompleteValueChange($event)"
 		(clearEvent)="autocompleteCleared($event)"
 		></autocomplete>
- <p class="autocomplete-instructions" *ngIf="autocompleteInstructions && !query">{{autocompleteInstructions}}</p>
- <div class="default-info">Loading..</div>
+	<p class="autocomplete-instructions" *ngIf="autocompleteInstructions && !query">
+		{{autocompleteInstructions}}
+	</p>
+	<div class="default-info">Loading..</div>
 	<router-outlet></router-outlet> </div>
-<div id="plethora-map-container"></div>
-<div id="plethora-map-debug" *ngIf="debug">
-  <dl><dt>translateX:</dt><dd>{{ translateX }}</dd></dl>
-  <dl><dt>translateY:</dt><dd>{{ translateY }}</dd></dl>
-  <dl><dt>scale:</dt><dd>{{ scale }}</dd></dl>
+	<div id="plethora-map-container"></div>
+	<div id="plethora-map-debug" *ngIf="debug">
+	  <dl><dt>translateX:</dt><dd>{{ translateX }}</dd></dl>
+	  <dl><dt>translateY:</dt><dd>{{ translateY }}</dd></dl>
+	  <dl><dt>scale:</dt><dd>{{ scale }}</dd></dl>
+	</div>
+	<div id="plethora-map-hide-on-mobile"></div>
 </div>
-<div id="plethora-map-hide-on-mobile"></div>
