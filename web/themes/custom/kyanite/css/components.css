@@ -1100,7 +1100,7 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000315}}
   #block-kyanite-branding {
     text-align: center;
-    top: 5px;
+    top: 8px;
   }
 }
 @media (max-width: 979px) {
