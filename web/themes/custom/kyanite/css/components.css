@@ -401,7 +401,7 @@ body:not(.fixed-header-is-fixed):not(.divisionsite) .layout-primary-menu .superf
   text-decoration: none;
   border: none;
   display: block;
-  padding: .5em 1em;
+  padding: .5em 1.5em;
   text-transform: uppercase;
   font-weight: bold;
   position: relative;
