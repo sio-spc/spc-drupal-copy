@@ -1,3 +1,6 @@
+.langswitcherblock{
+	z-index: 1;
+}
 #block-languageswitchercontent, .langswitcherblock{
 	#header & {
 		@media (min-width: $bp-tablet-min){
