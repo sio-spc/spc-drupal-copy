@@ -916,7 +916,7 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
   line-height: 1.8em;
   line-height: calc(2.34em - 6px);
   position: relative;
-  top: -4px;
+  top: 4px;
 }
 @media (max-width: 699px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000315}}
