@@ -19,6 +19,7 @@
 			border: 2px solid transparent;
 			color: $global-color-link;
 			padding: .25em .5em;
+			display: inline-block;
 			
 			@media (max-width: $bp-mobile-max){
 				font-size: 1.3em;
