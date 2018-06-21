@@ -1,10 +1,7 @@
 #block-languageswitchercontent, .langswitcherblock{
 	#header & {
-		/*@media (max-width: $bp-mobile-max){
-			margin-top: .65em;
-		}*/
 		@media (min-width: $bp-tablet-min){
-		    margin-top: .65em;
+		    margin-top: 0;
 		}
 	}
 	ul.links{
@@ -20,6 +17,8 @@
 			color: $global-color-link;
 			padding: .25em .5em;
 			display: inline-block;
+			line-height: 1.8em;
+			line-height: calc(2.34em - 4px);
 			
 			@media (max-width: $bp-mobile-max){
 				font-size: 1.3em;
@@ -38,6 +37,7 @@
 			border-color: $global-color-link;
 			text-decoration: none;
 			background-color: #fff;
+
 			&:hover{
 				text-decoration: none;
 			}
