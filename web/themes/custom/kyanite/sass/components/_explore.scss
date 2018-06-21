@@ -270,7 +270,7 @@ $base-z-index: 10001;
 @media (min-width: $bp-tablet-min){
 	#explore {
 		/*padding-top: $global-top-line-height + $global-header-padding-top-tablet + ($global-logo-height-tablet - $global-explore-button-height-tablet)/2;*/
-		padding-top: .8em;
+		padding-top: 15px;
 		.layout-secondary-menu {
 			margin-top: $global-header-padding-bottom-tablet + ($global-logo-height-tablet - $global-explore-button-height-tablet)/2;
 		}
@@ -375,7 +375,7 @@ $base-z-index: 10001;
 @media (min-width: $bp-desktop-min){
 	#explore {
 		/*padding-top: $global-top-line-height + $global-header-padding-top-desktop;*/
-		padding-top: 1.25em;
+		/*padding-top: 1.25em;*/
 		//.layout-secondary-menu {
 		//	margin-top: $global-header-padding-bottom-desktop + ($global-logo-height-desktop - $global-explore-button-height-desktop)/2;
 		//}
@@ -388,7 +388,7 @@ $base-z-index: 10001;
 @media (min-width: $bp-desktop-big-min){
 	#explore {
 		/*padding-top: $global-header-padding-top-desktop-big;*/
-		padding-top: 1.2em;
+		/*padding-top: 1.2em;*/
 		.layout-secondary-menu {
 			//margin-top: $global-header-padding-bottom-desktop-big + ($global-logo-height-desktop-big - $global-explore-button-height-desktop-big)/2;
 			/*font-size: 1vw;*/
