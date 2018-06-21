@@ -5,7 +5,9 @@
 #header {
 	//border-bottom: 0 solid transparent;
 	transition: padding-top 0.5s, padding-bottom 0.5s;//, border-bottom 0.5s;
-	background-color: $global-color-header-bg;
+	/*background-color: $global-color-header-bg;*/
+	background: url("../images/headerbg.gif");
+	background-repeat: no-repeat;
 
  	@media (max-width: $bp-mobile-max){
  		.contextual {
