@@ -8,6 +8,8 @@
 	/*background-color: $global-color-header-bg;*/
 	background: url("../images/headerbg.gif");
 	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 
  	@media (max-width: $bp-mobile-max){
  		.contextual {
