@@ -1,15 +1,25 @@
 .layout-container {
 		position: relative;
-		background-color: $global-color-header-bg; // in case of light content, this will get rid of white gap between main and footer
+		@media (max-width: 979px){
+			background: url("../images/headerbg.gif");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		@media (min-width: 980px){
+			background-color: $global-color-header-bg; // in case of light content, this will get rid of white gap between main and footer
+		}
 }
 #header {
 	//border-bottom: 0 solid transparent;
 	transition: padding-top 0.5s, padding-bottom 0.5s;//, border-bottom 0.5s;
 	/*background-color: $global-color-header-bg;*/
-	background: url("../images/headerbg.gif");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	@media (min-width: 980px){
+		background: url("../images/headerbg.gif");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
 
  	@media (max-width: $bp-mobile-max){
  		.contextual {
