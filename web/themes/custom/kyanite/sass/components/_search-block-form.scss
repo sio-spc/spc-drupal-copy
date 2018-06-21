@@ -15,7 +15,7 @@ $search-block-form-icon-size : 1.5em;
 
 #block-kyanite-search, .searchbox, 
 #block-kyanite-search-fixed, .searchbox-fixed{
-	margin-top: 4px;
+	margin-top: 0;
     padding-right: 3rem;
     padding-left: 1rem;
 	@media (min-width: $bp-tablet-min){
@@ -72,24 +72,23 @@ $search-block-form-icon-size : 1.5em;
 	form {
 		position: relative;
 	}
-	form, form * {
-		color: $search-block-form-text-color;
-	}
-	form input:focus {
-		color: $search-block-form-text-color-focused;
-	}
-/*
-	@media (min-width: $bp-tablet-min){
+	@media (max-width: 699px){
 		form, form * {
-			//display: inline-block;
+			color: $search-block-form-text-color-focused;
+			background: transparent;
+		}
+		form input:focus {
+			color: $search-block-form-text-color;
+		}
+	}
+	@media (min-width: 700px){
+		form, form * {
 			color: $search-block-form-text-color;
 		}
 		form input:focus {
 			color: $search-block-form-text-color-focused;
 		}
-
 	}
-*/
 	form::after{
 	    content: $fa-var-search;
 	    display: inline-block;
