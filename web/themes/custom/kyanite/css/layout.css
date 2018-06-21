@@ -275,8 +275,8 @@ body.ready .layout-highlighted > * {
   .layout-container {
     background: url("../images/headerbg.gif");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: top;
   }
 }
 @media (min-width: 980px) {

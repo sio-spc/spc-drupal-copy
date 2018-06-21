@@ -3,8 +3,8 @@
 		@media (max-width: 979px){
 			background: url("../images/headerbg.gif");
 			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
+			background-size: contain;
+			background-position: top;
 		}
 		@media (min-width: 980px){
 			background-color: $global-color-header-bg; // in case of light content, this will get rid of white gap between main and footer
