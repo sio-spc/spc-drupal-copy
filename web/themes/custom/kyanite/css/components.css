@@ -910,10 +910,13 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
 #block-languageswitchercontent ul.links a.language-link, .langswitcherblock ul.links a.language-link {
   border: 2px solid transparent;
   color: #069;
-  padding: .25em .5em;
+  padding: 0 .5em;
+  padding-top: 2px;
   display: inline-block;
   line-height: 1.8em;
-  line-height: calc(2.34em - 4px);
+  line-height: calc(2.34em - 6px);
+  position: relative;
+  top: -4px;
 }
 @media (max-width: 699px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000315}}
@@ -929,41 +932,41 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
     font-size: 1em;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000334}}
 #block-languageswitchercontent ul.links a.language-link:hover, .langswitcherblock ul.links a.language-link:hover {
   text-decoration: underline;
   text-decoration-color: #ccc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000339}}
 #block-languageswitchercontent ul.links li.is-active a, .langswitcherblock ul.links li.is-active a {
   border-color: #069;
   text-decoration: none;
   background-color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000344}}
 #block-languageswitchercontent ul.links li.is-active a:hover, .langswitcherblock ul.links li.is-active a:hover {
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000349}}
 #explore #block-languageswitchercontent, #explore .langswitcherblock {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 @media (min-width: 461px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000349}}
   #explore #block-languageswitchercontent, #explore .langswitcherblock {
     display: none;
   }
 }
 
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000359}}
   body.division-sdp #header #block-languageswitchercontent, body.division-sdp #header .langswitcherblock, body.division-cces #header #block-languageswitchercontent, body.division-cces #header .langswitcherblock {
     display: none !important;
   }
 }
 @media (min-width: 461px) and (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000364}}
   body.division-sdp #explore #block-languageswitchercontent, body.division-sdp #explore .langswitcherblock, body.division-cces #explore #block-languageswitchercontent, body.division-cces #explore .langswitcherblock {
     display: block !important;
   }
