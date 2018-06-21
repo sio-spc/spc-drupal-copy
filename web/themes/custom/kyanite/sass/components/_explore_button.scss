@@ -1,6 +1,5 @@
 @media (max-width: 699px){
 	body.scrolled-down .explore-button{
-    	line-height: 2.7em;
     	height: 2.7em;
     }
 }
@@ -11,9 +10,9 @@
 		pointer-events: none !important;
     }
     font-size: 1.3em;
+    line-height: 1.8em;
 
     @media (min-width: 700px){
-    	line-height: 1.8em;
     	height: 1.8em;
     }
     
