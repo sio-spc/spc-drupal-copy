@@ -357,7 +357,8 @@ body.ready .layout-highlighted > * {
   #header > .region-header .langswitcherblock {
     position: absolute;
     top: 1em;
-    right: 25vw;
+    right: 7em;
+    /*was 25vw*/
   }
 }
 @media (min-width: 700px) {
