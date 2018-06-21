@@ -5,8 +5,17 @@
 		pointer-events: none !important;
     }
     font-size: 1.3em;
-    line-height: 1.8em;
-    height: 1.8em;
+    @media (max-width: 699px){
+    	&.scrolled-down{
+	    	line-height: 2.7em;
+	    	height: 2.7em;
+	    }
+    }
+    @media (min-width: 700px){
+    	line-height: 1.8em;
+    	height: 1.8em;
+    }
+    
     background: transparent;
 
     border: none;
