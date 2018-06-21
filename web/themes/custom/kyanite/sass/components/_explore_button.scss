@@ -1,8 +1,8 @@
 .explore-button{
     transition: opacity .5s;
     .fixed-header-is-fixed.explore-closed #explore & {
-	opacity: 0;
-	pointer-events: none !important;
+		opacity: 0;
+		pointer-events: none !important;
     }
     font-size: 1.3em;
     line-height: 1.8em;
@@ -54,9 +54,10 @@
 	}
 
 
-    color: #9da1a4;
+    
+    color: $global-color-hover;
 	&:hover, &:active, &:focus {
-		color: $global-color-hover;
+		color: #9da1a4;
 		outline: none;
 	}
 	transition: color 0.2s;

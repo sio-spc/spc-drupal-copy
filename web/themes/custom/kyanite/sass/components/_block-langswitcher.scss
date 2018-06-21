@@ -37,6 +37,7 @@
 		li.is-active a{
 			border-color: $global-color-link;
 			text-decoration: none;
+			background-color: #fff;
 			&:hover{
 				text-decoration: none;
 			}
