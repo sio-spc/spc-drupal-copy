@@ -305,8 +305,11 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 	}
 	.events-sidebar{
 		padding: .5em 1em;
-		@media (min-width: 980px) and (max-width: 1019px){
-			font-size: .75em;
+		@media (max-width: 829px){
+			font-size: .85em;
+		}
+		@media (min-width: 830px){
+			font-size: 1em;
 		}
 		@media (min-width: 1020px){
 			font-size: .8em;
