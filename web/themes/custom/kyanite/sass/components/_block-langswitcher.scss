@@ -15,20 +15,22 @@
 		a.language-link{
 			border: 2px solid transparent;
 			color: $global-color-link;
-			padding: 0 .5em;
-			padding-top: 2px;
+			
 			display: inline-block;
 			line-height: 1.8em;
 			line-height: calc(2.34em - 6px);
 			position: relative;
 			
 			@media (max-width: $bp-mobile-max){
-				font-size: 1.3em;
+				font-size: 1em;
 				line-height: 1.8em;
 				height: 1.8em;
+				padding: 0 .3em;
 			}
 			@media (min-width: $bp-tablet-min){
 			    font-size: 1em;
+			    padding: 0 .5em;
+				padding-top: 2px;
 			}
 			&:hover{
 				text-decoration: underline;
