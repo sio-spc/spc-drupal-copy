@@ -296,6 +296,7 @@ body.color-scheme-dark.has-background-image blockquote {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003228}}
 #main .node--view-mode-full {
   font-size: .9em;
+  /* the content font size should be slightly smaller */
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003231}}
