@@ -4960,22 +4960,6 @@ body::-webkit-scrollbar-track:horizontal {
   line-height: 1.5em;
 }
 
-/*
-@media (min-width: $bp-tablet-min){
-	.scrolled-down, .fixed-header{
-		.search-block-form {
-			input[type=search]{
-				font-size: $search-block-form-font-size-scrolled-down;
-			}
-			form::after{
-				font-size: $search-block-form-icon-size-scrolled-down;
-				//line-height: 123%; // not sure how to get it to center without a number like this 
-			}
-		}
-
-	}
-}
-*/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search\.scss}line{font-family:\000031}}
 .path-search {
   /*search page / results*/
