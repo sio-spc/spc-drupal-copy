@@ -4743,8 +4743,8 @@ body::-webkit-scrollbar-track:horizontal {
 #block-kyanite-search, .searchbox,
 #block-kyanite-search-fixed, .searchbox-fixed {
   margin-top: 0;
-  padding-right: 3rem;
-  padding-left: 1rem;
+  padding-right: 1em;
+  padding-left: 1em;
 }
 @media (min-width: 700px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\0000316}}

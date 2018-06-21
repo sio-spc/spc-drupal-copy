@@ -16,8 +16,8 @@ $search-block-form-icon-size : 1.5em;
 #block-kyanite-search, .searchbox, 
 #block-kyanite-search-fixed, .searchbox-fixed{
 	margin-top: 0;
-    padding-right: 3rem;
-    padding-left: 1rem;
+    padding-right: 1em;
+    padding-left: 1em;
 	@media (min-width: $bp-tablet-min){
 		text-align: right;
 	}
