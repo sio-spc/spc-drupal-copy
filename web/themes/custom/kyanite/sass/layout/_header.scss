@@ -191,7 +191,7 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor{
 	}
 	@media (min-width: $bp-desktop-min){
 		body:not(.fixed-header-is-fixed) & {
-			margin-top: -1.8em;
+			margin-top: -2.5em;
 		}
 	}
 }
@@ -208,6 +208,8 @@ div#fixed-header {
 }
 .layout-fixed-header {
 	display: inline-block;
+	position: relative;
+	top: .7em;
 	body.fixed-header-is-fixed & {
 		width: 100%;
 	}
