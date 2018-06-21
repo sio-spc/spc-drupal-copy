@@ -384,11 +384,11 @@ body.ready .layout-highlighted > * {
   #header > .region-header > #block-logo {
     width: 50%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\0000388}}
-  #header > .region-header > .search-block-form {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding-left: .5em;
-  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\0000389}}
+#header > .region-header > .search-block-form input.form-search {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding-left: .5em;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\0000395}}
 #header p {
