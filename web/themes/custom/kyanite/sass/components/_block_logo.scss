@@ -16,12 +16,14 @@
 	text-align: $global-layout-logo-direction;
 	position: relative;
 
-	@media (min-width: $bp-tablet-min){
-		text-align: center;
-	}
+	
 	@media (max-width: $bp-mobile-max){
 		margin-left: 1em;
 		margin-right: 1em;
+	}
+	@media (min-width: $bp-tablet-min){
+		text-align: center;
+		top: 5px;
 	}
 	@media (max-width: $bp-tablet-max){
 		margin-top:4px;
