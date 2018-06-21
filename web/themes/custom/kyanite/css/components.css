@@ -4837,29 +4837,30 @@ body::-webkit-scrollbar-track:horizontal {
   #block-kyanite-search form, #block-kyanite-search form *, .searchbox form, .searchbox form *,
   #block-kyanite-search-fixed form,
   #block-kyanite-search-fixed form *, .searchbox-fixed form, .searchbox-fixed form * {
-    color: #333;
+    color: #1db4c4;
     background: transparent;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\0000380}}
   #block-kyanite-search form input:focus, .searchbox form input:focus,
   #block-kyanite-search-fixed form input:focus, .searchbox-fixed form input:focus {
     color: #bfbfbf;
+    background: #fff;
   }
 }
 @media (min-width: 700px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\0000386}}
   #block-kyanite-search form, #block-kyanite-search form *, .searchbox form, .searchbox form *,
   #block-kyanite-search-fixed form,
   #block-kyanite-search-fixed form *, .searchbox-fixed form, .searchbox-fixed form * {
     color: #bfbfbf;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\0000389}}
   #block-kyanite-search form input:focus, .searchbox form input:focus,
   #block-kyanite-search-fixed form input:focus, .searchbox-fixed form input:focus {
     color: #333;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\0000393}}
 #block-kyanite-search form::after, .searchbox form::after,
 #block-kyanite-search-fixed form::after, .searchbox-fixed form::after {
   content: "";
@@ -4879,12 +4880,12 @@ body::-webkit-scrollbar-track:horizontal {
   z-index: 1;
   pointer-events: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\00003111}}
 #block-kyanite-search form:hover::after, .searchbox form:hover::after,
 #block-kyanite-search-fixed form:hover::after, .searchbox-fixed form:hover::after {
   color: #1db4c4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\00003114}}
 #block-kyanite-search input[type=search],
 #block-kyanite-search form::after, .searchbox input[type=search],
 .searchbox form::after,
@@ -4894,7 +4895,7 @@ body::-webkit-scrollbar-track:horizontal {
   padding-top: 0;
   padding-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\00003119}}
 #block-kyanite-search form::after, .searchbox form::after,
 #block-kyanite-search-fixed form::after, .searchbox-fixed form::after {
   font-size: 1.5em;

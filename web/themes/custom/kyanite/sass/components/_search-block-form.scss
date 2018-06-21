@@ -74,11 +74,12 @@ $search-block-form-icon-size : 1.5em;
 	}
 	@media (max-width: 699px){
 		form, form * {
-			color: $search-block-form-text-color-focused;
+			color: $global-color-hover;
 			background: transparent;
 		}
 		form input:focus {
 			color: $search-block-form-text-color;
+			background: #fff;
 		}
 	}
 	@media (min-width: 700px){
