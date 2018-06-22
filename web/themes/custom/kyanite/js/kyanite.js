@@ -1551,17 +1551,22 @@
     $("p.autocomplete-instructions").append($(".kyanite-block.logoanimation"));
   }
 
-  function memberSizing(){
+  function mapInitialize(){
     $("#plethora-map-feature-wrapper").height($("#plethora-map-container").height() + 10);
   }
 
-  $(window).on("load scroll resize orientationchange", function(){
-    homeTweaks();
-    memberSizing();
-  });
+  function mapSizing(){
+    $("#plethora-map-feature-wrapper").height($("#plethora-map-container").height());
+  }
+
+  $(window).on("load scroll resize orientationchange", homeTweaks);
+
+  $(window).on("scroll resize orientationchange", mapSizing);
   
 
 	$(document).ready(function(){
+
+    mapInitialize();
 
     frieze();
 
