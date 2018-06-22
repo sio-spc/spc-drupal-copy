@@ -1555,7 +1555,10 @@
     $(".plethora-map-feature-wrapper").height($(""));
   }
 
-  $(window).on("load scroll resize orientationchange", homeTweaks; memberSizing);
+  $(window).on("load scroll resize orientationchange", function(){
+    homeTweaks();
+    memberSizing();
+  });
   
 
 	$(document).ready(function(){
