@@ -821,7 +821,7 @@ path.feature.show-detail {
 @media (min-width: 980px) {
   /* line 8, ../sass/components/_feature-detail.scss */
   .plethora-map-feature-detail {
-    margin-top: 1em;
+    margin-top: 10px;
     max-height: 75%;
     overflow: auto;
   }

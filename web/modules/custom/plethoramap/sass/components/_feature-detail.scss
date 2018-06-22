@@ -8,14 +8,14 @@ $color-bottom-border-mobile: $global-color-highlight-alt;
 .plethora-map-feature-detail {
 	padding: 0;
 	background: $color-background;
-        -webkit-box-shadow: 10px 10px 31px -1px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 10px 10px 31px -1px rgba(0,0,0,0.43);
 	-moz-box-shadow: 10px 10px 31px -1px rgba(0,0,0,0.43);
 	box-shadow: 10px 10px 31px -1px rgba(0,0,0,0.43);
 	@media(max-width: $global-map-desktop-view-breakpoint - 1){
 		border-bottom: 1px solid $color-bottom-border-mobile;
 	}
 	@media(min-width: $global-map-desktop-view-breakpoint){
-		margin-top: 1em;
+		margin-top: 10px;
 	    max-height: 75%;
 	    overflow: auto;
 	}
