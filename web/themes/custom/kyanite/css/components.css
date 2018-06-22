@@ -900,7 +900,7 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\000033}}
 .langswitcherblock .contextual {
-  top: 20px;
+  display: none;
 }
 
 @media (min-width: 700px) {
