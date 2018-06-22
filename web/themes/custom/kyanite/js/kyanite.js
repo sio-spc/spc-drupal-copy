@@ -1552,6 +1552,7 @@
   }
 
   function mapInitialize(){
+    consoleLog("height: " + $("#plethora-map-container").height());
     $("#plethora-map-feature-wrapper").height($("#plethora-map-container").height() + 20);
   }
 
