@@ -2776,7 +2776,7 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
   display: inline-block;
   vertical-align: middle;
   transition: transform 0.5s;
-  top: -.1em;
+  top: -.05em;
   position: relative;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000370}}
