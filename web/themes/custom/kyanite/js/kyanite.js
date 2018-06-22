@@ -1548,10 +1548,14 @@
   }
 
   function memberDefaultInfo(){
-    $("p.autocomplete-instructions").append($(".kyanite-block.logoanimation"));
+    $("#plethora-map-feature-wrapper").append($("#plethora-map-container").height());
   }
 
-  $(window).on("load scroll resize orientationchange", homeTweaks);
+  function memberSizing(){
+    $(".plethora-map-feature-wrapper").height($(""));
+  }
+
+  $(window).on("load scroll resize orientationchange", homeTweaks; memberSizing);
   
 
 	$(document).ready(function(){
@@ -1631,28 +1635,11 @@
     $("#block-views-block-featured-articles-block-1 header, #block-views-block-featured-articles-block-2 header, #block-views-block-publications-home-page-block-1 header, #block-views-block-publications-home-page-block-2 header, #block-views-block-kyanite-events-home header").each(function(){
       $(this).insertBefore($(this).parent().parent());
     });
-
-    //$(".kyanite-yammershare-button").wrap("<li class='kyanite-yammershare'></li>");
-    //$(".kyanite-yammershare").appendTo("#block-simplesocialiconsblock ul.soc, #block-simplesocialiconsblock-mobile ul.soc");
-
-    $("#block-simplesocialiconsblock ul.soc").append("<li><a class='kyanite-yammershare' title='kyanite Member Zone' href='http://www.kyanite-memberzone.org/' target='_blank'></a></li>");
     
 
     $("#block-simplesocialiconsblock").clone().attr("id","block-simplesocialiconsblock-mobile").prependTo("#maincontainer").parent();
     $("#block-simplesocialiconsblock-mobile .kyanite-yammershare").removeClass("kyanite-yammershare").addClass("kyanite-yammershare-mobile");
 
-    /*$(".kyanite-yammershare").click(function(){
-       yam.platform.yammerShareOpenPopup({
-        customButton : true, //false by default. Pass true if you are providing your own button to trigger the share popup
-        classSelector: 'kyanite-yammershare',
-      });
-    });
-    $(".kyanite-yammershare-mobile").click(function(){
-       yam.platform.yammerShareOpenPopup({
-        customButton : true, //false by default. Pass true if you are providing your own button to trigger the share popup
-        classSelector: 'kyanite-yammershare',
-      });
-    });*/
 
     $(".page-node-type-news #block-simplesocialiconsblock").insertBefore(".field-node-post-date");
     $(".page-node-type-events #block-simplesocialiconsblock").insertBefore(".field-field-event-date");
