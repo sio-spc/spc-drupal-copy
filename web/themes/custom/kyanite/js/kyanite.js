@@ -1548,11 +1548,11 @@
   }
 
   function memberDefaultInfo(){
-    $("#plethora-map-feature-wrapper").append($("#plethora-map-container").height());
+    $("p.autocomplete-instructions").append($(".kyanite-block.logoanimation"));
   }
 
   function memberSizing(){
-    $(".plethora-map-feature-wrapper").height($(""));
+    $(".plethora-map-feature-wrapper").height($("#plethora-map-container").height());
   }
 
   $(window).on("load scroll resize orientationchange", function(){
