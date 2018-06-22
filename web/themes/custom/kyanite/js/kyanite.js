@@ -1552,7 +1552,7 @@
   }
 
   function memberSizing(){
-    $(".plethora-map-feature-wrapper").height($("#plethora-map-container").height());
+    $("#plethora-map-feature-wrapper").height($("#plethora-map-container").height());
   }
 
   $(window).on("load scroll resize orientationchange", function(){
