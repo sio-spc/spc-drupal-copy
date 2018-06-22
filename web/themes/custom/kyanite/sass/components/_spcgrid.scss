@@ -175,7 +175,7 @@
 	&:not(.hideshadows) > .views-infinite-scroll-content-wrapper > .kyanite-views-rows, &:not(.hideshadows) > .kyanite-views-rows, &:not(.hideshadows) > .item-list > ul{
 		> .views-row > .kyanite-views-row-inner, > li{
 			@include shadowhover();
-			margin: 6px;
+			/*argin: 6px;*/
 			height: 100%;
 		}
 	}

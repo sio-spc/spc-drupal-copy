@@ -5586,7 +5586,7 @@ body.has-background-image .site-footer {
   @include boxshadow();
   */
   transition: box-shadow 0.3s ease-in-out;
-  margin: 6px;
+  /*argin: 6px;*/
   height: 100%;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/_init\.scss}line{font-family:\0000342}}
