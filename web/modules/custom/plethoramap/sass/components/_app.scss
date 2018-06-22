@@ -54,6 +54,8 @@ div.layout-content {
   z-index: 2;
   .autocomplete-instructions{
     padding: 10px;
+    height: 100%;
+    height: calc(100% - 40px);
   }
   * {
     pointer-events: auto;

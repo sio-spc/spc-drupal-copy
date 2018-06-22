@@ -16,7 +16,7 @@ $color-bottom-border-mobile: $global-color-highlight-alt;
 	}
 	@media(min-width: $global-map-desktop-view-breakpoint){
 		margin-top: 10px;
-	    max-height: 75%;
+	    /*max-height: 75%;*/
 	    overflow: auto;
 	}
 	.member-listing-image {

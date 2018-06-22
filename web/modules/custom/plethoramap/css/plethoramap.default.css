@@ -427,12 +427,14 @@ body[data-plethoramap-layout="columns"] #plethora-map {
 /* line 55, ../sass/components/_app.scss */
 #plethora-map-feature-wrapper .autocomplete-instructions {
   padding: 10px;
+  height: 100%;
+  height: calc(100% - 40px);
 }
-/* line 58, ../sass/components/_app.scss */
+/* line 60, ../sass/components/_app.scss */
 #plethora-map-feature-wrapper * {
   pointer-events: auto;
 }
-/* line 62, ../sass/components/_app.scss */
+/* line 64, ../sass/components/_app.scss */
 #plethora-map-feature-wrapper .plethora-map-feature-detail h2 {
   margin-top: 0;
   margin-bottom: 0;
@@ -441,7 +443,7 @@ body[data-plethoramap-layout="columns"] #plethora-map {
   color: #333;
   display: block;
 }
-/* line 70, ../sass/components/_app.scss */
+/* line 72, ../sass/components/_app.scss */
 #plethora-map-feature-wrapper .plethora-map-feature-detail ul {
   padding: 0;
 }
@@ -453,7 +455,7 @@ body[data-plethoramap-layout="columns"] #plethora-map {
     top: 0;
     left: 0;
   }
-  /* line 76, ../sass/components/_app.scss */
+  /* line 78, ../sass/components/_app.scss */
   body[data-plethoramap-layout="columns"] #plethora-map-feature-wrapper {
     position: relative;
   }
@@ -466,7 +468,7 @@ body[data-plethoramap-layout="columns"] #plethora-map {
     min-width: 30em;
     max-width: 40em;
   }
-  /* line 84, ../sass/components/_app.scss */
+  /* line 86, ../sass/components/_app.scss */
   body[data-plethoramap-layout="columns"] #plethora-map-feature-wrapper {
     margin: 0 .5em 0 .5em;
   }
@@ -478,17 +480,17 @@ body[data-plethoramap-layout="columns"] #plethora-map {
   }
 }
 
-/* line 95, ../sass/components/_app.scss */
+/* line 97, ../sass/components/_app.scss */
 body[data-plethoramap-layout="columns"] .autocomplete-component .autocomplete-suggestions ul {
   background: #197fba;
   width: 100%;
 }
-/* line 99, ../sass/components/_app.scss */
+/* line 101, ../sass/components/_app.scss */
 body[data-plethoramap-layout="columns"] .autocomplete-component input {
   border: none !important;
 }
 
-/* line 104, ../sass/components/_app.scss */
+/* line 106, ../sass/components/_app.scss */
 #plethora-map-container {
   margin-right: .5em;
   overflow: hidden;
@@ -496,7 +498,7 @@ body[data-plethoramap-layout="columns"] .autocomplete-component input {
   background: #eff8ff;
 }
 @media (max-width: 979px) {
-  /* line 104, ../sass/components/_app.scss */
+  /* line 106, ../sass/components/_app.scss */
   #plethora-map-container {
     visibility: hidden;
     position: absolute;
@@ -507,29 +509,29 @@ body[data-plethoramap-layout="columns"] .autocomplete-component input {
     left: -100vw;
     z-index: -999;
   }
-  /* line 115, ../sass/components/_app.scss */
+  /* line 117, ../sass/components/_app.scss */
   #plethora-map-container, #plethora-map-container * {
     pointer-events: none !important;
   }
 }
 @media (min-width: 980px) {
-  /* line 120, ../sass/components/_app.scss */
+  /* line 122, ../sass/components/_app.scss */
   body[data-plethoramap-layout="columns"] #plethora-map-container {
     width: 80%;
   }
 }
-/* line 125, ../sass/components/_app.scss */
+/* line 127, ../sass/components/_app.scss */
 #plethora-map-container rect.background {
   fill: transparent;
 }
-/* line 128, ../sass/components/_app.scss */
+/* line 130, ../sass/components/_app.scss */
 #plethora-map-container svg {
   display: block;
   margin: 0;
   padding: 0;
   position: relative;
 }
-/* line 134, ../sass/components/_app.scss */
+/* line 136, ../sass/components/_app.scss */
 #plethora-map-container.framed {
   margin: 5px;
   border: 1px solid #333;
@@ -537,33 +539,33 @@ body[data-plethoramap-layout="columns"] .autocomplete-component input {
   height: 100%;
   overflow: hidden;
 }
-/* line 141, ../sass/components/_app.scss */
+/* line 143, ../sass/components/_app.scss */
 #plethora-map-container .point-wrapper {
   opacity: 0;
   transition: opacity 0.5s;
   pointer-events: none;
 }
-/* line 146, ../sass/components/_app.scss */
+/* line 148, ../sass/components/_app.scss */
 #plethora-map-container .zoomed-in .point-wrapper {
   opacity: 1;
 }
-/* line 149, ../sass/components/_app.scss */
+/* line 151, ../sass/components/_app.scss */
 #plethora-map-container .pin {
   pointer-events: auto;
   cursor: pointer;
 }
-/* line 152, ../sass/components/_app.scss */
+/* line 154, ../sass/components/_app.scss */
 #plethora-map-container .pin .point {
   transition: fill .5s;
   fill: rgba(255, 255, 255, 0.2);
   stroke-width: 1px;
   stroke: #fff;
 }
-/* line 159, ../sass/components/_app.scss */
+/* line 161, ../sass/components/_app.scss */
 #plethora-map-container .pin .text, #plethora-map-container .pin .icon {
   transition: fill .5s, opacity .5s;
 }
-/* line 162, ../sass/components/_app.scss */
+/* line 164, ../sass/components/_app.scss */
 #plethora-map-container .pin .text {
   alignment-baseline: hanging;
   dominant-baseline: hanging;
@@ -572,92 +574,92 @@ body[data-plethoramap-layout="columns"] .autocomplete-component input {
   opacity: 0;
   pointer-events: none;
 }
-/* line 170, ../sass/components/_app.scss */
+/* line 172, ../sass/components/_app.scss */
 #plethora-map-container .pin .icon {
   text-anchor: middle;
   fill: rgba(255, 204, 0, 0.7);
   text-shadow: 0.05em 0.05em rgba(0, 0, 0, 0.4);
 }
-/* line 176, ../sass/components/_app.scss */
+/* line 178, ../sass/components/_app.scss */
 #plethora-map-container .pin:hover .point {
   fill: rgba(255, 255, 255, 0.7);
 }
-/* line 179, ../sass/components/_app.scss */
+/* line 181, ../sass/components/_app.scss */
 #plethora-map-container .pin:hover .icon {
   fill: #ffcc00 !important;
   /* to be overwritten with another important only! */
 }
-/* line 182, ../sass/components/_app.scss */
+/* line 184, ../sass/components/_app.scss */
 #plethora-map-container .pin:hover .text {
   opacity: 1;
 }
-/* line 189, ../sass/components/_app.scss */
+/* line 191, ../sass/components/_app.scss */
 #plethora-map-container .pin.active .icon {
   fill: red;
 }
-/* line 195, ../sass/components/_app.scss */
+/* line 197, ../sass/components/_app.scss */
 #plethora-map-container .feature {
   fill: #f1eee9;
   transition: fill .5s, stroke 2s;
   stroke: #CCC;
   stroke-width: 1px;
 }
-/* line 198, ../sass/components/_app.scss */
+/* line 200, ../sass/components/_app.scss */
 #plethora-map-container .feature.highlighted {
   cursor: pointer;
   fill: #1db4c4;
 }
-/* line 203, ../sass/components/_app.scss */
+/* line 205, ../sass/components/_app.scss */
 #plethora-map-container .feature.highlighted.active, #plethora-map-container .feature.highlighted.active:hover, #plethora-map-container .feature.highlighted.active.hover {
   fill: #0071b3;
 }
-/* line 211, ../sass/components/_app.scss */
+/* line 213, ../sass/components/_app.scss */
 #plethora-map-container .feature:hover, #plethora-map-container .feature.hover {
   /*  stroke: #000;
     stroke-width: 1.5px;
     */
   fill: #e7e2d9;
 }
-/* line 216, ../sass/components/_app.scss */
+/* line 218, ../sass/components/_app.scss */
 #plethora-map-container .feature:hover.highlighted, #plethora-map-container .feature.hover.highlighted {
   fill: #0071b3;
 }
-/* line 220, ../sass/components/_app.scss */
+/* line 222, ../sass/components/_app.scss */
 #plethora-map-container .feature.active {
   fill: #afaeaa;
 }
-/* line 222, ../sass/components/_app.scss */
+/* line 224, ../sass/components/_app.scss */
 #plethora-map-container .feature.active:hover, #plethora-map-container .feature.active.hover {
   fill: #afaeaa;
 }
-/* line 225, ../sass/components/_app.scss */
+/* line 227, ../sass/components/_app.scss */
 #plethora-map-container .feature.active.highlighted {
   fill: #0071b3;
 }
-/* line 227, ../sass/components/_app.scss */
+/* line 229, ../sass/components/_app.scss */
 #plethora-map-container .feature.active.highlighted:hover, #plethora-map-container .feature.active.highlighted.hover {
   fill: #0081cd;
 }
-/* line 234, ../sass/components/_app.scss */
+/* line 236, ../sass/components/_app.scss */
 #plethora-map-container .point-wrapper .text {
   font-size: 8px;
 }
-/* line 237, ../sass/components/_app.scss */
+/* line 239, ../sass/components/_app.scss */
 #plethora-map-container .hidden {
   display: none;
 }
-/* line 240, ../sass/components/_app.scss */
+/* line 242, ../sass/components/_app.scss */
 #plethora-map-container div.tooltip {
   white-space: nowrap;
 }
 @media (max-width: 979px) {
-  /* line 240, ../sass/components/_app.scss */
+  /* line 242, ../sass/components/_app.scss */
   #plethora-map-container div.tooltip {
     display: none !important;
   }
 }
 @media (min-width: 980px) {
-  /* line 240, ../sass/components/_app.scss */
+  /* line 242, ../sass/components/_app.scss */
   #plethora-map-container div.tooltip {
     color: #222;
     background: #fff;
@@ -670,20 +672,20 @@ body[data-plethoramap-layout="columns"] .autocomplete-component input {
     z-index: 10;
   }
 }
-/* line 257, ../sass/components/_app.scss */
+/* line 259, ../sass/components/_app.scss */
 #plethora-map-container .graticule {
   fill: none;
   stroke: #bbb;
   stroke-width: .5px;
   stroke-opacity: .5;
 }
-/* line 264, ../sass/components/_app.scss */
+/* line 266, ../sass/components/_app.scss */
 #plethora-map-container .equator {
   stroke: #ccc;
   stroke-width: 1px;
 }
 
-/* line 269, ../sass/components/_app.scss */
+/* line 271, ../sass/components/_app.scss */
 #plethora-map-debug {
   position: fixed;
   z-index: 999;
@@ -696,23 +698,23 @@ body[data-plethoramap-layout="columns"] .autocomplete-component input {
   max-height: 10em;
 }
 
-/* line 282, ../sass/components/_app.scss */
+/* line 284, ../sass/components/_app.scss */
 #plethora-map-debug {
   display: table;
 }
 
-/* line 285, ../sass/components/_app.scss */
+/* line 287, ../sass/components/_app.scss */
 #plethora-map-debug dl {
   display: table-row;
 }
 
-/* line 288, ../sass/components/_app.scss */
+/* line 290, ../sass/components/_app.scss */
 #plethora-map-debug dl > * {
   display: table-cell;
   padding: .2em;
 }
 
-/* line 293, ../sass/components/_app.scss */
+/* line 295, ../sass/components/_app.scss */
 .feature-detail-layer {
   fill: #034003;
   stroke: #00d002;
@@ -726,79 +728,79 @@ body[data-plethoramap-layout="columns"] .autocomplete-component input {
     stroke: #848194;
     stroke-width: 1px;
 }*/
-/* line 305, ../sass/components/_app.scss */
+/* line 307, ../sass/components/_app.scss */
 .debug-shapes-layer .debug {
   stroke: red;
   fill: none;
 }
 
-/* line 309, ../sass/components/_app.scss */
+/* line 311, ../sass/components/_app.scss */
 path.feature.show-detail {
   visibility: hidden;
 }
 
-/* line 314, ../sass/components/_app.scss */
+/* line 316, ../sass/components/_app.scss */
 #plethora-map-feature-wrapper .member-content a:hover, #plethora-map-feature-wrapper .member-content a:focus, #plethora-map-feature-wrapper .member-content a:active {
   color: black;
   text-decoration: none;
 }
 
-/* line 320, ../sass/components/_app.scss */
+/* line 322, ../sass/components/_app.scss */
 .plethora-map-feature-detail-member-details .field-item-label {
   display: inline-block;
 }
 
-/* line 323, ../sass/components/_app.scss */
+/* line 325, ../sass/components/_app.scss */
 .plethora-map-feature-detail-member-details .field-item,
 .plethora-map-feature-detail-member-details .field-items {
   display: inline-block;
 }
 
-/* line 328, ../sass/components/_app.scss */
+/* line 330, ../sass/components/_app.scss */
 .node--type-member-listing.node--view-mode-teaser > div {
   display: table;
 }
 
-/* line 331, ../sass/components/_app.scss */
+/* line 333, ../sass/components/_app.scss */
 .node--type-member-listing.node--view-mode-teaser > div > * {
   display: table-row;
 }
 
-/* line 334, ../sass/components/_app.scss */
+/* line 336, ../sass/components/_app.scss */
 .node--type-member-listing.node--view-mode-teaser > div > .field-title {
   display: table-caption;
 }
 
-/* line 337, ../sass/components/_app.scss */
+/* line 339, ../sass/components/_app.scss */
 .node--type-member-listing.node--view-mode-teaser > div > .field-title > * {
   display: block;
 }
 
-/* line 340, ../sass/components/_app.scss */
+/* line 342, ../sass/components/_app.scss */
 .node--type-member-listing.node--view-mode-teaser > div > * > * {
   display: table-cell;
   padding-right: 2em;
   border-bottom: 1px solid #ccc;
 }
 
-/* line 346, ../sass/components/_app.scss */
+/* line 348, ../sass/components/_app.scss */
 .node--type-member-listing.node--view-mode-teaser > div > * > .field-item-label::after {
   content: ":";
 }
 
-/* line 349, ../sass/components/_app.scss */
+/* line 351, ../sass/components/_app.scss */
 .plethora-map-feature-detail-member-details {
   list-style-type: none;
   margin: 0 1em 1em 1em;
   overflow: hidden;
 }
 
-/* line 354, ../sass/components/_app.scss */
+/* line 356, ../sass/components/_app.scss */
 #plethora-map-hide-on-mobile {
   display: none;
 }
 @media (min-width: 980px) {
-  /* line 354, ../sass/components/_app.scss */
+  /* line 356, ../sass/components/_app.scss */
   #plethora-map-hide-on-mobile {
     display: block;
   }
@@ -822,7 +824,7 @@ path.feature.show-detail {
   /* line 8, ../sass/components/_feature-detail.scss */
   .plethora-map-feature-detail {
     margin-top: 10px;
-    max-height: 75%;
+    /*max-height: 75%;*/
     overflow: auto;
   }
 }
