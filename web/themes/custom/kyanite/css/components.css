@@ -360,7 +360,7 @@ body:not(.fixed-header-is-fixed):not(.divisionsite) .layout-primary-menu .superf
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000334}}
 .layout-primary-menu .superfishdropdown > ul > li > ul > li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > ul > li {
-  background-color: #1954a5 !important;
+  background-color: #009bab !important;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000336}}
 .layout-primary-menu .superfishdropdown > ul > li > ul > li a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > ul > li a:hover {
