@@ -1,5 +1,8 @@
 .langswitcherblock{
 	z-index: 1;
+	.contextual{
+		top: 20px;
+	}
 }
 #block-languageswitchercontent, .langswitcherblock{
 	#header & {
