@@ -1562,7 +1562,7 @@
 
   $(window).on("load scroll resize orientationchange", homeTweaks);
 
-  $(window).on("scroll resize orientationchange", mapSizing);
+  //$(window).on("scroll resize orientationchange", mapSizing);
   
 
 	$(document).ready(function(){
@@ -1617,7 +1617,7 @@
 	$(window).load(function(){
 		$('body').addClass('window-loaded');
 
-    mapInitialize();
+    //mapInitialize();
     
     inlineImageTweaks();
 
