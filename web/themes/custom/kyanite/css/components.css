@@ -2776,69 +2776,71 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
   display: inline-block;
   vertical-align: middle;
   transition: transform 0.5s;
+  top: -.1em;
+  position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000370}}
 .explore-button:hover, .explore-button:active, .explore-button:focus {
   color: #069;
   outline: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000377}}
 body.explore-open .explore-button {
   color: #4c6686;
   /* &::after{
   	content: $fa-var-close;
   } */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000379}}
 body.explore-open .explore-button:hover {
   color: #1db4c4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000382}}
 body.explore-open .explore-button:active, body.explore-open .explore-button:focus {
   color: #4c6686;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000394}}
 body.explore-open.explore-animating-first-half .explore-button::after,
 body.explore-closed.explore-animating-second-half .explore-button::after,
 body.explore-closed .explore-button::after {
   content: "";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003101}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003103}}
 body.explore-closed.explore-animating-first-half .explore-button::after,
 body.explore-open.explore-animating-second-half .explore-button::after,
 body.explore-open .explore-button::after {
   content: "";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003110}}
 body.explore-animating-first-half .explore-button::after {
   padding: 0 !important;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003117}}
 body.explore-open.explore-animating-first-half .explore-button::after {
   transform: scaleX(0);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003124}}
 body.explore-open.explore-animating-second-half .explore-button::after, body.explore-open .explore-button::after {
   transform: scaleX(1);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003132}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003134}}
 body.explore-closed.explore-animating-first-half .explore-button::after {
   transform: scaleX(0);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003141}}
 body.explore-closed.explore-animating-second-half .explore-button::after, body.explore-closed .explore-button::after {
   transform: scaleX(1);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003145}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003147}}
 body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layout-secondary-menu {
   display: none !important;
 }
@@ -2852,30 +2854,30 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
 	}
 }
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003159}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003161}}
 .explore-button-fixed {
   position: relative;
 }
 @media (max-width: 1400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003159}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003161}}
   .explore-button-fixed {
     margin-top: 6px;
   }
 }
 @media (min-width: 1400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003159}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003161}}
   .explore-button-fixed {
     /*font-size: 1vw;*/
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003167}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003169}}
 .explore-button-fixed .text {
   text-indent: -99999px;
   left: -999999px;
   position: absolute;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003177}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003179}}
 .explore-button {
   /*@media (min-width: $bp-desktop-min){
   	line-height: 2.4em;
@@ -2884,7 +2886,7 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   }*/
 }
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003177}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003179}}
   .explore-button {
     transition: padding 0.5s, background-color 0.5s, color 0.5s;
     z-index: 999999;
@@ -2896,13 +2898,13 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
     top: -4px;
     right: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003190}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003192}}
   .explore-button else {
     left: 0;
   }
 }
 @media (min-width: 1400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003177}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003179}}
   .explore-button {
     /*line-height: 2.8em;
     height: 2.8em;
@@ -2912,13 +2914,13 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
 }
 
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003212}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003214}}
   .scrolled-down .explore-button {
     padding: 0.5em;
     background-color: rgba(0, 0, 0, 0.5);
     color: white !important;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003218}}
   .scrolled-down .explore-button.touching {
     background-color: black;
   }
@@ -4829,10 +4831,10 @@ body::-webkit-scrollbar-track:horizontal {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\0000332}}
 #block-kyanite-search input[type=search], .searchbox input[type=search],
 #block-kyanite-search-fixed input[type=search], .searchbox-fixed input[type=search] {
-  font-size: 1.3em;
-  line-height: 1.8em;
-  height: 1.8em;
-  padding-right: 2.11em;
+  font-size: 1.2em;
+  line-height: 1.65em;
+  height: 1.65em;
+  padding-right: 2.01em;
   padding-left: 0.1em;
 }
 @media (min-width: 700px) {
@@ -4956,8 +4958,8 @@ body::-webkit-scrollbar-track:horizontal {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search-block-form\.scss}line{font-family:\00003119}}
 #block-kyanite-search form::after, .searchbox form::after,
 #block-kyanite-search-fixed form::after, .searchbox-fixed form::after {
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size: 1.4em;
+  line-height: 1.4em;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_search\.scss}line{font-family:\000031}}
