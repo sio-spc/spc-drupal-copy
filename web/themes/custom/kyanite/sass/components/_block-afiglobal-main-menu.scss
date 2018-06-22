@@ -2,6 +2,8 @@
 	.superfishdropdown{
 		transition: font-size 0.5s;
 		font-size: 0.6em;
+		position: relative;
+		top: 4px;
 		body:not(.fixed-header-is-fixed):not(.divisionsite) & {
 			/*padding-right: 1rem;*/
 		}

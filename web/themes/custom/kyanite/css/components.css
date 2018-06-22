@@ -317,8 +317,10 @@ $global-header-padding-bottom-big-scrolled-down: $global-header-padding-top-big-
 .layout-primary-menu .superfishdropdown {
   transition: font-size 0.5s;
   font-size: 0.6em;
+  position: relative;
+  top: 4px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\000037}}
 body:not(.fixed-header-is-fixed):not(.divisionsite) .layout-primary-menu .superfishdropdown {
   /*padding-right: 1rem;*/
 }
@@ -334,47 +336,47 @@ body:not(.fixed-header-is-fixed):not(.divisionsite) .layout-primary-menu .superf
     /*font-size: 1.5vw;*/
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000317}}
 .layout-primary-menu .superfishdropdown > ul, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white {
   display: block;
   margin: 0;
   padding: 0;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000323}}
 .layout-primary-menu .superfishdropdown > ul > li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li {
   font-size: 1.5em;
   background: transparent;
   list-style-type: none;
   display: inline-block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000327}}
 .layout-primary-menu .superfishdropdown > ul > li.sfHover, .layout-primary-menu .superfishdropdown > ul > li.sfHover > a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.sfHover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.sfHover > a {
   color: #1db4c4 !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000331}}
 .layout-primary-menu .superfishdropdown > ul > li > ul, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > ul {
   top: 2em !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000334}}
 .layout-primary-menu .superfishdropdown > ul > li > ul > li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > ul > li {
   background-color: #0046AD !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000336}}
 .layout-primary-menu .superfishdropdown > ul > li > ul > li a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > ul > li a:hover {
   color: #fff;
   background-color: #0b5174;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000340}}
 .layout-primary-menu .superfishdropdown > ul > li > ul > li > ul > li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > ul > li > ul > li {
   background-color: #406daf !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000342}}
 .layout-primary-menu .superfishdropdown > ul > li > ul > li > ul > li a:hover, .layout-primary-menu .superfishdropdown > ul > li > ul > li > ul > li a.is-active, .layout-primary-menu .superfishdropdown > ul > li > ul > li > ul > li.active-trail > a.is-active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > ul > li > ul > li a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > ul > li > ul > li a.is-active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > ul > li > ul > li.active-trail > a.is-active {
   color: #fff !important;
   background-color: #0b5174 !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000347}}
 .layout-primary-menu .superfishdropdown > ul > li > ul > li a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > ul > li a {
   text-align: left;
   text-transform: none;
@@ -382,21 +384,21 @@ body:not(.fixed-header-is-fixed):not(.divisionsite) .layout-primary-menu .superf
   font-weight: normal;
   color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000356}}
 .layout-primary-menu .superfishdropdown > ul > li:hover, .layout-primary-menu .superfishdropdown > ul > li:hover > a, .layout-primary-menu .superfishdropdown > ul > li a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li:hover > a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a:hover {
   background: transparent;
 }
 @media (max-width: 979px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000359}}
   body:not(.fixed-header-is-fixed):not(.divisionsite) .layout-primary-menu .superfishdropdown > ul > li, body:not(.fixed-header-is-fixed):not(.divisionsite) .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li {
     font-size: 2em;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000367}}
 .layout-primary-menu .superfishdropdown > ul > li > span, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > span {
   color: #005bb7;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000370}}
 .layout-primary-menu .superfishdropdown > ul > li a, .layout-primary-menu .superfishdropdown > ul > li > span, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > span {
   text-decoration: none;
   border: none;
@@ -406,159 +408,159 @@ body:not(.fixed-header-is-fixed):not(.divisionsite) .layout-primary-menu .superf
   font-weight: bold;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000375}}
 body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown > ul > li a, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown > ul > li > span, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > span {
   text-transform: none;
   padding: 0.5em;
 }
 @media (min-width: 700px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000375}}
   body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown > ul > li a, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown > ul > li > span, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > span {
     /*padding: .5em .5vw 0 .5vw;*/
   }
 }
 @media (min-width: 980px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000375}}
   body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown > ul > li a, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown > ul > li > span, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > span {
     /*padding: .5em 1vw 0 1vw;*/
   }
 }
 @media (min-width: 1400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000375}}
   body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown > ul > li a, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown > ul > li > span, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > span {
     /*padding: .5em 1.5vw 0 1.5vw;*/
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000394}}
 .layout-primary-menu .superfishdropdown > ul > li a.is-active, .layout-primary-menu .superfishdropdown > ul > li a.is-active:hover, .layout-primary-menu .superfishdropdown > ul > li a.is-active:focus, .layout-primary-menu .superfishdropdown > ul > li a.is-active:active, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:hover, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:focus, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:active, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:hover, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:focus, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:active, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:hover, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:focus, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:active {
   color: #1db4c4;
   text-decoration: none;
   border: none;
   outline: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003101}}
 .layout-primary-menu .superfishdropdown > ul > li a:hover, .layout-primary-menu .superfishdropdown > ul > li a:focus, .layout-primary-menu .superfishdropdown > ul > li a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a:active {
   color: #1db4c4;
   text-decoration: none;
   border: none;
   outline: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003109}}
 .layout-primary-menu .superfishdropdown > ul > li ul, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li ul {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003116}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(10),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(10) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(10),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(10) ~ li {
   font-size: 1.2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003116}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(11),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(11) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(11),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(11) ~ li {
   font-size: 1.09091em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003116}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(12),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(12) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(12),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(12) ~ li {
   font-size: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003116}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(13),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(13) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(13),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(13) ~ li {
   font-size: 0.92308em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003116}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(14),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(14) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(14),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(14) ~ li {
   font-size: 0.85714em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003116}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(15),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(15) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(15),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(15) ~ li {
   font-size: 0.8em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003116}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(16),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(16) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(16),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(16) ~ li {
   font-size: 0.75em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003116}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(17),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(17) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(17),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(17) ~ li {
   font-size: 0.70588em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003116}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(18),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(18) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(18),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(18) ~ li {
   font-size: 0.66667em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003116}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(19),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(19) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(19),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(19) ~ li {
   font-size: 0.63158em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003116}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(20),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(20) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(20),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(20) ~ li {
   font-size: 0.6em;
 }
 @media (min-width: 700px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003124}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu, .layout-primary-menu .scrolled-down #block-mainmenufrench, .layout-primary-menu .fixed-header #block-kyanite-main-menu, .layout-primary-menu .fixed-header #block-mainmenufrench {
     background-color: transparent;
     font-size: 0.6em;
   }
 }
 @media (min-width: 700px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003129}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003131}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu > ul > li a, .layout-primary-menu .scrolled-down #block-mainmenufrench > ul > li a, .layout-primary-menu .fixed-header #block-kyanite-main-menu > ul > li a, .layout-primary-menu .fixed-header #block-mainmenufrench > ul > li a {
     padding: 0.55em;
   }
 }
 @media (min-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003129}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003131}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu > ul > li a, .layout-primary-menu .scrolled-down #block-mainmenufrench > ul > li a, .layout-primary-menu .fixed-header #block-kyanite-main-menu > ul > li a, .layout-primary-menu .fixed-header #block-mainmenufrench > ul > li a {
     padding: 0.6em;
   }
 }
 @media (min-width: 1000px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003129}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003131}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu > ul > li a, .layout-primary-menu .scrolled-down #block-mainmenufrench > ul > li a, .layout-primary-menu .fixed-header #block-kyanite-main-menu > ul > li a, .layout-primary-menu .fixed-header #block-mainmenufrench > ul > li a {
     padding: 0.7em;
   }
 }
 @media (min-width: 1100px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003129}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003131}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu > ul > li a, .layout-primary-menu .scrolled-down #block-mainmenufrench > ul > li a, .layout-primary-menu .fixed-header #block-kyanite-main-menu > ul > li a, .layout-primary-menu .fixed-header #block-mainmenufrench > ul > li a {
     padding: 0.8em;
   }
 }
 @media (min-width: 700px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003124}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu, .layout-primary-menu .scrolled-down #block-mainmenufrench, .layout-primary-menu .fixed-header #block-kyanite-main-menu, .layout-primary-menu .fixed-header #block-mainmenufrench {
     display: block;
     font-size: 0.6em;
   }
 }
 @media (min-width: 800px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003124}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu, .layout-primary-menu .scrolled-down #block-mainmenufrench, .layout-primary-menu .fixed-header #block-kyanite-main-menu, .layout-primary-menu .fixed-header #block-mainmenufrench {
     font-size: 0.7em;
   }
 }
 @media (min-width: 1000px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003124}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu, .layout-primary-menu .scrolled-down #block-mainmenufrench, .layout-primary-menu .fixed-header #block-kyanite-main-menu, .layout-primary-menu .fixed-header #block-mainmenufrench {
     font-size: 0.8em;
   }
@@ -932,7 +934,7 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
 @media (min-width: 700px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-langswitcher\.scss}line{font-family:\0000318}}
   #block-languageswitchercontent ul.links a.language-link, .langswitcherblock ul.links a.language-link {
-    font-size: 1em;
+    font-size: .87em;
     padding: 0 .5em;
     padding-top: 2px;
   }
@@ -1106,7 +1108,6 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000315}}
   #block-kyanite-branding {
     text-align: center;
-    top: 8px;
   }
 }
 @media (max-width: 979px) {
@@ -1115,7 +1116,7 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
     margin-top: 4px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000331}}
 #block-kyanite-branding a,
 #block-kyanite-branding a.link {
   transition: all 0.5s;
@@ -1124,7 +1125,7 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
   display: inline-block;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000339}}
 #block-kyanite-branding a:hover,
 #block-kyanite-branding a:active,
 #block-kyanite-branding a:focus,
@@ -1134,7 +1135,7 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
   text-decoration: none;
   border-bottom: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000349}}
 #block-kyanite-branding img {
   max-width: none;
   max-height: none;
@@ -1142,31 +1143,31 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
   margin-top: 0;
 }
 @media (min-width: 700px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000349}}
   #block-kyanite-branding img {
     width: 120px;
   }
 }
 @media (min-width: 980px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000349}}
   #block-kyanite-branding img {
     width: 200px;
   }
 }
 @media (min-width: 1400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000349}}
   #block-kyanite-branding img {
     width: 12vw;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000369}}
 #block-kyanite-branding p {
   margin: 0;
   padding: 0;
   line-height: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000375}}
 .divisionsite #block-kyanite-branding {
   display: flex;
   position: relative;
@@ -1175,7 +1176,7 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
 }
 
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000384}}
   .explore-open #block-kyanite-branding {
     display: none;
   }
@@ -2714,8 +2715,10 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\000036}}
 .explore-button {
   transition: opacity .5s;
-  font-size: 1.3em;
+  font-size: 1.4em;
   line-height: 1.8em;
+  position: relative;
+  top: -1px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -2744,7 +2747,7 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
     padding-bottom: 1em;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000334}}
 .explore-button .text {
   font-size: .8em;
   line-height: normal;
@@ -2758,14 +2761,14 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
   vertical-align: middle;
 }
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000334}}
   .explore-button .text {
     text-indent: -99999px;
     left: -999999px;
     position: absolute;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000355}}
 .explore-button::after {
   content: "";
   font: normal normal normal 2em/1 FontAwesome;
@@ -2779,68 +2782,68 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
   top: -.05em;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000372}}
 .explore-button:hover, .explore-button:active, .explore-button:focus {
   color: #069;
   outline: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000379}}
 body.explore-open .explore-button {
   color: #4c6686;
   /* &::after{
   	content: $fa-var-close;
   } */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000381}}
 body.explore-open .explore-button:hover {
   color: #1db4c4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000384}}
 body.explore-open .explore-button:active, body.explore-open .explore-button:focus {
   color: #4c6686;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\0000396}}
 body.explore-open.explore-animating-first-half .explore-button::after,
 body.explore-closed.explore-animating-second-half .explore-button::after,
 body.explore-closed .explore-button::after {
   content: "";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003105}}
 body.explore-closed.explore-animating-first-half .explore-button::after,
 body.explore-open.explore-animating-second-half .explore-button::after,
 body.explore-open .explore-button::after {
   content: "";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003112}}
 body.explore-animating-first-half .explore-button::after {
   padding: 0 !important;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003117}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003119}}
 body.explore-open.explore-animating-first-half .explore-button::after {
   transform: scaleX(0);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003124}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003126}}
 body.explore-open.explore-animating-second-half .explore-button::after, body.explore-open .explore-button::after {
   transform: scaleX(1);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003134}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003136}}
 body.explore-closed.explore-animating-first-half .explore-button::after {
   transform: scaleX(0);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003141}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003143}}
 body.explore-closed.explore-animating-second-half .explore-button::after, body.explore-closed .explore-button::after {
   transform: scaleX(1);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003147}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003149}}
 body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layout-secondary-menu {
   display: none !important;
 }
@@ -2854,30 +2857,30 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
 	}
 }
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003163}}
 .explore-button-fixed {
   position: relative;
 }
 @media (max-width: 1400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003163}}
   .explore-button-fixed {
     margin-top: 6px;
   }
 }
 @media (min-width: 1400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003163}}
   .explore-button-fixed {
     /*font-size: 1vw;*/
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003169}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003171}}
 .explore-button-fixed .text {
   text-indent: -99999px;
   left: -999999px;
   position: absolute;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003181}}
 .explore-button {
   /*@media (min-width: $bp-desktop-min){
   	line-height: 2.4em;
@@ -2886,7 +2889,7 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   }*/
 }
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003181}}
   .explore-button {
     transition: padding 0.5s, background-color 0.5s, color 0.5s;
     z-index: 999999;
@@ -2898,13 +2901,13 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
     top: -4px;
     right: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003192}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003194}}
   .explore-button else {
     left: 0;
   }
 }
 @media (min-width: 1400px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003181}}
   .explore-button {
     /*line-height: 2.8em;
     height: 2.8em;
@@ -2914,13 +2917,13 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
 }
 
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003214}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003216}}
   .scrolled-down .explore-button {
     padding: 0.5em;
     background-color: rgba(0, 0, 0, 0.5);
     color: white !important;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003218}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore_button\.scss}line{font-family:\00003220}}
   .scrolled-down .explore-button.touching {
     background-color: black;
   }
