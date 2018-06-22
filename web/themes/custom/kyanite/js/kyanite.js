@@ -1553,7 +1553,7 @@
 
   function mapInitialize(){
     consoleLog("height: " + $("#plethora-map-container").height());
-    $("#plethora-map-feature-wrapper").height($("#plethora-map-container").height() + 20);
+    $("#plethora-map-feature-wrapper").height($("#plethora-map-container").height() + 10);
   }
 
   function mapSizing(){
@@ -1566,8 +1566,6 @@
   
 
 	$(document).ready(function(){
-
-    mapInitialize();
 
     frieze();
 
@@ -1618,6 +1616,8 @@
 	});
 	$(window).load(function(){
 		$('body').addClass('window-loaded');
+
+    mapInitialize();
     
     inlineImageTweaks();
 
