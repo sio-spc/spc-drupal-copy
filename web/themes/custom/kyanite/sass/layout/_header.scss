@@ -185,22 +185,19 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor{
 #fixed-header, #fixed-header-anchor{
 	display: none;
 	@media (min-width: $bp-tablet-min) and ($bp-tablet-max){
-		body:not(.fixed-header-is-fixed) & {
-			width: 100%;
-		    display: flex;
-		    background: transparent;
-		    align-items: center;
-		    margin-right: 0;
-		}
+		width: 100%;
+	    display: flex;
+	    background: transparent;
+	    align-items: center;
+	    margin-right: 0;
 	}
 	@media (min-width: $bp-desktop-min){
-		body:not(.fixed-header-is-fixed) & {
-			width: auto;
-			float: right;
-			margin-top: -2.5em;
-			margin-right: 1rem;
-			margin-right: calc(1rem - .3em);
-		}
+		display: block;
+		width: auto;
+		float: right;
+		margin-top: -2.5em;
+		margin-right: 1rem;
+		margin-right: calc(1rem - .3em);
 	}
 }
 div#fixed-header {
