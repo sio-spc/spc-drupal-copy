@@ -188,10 +188,10 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor{
 	}
 }
 div#fixed-header {
+	background: transparent;
 	@media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max){
 		width: 100%;
 	    display: flex;
-	    background: transparent;
 	    align-items: center;
 	    margin-right: 0;
 	    font-size: 80%;
@@ -209,7 +209,12 @@ div#fixed-header {
 	display: inline-block;
 	position: relative;
 	margin: auto;
-	top: .7em;
+	@media (max-width: $bp-tablet-max){
+		top: 4px;
+	}
+	@media (min-width: $bp-desktop-min){
+		top: .7em;
+	}
 	body.fixed-header-is-fixed & {
 		width: 100%;
 	}
