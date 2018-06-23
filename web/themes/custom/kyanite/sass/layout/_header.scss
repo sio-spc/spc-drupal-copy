@@ -186,12 +186,15 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor{
 	@media (max-width: $bp-mobile-max){
 		display: none;
 	}
-	@media (min-width: $bp-tablet-min) and ($bp-tablet-max){
+}
+div#fixed-header {
+	@media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max){
 		width: 100%;
 	    display: flex;
 	    background: transparent;
 	    align-items: center;
 	    margin-right: 0;
+	    font-size: 80%;
 	}
 	@media (min-width: $bp-desktop-min){
 		display: block;
@@ -200,11 +203,6 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor{
 		margin-top: -2.5em;
 		margin-right: 1rem;
 		margin-right: calc(1rem - .3em);
-	}
-}
-div#fixed-header {
-	@media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max){
-		font-size: 80%;
 	}
 }
 .layout-fixed-header {
