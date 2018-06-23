@@ -317,17 +317,16 @@ $global-header-padding-bottom-big-scrolled-down: $global-header-padding-top-big-
 .layout-primary-menu .superfishdropdown {
   transition: font-size 0.5s;
   font-size: 0.6em;
-  position: relative;
-  top: 4px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\000036}}
 body:not(.fixed-header-is-fixed):not(.divisionsite) .layout-primary-menu .superfishdropdown {
   /*padding-right: 1rem;*/
 }
 @media (min-width: 700px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\000032}}
   .layout-primary-menu .superfishdropdown {
-    /*font-size: 1.2vw;*/
+    position: relative;
+    top: 4px;
   }
 }
 @media (min-width: 1400px) {
@@ -1150,7 +1149,7 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
 @media (min-width: 700px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000349}}
   #block-kyanite-branding img {
-    width: 120px;
+    width: 160px;
   }
 }
 @media (min-width: 980px) {
@@ -2573,7 +2572,7 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore\.scss}line{font-family:\00003274}}
   #explore .layout-secondary-menu {
-    margin-top: 17.5px;
+    margin-top: 25.66667px;
   }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore\.scss}line{font-family:\00003278}}
