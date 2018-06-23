@@ -14,11 +14,17 @@ body.divisionsite{
 	@media (max-width: $bp-tablet-max){
 		.layout-container{
 			background: url("../images/headerbg.jpg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: top;
 		}
 	}
 	#header{
 		@media (min-width: $bp-desktop-min){
 			background: url("../images/headerbg.jpg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: top;
 		}
 	}
 }
