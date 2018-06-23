@@ -96,10 +96,13 @@
 				}
 				a.is-active, &.menu-item--active-trail > a, &.active-trail > a, &.active-trail > span{
 					&, &:hover, &:focus, &:active{
-						color: #fff;
+						color: $global-color-main-menu-hover;
 						text-decoration: none;
 						border: none;
 						outline: none;
+						a, a:hover, a:focus, a:active{
+							color: #fff;
+						}
 					}
 				}
 				a:hover, a:focus, a:active {

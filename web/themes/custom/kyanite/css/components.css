@@ -433,134 +433,138 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000398}}
 .layout-primary-menu .superfishdropdown > ul > li a.is-active, .layout-primary-menu .superfishdropdown > ul > li a.is-active:hover, .layout-primary-menu .superfishdropdown > ul > li a.is-active:focus, .layout-primary-menu .superfishdropdown > ul > li a.is-active:active, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:hover, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:focus, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:active, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:hover, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:focus, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:active, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:hover, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:focus, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:active {
-  color: #fff;
+  color: #1db4c4;
   text-decoration: none;
   border: none;
   outline: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003105}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003103}}
+.layout-primary-menu .superfishdropdown > ul > li a.is-active a, .layout-primary-menu .superfishdropdown > ul > li a.is-active a:hover, .layout-primary-menu .superfishdropdown > ul > li a.is-active a:focus, .layout-primary-menu .superfishdropdown > ul > li a.is-active a:active, .layout-primary-menu .superfishdropdown > ul > li a.is-active:hover a, .layout-primary-menu .superfishdropdown > ul > li a.is-active:hover a:hover, .layout-primary-menu .superfishdropdown > ul > li a.is-active:hover a:focus, .layout-primary-menu .superfishdropdown > ul > li a.is-active:hover a:active, .layout-primary-menu .superfishdropdown > ul > li a.is-active:focus a, .layout-primary-menu .superfishdropdown > ul > li a.is-active:focus a:hover, .layout-primary-menu .superfishdropdown > ul > li a.is-active:focus a:focus, .layout-primary-menu .superfishdropdown > ul > li a.is-active:focus a:active, .layout-primary-menu .superfishdropdown > ul > li a.is-active:active a, .layout-primary-menu .superfishdropdown > ul > li a.is-active:active a:hover, .layout-primary-menu .superfishdropdown > ul > li a.is-active:active a:focus, .layout-primary-menu .superfishdropdown > ul > li a.is-active:active a:active, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a a, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a a:hover, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a a:focus, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a a:active, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:hover a, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:hover a:hover, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:hover a:focus, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:hover a:active, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:focus a, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:focus a:hover, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:focus a:focus, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:focus a:active, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:active a, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:active a:hover, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:active a:focus, .layout-primary-menu .superfishdropdown > ul > li.menu-item--active-trail > a:active a:active, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a a, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a a:hover, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a a:focus, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a a:active, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:hover a, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:hover a:hover, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:hover a:focus, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:hover a:active, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:focus a, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:focus a:hover, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:focus a:focus, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:focus a:active, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:active a, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:active a:hover, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:active a:focus, .layout-primary-menu .superfishdropdown > ul > li.active-trail > a:active a:active, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span a, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span a:hover, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span a:focus, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span a:active, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:hover a, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:hover a:hover, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:hover a:focus, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:hover a:active, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:focus a, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:focus a:hover, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:focus a:focus, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:focus a:active, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:active a, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:active a:hover, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:active a:focus, .layout-primary-menu .superfishdropdown > ul > li.active-trail > span:active a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:hover a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:hover a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:hover a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:hover a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:focus a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:focus a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:focus a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:focus a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:active a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:active a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:active a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a.is-active:active a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:hover a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:hover a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:hover a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:hover a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:focus a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:focus a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:focus a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:focus a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:active a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:active a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:active a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.menu-item--active-trail > a:active a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:hover a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:hover a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:hover a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:hover a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:focus a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:focus a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:focus a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:focus a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:active a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:active a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:active a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > a:active a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:hover a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:hover a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:hover a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:hover a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:focus a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:focus a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:focus a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:focus a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:active a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:active a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:active a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li.active-trail > span:active a:active {
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003108}}
 .layout-primary-menu .superfishdropdown > ul > li a:hover, .layout-primary-menu .superfishdropdown > ul > li a:focus, .layout-primary-menu .superfishdropdown > ul > li a:active, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a:hover, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a:focus, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a:active {
   color: #1db4c4;
   text-decoration: none;
   border: none;
   outline: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003116}}
 .layout-primary-menu .superfishdropdown > ul > li ul, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li ul {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003123}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(10),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(10) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(10),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(10) ~ li {
   font-size: 1.2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003123}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(11),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(11) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(11),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(11) ~ li {
   font-size: 1.09091em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003123}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(12),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(12) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(12),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(12) ~ li {
   font-size: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003123}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(13),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(13) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(13),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(13) ~ li {
   font-size: 0.92308em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003123}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(14),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(14) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(14),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(14) ~ li {
   font-size: 0.85714em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003123}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(15),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(15) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(15),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(15) ~ li {
   font-size: 0.8em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003123}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(16),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(16) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(16),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(16) ~ li {
   font-size: 0.75em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003123}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(17),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(17) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(17),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(17) ~ li {
   font-size: 0.70588em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003123}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(18),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(18) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(18),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(18) ~ li {
   font-size: 0.66667em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003123}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(19),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(19) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(19),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(19) ~ li {
   font-size: 0.63158em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003123}}
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(20),
 .layout-primary-menu .superfishdropdown > ul li:first-child:nth-last-child(20) ~ li, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(20),
 .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white li:first-child:nth-last-child(20) ~ li {
   font-size: 0.6em;
 }
 @media (min-width: 700px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003128}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003131}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu, .layout-primary-menu .scrolled-down #block-mainmenufrench, .layout-primary-menu .fixed-header #block-kyanite-main-menu, .layout-primary-menu .fixed-header #block-mainmenufrench {
     background-color: transparent;
     font-size: 0.6em;
   }
 }
 @media (min-width: 700px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003138}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu > ul > li a, .layout-primary-menu .scrolled-down #block-mainmenufrench > ul > li a, .layout-primary-menu .fixed-header #block-kyanite-main-menu > ul > li a, .layout-primary-menu .fixed-header #block-mainmenufrench > ul > li a {
     padding: 0.55em;
   }
 }
 @media (min-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003138}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu > ul > li a, .layout-primary-menu .scrolled-down #block-mainmenufrench > ul > li a, .layout-primary-menu .fixed-header #block-kyanite-main-menu > ul > li a, .layout-primary-menu .fixed-header #block-mainmenufrench > ul > li a {
     padding: 0.6em;
   }
 }
 @media (min-width: 1000px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003138}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu > ul > li a, .layout-primary-menu .scrolled-down #block-mainmenufrench > ul > li a, .layout-primary-menu .fixed-header #block-kyanite-main-menu > ul > li a, .layout-primary-menu .fixed-header #block-mainmenufrench > ul > li a {
     padding: 0.7em;
   }
 }
 @media (min-width: 1100px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003138}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu > ul > li a, .layout-primary-menu .scrolled-down #block-mainmenufrench > ul > li a, .layout-primary-menu .fixed-header #block-kyanite-main-menu > ul > li a, .layout-primary-menu .fixed-header #block-mainmenufrench > ul > li a {
     padding: 0.8em;
   }
 }
 @media (min-width: 700px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003128}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003131}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu, .layout-primary-menu .scrolled-down #block-mainmenufrench, .layout-primary-menu .fixed-header #block-kyanite-main-menu, .layout-primary-menu .fixed-header #block-mainmenufrench {
     display: block;
     font-size: 0.6em;
   }
 }
 @media (min-width: 800px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003128}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003131}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu, .layout-primary-menu .scrolled-down #block-mainmenufrench, .layout-primary-menu .fixed-header #block-kyanite-main-menu, .layout-primary-menu .fixed-header #block-mainmenufrench {
     font-size: 0.7em;
   }
 }
 @media (min-width: 1000px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003128}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\00003131}}
   .layout-primary-menu .scrolled-down #block-kyanite-main-menu, .layout-primary-menu .scrolled-down #block-mainmenufrench, .layout-primary-menu .fixed-header #block-kyanite-main-menu, .layout-primary-menu .fixed-header #block-mainmenufrench {
     font-size: 0.8em;
   }
