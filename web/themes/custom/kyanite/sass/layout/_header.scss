@@ -184,11 +184,6 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor{
 }
 #fixed-header, #fixed-header-anchor{
 	display: none;
-	@media (min-width: $bp-tablet-min){
-		display: block;
-		text-align: right;
-		background: transparent;
-	}
 	@media (min-width: $bp-tablet-min) and ($bp-tablet-max){
 		body:not(.fixed-header-is-fixed) & {
 			width: 100%;
@@ -212,12 +207,6 @@ div#fixed-header {
 	@media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max){
 		font-size: 80%;
 	}
-	/*
-	&.fixed {
-		@media (min-width: $bp-desktop-min){
-			font-size: 90%;
-		}
-	}*/
 }
 .layout-fixed-header {
 	display: inline-block;
