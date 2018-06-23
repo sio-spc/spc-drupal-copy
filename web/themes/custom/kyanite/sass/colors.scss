@@ -29,8 +29,8 @@ a:active,
 }
 
 .layout-primary-menu {
-    background-color: $global-color-main-menu-bg;
-    transition: background $global-color-scheme-change-duration;
+/*    background-color: $global-color-main-menu-bg;
+    transition: background $global-color-scheme-change-duration;*/
 	a {
 		color: $global-color-main-menu-links;
 		transition: color $global-color-scheme-change-duration;

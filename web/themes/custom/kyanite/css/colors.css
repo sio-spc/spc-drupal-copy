@@ -56,8 +56,8 @@ a:active,
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\0000331}}
 .layout-primary-menu {
-  background-color: #fff;
-  transition: background 0.5s;
+  /*    background-color: $global-color-main-menu-bg;
+      transition: background $global-color-scheme-change-duration;*/
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/colors\.scss}line{font-family:\0000334}}
 .layout-primary-menu a {
