@@ -26,6 +26,11 @@
 						color: $global-color-main-menu-hover !important;
 					}
 				}
+				@media (min-width: $bp-desktop-min){
+					&:last-child > a{
+						padding-right: .5rem;
+					}
+				}
 				> ul{
 					top: 2em!important;
 					
