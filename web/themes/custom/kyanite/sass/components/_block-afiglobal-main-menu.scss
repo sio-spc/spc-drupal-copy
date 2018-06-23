@@ -94,17 +94,20 @@
 					position: relative;
 					
 				}
-				a.is-active, &.menu-item--active-trail > a, &.active-trail > a, &.active-trail > span{
+				a.is-active, &.active-trail > a{
 					&, &:hover, &:focus, &:active{
-						color: $global-color-main-menu-hover;
+						color: #fff;
 						text-decoration: none;
 						border: none;
 						outline: none;
 					}
 				}
-				&.menu-item--active-trail a a, &.active-trail a a{
+				> a.is-active, &.menu-item--active-trail > a, &.active-trail > a, &.active-trail > span{
 					&, &:hover, &:focus, &:active{
-						color: #fff!important;
+						color: $global-color-main-menu-hover;
+						text-decoration: none;
+						border: none;
+						outline: none;
 					}
 				}
 				a:hover, a:focus, a:active {
