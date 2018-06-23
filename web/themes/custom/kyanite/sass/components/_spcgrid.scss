@@ -491,7 +491,7 @@
 #block-views-block-members-grid-block-1{
 	margin: auto;
 	margin-bottom: 5em;
-	@media (max-width: 979px){/* map is hidden < 980px */
+	@media (max-width: $bp-tablet-max){/* map is hidden < 980px */
 		padding-top: 0;
 	}
 }

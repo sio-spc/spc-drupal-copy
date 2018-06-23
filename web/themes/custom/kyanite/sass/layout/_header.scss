@@ -1,18 +1,18 @@
 .layout-container {
 		position: relative;
-		@media (max-width: 979px){
+		@media (max-width: $bp-tablet-max){
 			background: url("../images/headerbg.gif");
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: top;
 		}
-		@media (min-width: 980px){
+		@media (min-width: $bp-desktop-min){
 			background-color: $global-color-header-bg; // in case of light content, this will get rid of white gap between main and footer
 		}
 }
 #header {
 	transition: padding-top 0.5s, padding-bottom 0.5s;//, border-bottom 0.5s;
-	@media (min-width: 980px){
+	@media (min-width: $bp-desktop-min){
 		background: url("../images/headerbg.gif");
 		background-repeat: no-repeat;
 		background-size: cover;

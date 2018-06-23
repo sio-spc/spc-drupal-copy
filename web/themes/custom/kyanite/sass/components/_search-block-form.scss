@@ -78,7 +78,7 @@ $search-block-form-icon-size : 1.4em;
 	form {
 		position: relative;
 	}
-	@media (max-width: 699px){
+	@media (max-width: $bp-mobile-max){
 		form, form * {
 			color: $global-color-hover;
 			background: transparent;
@@ -88,7 +88,7 @@ $search-block-form-icon-size : 1.4em;
 			background: #fff;
 		}
 	}
-	@media (min-width: 700px){
+	@media (min-width: $bp-tablet-min){
 		form, form * {
 			color: $search-block-form-text-color;
 		}

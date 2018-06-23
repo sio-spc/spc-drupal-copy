@@ -1,4 +1,4 @@
-@media (max-width: 699px){
+@media (max-width: $bp-mobile-max){
 	body.scrolled-down .explore-button{
     	height: 2.7em;
     }
@@ -14,13 +14,13 @@
     position: relative;
     top: -1px;
 
-    @media (min-width: 700px){
+    @media (min-width: $bp-tablet-min){
     	height: 1.8em;
     }
-    @media (max-width: 979px){
+    @media (max-width: $bp-tablet-max){
     	top: -6px;
     }
-    @media (min-width: 980px){
+    @media (min-width: $bp-desktop-min){
     	top: -1px;
     }
     

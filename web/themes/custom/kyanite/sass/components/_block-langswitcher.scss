@@ -64,14 +64,14 @@
 	}
 }
 body.division-sdp, body.division-cces{
-	@media(max-width: 699px){
+	@media(max-width: $bp-mobile-max){
 		#header #block-languageswitchercontent, #header .langswitcherblock{
 			display: none!important;
 		}
 	}
 	#explore{
 		#block-languageswitchercontent, .langswitcherblock{
-			@media(min-width: 461px) and (max-width: 699px){
+			@media(min-width: 461px) and (max-width: $bp-mobile-max){
 				display: block!important;
 			}
 		}

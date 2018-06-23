@@ -311,7 +311,7 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 		@media (min-width: 830px){
 			font-size: 1em;
 		}
-		@media (min-width: 980px){
+		@media (min-width: $bp-desktop-min){
 			font-size: .8em;
 		}
 		@media (min-width: 1160px){

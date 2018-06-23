@@ -5,12 +5,12 @@ body.divisionsite:not(.division-sdp) .langswitcherblock{
 }
 body.divisionsite{
 	#explore{
-		@media (min-width: 700px){
+		@media (min-width: $bp-tablet-min){
 			top: 50px!important;
 		}
 	}
 	#header > .region-header > div:nth-child(2), .frieze{
-		@media (max-width: 699px){
+		@media (max-width: $bp-mobile-max){
 			position: relative;
 			margin-top: 1em;
 			right: 0;
@@ -35,7 +35,7 @@ body.divisionsite{
 				opacity: .4;
 			}
 		}
-		@media (min-width: 700px){
+		@media (min-width: $bp-tablet-min){
 			padding-right: 8em!important;
 		    padding-left: 1em!important;
 		}

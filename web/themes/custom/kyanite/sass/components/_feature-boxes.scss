@@ -53,10 +53,10 @@
 		}
 		p {
 			
-			@media (max-width: 699px){
+			@media (max-width: $bp-mobile-max){
 				font-size: 1.2em;
 			}
-			@media (min-width: 700px) and (max-width: 1149px){
+			@media (min-width: $bp-tablet-min) and (max-width: 1149px){
 				font-size: 1.2em;
 			}
 			
