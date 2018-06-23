@@ -1753,7 +1753,7 @@ body.divisionsite .frieze .divisioniconsheader .item-list li a.active {
 @media (min-width: 700px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000322}}
   body.divisionsite .frieze {
-    padding-right: 8em !important;
+    padding-right: 1em !important;
     padding-left: 1em !important;
   }
 }
