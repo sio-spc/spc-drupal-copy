@@ -11,9 +11,7 @@
 		}
 }
 #header {
-	//border-bottom: 0 solid transparent;
 	transition: padding-top 0.5s, padding-bottom 0.5s;//, border-bottom 0.5s;
-	/*background-color: $global-color-header-bg;*/
 	@media (min-width: 980px){
 		background: url("../images/headerbg.gif");
 		background-repeat: no-repeat;
@@ -28,7 +26,6 @@
  	}
  	@media (min-width: $bp-tablet-min){
 		display: block;
-		//border-bottom: 1px solid #999;;
 	}
 	padding-top: $global-header-padding-top-mobile; 
 	padding-bottom: $global-header-padding-bottom-mobile;
@@ -191,16 +188,23 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor{
 		display: block;
 		text-align: right;
 		background: transparent;
+	}
+	@media (min-width: $bp-tablet-min) and ($bp-tablet-max){
 		body:not(.fixed-header-is-fixed) & {
-			width: auto;
-			float: right;
-			margin-right: 1rem;
-			margin-right: calc(1rem - .3em);
+			width: 100%;
+		    display: flex;
+		    background: transparent;
+		    align-items: center;
+		    margin-right: 0;
 		}
 	}
 	@media (min-width: $bp-desktop-min){
 		body:not(.fixed-header-is-fixed) & {
+			width: auto;
+			float: right;
 			margin-top: -2.5em;
+			margin-right: 1rem;
+			margin-right: calc(1rem - .3em);
 		}
 	}
 }
@@ -218,6 +222,7 @@ div#fixed-header {
 .layout-fixed-header {
 	display: inline-block;
 	position: relative;
+	margin: auto;
 	top: .7em;
 	body.fixed-header-is-fixed & {
 		width: 100%;
