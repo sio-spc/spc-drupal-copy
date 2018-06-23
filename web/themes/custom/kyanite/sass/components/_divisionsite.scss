@@ -25,13 +25,11 @@ body.divisionsite{
 			display: inline-block;
 		}
 		.divisioniconsheader .item-list li{
+			-webkit-border-radius: 6px;
+			-moz-border-radius: 6px;
+			border-radius: 6px;
 			&.active{
 				background-color: #5cbec7;
-				-webkit-border-radius: 6px;
-				-moz-border-radius: 6px;
-				border-radius: 6px;
-			}
-			a.active{
 				opacity: .4;
 			}
 		}
