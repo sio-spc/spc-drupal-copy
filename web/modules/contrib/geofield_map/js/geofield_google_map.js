@@ -107,6 +107,16 @@
     place_feature: function(feature, icon_image, mapid) {
       var self = this;
 
+      // If the features are object of geofield map theming then remove custom url Icon Image
+      if (feature.geojsonProperties.theming) {
+        icon_image = null;
+      }
+
+      // Override and set icon image with geojsonProperties.icon, if set as not null/empty.
+      if (feature.geojsonProperties.icon && feature.geojsonProperties.icon.length > 0) {
+        icon_image = feature.geojsonProperties.icon;
+      }
+
       // Define the OverlappingMarkerSpiderfier flag.
       var oms = self.map_data[mapid].oms ? self.map_data[mapid].oms : null;
 
@@ -120,11 +130,14 @@
           img.onerror = logError;
         }
 
-        checkImage(icon_image, function(){
+        checkImage(icon_image,
+          // Success loading image.
+          function(){
             feature.setIcon(icon_image);
           },
+          // Error loading image.
           function(){
-            console.log("Geofield Gmap: The Icon Image doesn't exist at the set path");
+            console.log("Geofield Gmap: The Icon Image doesn't exist at the requested path: " + icon_image);
           });
       }
 
@@ -184,10 +197,18 @@
           zoom: map_settings.map_zoom_and_pan.zoom.initial ? parseInt(map_settings.map_zoom_and_pan.zoom.initial) : 8,
           minZoom: map_settings.map_zoom_and_pan.zoom.min ? parseInt(map_settings.map_zoom_and_pan.zoom.min) : 1,
           maxZoom: map_settings.map_zoom_and_pan.zoom.max ? parseInt(map_settings.map_zoom_and_pan.zoom.max) : 20,
-          scrollwheel: !!map_settings.map_zoom_and_pan.scrollwheel,
-          draggable: !!map_settings.map_zoom_and_pan.draggable,
+          gestureHandling: map_settings.map_zoom_and_pan.gestureHandling ? map_settings.map_zoom_and_pan.gestureHandling : 'auto',
           mapTypeId: map_settings.map_controls.map_type_id ? map_settings.map_controls.map_type_id : 'roadmap',
         };
+
+        // Manage the old scrollwheel & draggable settings (deprecated by google maps api).
+        if(!map_settings.map_zoom_and_pan.scrollwheel && !map_settings.map_zoom_and_pan.gestureHandling) {
+          mapOptions.scrollwheel = false;
+        }
+
+        if(!map_settings.map_zoom_and_pan.draggable && !map_settings.map_zoom_and_pan.gestureHandling) {
+          mapOptions.draggable = false;
+        }
 
         if(!!map_settings.map_controls.disable_default_ui) {
           mapOptions.disableDefaultUI = map_settings.map_controls.disable_default_ui;
@@ -307,6 +328,7 @@
           // Define the icon_image, if set.
           var icon_image = map_settings.map_marker_and_infowindow.icon_image_path.length > 0 ? map_settings.map_marker_and_infowindow.icon_image_path : null;
 
+
           if (features.setMap) {
             self.place_feature(features, icon_image, mapid);
           }
@@ -339,7 +361,8 @@
               $.extend(markeclusterOption, markeclusterAdditionalOptions);
             }
 
-            var markerCluster = new MarkerClusterer(map, self.map_data[mapid].markers, markeclusterOption);
+            // Define a markerCluster property, so other code can interact with it.
+            self.map_data[mapid].markerCluster = new MarkerClusterer(map, self.map_data[mapid].markers, markeclusterOption);
           }
         }
 

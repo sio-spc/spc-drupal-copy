@@ -3,6 +3,7 @@
 namespace Drupal\geofield_map\Plugin\Field\FieldWidget;
 
 use Drupal\geofield_map\GeofieldMapFieldTrait;
+use Drupal\geofield_map\GeofieldMapFormElementsValidationTrait;
 use Drupal\Core\Url;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FieldDefinitionInterface;
@@ -34,6 +35,7 @@ use Drupal\Core\Session\AccountInterface;
 class GeofieldMapWidget extends GeofieldLatLonWidget implements ContainerFactoryPluginInterface {
 
   use GeofieldMapFieldTrait;
+  use GeofieldMapFormElementsValidationTrait;
 
   /**
    * The geoPhpWrapper service.

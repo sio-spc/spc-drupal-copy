@@ -41,7 +41,7 @@
         "drupal/filefield_paths": "1.0-beta1",
         "drupal/fitvids": "1.0",
         "drupal/flexslider": "2.0-beta1",
-        "drupal/geofield_map": "^1.44",
+        "drupal/geofield_map": "^2.4",
         "drupal/geolocation": "^1.11",
         "drupal/image_effects": "^2.0",
         "drupal/imce": "1.x-dev",

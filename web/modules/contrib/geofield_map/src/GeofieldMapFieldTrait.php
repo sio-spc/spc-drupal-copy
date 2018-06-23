@@ -4,7 +4,6 @@ namespace Drupal\geofield_map;
 
 use Drupal\Component\Utility\UrlHelper;
 use Drupal\Core\Url;
-use Drupal\Component\Serialization\Json;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -120,7 +119,11 @@ trait GeofieldMapFieldTrait {
         'fullscreen_control' => 1,
       ],
       'map_marker_and_infowindow' => [
+        'icon_image_mode' => 'icon_file',
         'icon_image_path' => '',
+        'icon_file_wrapper' => [
+          'icon_file' => '',
+        ],
         'infowindow_field' => 'title',
         'multivalue_split' => 0,
         'force_open' => 0,
@@ -158,6 +161,12 @@ trait GeofieldMapFieldTrait {
    * @return array
    *   The GMap Settings Form*/
   public function generateGmapSettingsForm(array $form, FormStateInterface $form_state, array $settings, array $default_settings) {
+
+    $elements['#attached'] = [
+      'library' => [
+        'geofield_map/geofield_map_view_display_settings',
+      ],
+    ];
 
     $elements = [];
 
@@ -213,99 +222,6 @@ trait GeofieldMapFieldTrait {
   }
 
   /**
-   * Form element validation handler for a Map Zoom level.
-   *
-   * {@inheritdoc}
-   */
-  public static function zoomLevelValidate($element, FormStateInterface &$form_state) {
-    // Get to the actual values in a form tree.
-    $parents = $element['#parents'];
-    $values = $form_state->getValues();
-    for ($i = 0; $i < count($parents) - 1; $i++) {
-      $values = $values[$parents[$i]];
-    }
-    // Check the initial map zoom level.
-    $zoom = $element['#value'];
-    $min_zoom = $values['min'];
-    $max_zoom = $values['max'];
-    if ($zoom < $min_zoom || $zoom > $max_zoom) {
-      $form_state->setError($element, t('The @zoom_field should be between the Minimum and the Maximum Zoom levels.', ['@zoom_field' => $element['#title']]));
-    }
-  }
-
-  /**
-   * Form element validation handler for the Map Max Zoom level.
-   *
-   * {@inheritdoc}
-   */
-  public static function maxZoomLevelValidate($element, FormStateInterface &$form_state) {
-    // Get to the actual values in a form tree.
-    $parents = $element['#parents'];
-    $values = $form_state->getValues();
-    for ($i = 0; $i < count($parents) - 1; $i++) {
-      $values = $values[$parents[$i]];
-    }
-    // Check the max zoom level.
-    $min_zoom = $values['min'];
-    $max_zoom = $element['#value'];
-    if ($max_zoom && $max_zoom <= $min_zoom) {
-      $form_state->setError($element, t('The Max Zoom level should be above the Minimum Zoom level.'));
-    }
-  }
-
-  /**
-   * Form element validation handler for a Custom Map Style Name Required.
-   *
-   * {@inheritdoc}
-   */
-  public static function customMapStyleValidate($element, FormStateInterface &$form_state) {
-    // Get to the actual values in a form tree.
-    $parents = $element['#parents'];
-    $values = $form_state->getValues();
-    for ($i = 0; $i < count($parents) - 1; $i++) {
-      $values = $values[$parents[$i]];
-    }
-    if ($values['custom_style_control'] && empty($element['#value'])) {
-      $form_state->setError($element, t('The @field cannot be empty.', ['@field' => $element['#title']]));
-    }
-  }
-
-  /**
-   * Form element json format validation handler.
-   *
-   * {@inheritdoc}
-   */
-  public static function jsonValidate($element, FormStateInterface &$form_state) {
-    $element_values_array = JSON::decode($element['#value']);
-    // Check the jsonValue.
-    if (!empty($element['#value']) && $element_values_array == NULL) {
-      $form_state->setError($element, t('The @field field is not valid Json Format.', ['@field' => $element['#title']]));
-    }
-    elseif (!empty($element['#value'])) {
-      $form_state->setValueForElement($element, JSON::encode($element_values_array));
-    }
-  }
-
-  /**
-   * Form element url format validation handler.
-   *
-   * {@inheritdoc}
-   */
-  public static function urlValidate($element, FormStateInterface &$form_state) {
-    $path = $element['#value'];
-    // Check the jsonValue.
-    if (UrlHelper::isExternal($path) && !UrlHelper::isValid($path, TRUE)) {
-      $form_state->setError($element, t('The @field field is not valid Url Format.', ['@field' => $element['#title']]));
-    }
-    elseif (!UrlHelper::isExternal($path)) {
-      $path = Url::fromUri('base:' . $path, ['absolute' => TRUE])->toString();
-      if (!UrlHelper::isValid($path)) {
-        $form_state->setError($element, t('The @field field is not valid internal Drupal path.', ['@field' => $element['#title']]));
-      }
-    }
-  }
-
-  /**
    * Pre Process the MapSettings.
    *
    * Performs some preprocess on the maps settings before sending to js.
@@ -337,7 +253,7 @@ trait GeofieldMapFieldTrait {
    *   The Geofield Data Values.
    * @param string $description
    *   The description value.
-   * @param mixed $additional_data
+   * @param array $additional_data
    *   Additional data to be added to the feature properties, i.e.
    *   GeofieldGoogleMapViewStyle will add row fields (already rendered).
    *
@@ -345,7 +261,7 @@ trait GeofieldMapFieldTrait {
    *   The data array for the current feature, including Geojson and additional
    *   data.
    */
-  protected function getGeoJsonData($items, $description = NULL, $additional_data = NULL) {
+  protected function getGeoJsonData($items, $description = NULL, array $additional_data = NULL) {
     $data = [];
     foreach ($items as $delta => $item) {
 
@@ -367,6 +283,7 @@ trait GeofieldMapFieldTrait {
           'description' => isset($description[$delta]) ? $description[$delta] : (isset($description[0]) ? $description[0] : NULL),
           'data' => $additional_data,
         ];
+
         $data[] = $datum;
       }
     }
@@ -382,14 +299,16 @@ trait GeofieldMapFieldTrait {
   private function setMapGoogleApiKeyElement(array &$elements) {
     $gmap_api_key = $this->getGmapApiKey();
 
+    $query = [];
+    if (isset($this->fieldDefinition)) {
+      $query['destination'] = Url::fromRoute('<current>')->toString();
+    }
+
     // Define the Google Maps API Key value message markup.
     if (!empty($gmap_api_key)) {
       $map_google_api_key_value = $this->t('<strong>Gmap Api Key:</strong> @gmaps_api_key_link<br><div class="description">A valid Gmap Api Key is needed anyway for the Widget Geocode and ReverseGeocode functionalities (provided by the Google Map Geocoder)</div>', [
         '@gmaps_api_key_link' => $this->link->generate($gmap_api_key, Url::fromRoute('geofield_map.settings', [], [
-          'query' => [
-            'destination' => Url::fromRoute('<current>')
-              ->toString(),
-          ],
+          'query' => $query,
         ])),
       ]);
     }
@@ -526,6 +445,7 @@ trait GeofieldMapFieldTrait {
    *   The Form element to alter.
    */
   private function setMapZoomAndPanElement(array $settings, array $default_settings, array &$elements) {
+
     $elements['map_zoom_and_pan'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Map Zoom and Pan'),
@@ -565,19 +485,30 @@ trait GeofieldMapFieldTrait {
         '#element_validate' => [[get_class($this), 'maxZoomLevelValidate']],
       ],
     ];
+    $elements['map_zoom_and_pan']['gestureHandling'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Gesture Handling (Controlling Zoom and Pan)'),
+      '#options' => [
+        'auto' => 'auto',
+        'greedy' => 'greedy',
+        'cooperative' => 'cooperative' ,
+        'none' => 'none',
+      ],
+      '#default_value' => isset($settings['map_zoom_and_pan']['gestureHandling']) ? $settings['map_zoom_and_pan']['gestureHandling'] : 'auto',
+      '#description' => $this->t("This control sets how users can zoom and pan the map, and also whether the user's page scrolling actions take priority over the map's zooming and panning.<br>Visit the @google_map_page to inspect and learn the corresponding behaviours of the different options.", [
+        '@google_map_page' => $this->link->generate(t("Official Google Maps Javascript API 'Controlling Zoom and Pan' page"), Url::fromUri('https://developers.google.com/maps/documentation/javascript/interaction', [
+          'absolute' => TRUE,
+          'attributes' => ['target' => 'blank'],
+        ])),
+      ]),
+    ];
     $elements['map_zoom_and_pan']['scrollwheel'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Scrollwheel'),
-      '#description' => $this->t('Enable scrollwheel zooming'),
+      '#type' => 'hidden',
       '#default_value' => $settings['map_zoom_and_pan']['scrollwheel'],
-      '#return_value' => 1,
     ];
     $elements['map_zoom_and_pan']['draggable'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Draggable'),
-      '#description' => $this->t('Enable dragging/panning on the map'),
+      '#type' => 'hidden',
       '#default_value' => $settings['map_zoom_and_pan']['draggable'],
-      '#return_value' => 1,
     ];
 
     $elements['map_zoom_and_pan']['map_reset'] = [
@@ -731,12 +662,13 @@ trait GeofieldMapFieldTrait {
     ];
     $elements['map_marker_and_infowindow']['icon_image_path'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Icon Image'),
+      '#title' => $this->t('Icon Image Path'),
       '#size' => '120',
       '#description' => $this->t('Input the Specific Icon Image path (absolute path, or relative to the Drupal site root prefixed with a trailing hash). If not set, or not found/loadable, the Default Google Marker will be used.'),
       '#default_value' => $settings['map_marker_and_infowindow']['icon_image_path'],
       '#placeholder' => 'modules/custom/geofield_map/images/beachflag.png',
       '#element_validate' => [[get_class($this), 'urlValidate']],
+      '#weight' => -10,
     ];
 
     $multivalue_fields_states = [];
