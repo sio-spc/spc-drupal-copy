@@ -30,7 +30,9 @@ body.divisionsite{
 			border-radius: 6px;
 			&.active{
 				background-color: #5cbec7;
-				opacity: .4;
+				> a{
+					opacity: .4;
+				}
 			}
 		}
 		@media (min-width: $bp-tablet-min){
