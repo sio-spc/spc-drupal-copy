@@ -84,7 +84,14 @@
 	  		}
 		}
 		> .search-block-form input.form-search {
-			background-color: rgba(255,255,255,.7);
+			@media (min-width: $bp-mobile-max){
+				&:focus{
+					background-color: rgba(255,255,255,.7);
+				}
+			}
+			@media (min-width: $bp-tablet-min){
+				background-color: rgba(255,255,255,.7);
+			}
 		    padding-left: .5em;
   		}
 	}
