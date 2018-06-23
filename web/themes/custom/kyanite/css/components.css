@@ -1750,7 +1750,7 @@ body.divisionsite .frieze .divisioniconsheader .item-list li.active {
   background-color: #5cbec7;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000333}}
-body.divisionsite .frieze .divisioniconsheader .item-list li.active > a {
+body.divisionsite .frieze .divisioniconsheader .item-list li.active a {
   opacity: .4;
 }
 @media (min-width: 700px) {
