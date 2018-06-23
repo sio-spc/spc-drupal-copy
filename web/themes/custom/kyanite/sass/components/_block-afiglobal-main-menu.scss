@@ -100,9 +100,11 @@
 						text-decoration: none;
 						border: none;
 						outline: none;
-						a, a:hover, a:focus, a:active{
-							color: #fff!important;
-						}
+					}
+				}
+				&.menu-item--active-trail a a, &.active-trail a a{
+					&, &:hover, &:focus, &:active{
+						color: #fff!important;
 					}
 				}
 				a:hover, a:focus, a:active {
