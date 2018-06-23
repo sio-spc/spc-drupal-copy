@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed7a1b27e787d103dc01788221ee254f",
+    "content-hash": "a5daef2521b2509a511761089aef0fd8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -154,7 +154,7 @@
                 "localization",
                 "postal"
             ],
-            "time": "2018-04-29 21:27:54"
+            "time": "2018-04-29T21:27:54+00:00"
         },
         {
             "name": "composer/installers",
@@ -1286,8 +1286,7 @@
             "homepage": "http://drupal.org/project/address",
             "support": {
                 "source": "http://cgit.drupalcode.org/address"
-            },
-            "time": "2018-05-02 09:38:17"
+            }
         },
         {
             "name": "drupal/addtocalendar",
@@ -1429,8 +1428,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
-            },
-            "time": "2018-04-16 15:01:13"
+            }
         },
         {
             "name": "drupal/better_exposed_filters",
@@ -3235,17 +3233,17 @@
         },
         {
             "name": "drupal/geofield_map",
-            "version": "1.44.0",
+            "version": "1.45.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/geofield_map",
-                "reference": "8.x-1.44"
+                "reference": "8.x-1.45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geofield_map-8.x-1.44.zip",
-                "reference": "8.x-1.44",
-                "shasum": "d6adc93cf9d27de6cbcbdf80656bddb30c1bf234"
+                "url": "https://ftp.drupal.org/files/projects/geofield_map-8.x-1.45.zip",
+                "reference": "8.x-1.45",
+                "shasum": "2b5e60adb5e1627020ecf4529dd776db5de88724"
             },
             "require": {
                 "drupal/core": "*",
@@ -3257,8 +3255,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.44",
-                    "datestamp": "1520809680",
+                    "version": "8.x-1.45",
+                    "datestamp": "1527220966",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3437,7 +3435,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/imce"
             },
-            "time": "2018-03-13 19:53:09"
+            "time": "2018-03-13T19:53:09+00:00"
         },
         {
             "name": "drupal/inline_responsive_images",
@@ -3607,53 +3605,6 @@
             }
         },
         {
-            "name": "drupal/manage_display",
-            "version": "1.0.0-alpha5",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/manage_display",
-                "reference": "8.x-1.0-alpha5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/manage_display-8.x-1.0-alpha5.zip",
-                "reference": "8.x-1.0-alpha5",
-                "shasum": "c5e7d1f8ad8c5655cd48d2a15c6c54131e2c6c65"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha5",
-                    "datestamp": "1525270384",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "AdamPS",
-                    "homepage": "https://www.drupal.org/user/2650563"
-                }
-            ],
-            "description": "Make base fields such as 'title' available in \"Manage Display\"",
-            "homepage": "https://www.drupal.org/project/manage_display",
-            "support": {
-                "source": "http://cgit.drupalcode.org/manage_display"
-            }
-        },
-        {
             "name": "drupal/menu_block",
             "version": "dev-1.x",
             "source": {
@@ -3678,7 +3629,7 @@
                     }
                 },
                 "patches_applied": {
-                    "Menu parent as block title - https://www.drupal.org/project/menu_block/issues/2809699": "https://www.drupal.org/files/issues/menu_block-label_configuration-2809699-51.patch"
+                    "Add option to show block if menu tree contains no links - https://www.drupal.org/project/menu_block/issues/2757215#comment-12606721": "https://www.drupal.org/files/issues/2018-05-08/menu_block-hide_block_if_no_links-2757215-9.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3712,7 +3663,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/menu_block"
             },
-            "time": "2018-05-01 03:10:15"
+            "time": "2018-05-01T03:10:15+00:00"
         },
         {
             "name": "drupal/menu_trail_by_path",
@@ -3873,8 +3824,7 @@
             "homepage": "https://www.drupal.org/project/migrate_devel",
             "support": {
                 "source": "http://cgit.drupalcode.org/migrate_devel"
-            },
-            "time": "2017-06-25 23:46:13"
+            }
         },
         {
             "name": "drupal/migrate_manifest",
@@ -4467,8 +4417,7 @@
             "homepage": "https://www.drupal.org/project/search404",
             "support": {
                 "source": "http://cgit.drupalcode.org/search404"
-            },
-            "time": "2017-11-10 07:02:42"
+            }
         },
         {
             "name": "drupal/simple_social_icons",
@@ -4533,8 +4482,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/simple_social_share_block",
                 "issues": "http://drupal.org/project/issues/simple_social_share_block"
-            },
-            "time": "2018-03-07 06:59:10"
+            }
         },
         {
             "name": "drupal/superfish",
@@ -5050,8 +4998,7 @@
             "homepage": "https://www.drupal.org/project/views_infinite_scroll",
             "support": {
                 "source": "http://cgit.drupalcode.org/views_infinite_scroll"
-            },
-            "time": "2018-04-24 00:28:45"
+            }
         },
         {
             "name": "drupal/viewsreference",
@@ -8815,6 +8762,53 @@
             "time": "2017-03-18T10:28:49+00:00"
         },
         {
+            "name": "drupal/manage_display",
+            "version": "1.0.0-alpha5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/manage_display",
+                "reference": "8.x-1.0-alpha5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/manage_display-8.x-1.0-alpha5.zip",
+                "reference": "8.x-1.0-alpha5",
+                "shasum": "c5e7d1f8ad8c5655cd48d2a15c6c54131e2c6c65"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha5",
+                    "datestamp": "1525270384",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "AdamPS",
+                    "homepage": "https://www.drupal.org/user/2650563"
+                }
+            ],
+            "description": "Make base fields such as 'title' available in \"Manage Display\"",
+            "homepage": "https://www.drupal.org/project/manage_display",
+            "support": {
+                "source": "http://cgit.drupalcode.org/manage_display"
+            }
+        },
+        {
             "name": "fabpot/goutte",
             "version": "v3.2.2",
             "source": {
@@ -10756,7 +10750,6 @@
         "drupal/block_class": 15,
         "drupal/context_active_trail": 5,
         "drupal/imce": 20,
-        "drupal/manage_display": 15,
         "drupal/menu_block": 20,
         "drupal/migrate_devel": 20,
         "drupal/search404": 20,
