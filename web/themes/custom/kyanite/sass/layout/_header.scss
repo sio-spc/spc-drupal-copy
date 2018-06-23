@@ -62,7 +62,7 @@
 			.langswitcherblock{
 				position: absolute;
 				top: 1em;
-				right: 7em;/*was 25vw*/
+				right: 10em;/*was 25vw*/
 			}
 		}
  		@media (min-width: $bp-tablet-min){
@@ -84,6 +84,7 @@
 	  		}
 		}
 		> .search-block-form input.form-search {
+			cursor: pointer;
 			@media (min-width: $bp-mobile-max){
 				&:focus{
 					background-color: rgba(255,255,255,.7);

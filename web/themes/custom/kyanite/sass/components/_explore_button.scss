@@ -29,9 +29,11 @@
     border: none;
     cursor: pointer;
     padding: 0;
-    padding-left: 1em; //this is to roughly center the icon with the icons in the menu below it.
     @media (max-width: $bp-mobile-max){
     	padding-bottom: 1em; // only doing this on mobile, otherwise the line above the first menu item no longer aligns!
+	}
+	@media (max-width: $bp-desktop-min){
+	    padding-left: 1em; //this is to roughly center the icon with the icons in the menu below it.
 	}
     margin: 0;
     display: inline-block;

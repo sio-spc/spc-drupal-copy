@@ -22,6 +22,7 @@ $search-block-form-icon-size : 1.4em;
 	@media (max-width: $bp-mobile-max){
 	    position: absolute;
 	    top: 0.5em;
+	    font-size: 1.3em;
 	    right: $global-mobile-search-right-offset;
 	}
 	@media (min-width: $bp-tablet-min){
