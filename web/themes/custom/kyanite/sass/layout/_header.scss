@@ -10,6 +10,16 @@
 			background-color: $global-color-header-bg; // in case of light content, this will get rid of white gap between main and footer
 		}
 }
+body.divisionsite{
+	@media (max-width: $bp-tablet-max){
+		background: url("../images/headerbg.jpg");
+	}
+	#header{
+		@media (min-width: $bp-desktop-min){
+			background: url("../images/headerbg.jpg");
+		}
+	}
+}
 #header {
 	transition: padding-top 0.5s, padding-bottom 0.5s;//, border-bottom 0.5s;
 	@media (min-width: $bp-desktop-min){
