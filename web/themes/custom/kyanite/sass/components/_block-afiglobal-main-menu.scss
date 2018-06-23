@@ -6,13 +6,11 @@
 		body:not(.fixed-header-is-fixed):not(.divisionsite) & {
 			/*padding-right: 1rem;*/
 		}
-		@media (min-width: $bp-tablet-min){
+		@media (min-width: $bp-desktop-min){
 			position: relative;
 			top: 4px;
 		}
-		@media (min-width: $bp-desktop-big-min){
-			/*font-size: 1.5vw;*/
-		}
+		
 
 		> ul, ul.sf-menu.sf-style-white{
 			//@include clearfix();
