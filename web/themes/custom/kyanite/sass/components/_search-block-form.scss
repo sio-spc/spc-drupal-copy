@@ -18,13 +18,18 @@ $search-block-form-icon-size : 1.4em;
 	margin-top: 0;
     padding-right: 1em;
     padding-left: 1em;
-	@media (min-width: $bp-tablet-min){
-		text-align: right;
-	}
+	
 	@media (max-width: $bp-mobile-max){
 	    position: absolute;
 	    top: 0.5em;
 	    right: $global-mobile-search-right-offset;
+	}
+	@media (min-width: $bp-tablet-min){
+		text-align: right;
+	}
+	@media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max){
+		top: 3px;
+		position: relative;
 	}
 	h2, .form-actions {
 		display: none;

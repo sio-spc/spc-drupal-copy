@@ -17,6 +17,12 @@
     @media (min-width: 700px){
     	height: 1.8em;
     }
+    @media (max-width: 979px){
+    	top: -6px;
+    }
+    @media (min-width: 980px){
+    	top: -1px;
+    }
     
     background: transparent;
 

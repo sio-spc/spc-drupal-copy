@@ -6,9 +6,11 @@
 }
 #block-languageswitchercontent, .langswitcherblock{
 	#header & {
-		@media (min-width: $bp-tablet-min){
-		    margin-top: 0;
+		@media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max){
+		    margin-top: 3px;
 		}
+		
+		
 	}
 	ul.links{
 		&, > li{
