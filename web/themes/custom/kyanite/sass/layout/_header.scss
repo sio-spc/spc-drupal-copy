@@ -12,7 +12,9 @@
 }
 body.divisionsite{
 	@media (max-width: $bp-tablet-max){
-		background: url("../images/headerbg.jpg");
+		.layout-container{
+			background: url("../images/headerbg.jpg");
+		}
 	}
 	#header{
 		@media (min-width: $bp-desktop-min){
