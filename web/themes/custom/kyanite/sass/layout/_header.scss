@@ -183,7 +183,9 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor{
 	}
 }
 #fixed-header, #fixed-header-anchor{
-	display: none;
+	@media (max-width: $bp-mobile-max){
+		display: none;
+	}
 	@media (min-width: $bp-tablet-min) and ($bp-tablet-max){
 		width: 100%;
 	    display: flex;
