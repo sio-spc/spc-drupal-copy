@@ -4789,7 +4789,7 @@ body::-webkit-scrollbar-track:horizontal {
 #block-kyanite-search, .searchbox,
 #block-kyanite-search-fixed, .searchbox-fixed {
   margin-top: 0;
-  padding-right: 90px;
+  padding-right: 73px;
   padding-left: 50px;
 }
 @media (max-width: 699px) {
