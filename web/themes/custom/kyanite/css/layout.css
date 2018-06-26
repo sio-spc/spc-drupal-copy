@@ -268,15 +268,12 @@ body.ready .layout-highlighted > * {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\000031}}
 .layout-container {
   position: relative;
-}
-@media (max-width: 979px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\000031}}
-  .layout-container {
-    background: url("../images/headerbg.gif");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top;
-  }
+  /*@media (max-width: $bp-tablet-max){
+  	background: url("../images/headerbg.gif");
+  	background-repeat: no-repeat;
+  	background-size: contain;
+  	background-position: top;
+  }*/
 }
 @media (min-width: 980px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\000031}}
@@ -285,38 +282,37 @@ body.ready .layout-highlighted > * {
   }
 }
 
-@media (max-width: 979px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\0000315}}
-  body.divisionsite .layout-container {
-    background: url("../images/headerbg.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top;
-  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\0000313}}
+body.divisionsite {
+  /*@media (max-width: $bp-tablet-max){
+  	.layout-container{
+  		background: url("../images/headerbg.jpg");
+  		background-repeat: no-repeat;
+  		background-size: contain;
+  		background-position: top;
+  	}
+  }*/
 }
-@media (min-width: 980px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\0000322}}
-  body.divisionsite #header {
-    background: url("../images/headerbg.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top;
-  }
+body.divisionsite #header {
+  /*@media (min-width: $bp-desktop-min){*/
+  background: url("../images/headerbg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  /*}*/
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\0000331}}
 #header {
+  /*@media (min-width: $bp-desktop-min){*/
+  background: url("../images/headerbg.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /*}*/
   padding-top: 5px;
   padding-bottom: 5px;
-}
-@media (min-width: 980px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\0000331}}
-  #header {
-    background: url("../images/headerbg.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
 }
 @media (max-width: 699px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\0000340}}
