@@ -17,7 +17,6 @@
 			display: block;
 			margin: 0;
 			padding: 0;
-			text-align: center;
 			> li {
 				font-size: 1.5em;
 				background: transparent;
@@ -53,18 +52,13 @@
 							font-size: 1em;
 							font-weight: normal;
 							color: #fff;
-							text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 						}
 					}
 				}
 				&:hover, &:hover > a, a:hover{
 					background: transparent;
 				}
-				body:not(.fixed-header-is-fixed):not(.divisionsite) & {
-					@media(max-width: $bp-tablet-max){
-						font-size: 2em;
-					}
-				}
+				
 				list-style-type: none;
 				//float: left;
 				display: inline-block;
