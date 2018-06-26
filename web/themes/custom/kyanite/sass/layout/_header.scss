@@ -214,15 +214,8 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor{
 	}
 }
 div#fixed-header {
-	background: transparent;
-	@media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max){
-		width: 100%;
-	    display: flex;
-	    align-items: center;
-	    margin-right: 0;
-	    font-size: 80%;
-	}
-	@media (min-width: $bp-desktop-min){
+	background: transparent;	
+	@media (min-width: $bp-tablet-min){
 		display: block;
 		width: auto;
 		float: right;
