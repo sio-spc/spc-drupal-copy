@@ -524,14 +524,14 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor {
 .superfishdropdown {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 1050px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\00003204}}
   .superfishdropdown {
     display: block;
   }
 }
 
-@media (max-width: 699px) {
+@media (max-width: 1049px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\00003210}}
   #fixed-header, #fixed-header-anchor {
     display: none;
@@ -542,7 +542,7 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor {
 div#fixed-header {
   background: transparent;
 }
-@media (min-width: 700px) {
+@media (min-width: 1050px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\00003215}}
   div#fixed-header {
     display: block;
@@ -560,13 +560,13 @@ div#fixed-header {
   position: relative;
   margin: auto;
 }
-@media (max-width: 979px) {
+@media (max-width: 1049px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\00003226}}
   .layout-fixed-header {
     top: 4px;
   }
 }
-@media (min-width: 980px) {
+@media (min-width: 1050px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\00003226}}
   .layout-fixed-header {
     top: .7em;
@@ -617,7 +617,7 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-fixed-header-content .la
   float: right;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1049px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\00003273}}
   .fixed-header #header {
     display: none;

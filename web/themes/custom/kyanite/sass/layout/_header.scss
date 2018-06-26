@@ -203,18 +203,18 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor{
 }
 .superfishdropdown{
 	display: none;
-	@media (min-width: 768px){
+	@media (min-width: 1050px){
 		display: block;
 	}
 }
 #fixed-header, #fixed-header-anchor{
-	@media (max-width: $bp-mobile-max){
+	@media (max-width: 1049px){
 		display: none;
 	}
 }
 div#fixed-header {
 	background: transparent;	
-	@media (min-width: $bp-tablet-min){
+	@media (min-width: 1050px){
 		display: block;
 		width: auto;
 		float: right;
@@ -227,10 +227,10 @@ div#fixed-header {
 	display: inline-block;
 	position: relative;
 	margin: auto;
-	@media (max-width: $bp-tablet-max){
+	@media (max-width: 1049px){
 		top: 4px;
 	}
-	@media (min-width: $bp-desktop-min){
+	@media (min-width: 1050px){
 		top: .7em;
 	}
 	body.fixed-header-is-fixed & {
@@ -268,7 +268,7 @@ div#fixed-header {
 		}
 	}
 }
-@media (min-width: $bp-tablet-min){
+@media (min-width: 1049px){
 	// for non-mobile display, if this is a permanently fixed header (denoted by class fixed-header) we never show the regular header
 	.fixed-header #header{
 		display: none;
