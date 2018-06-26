@@ -1,15 +1,13 @@
 .layout-primary-menu{
 	.superfishdropdown{
-		transition: font-size 0.5s;
 		font-size: 0.6em;
 		
 		body:not(.fixed-header-is-fixed):not(.divisionsite) & {
 			/*padding-right: 1rem;*/
 		}
-		@media (min-width: $bp-desktop-min){
-			position: relative;
-			top: 4px;
-		}
+		position: relative;
+		top: 4px;
+	
 		
 
 		> ul, ul.sf-menu.sf-style-white{

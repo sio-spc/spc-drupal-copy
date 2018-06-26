@@ -29,7 +29,6 @@ body.divisionsite{
 	}
 }
 #header {
-	transition: padding-top 0.5s, padding-bottom 0.5s;//, border-bottom 0.5s;
 	@media (min-width: $bp-desktop-min){
 		background: url("../images/headerbg.gif");
 		background-repeat: no-repeat;
