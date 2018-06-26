@@ -16,10 +16,9 @@ $search-block-form-icon-size : 1.4em;
 #block-kyanite-search, .searchbox, 
 #block-kyanite-search-fixed, .searchbox-fixed{
 	margin-top: 0;
-    padding-right: 73px;
-    padding-left: 50px;
 	
 	@media (max-width: $bp-mobile-max){
+		padding-right: 20px;
 	    position: absolute;
 	    top: 0.5em;
 	    font-size: 1.3em;
@@ -27,6 +26,8 @@ $search-block-form-icon-size : 1.4em;
 	}
 	@media (min-width: $bp-tablet-min){
 		text-align: right;
+		padding-right: 73px;
+	    padding-left: 50px;
 	}
 	@media (min-width: $bp-tablet-min) and (max-width: $bp-tablet-max){
 		top: 3px;
