@@ -202,21 +202,8 @@ body.no-explore {
 		else {
 			left: 0;
 		}
-	    //float: $global-layout-logo-explore-direction;
-	    //position: relative;
-	    //z-index: 1;
 	}
-	/*@media (min-width: $bp-desktop-min){
-		line-height: 2.4em;
-		height: 2.4em;
-		vertical-align: middle;
-	}*/
-	@media (min-width: $bp-desktop-big-min){
-		/*line-height: 2.8em;
-		height: 2.8em;
-		vertical-align: middle;*/
-		margin-top: .3em;
-	}
+	
 }
 
 .scrolled-down {
