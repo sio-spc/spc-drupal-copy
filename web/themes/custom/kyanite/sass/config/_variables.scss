@@ -41,7 +41,7 @@ $global-header-padding-top-tablet: 7px; //must be pixels to allow for adjustment
 $global-header-padding-bottom-tablet: $global-header-padding-top-tablet; // should probably just match the top padding...
 $global-header-padding-top-desktop: 15px; //must be pixels to allow for adjustments for the explore menu top...
 $global-header-padding-bottom-desktop: $global-header-padding-top-desktop; // should probably just match the top padding...
-$global-header-padding-top-desktop-big: 1vw; 
+$global-header-padding-top-desktop-big: 15px; 
 $global-header-padding-bottom-desktop-big: $global-header-padding-top-desktop-big; // should probably just match the top padding...
 
 /*
@@ -58,7 +58,7 @@ $global-header-padding-bottom-big-scrolled-down: $global-header-padding-top-big-
 
 $global-explore-button-height-desktop: 28px;
 $global-explore-button-height-tablet: $global-explore-button-height-desktop;
-$global-explore-button-height-desktop-big: 2vw;
+$global-explore-button-height-desktop-big: 28px;
 //$global-explore-button-height-desktop-scrolled-down: 28px;
 //$global-explore-button-height-desktop-big-scrolled-down: 28px;
 //$global-explore-button-height-tablet-scrolled-down: $global-explore-button-height-desktop-scrolled-down;

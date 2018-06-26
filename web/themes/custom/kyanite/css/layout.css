@@ -345,8 +345,8 @@ body.divisionsite #header {
 @media (min-width: 1400px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\0000331}}
   #header {
-    padding-top: 1vw;
-    padding-bottom: 1vw;
+    padding-top: 15px;
+    padding-bottom: 15px;
     width: 88%;
   }
 }
