@@ -2344,11 +2344,9 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
-  transition: background 0.2s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore\.scss}line{font-family:\0000359}}
 .layout-secondary-menu nav > ul a:hover, .layout-secondary-menu nav > ul a:active, .layout-secondary-menu nav > ul a:focus {
-  transition: background 0s;
   text-decoration: none;
   outline: none;
   color: #1db4c4;
@@ -2443,7 +2441,6 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
     cursor: pointer;
     background: #000;
     opacity: 0;
-    transition: opacity 0.5s;
   }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore\.scss}line{font-family:\00003155}}
@@ -2453,14 +2450,8 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
     opacity: 0.5;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore\.scss}line{font-family:\00003161}}
-  body.ready #explore {
-    transition: background 0.5s 0s, box-shadow 0.2s 0s, border-bottom-color 0.2s 0s, min-height 0s 1s;
-  }
-
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore\.scss}line{font-family:\00003166}}
   .layout-secondary-menu {
-    transition: visibility 0s 0.5s, opacity 0.5s 0s linear, height 0.5s 0s, max-height 0s 2s linear, max-width .5s 0s linear, background 0.5s 0s, transform 0.5s;
     max-width: 0;
   }
 
@@ -2470,7 +2461,6 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore\.scss}line{font-family:\00003172}}
   body.explore-open.ready #explore {
-    transition: background 0.5s 0s, box-shadow 1.5s 1.2s, border-bottom-color 0.2s 0.5s, min-height 0s 0s, padding-top 0.5s, margin-top 0.2s, padding-left 0.5s;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0px 0px 20px #888;
     padding-bottom: 80px;
@@ -2483,7 +2473,6 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore\.scss}line{font-family:\00003188}}
   body.explore-open.ready .layout-secondary-menu {
-    transition: visibility 0s 0s, opacity 0.5s 0.2s linear, height 0.5s 0.5s, max-height 0.5s 0s linear, max-width 0.5s 0s linear, background 0.5s 0s, transform 0.5s 0.1s;
     visibility: visible;
     overflow: visible;
     opacity: 1;

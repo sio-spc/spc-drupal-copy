@@ -55,9 +55,9 @@ $base-z-index: 10001;
 				padding-top: 0.2em;
 				padding-bottom: 0.2em;
 
-				transition: background 0.2s; // defines transition when going back to default state
+				//transition: background 0.2s; // defines transition when going back to default state
 				&:hover, &:active, &:focus {
-					transition: background 0s; // defines transition when becoming active
+					//transition: background 0s; // defines transition when becoming active
 					text-decoration: none;
 					outline: none;
 					color: $global-color-highlight;
@@ -150,7 +150,7 @@ $base-z-index: 10001;
 		cursor: pointer;
 		background: #000;
 		opacity: 0;
-		transition: opacity 0.5s;
+		//transition: opacity 0.5s;
 	}
 	.explore-open #explore-page-blocker {
 		z-index: $base-z-index; /* above the fixed header element */
@@ -161,17 +161,17 @@ $base-z-index: 10001;
 	body.ready #explore {
 		//defines the transition when closing
 	    //transition: background 0.5s 0s, box-shadow 0.2s 0s, border-bottom-color 0.2s 0s, min-height 0s 1s, padding-top 0.5s, margin-top 0.2s, padding-left 0.5s;
-	    transition: background 0.5s 0s, box-shadow 0.2s 0s, border-bottom-color 0.2s 0s, min-height 0s 1s;
+	    //transition: background 0.5s 0s, box-shadow 0.2s 0s, border-bottom-color 0.2s 0s, min-height 0s 1s;
 	}
 	.layout-secondary-menu {
 		//defines the transition when closing
-		transition: visibility 0s 0.5s, opacity 0.5s 0s linear, height 0.5s 0s, max-height 0s 2s linear, max-width .5s 0s linear, background 0.5s 0s, transform 0.5s;
+		//transition: visibility 0s 0.5s, opacity 0.5s 0s linear, height 0.5s 0s, max-height 0s 2s linear, max-width .5s 0s linear, background 0.5s 0s, transform 0.5s;
 		max-width: 0;
 	}
 	body.explore-open.ready {
 		#explore {
 			//defines the transition when opening
-		    transition: background 0.5s 0s, box-shadow 1.5s 1.2s, border-bottom-color 0.2s 0.5s, min-height 0s 0s, padding-top 0.5s, margin-top 0.2s, padding-left 0.5s;//, border-bottom-right-radius 0.3s 1s;
+		    //transition: background 0.5s 0s, box-shadow 1.5s 1.2s, border-bottom-color 0.2s 0.5s, min-height 0s 0s, padding-top 0.5s, margin-top 0.2s, padding-left 0.5s;//, border-bottom-right-radius 0.3s 1s;
 	    	//defines the styles when open
 	    	background: $global-color-explore-bg;
 	   		box-shadow: 0px 0px 20px $global-color-explore-shadow;
@@ -187,7 +187,7 @@ $base-z-index: 10001;
 		border-right: 1px solid  $global-color-explore-lines;
 		.layout-secondary-menu {
 			//defines the transition when opening
-			transition: visibility 0s 0s, opacity 0.5s 0.2s linear, height 0.5s 0.5s, max-height 0.5s 0s linear, max-width 0.5s 0s linear, background 0.5s 0s, transform 0.5s 0.1s;
+			//transition: visibility 0s 0s, opacity 0.5s 0.2s linear, height 0.5s 0.5s, max-height 0.5s 0s linear, max-width 0.5s 0s linear, background 0.5s 0s, transform 0.5s 0.1s;
 			//defines the styles when open
 			visibility: visible;
 			overflow: visible; // this allows the line on the left border to show below the content, so it can go all the way to the bottom
