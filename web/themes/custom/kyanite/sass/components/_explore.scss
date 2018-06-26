@@ -2,8 +2,8 @@
 $base-z-index: 10001;
 #explore {
 	pointer-events: none;
-	padding-right: 1rem;
-	padding-left: 1rem;
+	padding-right: 15px;
+	padding-left: 0;
 	@media (min-width: $bp-desktop-min){
 		padding-bottom:80px;
 	}

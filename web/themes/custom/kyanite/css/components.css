@@ -2279,8 +2279,8 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore\.scss}line{font-family:\000033}}
 #explore {
   pointer-events: none;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 15px;
+  padding-left: 0;
 }
 @media (min-width: 980px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore\.scss}line{font-family:\000033}}
@@ -4795,7 +4795,7 @@ body::-webkit-scrollbar-track:horizontal {
 #block-kyanite-search, .searchbox,
 #block-kyanite-search-fixed, .searchbox-fixed {
   margin-top: 0;
-  padding-right: 50px;
+  padding-right: 90px;
   padding-left: 50px;
 }
 @media (max-width: 699px) {
