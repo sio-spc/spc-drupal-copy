@@ -1,3 +1,6 @@
+.paragraph>.paragraph__column{
+	padding-bottom: 0;
+}
 .paragraph{
 	&.paragraph--type--bp-tabs{
 		> .paragraph__column{
