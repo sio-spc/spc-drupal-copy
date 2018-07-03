@@ -226,7 +226,7 @@ img {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003166}}
 .paragraph__column .field-type-text-with-summary li, .paragraph__column .field-type-text-long li {
-  list-style-position: outside;
+  list-style-position: inside;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003172}}
