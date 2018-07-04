@@ -20,7 +20,10 @@ body.divisionsite{
 		}
 	}*/
 	#header{
-		background: url("../images/headerbg.jpg");			
+		background: url("../images/headerbg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;		
 	}
 }
 #header {
