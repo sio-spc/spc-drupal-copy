@@ -4401,7 +4401,7 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_paragraph\.scss}line{font-family:\000031}}
 .paragraph > .paragraph__column {
-  padding-bottom: 0;
+  padding-bottom: 1em;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_paragraph\.scss}line{font-family:\000037}}
