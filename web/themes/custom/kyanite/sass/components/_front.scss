@@ -113,27 +113,25 @@
 			
 		}
 	}
+	#block-views-block-divisions-block-1{
+		margin-bottom: 40px;
+	}
 	.field-field-banner{
 		margin-bottom: 30px;
-		margin-bottom: 3vw;
 		max-height: none;
 	}
 	#block-views-block-updates-block-1{/* refer to _spcgrid.scss to coordinate these breakpoints */
 		@media (max-width: 639px){
 			margin-top: 3em;
-			margin-top: 9vw;
 		}
 		@media (min-width: 640px){
 			margin-top: 2em;
-			margin-top: 5vw;
 		}
 		@media (min-width: 768px){
 			margin-top: 2.5em;
-			margin-top: 5vw;
 		}
 		@media (min-width: 960px){
 			margin-top: 2.5em;
-			margin-top: 4vw;
 		}
 	}
 	.field-field-newsimage, .field-field-blog-image, .field-field-banner, .field-field-list-image{
@@ -152,7 +150,7 @@
 			    	font-size: 1em;
 				    top: calc(50% - 1em);
 			    }
-			    @media (min-width: $bp-tablet-min){
+			    @media (min-width: $bp-tablet-min) and (max-width: 1099px){
 			    	font-size: 1.5em;
 				    font-size: 2vw;
 				    top: calc(50% - 1em);
@@ -160,7 +158,6 @@
 			    }
 			    @media (min-width: 1100px){
 			    	font-size: 1.5em;
-			    	font-size: 5vmin;
 				    top: calc(50% - 1em);
 			    }
 			}
