@@ -5555,7 +5555,7 @@ body.has-background-image .site-footer {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003151}}
   .spcgrid > .views-infinite-scroll-content-wrapper > .kyanite-views-rows > .views-row, .spcgrid > .views-infinite-scroll-content-wrapper > .kyanite-views-rows > li, .spcgrid > .kyanite-views-rows > .views-row, .spcgrid > .kyanite-views-rows > li, .spcgrid > .item-list > ul > .views-row, .spcgrid > .item-list > ul > li {
     width: 22%;
-    margin-bottom: 4vw;
+    margin-bottom: 3.3vw;
   }
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003176}}
