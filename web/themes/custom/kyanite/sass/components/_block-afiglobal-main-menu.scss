@@ -71,15 +71,6 @@
 					body.fixed-header-is-fixed .layout-fixed-header & {
 						text-transform: none;
 						padding: 0.5em;
-						@media (min-width: $bp-tablet-min){
-							/*padding: .5em .5vw 0 .5vw;*/
-						}
-						@media (min-width: $bp-desktop-min){
-							/*padding: .5em 1vw 0 1vw;*/
-						}
-						@media (min-width: $bp-desktop-big-min){
-							/*padding: .5em 1.5vw 0 1.5vw;*/
-						}
 					}
 					text-transform: uppercase;
 					font-weight: bold;
