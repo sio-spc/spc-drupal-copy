@@ -5300,31 +5300,44 @@ body.has-background-image .site-footer {
     font-size: 6vw;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 700px) and (max-width: 1099px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000321}}
   .slideshow .slidecaption h1 {
     font-size: 3.5em;
     font-size: 3.5vw;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000336}}
+@media (min-width: 1100px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000321}}
+  .slideshow .slidecaption h1 {
+    font-size: 3.5em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000339}}
 .slideshow .slidecaption h2 {
   margin: auto;
   text-shadow: 0px 0px 10px black;
 }
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000339}}
   .slideshow .slidecaption h2 {
     font-size: 2em;
     font-size: 3vw;
     max-width: 90%;
   }
 }
-@media (min-width: 700px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000336}}
+@media (min-width: 700px) and (max-width: 1099px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000339}}
   .slideshow .slidecaption h2 {
     font-size: 2em;
     font-size: 2vw;
+    max-width: 70%;
+  }
+}
+@media (min-width: 1100px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000339}}
+  .slideshow .slidecaption h2 {
+    font-size: 2em;
     max-width: 70%;
   }
 }
