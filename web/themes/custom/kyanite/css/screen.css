@@ -1015,6 +1015,11 @@ img.align-center, img.aligncenter, img[align="center"] {
   margin-bottom: 2em;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003761}}
+.field-field-don-t-show-text-on-banner {
+  display: none;
+}
+
 /* Layout ------------------------------------------------------------------*/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/screen\.scss}line{font-family:\000037}}
 .container {
