@@ -274,11 +274,6 @@ $global-header-padding-bottom-big-scrolled-down: $global-header-padding-top-big-
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_bannerimages\.scss}line{font-family:\00003177}}
-.field-field-don-t-show-text-on-banner {
-  display: none;
-}
-
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-breadcrumbs\.scss}line{font-family:\000033}}
 #block-kyanite-breadcrumbs nav ol {
   /*removed ul here, since the nav contains only an ol*/

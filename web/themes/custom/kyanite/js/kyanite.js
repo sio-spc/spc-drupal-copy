@@ -934,23 +934,7 @@
   }
   
   
-  /*function bannerTweaks(){
-    $("body:not(.path-frontpage) main").before($(".field-field-featured-image"));    
 
-    if($(".field-field-featured-image #block-kyanite-page-title").parent().find(".bannershadow").length === 0){
-      $(".field-field-featured-image #block-kyanite-page-title").before("<div class='bannershadow'></div>");
-    }
-    if($("#block-kyanite-page-title h1").length && ($(".field-field-don-t-show-text-on-banner").text().trim() != "1") && ($(".field-field-featured-image img").length > 0)){
-      consoleLog("title and show text on banner and featured image exists");
-
-      $(".field-field-featured-image").prepend($("#block-kyanite-page-title"));
-
-      if($(".field-field-featured-image .bannershadow").length === 0){
-        $(".field-field-featured-image .field-items").before("<div class='bannershadow'></div>");
-      }
-      
-    }
-  }*/
  
   var landingPageHeightsListening = false;
   
@@ -1589,8 +1573,6 @@
     spcFeaturedImageTweaks();
 
     blogTweaks();
-
-    //bannerTweaks();
 
     eventMap();
           

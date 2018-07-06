@@ -199,15 +199,30 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor{
 	display: block;
     }
 }
-.superfishdropdown{
-	display: none;
-	@media (min-width: 1050px){
-		display: block;
+html[lang="en"]{
+	.superfishdropdown{
+		display: none;
+		@media (min-width: 900px){
+			display: block;
+		}
+	}
+	#fixed-header, #fixed-header-anchor{
+		@media (max-width: 899px){
+			display: none;
+		}
 	}
 }
-#fixed-header, #fixed-header-anchor{
-	@media (max-width: 1049px){
+html[lang="fr"]{
+	.superfishdropdown{
 		display: none;
+		@media (min-width: 1050px){
+			display: block;
+		}
+	}
+	#fixed-header, #fixed-header-anchor{
+		@media (max-width: 1049px){
+			display: none;
+		}
 	}
 }
 div#fixed-header {
