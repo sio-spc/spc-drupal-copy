@@ -249,9 +249,6 @@
 		> .item-list li{
 			text-align: left;
 			background-color: transparent;
-			.views-field-field-twitter-handle a:before{
-				content: "\f099";
-			}
 			@media (min-width: 640px){
 				max-width: 178px!important;
 			}
