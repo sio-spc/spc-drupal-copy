@@ -808,7 +808,7 @@ body.has-background-image.scrolled-down .layout-container, body.has-background-i
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\00003444}}
-.path-frontpage #headerborder {
+.path-frontpage #headerborder, .divisionfront #headerborder {
   margin-bottom: 0;
 }
 
