@@ -5883,7 +5883,7 @@ body.has-background-image .site-footer {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003441}}
-.spcgrid:not(.partners) h2 {
+.spcgrid:not(.partners):not(.people) h2 {
   margin-top: 0;
   padding-top: .5em;
   padding-bottom: .25em;
