@@ -364,7 +364,7 @@ body:not(.fixed-header-is-fixed):not(.divisionsite) .layout-primary-menu .superf
   background-color: #0b5174 !important;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000347}}
-.layout-primary-menu .superfishdropdown > ul > li > ul > li a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > ul > li a {
+.layout-primary-menu .superfishdropdown > ul > li > ul > li a, .layout-primary-menu .superfishdropdown > ul > li > ul > li span, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > ul > li a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > ul > li span {
   text-align: left;
   text-transform: none;
   font-size: 1em;
