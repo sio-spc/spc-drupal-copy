@@ -1545,7 +1545,7 @@
   }
 
   function ccestweaks(){
-    $(".divisionsite.division-cces .paragraph--type--bp-carousel").insertAfter($(".bottomfullwidth"));
+    $(".divisionfront.division-cces .paragraph--type--bp-carousel").insertAfter($(".bottomfullwidth"));
   }
 
   $(window).on("load scroll resize orientationchange", homeTweaks);

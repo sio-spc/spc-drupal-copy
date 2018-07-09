@@ -53,3 +53,11 @@ body.divisionsite{
 		}
 	}
 }
+.divisionfront.division-cces .paragraph--type--bp-carousel{
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	@media (min-width: 778px){
+		max-width: 70%;
+	}
+}
