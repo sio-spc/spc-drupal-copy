@@ -161,8 +161,8 @@ img {
     margin-bottom: .5em;
   }
 }
-.paragraph__column{
-  .field-type-text-with-summary, .field-type-text-long{
+.paragraph__column, .field-body{
+  .field-type-text-with-summary, .field-type-text-long, &.field-type-text-with-summary, &.field-type-text-long{
     li{
       list-style-position: inside;
     }
