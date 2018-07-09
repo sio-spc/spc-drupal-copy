@@ -53,12 +53,21 @@ body.divisionsite{
 		}
 	}
 }
-.divisionfront.division-cces .paragraph--type--bp-carousel{
-	margin: auto;
-	margin-top: 2em;
-	margin-bottom: 2em;
-	float: none;
-	@media (min-width: 778px){
-		max-width: 70%;
+.divisionfront{
+	.relatedinner{
+		.contenttype, .created{
+			display: none;
+		}
+	}
+	&.division-cces{
+		.paragraph--type--bp-carousel{
+			margin: auto;
+			margin-top: 2em;
+			margin-bottom: 2em;
+			float: none;
+			@media (min-width: 778px){
+				max-width: 70%;
+			}
+		}
 	}
 }
