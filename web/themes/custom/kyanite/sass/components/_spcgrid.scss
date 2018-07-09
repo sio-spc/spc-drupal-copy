@@ -250,9 +250,7 @@
 			text-align: left;
 			background-color: transparent;
 			@media (min-width: 640px){
-				width: 178px!important;
-				margin-left: auto!important;
-				margin-right: auto!important;
+				max-width: 178px!important;
 			}
 			.views-field-field-title{
 				font-size: .9em;
