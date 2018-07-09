@@ -1749,6 +1749,7 @@ body.divisionsite.path-cces h1 {
   margin: auto;
   margin-top: 2em;
   margin-bottom: 2em;
+  float: none;
 }
 @media (min-width: 778px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000356}}
