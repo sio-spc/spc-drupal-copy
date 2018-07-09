@@ -246,22 +246,27 @@
 		}
 	}
 	&.people{
-		> .item-list li{
-			text-align: left;
-			background-color: transparent;
-			@media (min-width: 640px){
-				max-width: 178px!important;
-			}
-			.views-field-field-title{
-				font-size: .9em;
-				line-height: 1em;
-			}
-			.views-field-field-email, .views-field-field-telephone, .views-field-field-extension{
-				display: block;
-				clear: both;
-				font-size: .9em;
-				a{
-					display: inline;
+		> .item-list{
+			> ul{
+				justify-content: space-evenly!important;
+				li{
+					text-align: left;
+					background-color: transparent;
+					@media (min-width: 640px){
+						max-width: 178px!important;
+					}
+					.views-field-field-title{
+						font-size: .9em;
+						line-height: 1em;
+					}
+					.views-field-field-email, .views-field-field-telephone, .views-field-field-extension{
+						display: block;
+						clear: both;
+						font-size: .9em;
+						a{
+							display: inline;
+						}
+					}
 				}
 			}
 		}
