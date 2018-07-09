@@ -380,7 +380,7 @@ body:not(.fixed-header-is-fixed):not(.divisionsite) .layout-primary-menu .superf
   color: #005bb7;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000366}}
-.layout-primary-menu .superfishdropdown > ul > li a, .layout-primary-menu .superfishdropdown > ul > li > span, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > span {
+.layout-primary-menu .superfishdropdown > ul > li a, .layout-primary-menu .superfishdropdown > ul > li span, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a, .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li span {
   text-decoration: none;
   border: none;
   display: block;
@@ -390,7 +390,7 @@ body:not(.fixed-header-is-fixed):not(.divisionsite) .layout-primary-menu .superf
   position: relative;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block-afiglobal-main-menu\.scss}line{font-family:\0000371}}
-body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown > ul > li a, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown > ul > li > span, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li > span {
+body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown > ul > li a, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown > ul > li span, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li a, body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishdropdown ul.sf-menu.sf-style-white > li span {
   text-transform: none;
   padding: 0.5em;
 }
