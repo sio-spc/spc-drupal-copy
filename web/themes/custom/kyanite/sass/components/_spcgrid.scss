@@ -501,10 +501,12 @@
 	width: 100%;
 }
 #views-exposed-form-updates-page-1{
+	margin-bottom: 2em;
 	.form-item, .form-actions{
 		display: inline-block;
 	}
 	.button{
 		font-size: .8em;
+		cursor: pointer;
 	}
 }
