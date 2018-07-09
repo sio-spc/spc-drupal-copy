@@ -5684,12 +5684,7 @@ body.has-background-image .site-footer {
 .spcgrid.people > .item-list > ul li {
   text-align: left;
   background-color: transparent;
-}
-@media (min-width: 640px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003252}}
-  .spcgrid.people > .item-list > ul li {
-    max-width: 178px !important;
-  }
+  max-width: 178px !important;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003258}}
 .spcgrid.people > .item-list > ul li .views-field-field-title {
