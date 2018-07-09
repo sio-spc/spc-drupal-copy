@@ -369,6 +369,11 @@
 			}
 		}
 	}
+	&.countryreports{
+		> .item-list > ul{
+			margin-bottom: 3em;
+		}
+	}
 	&.divisioniconsheader{
 		> .item-list{
 			> ul{
