@@ -1544,6 +1544,10 @@
     $("#plethora-map-feature-wrapper").height($("#plethora-map-container").height());
   }
 
+  function ccestweaks(){
+    $(".divisionsite.division-cces .paragraph--type--bp-carousel").insertAfter($(".bottomfullwidth"));
+  }
+
   $(window).on("load scroll resize orientationchange", homeTweaks);
 
   //$(window).on("scroll resize orientationchange", mapSizing);
@@ -1556,6 +1560,8 @@
     eventPageInit();
 
     memberDefaultInfo();
+
+    ccestweaks();
     
 
 // please do not try to optimize this by putting it into another document ready event handler
