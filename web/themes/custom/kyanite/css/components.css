@@ -5970,6 +5970,15 @@ body.has-background-image .site-footer {
   width: 100%;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003504}}
+#views-exposed-form-updates-page-1 .form-item, #views-exposed-form-updates-page-1 .form-actions {
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003507}}
+#views-exposed-form-updates-page-1 .button {
+  font-size: .8em;
+}
+
 /*.feed-subscribe{
 	display: block;
 	position: absolute;

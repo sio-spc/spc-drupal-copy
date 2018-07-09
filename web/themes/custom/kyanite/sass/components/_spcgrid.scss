@@ -500,3 +500,11 @@
 	bottom: 5px;
 	width: 100%;
 }
+#views-exposed-form-updates-page-1{
+	.form-item, .form-actions{
+		display: inline-block;
+	}
+	.button{
+		font-size: .8em;
+	}
+}
