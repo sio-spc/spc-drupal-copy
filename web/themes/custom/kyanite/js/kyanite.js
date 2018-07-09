@@ -1546,6 +1546,11 @@
 
   function ccestweaks(){
     $(".divisionfront.division-cces .paragraph--type--bp-carousel").insertAfter($(".bottomfullwidth"));
+    $("body.cccpir .divisioniconsheader .item-list li a[href='/cces'], body.cccpir .divisioniconsheader .item-list li a[href='/decc']").each(function(){
+      $(this).addClass("active")
+      $(this).closest("li").addClass("active");
+    });
+    
   }
 
   $(window).on("load scroll resize orientationchange", homeTweaks);
