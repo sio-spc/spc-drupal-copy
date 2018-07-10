@@ -1225,7 +1225,7 @@
   function authorTweaks(){
     //consoleLog("authorTweaks");
     if($("#block-views-block-author-block-1 .views-row").length){
-      //consoleLog("if.. author");
+      consoleLog("has author");
       $("#block-views-block-author-block-1 .views-row").fadeIn();
     }
     else{
