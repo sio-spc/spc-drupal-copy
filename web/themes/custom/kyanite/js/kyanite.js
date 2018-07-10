@@ -1226,7 +1226,7 @@
     //consoleLog("authorTweaks");
     if($("#block-views-block-author-block-1 .views-row").length){
       consoleLog("has author");
-      $("#block-views-block-author-block-1 .views-row").fadeIn();
+      $("#block-views-block-author-block-1").fadeIn();
     }
     else{
       //do nothing
