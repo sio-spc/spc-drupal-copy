@@ -1134,8 +1134,8 @@
       lastlangnid = $(this).find(".relatedinner").attr("data-langnid");
     });
     //consoleLog("relatedcontent count: " + $(".spcgrid.relatedcontent .views-row").length);
-    if($(".spcgrid.relatedcontent .views-row").length < 1){
-      $("#block-views-block-related-content-block-1").remove();//hide related content block if even the fallback view is empty
+    if($(".spcgrid.relatedcontent .views-row").length){
+      $("#block-views-block-related-content-block-1").fadeIn();//hide related content block if even the fallback view is empty
     }
   }
   function bottomcontent(){
