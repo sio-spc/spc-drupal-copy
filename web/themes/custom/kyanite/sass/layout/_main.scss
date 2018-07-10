@@ -7,6 +7,9 @@
     margin:0;
   }
 }
+.bottom, .bottomfullwidth{
+  display: none;
+}
 body:not(.context-resources) #main, 
 .context-resources #block-pagetitle, 
 .context-resources #block-kyanite-content, 

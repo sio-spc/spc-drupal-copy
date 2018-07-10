@@ -1140,13 +1140,13 @@
   }
   function bottomcontent(){
     if($(".bottom").length){
-      if(($(".bottom").html().trim() == "") || $(".bottom > div").html().trim() == ""){
-        $(".bottom").hide();
+      if(($(".bottom").html().trim() != "") && $(".bottom > div").html().trim() != ""){
+        $(".bottom").fadeIn();
       }
     }
     if($(".bottomfullwidth").length){
-      if(($(".bottomfullwidth").html().trim() == "") || $(".bottomfullwidth > div").html().trim() == ""){
-        $(".bottomfullwidth").hide();
+      if(($(".bottomfullwidth").html().trim() != "") && $(".bottomfullwidth > div").html().trim() != ""){
+        $(".bottomfullwidth").fadeIn();
       }
     }
   }
