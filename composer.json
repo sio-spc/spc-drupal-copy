@@ -65,6 +65,7 @@
         "drupal/simple_social_icons": "2.x-dev",
         "drupal/superfish": "1.2",
         "drupal/title_field_for_manage_display": "^1.0",
+        "drupal/twitter_block": "^2.1",
         "drupal/video_embed_field": "1.5",
         "drupal/views_bulk_edit": "2.0-beta4",
         "drupal/views_bulk_operations": "2.0",

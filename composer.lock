@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5a96268fca51823f3580668c614133b",
+    "content-hash": "03c19b2b6b92942ee765bb5ade70cb87",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1428,7 +1428,8 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
-            }
+            },
+            "time": "2018-04-16T15:01:13+00:00"
         },
         {
             "name": "drupal/ape",
@@ -3931,7 +3932,8 @@
             "homepage": "https://www.drupal.org/project/migrate_devel",
             "support": {
                 "source": "http://cgit.drupalcode.org/migrate_devel"
-            }
+            },
+            "time": "2017-06-25T23:46:13+00:00"
         },
         {
             "name": "drupal/migrate_manifest",
@@ -4524,7 +4526,8 @@
             "homepage": "https://www.drupal.org/project/search404",
             "support": {
                 "source": "http://cgit.drupalcode.org/search404"
-            }
+            },
+            "time": "2017-11-10T07:02:42+00:00"
         },
         {
             "name": "drupal/simple_social_icons",
@@ -4753,6 +4756,69 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "http://cgit.drupalcode.org/token"
+            }
+        },
+        {
+            "name": "drupal/twitter_block",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/twitter_block",
+                "reference": "8.x-2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/twitter_block-8.x-2.1.zip",
+                "reference": "8.x-2.1",
+                "shasum": "374eff45b257ca112177b38ef040fd2d920c5d16"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.1",
+                    "datestamp": "1463644739",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Devin Carlson",
+                    "homepage": "https://www.drupal.org/user/290182"
+                },
+                {
+                    "name": "ZenDoodles",
+                    "homepage": "https://www.drupal.org/user/226976"
+                },
+                {
+                    "name": "cweagans",
+                    "homepage": "https://www.drupal.org/user/404732"
+                },
+                {
+                    "name": "naveenvalecha",
+                    "homepage": "https://www.drupal.org/user/2665733"
+                },
+                {
+                    "name": "subhojit777",
+                    "homepage": "https://www.drupal.org/user/1812492"
+                }
+            ],
+            "description": "Provides configurable blocks for a Twitter feed.",
+            "homepage": "http://drupal.org/project/twitter_block",
+            "support": {
+                "source": "http://cgit.drupalcode.org/twitter_block"
             }
         },
         {
@@ -5105,7 +5171,8 @@
             "homepage": "https://www.drupal.org/project/views_infinite_scroll",
             "support": {
                 "source": "http://cgit.drupalcode.org/views_infinite_scroll"
-            }
+            },
+            "time": "2018-04-24T00:28:45+00:00"
         },
         {
             "name": "drupal/viewsreference",
