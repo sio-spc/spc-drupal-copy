@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6fa04a74c1b039be3b74625dc4fc4d6",
+    "content-hash": "a5a96268fca51823f3580668c614133b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1744,53 +1744,6 @@
             "homepage": "https://www.drupal.org/project/captcha",
             "support": {
                 "source": "http://cgit.drupalcode.org/captcha"
-            }
-        },
-        {
-            "name": "drupal/ckeditor_entity_link",
-            "version": "1.0.0-alpha2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/ckeditor_entity_link",
-                "reference": "8.x-1.0-alpha2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ckeditor_entity_link-8.x-1.0-alpha2.zip",
-                "reference": "8.x-1.0-alpha2",
-                "shasum": "8d483b5a8a18eb119e8a4a316404ce99436ae6b6"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha2",
-                    "datestamp": "1490814183",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "dealancer",
-                    "homepage": "https://www.drupal.org/user/243418"
-                }
-            ],
-            "description": "Allows to insert entity links in CKEditor.",
-            "homepage": "https://www.drupal.org/project/ckeditor_entity_link",
-            "support": {
-                "source": "http://cgit.drupalcode.org/ckeditor_entity_link"
             }
         },
         {
@@ -3536,8 +3489,7 @@
             "homepage": "https://drupal.org/project/imce",
             "support": {
                 "source": "http://cgit.drupalcode.org/imce"
-            },
-            "time": "2018-03-13 19:53:09"
+            }
         },
         {
             "name": "drupal/inline_responsive_images",

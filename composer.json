@@ -27,7 +27,6 @@
         "drupal/block_class": "^1.0@alpha",
         "drupal/bootstrap_library": "^1.10",
         "drupal/captcha": "1.0-beta1",
-        "drupal/ckeditor_entity_link": "1.0-alpha2",
         "drupal/color_field": "2.0-rc2",
         "drupal/colorbox": "1.4",
         "drupal/config_devel": "1.2",
