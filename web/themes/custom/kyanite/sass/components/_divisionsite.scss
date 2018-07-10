@@ -43,6 +43,7 @@ body.divisionsite{
 	.headertitle{
 		font-size: 2em;
 		text-align: center;
+		margin-right: 40px;/* needed to keep hamburger icon from overlapping with this */
 		.field-body{
 			padding-bottom: 0;
 		}
