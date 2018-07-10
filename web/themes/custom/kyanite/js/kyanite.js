@@ -1152,10 +1152,10 @@
       consoleLog("bottomfullwidth text: "+ $(".bottomfullwidth").text().trim());
       consoleLog("bottomfullwidth > div text: "+$(".bottomfullwidth > div").text().trim());
       if(
-          $(".bottomfullwidth").text().trim() != "Related Content") && 
-          $(".bottomfullwidth").text().trim() != "Contenu connexe") && 
-          $(".bottomfullwidth > div").text().trim() != "Related Content") &&
-          $(".bottomfullwidth > div").text().trim() != "Contenu connexe")
+          ($(".bottomfullwidth").text().trim() != "Related Content") && 
+          ($(".bottomfullwidth").text().trim() != "Contenu connexe") && 
+          ($(".bottomfullwidth > div").text().trim() != "Related Content") &&
+          ($(".bottomfullwidth > div").text().trim() != "Contenu connexe")
         ){
         $(".bottomfullwidth").fadeIn();
       }
