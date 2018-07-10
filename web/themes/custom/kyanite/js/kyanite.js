@@ -1149,6 +1149,8 @@
       }
     }
     if($(".bottomfullwidth").length){
+      consoleLog("bottomfullwidth text: "+ $(".bottomfullwidth").html().trim());
+      consoleLog("bottomfullwidth > div text: "+$(".bottomfullwidth > div").html().trim());
       if(($(".bottomfullwidth").html().trim() != "Related Content") && $(".bottomfullwidth > div").html().trim() != "Related Content"){
         $(".bottomfullwidth").fadeIn();
       }
