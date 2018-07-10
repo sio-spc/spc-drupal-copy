@@ -1225,12 +1225,12 @@
   function authorTweaks(){
     //consoleLog("authorTweaks");
     if($("#block-views-block-author-block-1 .views-row").length){
-      //do nothing
       //consoleLog("if.. author");
+      $("#block-views-block-author-block-1 .views-row").fadeIn();
     }
     else{
-      //consoleLog("else.. remove author");
-      $("#block-views-block-author-block-1").remove();
+      //do nothing
+      //$("#block-views-block-author-block-1").remove();
     }
   }
 

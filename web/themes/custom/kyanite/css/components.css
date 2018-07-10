@@ -17,14 +17,18 @@ $global-header-padding-bottom-desktop-scrolled-down: $global-header-padding-top-
 $global-header-padding-top-big-scrolled-down: 0;
 $global-header-padding-bottom-big-scrolled-down: $global-header-padding-top-big-scrolled-down; // should probably just match the top padding...
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_author\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_author\.scss}line{font-family:\000031}}
+#block-views-block-author-block-1 {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_author\.scss}line{font-family:\000034}}
 #block-views-block-author-block-1 .kyanite-views-row-inner .views-field-field-headshot {
   display: block;
   float: left;
   margin-right: 2em;
   margin-bottom: 2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_author\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_author\.scss}line{font-family:\000039}}
 #block-views-block-author-block-1 .kyanite-views-row-inner .views-field-field-headshot img {
   display: block;
 }
