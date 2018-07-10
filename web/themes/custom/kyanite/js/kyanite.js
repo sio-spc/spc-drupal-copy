@@ -1137,6 +1137,9 @@
     if($(".spcgrid.relatedcontent .views-row").length){
       $("#block-views-block-related-content-block-1").fadeIn();//hide related content block if even the fallback view is empty
     }
+    if($(".field-field-override-related-content").length{
+      $("#block-views-block-related-content-block-1 > h2").text($(".field-field-override-related-content").text());
+    }
   }
   function bottomcontent(){
     if($(".bottom").length){
