@@ -275,7 +275,7 @@ body.ready .layout-highlighted > * {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_general\.scss}line{font-family:\00003186}}
-#block-twitter .field-body {
+#block-twitter .field-body, #block-dgtwitter .field-body {
   height: 200px;
   overflow: scroll;
   padding-bottom: 0;
