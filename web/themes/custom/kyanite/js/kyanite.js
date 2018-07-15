@@ -1561,7 +1561,17 @@
       $(this).addClass("active")
       $(this).closest("li").addClass("active");
     });
-    
+  }
+
+  function dgTweaks(){
+    var galleryheight = $("#block-dggallery").height();
+    consoleLog("DG gallery height: " + galleryheight);
+    if($(window).width() > 640){//tablet and desktop only please
+      $("#block-twitter .field-body").height(galleryheight);
+    }
+    else{
+      $("#block-twitter .field-body").height(galleryheight*3);
+    }
   }
 
   $(window).on("load scroll resize orientationchange", homeTweaks);
@@ -1570,6 +1580,8 @@
   
 
 	$(document).ready(function(){
+
+    dgTweaks();
 
     frieze();
 
