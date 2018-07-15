@@ -1574,14 +1574,17 @@
     }
   }
 
-  $(window).on("load scroll resize orientationchange", homeTweaks);
+  function resizingTweaks(){
+    homeTweaks();
+    dgTweaks();
+  }
+
+  $(window).on("load scroll resize orientationchange", resizingTweaks);
 
   //$(window).on("scroll resize orientationchange", mapSizing);
   
 
 	$(document).ready(function(){
-
-    dgTweaks();
 
     frieze();
 
