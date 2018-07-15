@@ -178,7 +178,9 @@ body.dg .layout-content-bottom-66-33 > div{
 	@media (min-width: $bp-tablet-min){
 		display: block;
 		justify-content: none;
-		float: left;
+		> div{
+			float: left;
+		}
 	}
 }
 #block-twitter .field-body{
