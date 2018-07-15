@@ -175,6 +175,9 @@ body.ready .layout-highlighted > * {
 	}
 }
 body.dg .layout-content-bottom-66-33 > div{
+	#block-dggallery > div{
+		clear: both;
+	}
 	@media (min-width: $bp-tablet-min){
 		display: block;
 		justify-content: none;
