@@ -262,7 +262,16 @@ body.ready .layout-highlighted > * {
   }
 }
 
+@media (min-width: 700px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_general\.scss}line{font-family:\00003177}}
+  body.dg .layout-content-bottom-66-33 > div {
+    display: block;
+    justify-content: none;
+    float: left;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_general\.scss}line{font-family:\00003184}}
 #block-twitter .field-body {
   height: 200px;
   overflow: scroll;
