@@ -1579,6 +1579,14 @@
     dgTweaks();
   }
 
+  function centerBlockTitles(){
+    $(".kyanite-block").each(function(){
+      if( $(this).find(".field-field-center-title").text().trim() == "1"){
+        $(this).find("> h2").css("text-align","center");
+      }
+    });
+  }
+
   $(window).on("load scroll resize orientationchange", resizingTweaks);
 
   //$(window).on("scroll resize orientationchange", mapSizing);
@@ -1587,6 +1595,8 @@
 	$(document).ready(function(){
 
     frieze();
+
+    centerBlockTitles();
 
     eventPageInit();
 
