@@ -32,7 +32,7 @@
         "drupal/config_devel": "1.2",
         "drupal/config_update": "1.5",
         "drupal/context_active_trail": "^1.0@RC",
-        "drupal/core": "8.5.3",
+        "drupal/core": "8.5.5",
         "drupal/devel": "^1.2",
         "drupal/easy_breadcrumb": "1.6",
         "drupal/editor_advanced_link": "^1.4",
