@@ -36,6 +36,7 @@
         "drupal/devel": "^1.2",
         "drupal/easy_breadcrumb": "1.6",
         "drupal/editor_advanced_link": "^1.4",
+        "drupal/entity_clone": "1.x-dev",
         "drupal/entityqueue": "1.0-alpha7",
         "drupal/exclude_node_title": "1.0-beta1",
         "drupal/field_group": "^1.0",
