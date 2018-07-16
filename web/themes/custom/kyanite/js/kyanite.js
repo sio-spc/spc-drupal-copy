@@ -1594,6 +1594,8 @@
 
 	$(document).ready(function(){
 
+    $(".path-updates.path-fr/nouvelles/blog h1").text("Actus Web");
+
     frieze();
 
     centerBlockTitles();
