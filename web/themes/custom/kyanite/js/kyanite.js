@@ -1594,7 +1594,7 @@
 
 	$(document).ready(function(){
 
-    $(".path-updates.path-fr/nouvelles/blog h1").text("Actus Web");
+    $("html[lang='fr'] .path-updates h1").text("Actus Web");
 
     frieze();
 
