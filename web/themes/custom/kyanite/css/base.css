@@ -1034,3 +1034,8 @@ img.align-center, img.aligncenter, img[align="center"] {
 .field-field-slide article > h2 {
   display: none !important;
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003774}}
+body.specialprojects #maincontainer {
+  display: none;
+}

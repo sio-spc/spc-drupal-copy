@@ -770,3 +770,8 @@ img.align-center, img.aligncenter, img[align="center"]{
 .field-field-slide article > h2{
   display: none!important;
 }
+body.specialprojects{
+  #maincontainer{
+    display: none;
+  }
+}
