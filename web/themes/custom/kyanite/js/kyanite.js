@@ -1594,6 +1594,10 @@
 
 	$(document).ready(function(){
 
+    if($("#main").text().trim() == ""){
+      $("#main").hide();
+    }
+
     $(".french-web-stories h1").text("Actus Web");
 
     frieze();
