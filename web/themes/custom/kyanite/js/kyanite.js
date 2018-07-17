@@ -1588,7 +1588,7 @@
   }
 
   function hideMain(){
-    consoleLog( "#main: ".$("#main").text() );
+    consoleLog( "#main: " + $("#main").text() );
     if($("#main").text().trim() == ""){
       $("#main").hide();
     }
