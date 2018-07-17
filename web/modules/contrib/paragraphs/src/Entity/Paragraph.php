@@ -5,6 +5,8 @@ namespace Drupal\paragraphs\Entity;
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Component\Utility\Unicode;
 use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
+use Drupal\Core\Entity\EntityPublishedTrait;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\RevisionLogEntityTrait;
 use Drupal\Core\Field\BaseFieldDefinition;
@@ -53,7 +55,8 @@ use Drupal\user\UserInterface;
  *     "uuid" = "uuid",
  *     "bundle" = "type",
  *     "langcode" = "langcode",
- *     "revision" = "revision_id"
+ *     "revision" = "revision_id",
+ *     "published" = "status"
  *   },
  *   revision_metadata_keys = {
  *     "revision_user" = "revision_uid",
@@ -87,6 +90,7 @@ use Drupal\user\UserInterface;
 class Paragraph extends ContentEntityBase implements ParagraphInterface {
 
   use EntityNeedsSaveTrait;
+  use EntityPublishedTrait;
 
   /**
    * The behavior plugin data for the paragraph entity.
@@ -422,7 +426,14 @@ class Paragraph extends ContentEntityBase implements ParagraphInterface {
     $depth_limit = isset($options['depth_limit']) ? $options['depth_limit'] : 1;
     $this->summaryCount = 0;
     $summary = [];
-    foreach ($this->getFieldDefinitions() as $field_name => $field_definition) {
+    $components = entity_get_form_display('paragraph', $this->getType(), 'default')->getComponents();
+    uasort($components, 'Drupal\Component\Utility\SortArray::sortByWeightElement');
+    foreach (array_keys($components) as $field_name) {
+      // Components can be extra fields, check if the field really exists.
+      if (!$this->hasField($field_name)) {
+        continue;
+      }
+      $field_definition = $this->getFieldDefinition($field_name);
       // We do not add content to the summary from base fields, skip them
       // keeps performance while building the paragraph summary.
       if (!($field_definition instanceof FieldConfigInterface) || !$this->get($field_name)->access('view')) {

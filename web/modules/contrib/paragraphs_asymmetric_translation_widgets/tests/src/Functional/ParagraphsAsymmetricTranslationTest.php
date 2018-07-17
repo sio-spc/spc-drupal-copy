@@ -1,19 +1,27 @@
 <?php
 
-namespace Drupal\paragraphs\Tests\Classic;
+namespace Drupal\Tests\paragraphs_asymmetric_translation_widgets\Functional;
+
+use Drupal\field_ui\Tests\FieldUiTestTrait;
+use Drupal\paragraphs\Tests\Classic\ParagraphsCoreVersionUiTestTrait;
+use Drupal\Tests\BrowserTestBase;
+use Drupal\Tests\paragraphs\FunctionalJavascript\ParagraphsTestBaseTrait;
 
 /**
  * Tests asymmetric translation of paragraphs.
  *
- * @group paragraphs
+ * @group paragraphs_asymmetric_translation_widgets
  */
-class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
+class ParagraphsAsymmetricTranslationTest extends BrowserTestBase {
+
+  use FieldUiTestTrait, ParagraphsCoreVersionUiTestTrait, ParagraphsTestBaseTrait;
 
   public static $modules = [
     'node',
     'paragraphs_demo',
     'content_translation',
     'block',
+    'paragraphs_asymmetric_translation_widgets'
   ];
 
   /**
@@ -79,9 +87,9 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
    * 5. Reorder the paragraphs on each translation.
    */
   public function testParagraphsMultilingualFieldTranslation() {
-    // Edit widget to classic.
+    // Set widget to assymetric one.
     $this->drupalGet('/admin/structure/types/manage/paragraphed_content_demo/form-display');
-    $this->drupalPostForm(NULL, array('fields[field_paragraphs_demo][type]' => 'entity_reference_paragraphs'), t('Save'));
+    $this->drupalPostForm(NULL, array('fields[field_paragraphs_demo][type]' => 'paragraphs_classic_asymmetric'), t('Save'));
 
     // 1. Translate node and create different paragraphs.
     // Add an English node.
@@ -98,7 +106,7 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
     $node = $this->drupalGetNodeByTitle('Title in english');
     $this->drupalGet('node/' . $node->id() . '/translations/add/en/fr');
 
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_demo_0_edit');
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_demo_0_edit');
 
     $edit = [
       'title[0][value]' => 'Title in french',
@@ -114,17 +122,17 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
 
     // Check the english translation.
     $this->drupalGet('node/' . $node->id());
-    $this->assertText('Title in english');
-    $this->assertText('Text in english');
-    $this->assertNoText('Title in french');
-    $this->assertNoText('Text in french');
+    $this->assertSession()->pageTextContains('Title in english');
+    $this->assertSession()->pageTextContains('Text in english');
+    $this->assertSession()->responseNotContains('Title in french');
+    $this->assertSession()->responseNotContains('Text in french');
 
     // Check the french translation.
     $this->drupalGet('fr/node/' . $node->id());
-    $this->assertText('Title in french');
-    $this->assertText('Text in french');
-    $this->assertNoText('Title in english');
-    $this->assertNoText('Text in english');
+    $this->assertSession()->pageTextContains('Title in french');
+    $this->assertSession()->pageTextContains('Text in french');
+    $this->assertSession()->responseNotContains('Title in english');
+    $this->assertSession()->responseNotContains('Text in english');
 
     // Check the db.
     $select = \Drupal::database()->select('node__field_paragraphs_demo', 'n');
@@ -133,9 +141,9 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
     $select->condition('n.entity_id', $node->id());
     $paragraph_langcodes = $select->execute()->fetchCol();
 
-    $this->assertEqual(
-      $paragraph_langcodes,
+    $this->assertEquals(
       ['en', 'fr'],
+      $paragraph_langcodes,
       'Translated paragraphs are separate entities'
     );
 
@@ -143,7 +151,7 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
     // Try to edit the paragraphs, to see if the correct translation gets
     // updated. Start with the english.
     $this->drupalGet('node/' . $node->id() . '/edit');
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_demo_0_edit');
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_demo_0_edit');
     $edit = [
       'field_paragraphs_demo[0][subform][field_text_demo][0][value]' => 'The updated english text',
     ];
@@ -151,18 +159,18 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
     // Check if only the english node had its paragraph text updated, and that
     // there has been no mixing-up of the paragraph entities.
     $this->drupalGet('node/' . $node->id());
-    $this->assertText('The updated english text');
-    $this->assertNoText('Text in english');
-    $this->assertNoText('Text in french');
+    $this->assertSession()->pageTextContains('The updated english text');
+    $this->assertSession()->responseNotContains('Text in english');
+    $this->assertSession()->responseNotContains('Text in french');
 
     $this->drupalGet('fr/node/' . $node->id());
-    $this->assertText('Text in french');
-    $this->assertNoText('Text in english');
-    $this->assertNoText('The updated english text');
+    $this->assertSession()->pageTextContains('Text in french');
+    $this->assertSession()->responseNotContains('Text in english');
+    $this->assertSession()->responseNotContains('The updated english text');
 
     // Now repeat for the french.
     $this->drupalGet('fr/node/' . $node->id() . '/edit');
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_demo_0_edit');
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_demo_0_edit');
     $edit = [
       'field_paragraphs_demo[0][subform][field_text_demo][0][value]' => 'The updated french text',
     ];
@@ -170,14 +178,14 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
     // Check if only the french node had its paragraph text updated, and that
     // there has been no mixing-up of the paragraph entities.
     $this->drupalGet('node/' . $node->id());
-    $this->assertText('The updated english text');
-    $this->assertNoText('Text in french');
-    $this->assertNoText('The updated french text');
+    $this->assertSession()->pageTextContains('The updated english text');
+    $this->assertSession()->responseNotContains('Text in french');
+    $this->assertSession()->responseNotContains('The updated french text');
 
     $this->drupalGet('fr/node/' . $node->id());
-    $this->assertText('The updated french text');
-    $this->assertNoText('Text in french');
-    $this->assertNoText('The updated english text');
+    $this->assertSession()->pageTextContains('The updated french text');
+    $this->assertSession()->responseNotContains('Text in french');
+    $this->assertSession()->responseNotContains('The updated english text');
 
     // 3. Add different number of paragraphs on each translation.
     // Add 2 more paragraphs on the english node.
@@ -193,16 +201,16 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
     // Confirm that the english node has the new paragraphs, and the french
     // node is intact.
     $this->drupalGet('node/' . $node->id());
-    $this->assertText('The updated english text');
-    $this->assertText('Second text in english');
-    $this->assertText('Third text in english');
-    $this->assertNoText('The updated french text');
+    $this->assertSession()->pageTextContains('The updated english text');
+    $this->assertSession()->pageTextContains('Second text in english');
+    $this->assertSession()->pageTextContains('Third text in english');
+    $this->assertSession()->responseNotContains('The updated french text');
 
     $this->drupalGet('fr/node/' . $node->id());
-    $this->assertText('The updated french text');
-    $this->assertNoText('The updated english text');
-    $this->assertNoText('Second text in english');
-    $this->assertNoText('Third text in english');
+    $this->assertSession()->pageTextContains('The updated french text');
+    $this->assertSession()->responseNotContains('The updated english text');
+    $this->assertSession()->responseNotContains('Second text in english');
+    $this->assertSession()->responseNotContains('Third text in english');
 
     // Repeat the same, this time adding 3 new paragraphs on the french node.
     $this->drupalGet('fr/node/' . $node->id() . '/edit');
@@ -219,22 +227,22 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
     // Confirm that the french node has the new paragraphs, and the english
     // node is intact.
     $this->drupalGet('node/' . $node->id());
-    $this->assertText('The updated english text');
-    $this->assertText('Second text in english');
-    $this->assertText('Third text in english');
-    $this->assertNoText('The updated french text');
-    $this->assertNoText('Second text in french');
-    $this->assertNoText('Third text in french');
-    $this->assertNoText('Fourth text in french');
+    $this->assertSession()->pageTextContains('The updated english text');
+    $this->assertSession()->pageTextContains('Second text in english');
+    $this->assertSession()->pageTextContains('Third text in english');
+    $this->assertSession()->responseNotContains('The updated french text');
+    $this->assertSession()->responseNotContains('Second text in french');
+    $this->assertSession()->responseNotContains('Third text in french');
+    $this->assertSession()->responseNotContains('Fourth text in french');
 
     $this->drupalGet('fr/node/' . $node->id());
-    $this->assertText('The updated french text');
-    $this->assertText('Second text in french');
-    $this->assertText('Third text in french');
-    $this->assertText('Fourth text in french');
-    $this->assertNoText('The updated english text');
-    $this->assertNoText('Second text in english');
-    $this->assertNoText('Third text in english');
+    $this->assertSession()->pageTextContains('The updated french text');
+    $this->assertSession()->pageTextContains('Second text in french');
+    $this->assertSession()->pageTextContains('Third text in french');
+    $this->assertSession()->pageTextContains('Fourth text in french');
+    $this->assertSession()->responseNotContains('The updated english text');
+    $this->assertSession()->responseNotContains('Second text in english');
+    $this->assertSession()->responseNotContains('Third text in english');
 
     // 4. Remove paragraphs from each translation.
     // Delete one of the paragraphs on the english node, and confirm that the
@@ -242,59 +250,59 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
     $this->drupalGet('node/' . $node->id() . '/edit');
 
     $this->assertNotNull($this->xpath('//*[@name="field_paragraphs_demo_1_remove"]'));
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_demo_1_remove');
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_demo_1_remove');
     $this->assertNotNull($this->xpath('//*[@name="field_paragraphs_demo_1_confirm_remove"]'));
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_demo_1_confirm_remove');
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_demo_1_confirm_remove');
     $this->drupalPostForm(NULL, NULL, t('Save (this translation)'));
 
     $this->drupalGet('node/' . $node->id());
-    $this->assertText('The updated english text');
-    $this->assertNoText('Second text in english');
-    $this->assertText('Third text in english');
-    $this->assertNoText('The updated french text');
-    $this->assertNoText('Second text in french');
-    $this->assertNoText('Third text in french');
-    $this->assertNoText('Fourth text in french');
+    $this->assertSession()->pageTextContains('The updated english text');
+    $this->assertSession()->responseNotContains('Second text in english');
+    $this->assertSession()->pageTextContains('Third text in english');
+    $this->assertSession()->responseNotContains('The updated french text');
+    $this->assertSession()->responseNotContains('Second text in french');
+    $this->assertSession()->responseNotContains('Third text in french');
+    $this->assertSession()->responseNotContains('Fourth text in french');
 
     $this->drupalGet('fr/node/' . $node->id());
-    $this->assertNoText('The updated english text');
-    $this->assertNoText('Second text in english');
-    $this->assertNoText('Third text in english');
-    $this->assertText('The updated french text');
-    $this->assertText('Second text in french');
-    $this->assertText('Third text in french');
-    $this->assertText('Fourth text in french');
+    $this->assertSession()->responseNotContains('The updated english text');
+    $this->assertSession()->responseNotContains('Second text in english');
+    $this->assertSession()->responseNotContains('Third text in english');
+    $this->assertSession()->pageTextContains('The updated french text');
+    $this->assertSession()->pageTextContains('Second text in french');
+    $this->assertSession()->pageTextContains('Third text in french');
+    $this->assertSession()->pageTextContains('Fourth text in french');
 
     // Repeat the same for the french node, deleting 2 paragraphs now.
     $this->drupalGet('fr/node/' . $node->id() . '/edit');
 
     $this->assertNotNull($this->xpath('//*[@name="field_paragraphs_demo_1_remove"]'));
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_demo_1_remove');
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_demo_1_remove');
     $this->assertNotNull($this->xpath('//*[@name="field_paragraphs_demo_1_confirm_remove"]'));
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_demo_1_confirm_remove');
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_demo_1_confirm_remove');
     $this->assertNotNull($this->xpath('//*[@name="field_paragraphs_demo_3_remove"]'));
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_demo_3_remove');
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_demo_3_remove');
     $this->assertNotNull($this->xpath('//*[@name="field_paragraphs_demo_3_confirm_remove"]'));
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_demo_3_confirm_remove');
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_demo_3_confirm_remove');
     $this->drupalPostForm(NULL, NULL, t('Save (this translation)'));
 
     $this->drupalGet('fr/node/' . $node->id());
-    $this->assertNoText('The updated english text');
-    $this->assertNoText('Second text in english');
-    $this->assertNoText('Third text in english');
-    $this->assertText('The updated french text');
-    $this->assertNoText('Second text in french');
-    $this->assertText('Third text in french');
-    $this->assertNoText('Fourth text in french');
+    $this->assertSession()->responseNotContains('The updated english text');
+    $this->assertSession()->responseNotContains('Second text in english');
+    $this->assertSession()->responseNotContains('Third text in english');
+    $this->assertSession()->pageTextContains('The updated french text');
+    $this->assertSession()->responseNotContains('Second text in french');
+    $this->assertSession()->pageTextContains('Third text in french');
+    $this->assertSession()->responseNotContains('Fourth text in french');
 
     $this->drupalGet('node/' . $node->id());
-    $this->assertText('The updated english text');
-    $this->assertNoText('Second text in english');
-    $this->assertText('Third text in english');
-    $this->assertNoText('The updated french text');
-    $this->assertNoText('Second text in french');
-    $this->assertNoText('Third text in french');
-    $this->assertNoText('Fourth text in french');
+    $this->assertSession()->pageTextContains('The updated english text');
+    $this->assertSession()->responseNotContains('Second text in english');
+    $this->assertSession()->pageTextContains('Third text in english');
+    $this->assertSession()->responseNotContains('The updated french text');
+    $this->assertSession()->responseNotContains('Second text in french');
+    $this->assertSession()->responseNotContains('Third text in french');
+    $this->assertSession()->responseNotContains('Fourth text in french');
 
     // 5. Reorder the paragraphs on each translation.
     // Reminder: This is our current content
@@ -311,11 +319,11 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
     // steps.
     $this->drupalGet('node/' . $node->id());
     $regex = '/The updated english text.*Third text in english/s';
-    $this->assertPattern($regex);
+    $this->assertSession()->responseMatches($regex);
 
     $this->drupalGet('fr/node/' . $node->id());
     $regex = '/The updated french text.*Third text in french/s';
-    $this->assertPattern($regex);
+    $this->assertSession()->responseMatches($regex);
 
     // Reorder the paragraphs in the english node, and check if it applied
     // correctly. Check also that the french node is intact.
@@ -328,11 +336,11 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
 
     $this->drupalGet('node/' . $node->id());
     $regex = '/Third text in english.*The updated english text/s';
-    $this->assertPattern($regex);
+    $this->assertSession()->responseMatches($regex);
 
     $this->drupalGet('fr/node/' . $node->id());
     $regex = '/The updated french text.*Third text in french/s';
-    $this->assertPattern($regex);
+    $this->assertSession()->responseMatches($regex);
 
     // And now reorder the french node, and then confirm that the new order
     // applied correctly, and that the english node is intact.
@@ -345,26 +353,26 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
 
     $this->drupalGet('fr/node/' . $node->id());
     $regex = '/Third text in french.*The updated french text/s';
-    $this->assertPattern($regex);
+    $this->assertSession()->responseMatches($regex);
 
     $this->drupalGet('node/' . $node->id());
     $regex = '/Third text in english.*The updated english text/s';
-    $this->assertPattern($regex);
+    $this->assertSession()->responseMatches($regex);
   }
 
   /**
    * Test paragraphs with nested multilingual fields.
    */
   public function testParagraphsMultilingualFieldTranslationNested() {
-    // Edit widget to classic.
+    // Set widget to assymetric one.
     $this->drupalGet('/admin/structure/types/manage/paragraphed_content_demo/form-display');
-    $this->drupalPostForm(NULL, array('fields[field_paragraphs_demo][type]' => 'entity_reference_paragraphs'), t('Save'));
+    $this->drupalPostForm(NULL, array('fields[field_paragraphs_demo][type]' => 'paragraphs_classic_asymmetric'), t('Save'));
 
     // 1. Translate node and create different paragraphs.
     // Add an English node.
     $this->drupalGet('node/add/paragraphed_content_demo');
-    $this->drupalPostForm(NULL, NULL, t('Add Nested Paragraph'), array(), array(), '');
-    $this->drupalPostAjaxForm(NULL, NULL, 'field_paragraphs_demo_0_subform_field_paragraphs_demo_text_add_more');
+    $this->drupalPostForm(NULL, NULL, t('Add Nested Paragraph'), []);
+    $this->drupalPostForm(NULL, NULL, 'field_paragraphs_demo_0_subform_field_paragraphs_demo_text_add_more');
     $edit = [
       'title[0][value]' => 'Title in english',
       'field_paragraphs_demo[0][subform][field_paragraphs_demo][0][subform][field_text_demo][0][value]' => 'Text in english',
@@ -375,7 +383,7 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
     $node = $this->drupalGetNodeByTitle('Title in english');
     $this->drupalGet('node/' . $node->id() . '/translations/add/en/fr');
 
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_demo_0_edit');
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_demo_0_edit');
 
     $edit = [
       'title[0][value]' => 'Title in french',
@@ -389,23 +397,23 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
 
     // Check the english translation.
     $this->drupalGet('node/' . $node->id());
-    $this->assertText('Title in english');
-    $this->assertText('Text in english');
-    $this->assertNoText('Title in french');
-    $this->assertNoText('Text in french');
+    $this->assertSession()->pageTextContains('Title in english');
+    $this->assertSession()->pageTextContains('Text in english');
+    $this->assertSession()->responseNotContains('Title in french');
+    $this->assertSession()->responseNotContains('Text in french');
 
     // Check the french translation.
     $this->drupalGet('fr/node/' . $node->id());
-    $this->assertText('Title in french');
-    $this->assertText('Text in french');
-    $this->assertNoText('Title in english');
-    $this->assertNoText('Text in english');
+    $this->assertSession()->pageTextContains('Title in french');
+    $this->assertSession()->pageTextContains('Text in french');
+    $this->assertSession()->responseNotContains('Title in english');
+    $this->assertSession()->responseNotContains('Text in english');
 
     // 2. Update the paragraphs.
     // Try to edit the paragraphs, to see if the correct translation gets
     // updated. Start with the english.
     $this->drupalGet('node/' . $node->id() . '/edit');
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_demo_0_edit');
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_demo_0_edit');
     $edit = [
       'field_paragraphs_demo[0][subform][field_paragraphs_demo][0][subform][field_text_demo][0][value]' => 'The updated english text',
     ];
@@ -413,20 +421,20 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
     // Check if only the english node had its paragraph text updated, and that
     // there has been no mixing-up of the paragraph entities.
     $this->drupalGet('node/' . $node->id());
-    $this->assertText('The updated english text');
-    $this->assertNoText('Text in english');
-    $this->assertNoText('Text in french');
+    $this->assertSession()->pageTextContains('The updated english text');
+    $this->assertSession()->responseNotContains('Text in english');
+    $this->assertSession()->responseNotContains('Text in french');
 
     $this->drupalGet('fr/node/' . $node->id());
-    $this->assertText('Text in french');
-    $this->assertNoText('Text in english');
-    $this->assertNoText('The updated english text');
+    $this->assertSession()->pageTextContains('Text in french');
+    $this->assertSession()->responseNotContains('Text in english');
+    $this->assertSession()->responseNotContains('The updated english text');
 
     // 3. Add different number of paragraphs on one translation.
     // Add one more paragraph on the english node.
     $this->drupalGet('node/' . $node->id() . '/edit');
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_demo_0_edit');
-    $this->drupalPostAjaxForm(NULL, NULL, 'field_paragraphs_demo_0_subform_field_paragraphs_demo_text_add_more');
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_demo_0_edit');
+    $this->drupalPostForm(NULL, NULL, 'field_paragraphs_demo_0_subform_field_paragraphs_demo_text_add_more');
     $edit = [
       'field_paragraphs_demo[0][subform][field_paragraphs_demo][1][subform][field_text_demo][0][value]' => 'New english text',
     ];
@@ -439,30 +447,30 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
     // Confirm that the english node has the new paragraphs, and the french
     // node is intact.
     $this->drupalGet('node/' . $node->id());
-    $this->assertText('The updated english text');
-    $this->assertText('New english text');
-    $this->assertNoText('Text in french');
+    $this->assertSession()->pageTextContains('The updated english text');
+    $this->assertSession()->pageTextContains('New english text');
+    $this->assertSession()->responseNotContains('Text in french');
 
     $this->drupalGet('fr/node/' . $node->id());
-    $this->assertText('Text in french');
-    $this->assertNoText('The updated english text');
-    $this->assertNoText('New english text');
+    $this->assertSession()->pageTextContains('Text in french');
+    $this->assertSession()->responseNotContains('The updated english text');
+    $this->assertSession()->responseNotContains('New english text');
   }
 
   /**
    * Test paragraph multilingual field deletes.
    */
   public function testParagraphsMultilingualFieldDeleteTranslation() {
-    // Edit widget to classic.
+    // Set widget to assymetric one.
     $this->drupalGet('/admin/structure/types/manage/paragraphed_content_demo/form-display');
-    $this->drupalPostForm(NULL, array('fields[field_paragraphs_demo][type]' => 'entity_reference_paragraphs'), t('Save'));
+    $this->drupalPostForm(NULL, array('fields[field_paragraphs_demo][type]' => 'paragraphs_classic_asymmetric'), t('Save'));
 
     // 1. Translate node and create different paragraphs. Delete the translation
     // and check if the original is intact.
     // Add an English node.
     $this->drupalGet('node/add/paragraphed_content_demo');
-    $this->drupalPostForm(NULL, NULL, t('Add Nested Paragraph'), array(), array(), '');
-    $this->drupalPostAjaxForm(NULL, NULL, 'field_paragraphs_demo_0_subform_field_paragraphs_demo_text_add_more');
+    $this->drupalPostForm(NULL, NULL, t('Add Nested Paragraph'));
+    $this->drupalPostForm(NULL, NULL, 'field_paragraphs_demo_0_subform_field_paragraphs_demo_text_add_more');
     $edit = [
       'title[0][value]' => 'Title in english',
       'field_paragraphs_demo[0][subform][field_paragraphs_demo][0][subform][field_text_demo][0][value]' => 'Text in english',
@@ -472,7 +480,7 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
     // Translate the node to French.
     $node = $this->drupalGetNodeByTitle('Title in english');
     $this->drupalGet('node/' . $node->id() . '/translations/add/en/fr');
-    $this->drupalPostAjaxForm(NULL, [], 'field_paragraphs_demo_0_edit');
+    $this->drupalPostForm(NULL, [], 'field_paragraphs_demo_0_edit');
 
     $edit = [
       'title[0][value]' => 'Title in french',
@@ -486,17 +494,17 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
 
     // Check the english translation.
     $this->drupalGet('node/' . $node->id());
-    $this->assertText('Title in english');
-    $this->assertText('Text in english');
-    $this->assertNoText('Title in french');
-    $this->assertNoText('Text in french');
+    $this->assertSession()->pageTextContains('Title in english');
+    $this->assertSession()->pageTextContains('Text in english');
+    $this->assertSession()->responseNotContains('Title in french');
+    $this->assertSession()->responseNotContains('Text in french');
 
     // Check the french translation.
     $this->drupalGet('fr/node/' . $node->id());
-    $this->assertText('Title in french');
-    $this->assertText('Text in french');
-    $this->assertNoText('Title in english');
-    $this->assertNoText('Text in english');
+    $this->assertSession()->pageTextContains('Title in french');
+    $this->assertSession()->pageTextContains('Text in french');
+    $this->assertSession()->responseNotContains('Title in english');
+    $this->assertSession()->responseNotContains('Text in english');
 
     // Now delete the french translation.
     $this->drupalGet('fr/node/' . $node->id() . '/delete');
@@ -504,10 +512,10 @@ class ParagraphsAsymmetricTranslationTest extends ParagraphsTestBase {
 
     // Check the english translation.
     $this->drupalGet('node/' . $node->id());
-    $this->assertText('Title in english');
-    $this->assertText('Text in english');
-    $this->assertNoText('Title in french');
-    $this->assertNoText('Text in french');
+    $this->assertSession()->pageTextContains('Title in english');
+    $this->assertSession()->pageTextContains('Text in english');
+    $this->assertSession()->responseNotContains('Title in french');
+    $this->assertSession()->responseNotContains('Text in french');
   }
 
 }

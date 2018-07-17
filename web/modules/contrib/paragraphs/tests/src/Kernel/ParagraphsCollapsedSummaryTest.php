@@ -2,9 +2,9 @@
 
 namespace Drupal\Tests\paragraphs\Kernel;
 
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
-use Drupal\field_ui\Tests\FieldUiTestTrait;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\paragraphs\Entity\ParagraphsType;
 use Drupal\KernelTests\KernelTestBase;
@@ -53,6 +53,12 @@ class ParagraphsCollapsedSummaryTest extends KernelTestBase {
     ));
     $paragraph_type->save();
     $this->addParagraphsField('text_paragraph', 'text', 'string');
+    EntityFormDisplay::create([
+      'targetEntityType' => 'paragraph',
+      'bundle' => 'text_paragraph',
+      'mode' => 'default',
+      'status' => TRUE,
+    ])->setComponent('text', ['type' => 'string_textfield'])->save();
 
     // Add a nested Paragraph type.
     $paragraphs_type = ParagraphsType::create([
@@ -61,6 +67,12 @@ class ParagraphsCollapsedSummaryTest extends KernelTestBase {
     ]);
     $paragraphs_type->save();
     $this->addParagraphsField('nested_paragraph', 'nested_paragraph_field', 'entity_reference_revisions', ['target_type' => 'paragraph']);
+    EntityFormDisplay::create([
+      'targetEntityType' => 'paragraph',
+      'bundle' => 'nested_paragraph',
+      'mode' => 'default',
+      'status' => TRUE,
+    ])->setComponent('nested_paragraph_field', ['type' => 'paragraphs'])->save();
   }
 
   /**

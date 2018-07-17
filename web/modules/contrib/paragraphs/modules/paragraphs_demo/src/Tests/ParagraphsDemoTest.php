@@ -170,6 +170,13 @@ class ParagraphsDemoTest extends WebTestBase {
     $this->drupalGet('admin/content/paragraphs');
     $this->assertText('Library item');
     $this->assertText('This is content from the library.');
+
+    // Assert anonymous users cannot update library items.
+    $this->drupalLogout();
+    $this->drupalGet('admin/content/paragraphs/1/edit');
+    $this->assertResponse(403);
+    $this->drupalGet('admin/content/paragraphs/1/delete');
+    $this->assertResponse(403);
   }
 
 }

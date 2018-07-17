@@ -6,6 +6,7 @@ use Drupal\Core\Datetime\DateFormatterInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\ConfirmFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Messenger\Messenger;
 use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -33,16 +34,26 @@ class LibraryItemRevisionDeleteForm extends ConfirmFormBase {
   protected $dateFormatter;
 
   /**
+   * Provides messenger service.
+   *
+   * @var \Drupal\Core\Messenger\Messenger
+   */
+  protected $messenger;
+
+  /**
    * LibraryItemRevisionDeleteForm constructor.
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
    *   The entity type manager service.
    * @param \Drupal\Core\Datetime\DateFormatterInterface $date_formatter
    *   The date formatter service.
+   * @param \Drupal\Core\Messenger\Messenger $messenger
+   *   The messenger service.
    */
-  public function __construct(EntityTypeManagerInterface $entity_type_manager, DateFormatterInterface $date_formatter) {
+  public function __construct(EntityTypeManagerInterface $entity_type_manager, DateFormatterInterface $date_formatter, Messenger $messenger) {
     $this->entityTypeManager = $entity_type_manager;
     $this->dateFormatter = $date_formatter;
+    $this->messenger = $messenger;
   }
 
   /**
@@ -51,7 +62,8 @@ class LibraryItemRevisionDeleteForm extends ConfirmFormBase {
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('entity_type.manager'),
-      $container->get('date.formatter')
+      $container->get('date.formatter'),
+      $container->get('messenger')
     );
   }
 
@@ -78,8 +90,8 @@ class LibraryItemRevisionDeleteForm extends ConfirmFormBase {
     $this->entityTypeManager->getStorage('paragraphs_library_item')
       ->deleteRevision($this->revision->getRevisionId());
 
-    drupal_set_message($this->t('Revision from %revision-date has been deleted.', [
-      '%revision-date' => $this->dateFormatter->format($this->revision->getChangedTime())
+    $this->messenger->addMessage($this->t('Revision from %revision-date has been deleted.', [
+      '%revision-date' => $this->dateFormatter->format($this->revision->getChangedTime()),
     ]));
 
     $form_state->setRedirect('entity.paragraphs_library_item.version_history', [

@@ -39,5 +39,14 @@ function paragraphs_test_paragraph_view(array &$build, ParagraphInterface $entit
   $parent_type = $entity->get('parent_type')->value;
   $parent_id = $entity->get('parent_id')->value;
   $parent_field_name = $entity->get('parent_field_name')->value;
-  drupal_set_message("Parent: $parent_type/$parent_id/$parent_field_name", 'status', TRUE);
+  \Drupal::messenger()->addStatus("Parent: $parent_type/$parent_id/$parent_field_name", TRUE);
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function paragraphs_test_field_widget_entity_reference_paragraphs_form_alter(&$element, &$form_state, $context) {
+  if ($element['#paragraph_type'] == 'altered_paragraph') {
+    $element['subform']['field_text']['widget'][0]['#title'] = 'Altered title';
+  }
 }

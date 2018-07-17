@@ -144,8 +144,8 @@ class ParagraphsLibraryItemTest extends ParagraphsExperimentalTestBase {
 
     $this->assertText('Used', 'Usage column is available.');
     $result = $this->cssSelect('.views-field-count');
-    $this->assertEqual(trim($result[1]->__toString()), '3', 'Usage info is correctly displayed.');
-    $this->assertNoLink('3', 'Link to usage statistics is not available for user without permission.');
+    $this->assertEqual(trim($result[1]->__toString()), '4', 'Usage info is correctly displayed.');
+    $this->assertNoLink('4', 'Link to usage statistics is not available for user without permission.');
 
     $this->clickLink('Edit');
     $this->assertText('Library item is used 3 times.');
@@ -196,7 +196,7 @@ class ParagraphsLibraryItemTest extends ParagraphsExperimentalTestBase {
 
     $this->loginAsAdmin(['administer paragraphs library', 'access entity usage statistics']);
     $this->drupalGet('admin/content/paragraphs');
-    $this->assertLink('3', 0, 'Link to usage statistics is available for user with permission.');
+    $this->assertLink('4', 0, 'Link to usage statistics is available for user with permission.');
 
     $element = $this->cssSelect('th.views-field-paragraphs__target-id');
     $this->assertEqual($element[0]->__toString(), 'Paragraphs', 'Paragraphs column is available.');
@@ -215,7 +215,7 @@ class ParagraphsLibraryItemTest extends ParagraphsExperimentalTestBase {
       'administer paragraphs_library_item fields',
       'administer paragraphs_library_item form display',
       'administer paragraphs_library_item display',
-      'access administration pages'
+      'access administration pages',
     ]);
     $this->drupalGet('admin/config/content/paragraphs_library_item');
     $this->assertLink('Manage fields');

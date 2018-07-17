@@ -7,6 +7,7 @@ use Drupal\Core\Datetime\DateFormatterInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\ConfirmFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Messenger\Messenger;
 use Drupal\Core\Url;
 use Drupal\paragraphs_library\LibraryItemInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -42,6 +43,13 @@ class LibraryItemRevisionRevertForm extends ConfirmFormBase {
   protected $time;
 
   /**
+   * Provides messenger service.
+   *
+   * @var \Drupal\Core\Messenger\Messenger
+   */
+  protected $messenger;
+
+  /**
    * LibraryItemRevisionRevertForm constructor.
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
@@ -50,11 +58,14 @@ class LibraryItemRevisionRevertForm extends ConfirmFormBase {
    *   The date formatter service.
    * @param \Drupal\Component\Datetime\TimeInterface $time
    *   The time service.
+   * @param \Drupal\Core\Messenger\Messenger $messenger
+   *   The messenger service.
    */
-  public function __construct(EntityTypeManagerInterface $entity_type_manager, DateFormatterInterface $date_formatter, TimeInterface $time) {
+  public function __construct(EntityTypeManagerInterface $entity_type_manager, DateFormatterInterface $date_formatter, TimeInterface $time, Messenger $messenger) {
     $this->entityTypeManager = $entity_type_manager;
     $this->dateFormatter = $date_formatter;
     $this->time = $time;
+    $this->messenger = $messenger;
   }
 
   /**
@@ -64,7 +75,8 @@ class LibraryItemRevisionRevertForm extends ConfirmFormBase {
     return new static(
       $container->get('entity_type.manager'),
       $container->get('date.formatter'),
-      $container->get('datetime.time')
+      $container->get('datetime.time'),
+      $container->get('messenger')
     );
   }
 
@@ -96,9 +108,9 @@ class LibraryItemRevisionRevertForm extends ConfirmFormBase {
     $this->revision->setChangedTime($this->time->getRequestTime());
     $this->revision->save();
 
-    drupal_set_message($this->t('%title has been reverted to the revision from %revision-date.', [
+    $this->messenger->addMessage($this->t('%title has been reverted to the revision from %revision-date.', [
       '%title' => $this->revision->label(),
-      '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)
+      '%revision-date' => $this->dateFormatter->format($original_revision_timestamp),
     ]));
 
     $form_state->setRedirect('entity.paragraphs_library_item.version_history', [

@@ -301,6 +301,7 @@ class ParagraphsTranslationTest extends ParagraphsTestBase {
     $this->drupalPostForm(NULL, [], t('Save'));
     $this->assertText('Paragraphed article ' . $node->label() . ' has been updated.');
     // Check that first paragraph langcode has been updated.
+    \Drupal::entityTypeManager()->getStorage('paragraph')->resetCache([$paragraph_1->id(), $paragraph_2->id()]);
     $paragraph = Paragraph::load($paragraph_1->id());
     $this->assertEqual($paragraph->language()->getId(), 'de');
     $this->assertFalse($paragraph->hasTranslation('en'));

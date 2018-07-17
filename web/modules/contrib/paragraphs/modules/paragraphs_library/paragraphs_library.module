@@ -160,13 +160,13 @@ function paragraphs_library_views_pre_render(ViewExecutable $view) {
  */
 function paragraphs_library_form_paragraphs_library_item_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $library_item = $form_state->getFormObject()->getEntity();
-  $usage_data = \Drupal::service('entity_usage.usage')->listUsage($library_item);
+  $usage_data = \Drupal::service('entity_usage.usage')->listSources($library_item);
 
   if ($usage_data) {
     $usage_count = _paragraphs_library_count_usage($usage_data);
-    drupal_set_message(\Drupal::translation()->formatPlural($usage_count, 'Library item is used 1 time.', 'Library item is used @count times.', [
+    \Drupal::messenger()->addWarning(\Drupal::translation()->formatPlural($usage_count, 'Library item is used 1 time.', 'Library item is used @count times.', [
       '@count' => $usage_count,
-    ]), 'warning');
+    ]));
   }
 }
 
@@ -178,11 +178,15 @@ function paragraphs_library_form_paragraphs_library_item_edit_form_alter(&$form,
  *
  * @return int
  *   Returns the count of entity usage across all entities.
+ *
+ * @see \Drupal\entity_usage\EntityUsageInterface::listSources()
  */
 function _paragraphs_library_count_usage(array $usage_data) {
   $count = 0;
-  foreach ($usage_data as $entity => $ids) {
-    $count += array_sum($ids);
+  foreach ($usage_data as $entity_type => $entities) {
+    // We only want to register usages by different entities, ignoring usages
+    // accross revisions / translations / fields of the same entity.
+    $count += count($entities);
   }
 
   return $count;

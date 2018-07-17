@@ -84,7 +84,7 @@ class FieldCollectionItem extends FieldableEntity {
       'item_id' => $this->t('The field_collection_item id'),
       'revision_id' => $this->t('The field_collection_item revision id'),
       'bundle' => $this->t('The field_collection bundle'),
-      'field_name' => $this - t('The field_collection field_name'),
+      'field_name' => $this->t('The field_collection field_name'),
     ];
 
     return $fields;

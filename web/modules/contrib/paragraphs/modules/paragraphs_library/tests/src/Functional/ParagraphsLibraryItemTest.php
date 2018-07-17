@@ -58,6 +58,73 @@ class ParagraphsLibraryItemTest extends BrowserTestBase {
   }
 
   /**
+   * Tests the library items permissions in different scenarios.
+   */
+  public function testLibraryItemsAccessControl() {
+    // Login as a user with create paragraph library item permission.
+    $role = $this->createRole(['create paragraph library item']);
+    $user = $this->createUser([]);
+    $user->addRole($role);
+    $user->save();
+    $this->drupalLogin($user);
+
+    // Add a new library item.
+    $this->drupalGet('admin/content/paragraphs/add/default');
+    $this->getSession()->getPage()->pressButton('Add text');
+    $edit = [
+      'label[0][value]' => 'Library item',
+      'paragraphs[0][subform][field_text][0][value]' => 'Item content',
+    ];
+    $this->drupalPostForm(NULL, $edit, 'Save');
+    $this->assertSession()->pageTextContains('Paragraph Library item has been created');
+    // Assert a user has no access to the global library overview page.
+    $this->assertSession()->statusCodeEquals(403);
+
+    $matched_library_items = $this->container->get('entity_type.manager')
+      ->getStorage('paragraphs_library_item')
+      ->loadByProperties(['label' => 'Library item']);
+    $library_item = reset($matched_library_items);
+    $library_item_id = $library_item->id();
+
+    // Assert a regular user has no edit and delete access.
+    $this->assertLibraryItemAccess($library_item_id, 403, 'edit');
+    $this->assertLibraryItemAccess($library_item_id, 403, 'delete');
+
+    // Add edit paragraph library item permission.
+    user_role_grant_permissions($role, ['edit paragraph library item']);
+    $this->assertLibraryItemAccess($library_item_id, 200, 'edit');
+    $this->assertLibraryItemAccess($library_item_id, 403, 'delete');
+
+    // Enable granular permissions and make sure a user can not edit the library
+    // item anymore due to missing edit permission for target paragraph type.
+    $this->container->get('module_installer')->install(['paragraphs_type_permissions']);
+    $this->assertLibraryItemAccess($library_item_id, 403, 'edit');
+    user_role_grant_permissions($role, ['update paragraph content text']);
+    $this->assertLibraryItemAccess($library_item_id, 200, 'edit');
+    $this->assertLibraryItemAccess($library_item_id, 403, 'delete');
+
+    user_role_revoke_permissions($role, [
+      'create paragraph library item',
+      'edit paragraph library item',
+    ]);
+    user_role_grant_permissions($role, ['administer paragraphs library']);
+    $this->assertLibraryItemAccess($library_item_id, 200, 'edit');
+    // User has no delete access due to missing delete permission for the target
+    // paragraph type.
+    $this->assertLibraryItemAccess($library_item_id, 403, 'delete');
+    user_role_grant_permissions($role, ['delete paragraph content text']);
+    $this->assertLibraryItemAccess($library_item_id, 200, 'delete');
+  }
+
+  /**
+   * Asserts HTTP response codes for library item operations.
+   */
+  protected function assertLibraryItemAccess($library_item_id, $response_code, $operation) {
+    $this->drupalGet("admin/content/paragraphs/$library_item_id/$operation");
+    $this->assertSession()->statusCodeEquals($response_code);
+  }
+
+  /**
    * Check that conversion to and from library items does not have side effects.
    */
   public function testNoConversionSideEffects() {
@@ -211,9 +278,10 @@ class ParagraphsLibraryItemTest extends BrowserTestBase {
     $page->pressButton('Add From library');
     $edit = [
       'title[0][value]' => 'Test content',
-      'field_paragraphs[0][subform][field_reusable_paragraph][0][target_id]' => 'Test usage nested paragraph'
+      'field_paragraphs[0][subform][field_reusable_paragraph][0][target_id]' => 'Test usage nested paragraph',
     ];
-    $this->drupalPostForm(NULL, $edit,'Save');
+    $this->drupalPostForm(NULL, $edit, 'Save');
+    $node = $this->drupalGetNodeByTitle('Test content');
 
     // Check Usage tab.
     $this->drupalGet('admin/content/paragraphs');
@@ -222,9 +290,9 @@ class ParagraphsLibraryItemTest extends BrowserTestBase {
     $assert_session->pageTextContains('Entity usage information for Test usage nested paragraph');
 
     $assert_session->elementContains('css', 'table tbody tr td:nth-child(1)', 'Test content &gt; field_paragraphs');
-    $assert_session->elementContains('css', 'table tbody tr td:nth-child(2)', 'paragraph');
-    $assert_session->elementContains('css', 'table tbody tr td:nth-child(3)', 'entity_reference');
-    $assert_session->elementContains('css', 'table tbody tr td:nth-child(4)', '1');
+    $assert_session->elementContains('css', 'table tbody tr td:nth-child(2)', 'Paragraph');
+    $assert_session->elementContains('css', 'table tbody tr td:nth-child(3)', 'en');
+    $assert_session->elementContains('css', 'table tbody tr td:nth-child(5)', 'Reusable paragraph');
 
     // Assert breadcrumb.
     $assert_session->elementContains('css', '.breadcrumb ol li:nth-child(1)', 'Home');
@@ -243,10 +311,13 @@ class ParagraphsLibraryItemTest extends BrowserTestBase {
     $this->clickLink('Usage');
     $assert_session->pageTextContains('Entity usage information for Test usage nested paragraph');
 
-    $assert_session->elementContains('css', 'table tbody tr td:nth-child(1)', 'Test content &gt; field_paragraphs (previous revision)');
-    $assert_session->elementContains('css', 'table tbody tr td:nth-child(2)', 'paragraph');
-    $assert_session->elementContains('css', 'table tbody tr td:nth-child(3)', 'entity_reference');
-    $assert_session->elementContains('css', 'table tbody tr td:nth-child(4)', '1');
+    // No usage shows up on this page.
+    // @todo once 2954039 lands, we expect to have a row here indicating that
+    // the host node references the paragraph in a non-default revision.
+    // Alternatively, if 2971131 lands first, we would have here an extra row
+    // with possibly a generic label (just with the entity ID or similar). In
+    // both cases this test will need to be updated.
+    $assert_session->elementNotExists('css', 'table tbody tr');
   }
 
 }

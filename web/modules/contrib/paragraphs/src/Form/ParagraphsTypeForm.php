@@ -5,6 +5,7 @@ namespace Drupal\paragraphs\Form;
 use Drupal\Core\Entity\EntityForm;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Form\SubformState;
+use Drupal\Core\Messenger\Messenger;
 use Drupal\field_ui\FieldUI;
 use Drupal\paragraphs\ParagraphsBehaviorManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -29,13 +30,23 @@ class ParagraphsTypeForm extends EntityForm {
   protected $entity;
 
   /**
+   * Provides messenger service.
+   *
+   * @var \Drupal\Core\Messenger\Messenger
+   */
+  protected $messenger;
+
+  /**
    * GeneralSettingsForm constructor.
    *
    * @param \Drupal\paragraphs\ParagraphsBehaviorManager $paragraphs_behavior_manager
    *   The paragraphs type feature manager service.
+   * @param \Drupal\Core\Messenger\Messenger $messenger
+   *   The messenger service.
    */
-  public function __construct(ParagraphsBehaviorManager $paragraphs_behavior_manager) {
+  public function __construct(ParagraphsBehaviorManager $paragraphs_behavior_manager, Messenger $messenger) {
     $this->paragraphsBehaviorManager = $paragraphs_behavior_manager;
+    $this->messenger = $messenger;
   }
 
   /**
@@ -43,7 +54,8 @@ class ParagraphsTypeForm extends EntityForm {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('plugin.manager.paragraphs.behavior')
+      $container->get('plugin.manager.paragraphs.behavior'),
+      $container->get('messenger')
     );
   }
 
@@ -203,7 +215,7 @@ class ParagraphsTypeForm extends EntityForm {
     }
 
     $status = $paragraphs_type->save();
-    drupal_set_message($this->t('Saved the %label Paragraphs type.', array(
+    $this->messenger->addMessage($this->t('Saved the %label Paragraphs type.', array(
       '%label' => $paragraphs_type->label(),
     )));
     if (($status == SAVED_NEW && \Drupal::moduleHandler()->moduleExists('field_ui'))

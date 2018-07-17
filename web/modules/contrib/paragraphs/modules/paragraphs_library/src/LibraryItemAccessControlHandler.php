@@ -20,7 +20,7 @@ class LibraryItemAccessControlHandler extends EntityAccessControlHandler {
    */
   protected function checkAccess(EntityInterface $library_item, $operation, AccountInterface $account) {
     if ($operation == 'delete') {
-      $usage_data = \Drupal::service('entity_usage.usage')->listUsage($library_item);
+      $usage_data = \Drupal::service('entity_usage.usage')->listSources($library_item);
       if ($usage_data) {
         return AccessResult::forbidden();
       }
@@ -32,6 +32,16 @@ class LibraryItemAccessControlHandler extends EntityAccessControlHandler {
     // together, both must allow access if unpublished.
     $access = AccessResult::allowed()->addCacheableDependency($library_item);
     if ($operation === 'view' && !$library_item->isPublished()) {
+      $access = $access->andIf(AccessResult::allowedIfHasPermission($account, $this->entityType->getAdminPermission()));
+    }
+
+    // Allow update access with a specific or admin permission.
+    if ($operation === 'update') {
+      $access = $access->andIf(AccessResult::allowedIfHasPermissions($account, ['edit paragraph library item', $this->entityType->getAdminPermission()], 'OR'));
+    }
+
+    // Only users with admin permission can delete library items.
+    if ($operation === 'delete') {
       $access = $access->andIf(AccessResult::allowedIfHasPermission($account, $this->entityType->getAdminPermission()));
     }
 
