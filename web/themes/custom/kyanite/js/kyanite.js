@@ -1654,9 +1654,8 @@
 
     captionButtonBlock();
 
-    /* uncomment close to launch:
     $("a[href^='http']").attr("target","_blank");
-    */
+    
 
     $('#block-views-block-gallery-block-1 .views-row a, .paragraph--type--gallery .field-field-gallery-image-file .field-item a.colorbox, .paragraph--type--bp-carousel .carousel-item a.colorbox, .field-bp-image-field a.colorbox, a.colorbox.inline-spc-images').colorbox({rel:'gal', maxWidth:'95%', maxHeight:'95%', title: function(){
       var alt = "";
