@@ -1587,6 +1587,12 @@
     });
   }
 
+  function hideMain(){
+    if($("#main").text().trim() == ""){
+      $("#main").hide();
+    }
+  }
+
   $(window).on("load scroll resize orientationchange", resizingTweaks);
 
   //$(window).on("scroll resize orientationchange", mapSizing);
@@ -1594,9 +1600,7 @@
 
 	$(document).ready(function(){
 
-    if($("#main").text().trim() == ""){
-      $("#main").hide();
-    }
+    hideMain();
 
     $(".french-web-stories h1").text("Actus Web");
 
@@ -1651,6 +1655,9 @@
 	});
 	$(window).load(function(){
 		$('body').addClass('window-loaded');
+
+    
+    hideMain();
 
     //mapInitialize();
     
