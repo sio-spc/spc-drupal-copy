@@ -665,6 +665,9 @@ img.align-center, img.aligncenter, img[align="center"]{
 .field-field-this-is-a-link-to-an-image, .field-field-show-captions-under-the-th, .spcgrid.relatedcontent .views-field-title, .paragraph--bp-accordion--container .btn.btn-primary.bp-accordion--button, .paragraphfeaturedcontent .views-field-title, .spcgrid.updates .views-field-title, .spcgrid.resources .views-field-title{
   display: none;
 }
+.spcgrid.relatedcontent{
+  margin-bottom: 3vw;
+}
 #block-views-block-bottom-content-block-1, #block-categories{
   clear: both;
 }
