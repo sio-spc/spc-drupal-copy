@@ -1594,6 +1594,7 @@
 
 	$(document).ready(function(){
 
+    $(".actualite h1").text("Actualité");
     $(".french-web-stories h1").text("Actus Web");
 
     frieze();
