@@ -1197,12 +1197,12 @@
         });
       }
     });
-    $(".paragraph--type--bp-image").each(function(){
+    /*$(".paragraph--type--bp-image").each(function(){
       if( $(this).find(".field-field-show-captions-under-the-th").text().trim() == "1" ){
         $(this).find("img").wrap("<figure></figure>");
         $(this).find("img").after("<figcaption>" + $(this).find("img").attr("alt") + "</figcaption>");
       };
-    });
+    });*/
   }
 
   function paragraphImageTweaks(){
