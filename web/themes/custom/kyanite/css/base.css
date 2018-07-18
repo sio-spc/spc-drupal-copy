@@ -1046,6 +1046,6 @@ body.specialprojects #maincontainer {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003782}}
-.actualite h1 .communiques h1 .french-web-stories h1 {
+.actualite h1, .communiques h1, .french-web-stories h1 {
   display: none;
 }
