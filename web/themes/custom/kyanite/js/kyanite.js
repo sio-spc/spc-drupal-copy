@@ -1598,7 +1598,7 @@
     $(".actualite h1").text("Actualité");
     $(".communiques h1").text("Communiqués");
     $(".french-web-stories h1").text("Actus Web");
-    $(".actualite h1 .communiques h1 .french-web-stories h1").fadeIn();
+    $(".actualite h1, .communiques h1, .french-web-stories h1").fadeIn();
 
     frieze();
 
