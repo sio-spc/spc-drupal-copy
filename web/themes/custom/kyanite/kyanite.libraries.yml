@@ -1,5 +1,5 @@
 base:
-  version: 1.4
+  version: 1.5
   js:
     js/jquery.mobile.custom.js: {}
     js/kyanite.js: {}
