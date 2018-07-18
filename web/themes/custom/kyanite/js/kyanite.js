@@ -1595,6 +1595,7 @@
 	$(document).ready(function(){
 
     
+    //because for some reason the Updates view's translations don't save:
     $(".actualite h1").text("Actualité");
     $(".communiques h1").text("Communiqués");
     $(".french-web-stories h1").text("Actus Web");
