@@ -11404,7 +11404,6 @@
         "require-dev": {
             "drupal/token": "*"
         },
-        "time": "2018-05-24T14:39:08+00:00",
         "type": "drupal-module",
         "extra": {
             "branch-alias": {
@@ -11457,7 +11456,6 @@
         "require": {
             "drupal/core": "~8.0"
         },
-        "time": "2018-03-13T19:53:09+00:00",
         "type": "drupal-module",
         "extra": {
             "branch-alias": {

@@ -1290,8 +1290,7 @@
             "homepage": "http://drupal.org/project/address",
             "support": {
                 "source": "http://cgit.drupalcode.org/address"
-            },
-            "time": "2018-05-24T14:39:08+00:00"
+            }
         },
         {
             "name": "drupal/addtocalendar",
@@ -3655,8 +3654,7 @@
             "homepage": "https://drupal.org/project/imce",
             "support": {
                 "source": "http://cgit.drupalcode.org/imce"
-            },
-            "time": "2018-03-13T19:53:09+00:00"
+            }
         },
         {
             "name": "drupal/inline_responsive_images",
