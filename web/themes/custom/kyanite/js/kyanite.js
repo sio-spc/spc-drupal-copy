@@ -1475,6 +1475,11 @@
         }
       }
     });
+    $("img.align-center").each(function(){
+      if($(this).parent().is("figure")){
+        $(this).parent().css("margin","auto");
+      }
+    });
   }
 
   function paragraphSimpleBackgroundColor(){
@@ -1586,6 +1591,8 @@
       }
     });
   }
+
+
 
   $(window).on("load scroll resize orientationchange", resizingTweaks);
 
