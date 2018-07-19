@@ -40,6 +40,11 @@
 		.kyanite-views-row-inner a{
 			padding-bottom: 1em;
 		}
+		.views-field-nothing-1{
+			.contenttype, .created{
+				display: none;/* these were showing even though they don't show in the views preview and there is no Twig file for this*/
+			}
+		}
 	}
 	&.partners{
 		.item-list{
