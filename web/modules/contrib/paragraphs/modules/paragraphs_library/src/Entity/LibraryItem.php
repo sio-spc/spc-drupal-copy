@@ -86,7 +86,7 @@ class LibraryItem extends EditorialContentEntityBase implements LibraryItemInter
         'label' => 'hidden',
       ])
       ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
+        'type' => 'string',
         'weight' => -5,
       ])
       ->setRequired(TRUE)

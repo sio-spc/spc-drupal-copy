@@ -125,7 +125,7 @@ function paragraphs_form_field_storage_config_edit_form_alter(&$form, \Drupal\Co
 /**
  * Implements hook_form_FORM_ID_alter().
  *
- * Indicates not recommended multilingual paragraphs field configuration.
+ * Indicate unsupported multilingual paragraphs field configuration.
  */
 function paragraphs_form_field_config_edit_form_alter(&$form,  \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   $field = $form_state->getFormObject()->getEntity();
@@ -144,18 +144,24 @@ function paragraphs_form_field_config_edit_form_alter(&$form,  \Drupal\Core\Form
   }
 
   // This is a translatable ERR field pointing to a paragraph.
-  $message_text = t('The recommended multilingual configuration is to not enable translation on Paragraph fields. See the <a href=":documentation">online documentation</a>.', [
+  $message_display = 'warning';
+  $message_text = t('Paragraphs fields do not support translation. See the <a href=":documentation">online documentation</a>.', [
     ':documentation' => Url::fromUri('https://www.drupal.org/node/2735121')
       ->toString()
   ]);
 
-  $form['paragraphs_message'] = [
-    '#theme' => 'status_messages',
+  if ($form['translatable']['#default_value'] == TRUE) {
+    $message_display = 'error';
+  }
+
+  $form['paragraphs_message'] = array(
+    '#type' => 'container',
+    '#markup' => $message_text,
+    '#attributes' => array(
+      'class' => array('messages messages--' . $message_display),
+    ),
     '#weight' => 0,
-    '#message_list' => [
-      'warning' => [$message_text],
-    ],
-  ];
+  );
 }
 
 /**
@@ -179,7 +185,10 @@ function paragraphs_module_implements_alter(&$implementations, $hook) {
 /**
  * Implements hook_form_FORM_ID_alter().
  *
- * Indicates not recommended multilingual paragraphs field configuration.
+ * Indicate unsupported multilingual paragraphs field configuration.
+ *
+ * Add a warning that paragraph fields can not be translated.
+ * Switch to error if a paragraph field is marked as translatable.
  */
 function paragraphs_form_language_content_settings_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   // Without it Paragraphs message are meaningless.
@@ -188,11 +197,15 @@ function paragraphs_form_language_content_settings_form_alter(&$form, \Drupal\Co
   }
 
   $content_translation_manager = \Drupal::service('content_translation.manager');
-  $message_text = t('(* not recommended) The recommended multilingual configuration is to not enable translation on Paragraph fields. See the <a href=":documentation">online documentation</a>.', [
+  $message_display = 'warning';
+  $message_text = t('(* unsupported) Paragraphs fields do not support translation. See the <a href=":documentation">online documentation</a>.', [
     ':documentation' => Url::fromUri('https://www.drupal.org/node/2735121')
       ->toString()]);
   $map = \Drupal::service('entity_field.manager')->getFieldMapByFieldType('entity_reference_revisions');
   foreach ($map as $entity_type_id => $info) {
+    if (!$content_translation_manager->isEnabled($entity_type_id)) {
+      continue;
+    }
     $field_storage_definitions = \Drupal::service('entity_field.manager')->getFieldStorageDefinitions($entity_type_id);
 
     /** @var \Drupal\Core\Field\FieldStorageDefinitionInterface  $storage_definition */
@@ -210,23 +223,30 @@ function paragraphs_form_language_content_settings_form_alter(&$form, \Drupal\Co
           $bundles = Element::children($form['settings'][$entity_type_id]);
         }
         foreach($bundles as $bundle) {
+          if (!$content_translation_manager->isEnabled($entity_type_id, $bundle)) {
+            continue;
+          }
 
           // Update the label and if the paragraph field is translatable,
           // display an error message instead of just a warning.
           if (isset($form['settings'][$entity_type_id][$bundle]['fields'][$name]['#label'])) {
-            $form['settings'][$entity_type_id][$bundle]['fields'][$name]['#label'] = t('@field_label (* not recommended)', ['@field_label' => $form['settings'][$entity_type_id][$bundle]['fields'][$name]['#label']]);
+            $form['settings'][$entity_type_id][$bundle]['fields'][$name]['#label'] = t('@field_label (* unsupported)', ['@field_label' => $form['settings'][$entity_type_id][$bundle]['fields'][$name]['#label']]);
+          }
+          if (!empty($form['settings'][$entity_type_id][$bundle]['fields'][$name]['#default_value'])) {
+            $message_display = 'error';
           }
         }
       }
     }
   }
-  $form['settings']['paragraphs_message'] = [
-    '#theme' => 'status_messages',
+  $form['settings']['paragraphs_message'] = array(
+    '#type' => 'container',
+    '#markup' => $message_text,
+    '#attributes' => array(
+      'class' => array('messages messages--' . $message_display),
+    ),
     '#weight' => 0,
-    '#message_list' => [
-      'warning' => [$message_text],
-    ],
-  ];
+  );
 }
 
 /**

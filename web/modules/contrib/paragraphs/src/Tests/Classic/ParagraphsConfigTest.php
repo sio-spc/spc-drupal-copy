@@ -77,13 +77,14 @@ class ParagraphsConfigTest extends ParagraphsTestBase {
 
     // Check warning message is displayed.
     $this->drupalGet('admin/config/regional/content-language');
-    $this->assertText('(* not recommended) The recommended multilingual configuration is to not enable translation on Paragraph fields.');
+    $this->assertText('(* unsupported) Paragraphs fields do not support translation.');
 
     $this->addParagraphedContentType('paragraphed_test', 'paragraphs_field', 'entity_reference_paragraphs');
 
     // Check error message is not displayed.
     $this->drupalGet('admin/config/regional/content-language');
-    $this->assertText('(* not recommended) The recommended multilingual configuration is to not enable translation on Paragraph fields.');
+    $this->assertText('(* unsupported) Paragraphs fields do not support translation.');
+    $this->assertNoRaw('<div class="messages messages--error');
 
     // Add a second language.
     ConfigurableLanguage::create(['id' => 'de'])->save();
@@ -98,11 +99,12 @@ class ParagraphsConfigTest extends ParagraphsTestBase {
 
     // Check error message is still not displayed.
     $this->drupalGet('admin/config/regional/content-language');
-    $this->assertText('(* not recommended) The recommended multilingual configuration is to not enable translation on Paragraph fields.');
+    $this->assertText('(* unsupported) Paragraphs fields do not support translation.');
+    $this->assertNoRaw('<div class="messages messages--error');
 
     // Check content type field management warning.
     $this->drupalGet('admin/structure/types/manage/paragraphed_test/fields/node.paragraphed_test.paragraphs_field');
-    $this->assertText('The recommended multilingual configuration is to not enable translation on Paragraph fields.');
+    $this->assertText('Paragraphs fields do not support translation.');
 
     // Make the paragraphs field translatable.
     $edit = [
@@ -114,7 +116,8 @@ class ParagraphsConfigTest extends ParagraphsTestBase {
 
     // Check content type field management error.
     $this->drupalGet('admin/structure/types/manage/paragraphed_test/fields/node.paragraphed_test.paragraphs_field');
-    $this->assertText('The recommended multilingual configuration is to not enable translation on Paragraph fields.');
+    $this->assertText('Paragraphs fields do not support translation.');
+    $this->assertRaw('<div class="messages messages--error');
 
     // Check a not paragraphs translatable field does not display the message.
     $this->drupalGet('admin/structure/types/manage/paragraphed_test/fields/add-field');
@@ -125,7 +128,8 @@ class ParagraphsConfigTest extends ParagraphsTestBase {
     ];
     $this->drupalPostForm(NULL, $edit, t('Save and continue'));
     $this->drupalPostForm(NULL, [], t('Save field settings'));
-    $this->assertNoText('The recommended multilingual configuration is to not enable translation on Paragraph fields.');
+    $this->assertNoText('Paragraphs fields do not support translation.');
+    $this->assertNoRaw('<div class="messages messages--warning');
   }
 
   /**

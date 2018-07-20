@@ -298,7 +298,7 @@ class InlineParagraphsWidget extends WidgetBase {
       }
     }
 
-    if ($paragraphs_entity instanceof ParagraphInterface) {
+    if ($paragraphs_entity) {
       // Detect if we are translating.
       $this->initIsTranslating($form_state, $host);
       $langcode = $form_state->get('langcode');
@@ -315,13 +315,6 @@ class InlineParagraphsWidget extends WidgetBase {
           else {
             $paragraphs_entity->set($langcode_key, $langcode);
           }
-        }
-      }
-      elseif ($items->getFieldDefinition()->isTranslatable()) {
-        // If the field is translatable, host entity translation should refer to
-        // different paragraph entities. So we clone the paragraph.
-        if (!empty($form_state->get('content_translation'))) {
-          $paragraphs_entity = $this->createDuplicateWithSingleLanguage($paragraphs_entity, $langcode);
         }
       }
       else {
@@ -408,7 +401,7 @@ class InlineParagraphsWidget extends WidgetBase {
         $links = array();
 
         // Hide the button when translating.
-        $button_access = $paragraphs_entity->access('delete') && (!$this->isTranslating || $items->getFieldDefinition()->isTranslatable());
+        $button_access = $paragraphs_entity->access('delete') && !$this->isTranslating;
         if ($item_mode != 'remove') {
           $links['remove_button'] = [
             '#type' => 'submit',
@@ -735,7 +728,7 @@ class InlineParagraphsWidget extends WidgetBase {
       $bundles = \Drupal::service('entity_type.bundle.info')->getBundleInfo($this->getFieldSetting('target_type'));
       $weight = 0;
       foreach ($bundles as $machine_name => $bundle) {
-        if (empty($this->getSelectionHandlerSetting('target_bundles'))
+        if (!count($this->getSelectionHandlerSetting('target_bundles'))
           || in_array($machine_name, $this->getSelectionHandlerSetting('target_bundles'))) {
 
           $return_bundles[$machine_name] = array(
@@ -905,7 +898,7 @@ class InlineParagraphsWidget extends WidgetBase {
     $host = $items->getEntity();
     $this->initIsTranslating($form_state, $host);
 
-    if (($this->realItemCount < $cardinality || $cardinality == FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED) && !$form_state->isProgrammed() && (!$this->isTranslating || $this->fieldDefinition->isTranslatable())) {
+    if (($this->realItemCount < $cardinality || $cardinality == FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED) && !$form_state->isProgrammed() && !$this->isTranslating) {
       $elements['add_more'] = $this->buildAddActions();
     }
 
@@ -981,7 +974,7 @@ class InlineParagraphsWidget extends WidgetBase {
     $dragdrop_settings = $this->getSelectionHandlerSetting('target_bundles_drag_drop');
 
     foreach ($bundles as $machine_name => $bundle) {
-      if ($dragdrop_settings || (empty($this->getSelectionHandlerSetting('target_bundles'))
+      if ($dragdrop_settings || (!count($this->getSelectionHandlerSetting('target_bundles'))
           || in_array($machine_name, $this->getSelectionHandlerSetting('target_bundles')))) {
         if ($access_control_handler->createAccess($machine_name)) {
           $this->accessOptions[$machine_name] = $bundle['label'];
@@ -1351,50 +1344,6 @@ class InlineParagraphsWidget extends WidgetBase {
       // Editing a translation.
       $this->isTranslating = TRUE;
     }
-  }
-
-  /**
-   * Clones a paragraph recursively.
-   *
-   * Also, in case of a translatable paragraph, updates its original language
-   * and removes all other translations.
-   *
-   * @param \Drupal\paragraphs\ParagraphInterface $paragraph
-   *   The paragraph entity to clone.
-   * @param string $langcode
-   *   Language code for all the clone entities created.
-   *
-   * @return \Drupal\paragraphs\ParagraphInterface
-   *   New paragraph object with the data from the original paragraph. Not
-   *   saved. All sub-paragraphs are clones as well.
-   */
-  protected function createDuplicateWithSingleLanguage(ParagraphInterface $paragraph, $langcode) {
-    $duplicate = $paragraph->createDuplicate();
-
-    // Clone all sub-paragraphs recursively.
-    foreach ($duplicate->getFields(FALSE) as $field) {
-      // @todo: should we support field collections as well?
-      if ($field->getFieldDefinition()->getType() == 'entity_reference_revisions' && $field->getFieldDefinition()->getTargetEntityTypeId() == 'paragraph') {
-        foreach ($field as $item) {
-          $item->entity = $this->createDuplicateWithSingleLanguage($item->entity, $langcode);
-        }
-      }
-    }
-
-    // Change the original language and remove possible translations.
-    if ($duplicate->isTranslatable()) {
-      $duplicate->set('langcode', $langcode);
-      foreach ($duplicate->getTranslationLanguages(FALSE) as $language) {
-        try {
-          $duplicate->removeTranslation($language->getId());
-        }
-        catch (\InvalidArgumentException $e) {
-          // Should never happen.
-        }
-      }
-    }
-
-    return $duplicate;
   }
 
   /**

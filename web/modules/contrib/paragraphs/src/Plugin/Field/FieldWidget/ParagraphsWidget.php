@@ -1316,8 +1316,6 @@ class ParagraphsWidget extends WidgetBase {
       return $this->accessOptions;
     }
 
-    $this->accessOptions = [];
-
     $entity_type_manager = \Drupal::entityTypeManager();
     $target_type = $this->getFieldSetting('target_type');
     $bundles = $this->getAllowedTypes();
@@ -1325,7 +1323,7 @@ class ParagraphsWidget extends WidgetBase {
     $dragdrop_settings = $this->getSelectionHandlerSetting('target_bundles_drag_drop');
 
     foreach ($bundles as $machine_name => $bundle) {
-      if ($dragdrop_settings || (empty($this->getSelectionHandlerSetting('target_bundles'))
+      if ($dragdrop_settings || (!count($this->getSelectionHandlerSetting('target_bundles'))
           || in_array($machine_name, $this->getSelectionHandlerSetting('target_bundles')))) {
         if ($access_control_handler->createAccess($machine_name)) {
           $this->accessOptions[$machine_name] = $bundle['label'];
