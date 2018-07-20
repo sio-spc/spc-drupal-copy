@@ -51,7 +51,9 @@
 
 	#maincontainer{
 		position: relative;
-		padding-top: 2em;
+		@media (min-width: $bp-tablet-min){
+			padding-top: 2em;
+		}
 		#main{
 			padding-bottom: 0;
 			> .layout-content{

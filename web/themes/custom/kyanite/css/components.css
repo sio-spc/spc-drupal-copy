@@ -3428,18 +3428,23 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000352}}
 .path-frontpage #maincontainer {
   position: relative;
-  padding-top: 2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000355}}
+@media (min-width: 700px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000352}}
+  .path-frontpage #maincontainer {
+    padding-top: 2em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000357}}
 .path-frontpage #maincontainer #main {
   padding-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000359}}
 .path-frontpage #maincontainer #main > .layout-content {
   padding-top: 1em;
 }
 @media (max-width: 1279px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000357}}
   .path-frontpage #maincontainer #main {
     padding-top: 0;
     padding-bottom: 0;
@@ -3447,117 +3452,117 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   }
 }
 @media (max-width: 1279px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000357}}
   .path-frontpage #maincontainer #main {
     max-width: 100%;
   }
 }
 @media (min-width: 1280px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000357}}
   .path-frontpage #maincontainer #main {
     max-width: 100%;
   }
 }
 @media (min-width: 1600px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000357}}
   .path-frontpage #maincontainer #main {
     max-width: 100%;
   }
 }
 @media (min-width: 1900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000357}}
   .path-frontpage #maincontainer #main {
     max-width: 100%;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000379}}
 .path-frontpage #maincontainer #main #block-views-block-updates-block-1, .path-frontpage #maincontainer #main .layout-content-bottom-66-33 {
   background-color: #e6f7f9;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000382}}
 .path-frontpage #maincontainer #main #block-views-block-updates-block-1 {
   border-top: 1px solid #b6d5d8;
   border-bottom: 1px solid #b6d5d8;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000384}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000386}}
 .path-frontpage #maincontainer #main .layout-content-bottom-66-33 {
   border-top: 1px solid #b6d5d8;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000389}}
 .path-frontpage #maincontainer #main .layout-content-bottom-66-33 {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000393}}
 .path-frontpage #maincontainer #main .layout-content-bottom-66-33 #block-twitter {
   background-color: #fff;
 }
 @media (max-width: 1279px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000397}}
   .path-frontpage #maincontainer #main .layout-content-66-33, .path-frontpage #maincontainer #main .updates, .path-frontpage #maincontainer #main #block-views-block-divisions-block-1, .path-frontpage #maincontainer #main .layout-content-bottom-66-33 > div {
     max-width: 95%;
     margin: auto;
   }
 }
 @media (min-width: 1280px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000397}}
   .path-frontpage #maincontainer #main .layout-content-66-33, .path-frontpage #maincontainer #main .updates, .path-frontpage #maincontainer #main #block-views-block-divisions-block-1, .path-frontpage #maincontainer #main .layout-content-bottom-66-33 > div {
     max-width: 1100px;
     margin: auto;
   }
 }
 @media (min-width: 1600px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000397}}
   .path-frontpage #maincontainer #main .layout-content-66-33, .path-frontpage #maincontainer #main .updates, .path-frontpage #maincontainer #main #block-views-block-divisions-block-1, .path-frontpage #maincontainer #main .layout-content-bottom-66-33 > div {
     max-width: 1350px;
     margin: auto;
   }
 }
 @media (min-width: 1900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\0000397}}
   .path-frontpage #maincontainer #main .layout-content-66-33, .path-frontpage #maincontainer #main .updates, .path-frontpage #maincontainer #main #block-views-block-divisions-block-1, .path-frontpage #maincontainer #main .layout-content-bottom-66-33 > div {
     max-width: 1600px;
     margin: auto;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003116}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003118}}
 .path-frontpage #block-views-block-divisions-block-1 {
   margin-bottom: 40px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003121}}
 .path-frontpage .field-field-banner {
   margin-bottom: 30px;
   max-height: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003125}}
 .path-frontpage #block-views-block-updates-block-1 {
   /* refer to _spcgrid.scss to coordinate these breakpoints */
 }
 @media (max-width: 639px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003125}}
   .path-frontpage #block-views-block-updates-block-1 {
     margin-top: 3em;
   }
 }
 @media (min-width: 640px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003125}}
   .path-frontpage #block-views-block-updates-block-1 {
     margin-top: 2em;
   }
 }
 @media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003125}}
   .path-frontpage #block-views-block-updates-block-1 {
     margin-top: 2.5em;
   }
 }
 @media (min-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003125}}
   .path-frontpage #block-views-block-updates-block-1 {
     margin-top: 2.5em;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003141}}
 .path-frontpage .field-field-newsimage .flexslider .flex-caption, .path-frontpage .field-field-blog-image .flexslider .flex-caption, .path-frontpage .field-field-banner .flexslider .flex-caption, .path-frontpage .field-field-list-image .flexslider .flex-caption {
   position: absolute;
   width: 100%;
@@ -3570,14 +3575,14 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   font-weight: normal;
 }
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003141}}
   .path-frontpage .field-field-newsimage .flexslider .flex-caption, .path-frontpage .field-field-blog-image .flexslider .flex-caption, .path-frontpage .field-field-banner .flexslider .flex-caption, .path-frontpage .field-field-list-image .flexslider .flex-caption {
     font-size: 1em;
     top: calc(50% - 1em);
   }
 }
 @media (min-width: 700px) and (max-width: 1099px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003141}}
   .path-frontpage .field-field-newsimage .flexslider .flex-caption, .path-frontpage .field-field-blog-image .flexslider .flex-caption, .path-frontpage .field-field-banner .flexslider .flex-caption, .path-frontpage .field-field-list-image .flexslider .flex-caption {
     font-size: 1.5em;
     font-size: 2vw;
@@ -3586,13 +3591,13 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   }
 }
 @media (min-width: 1100px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003141}}
   .path-frontpage .field-field-newsimage .flexslider .flex-caption, .path-frontpage .field-field-blog-image .flexslider .flex-caption, .path-frontpage .field-field-banner .flexslider .flex-caption, .path-frontpage .field-field-list-image .flexslider .flex-caption {
     font-size: 1.5em;
     top: calc(50% - 1em);
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003164}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003166}}
 .path-frontpage .field-field-newsimage .flexslider .home-secondcaption, .path-frontpage .field-field-blog-image .flexslider .home-secondcaption, .path-frontpage .field-field-banner .flexslider .home-secondcaption, .path-frontpage .field-field-list-image .flexslider .home-secondcaption {
   position: absolute;
   top: calc(50%);
@@ -3601,20 +3606,20 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   width: 100%;
 }
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003164}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003166}}
   .path-frontpage .field-field-newsimage .flexslider .home-secondcaption, .path-frontpage .field-field-blog-image .flexslider .home-secondcaption, .path-frontpage .field-field-banner .flexslider .home-secondcaption, .path-frontpage .field-field-list-image .flexslider .home-secondcaption {
     font-size: 1.5em;
   }
 }
 @media (min-width: 700px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003164}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003166}}
   .path-frontpage .field-field-newsimage .flexslider .home-secondcaption, .path-frontpage .field-field-blog-image .flexslider .home-secondcaption, .path-frontpage .field-field-banner .flexslider .home-secondcaption, .path-frontpage .field-field-list-image .flexslider .home-secondcaption {
     font-size: 3em;
     font-size: 8vmin;
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003164}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003166}}
   .path-frontpage .field-field-newsimage .flexslider .home-secondcaption, .path-frontpage .field-field-blog-image .flexslider .home-secondcaption, .path-frontpage .field-field-banner .flexslider .home-secondcaption, .path-frontpage .field-field-list-image .flexslider .home-secondcaption {
     /*iphone 5*/
     font-size: 2em;
@@ -3622,7 +3627,7 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
     top: calc(50% + 1em);
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003189}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003191}}
 .path-frontpage #block-homepagefeaturedboxes, .path-frontpage #block-homepagefeaturedboxes-mobile {
   margin-left: 30px;
   margin-left: 3vw;
@@ -3630,23 +3635,23 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   margin-right: 3vw;
 }
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003195}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003197}}
   .path-frontpage #block-homepagefeaturedboxes {
     display: none;
   }
 }
 @media (min-width: 700px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003200}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003202}}
   .path-frontpage #block-homepagefeaturedboxes-mobile {
     display: none;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003205}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003207}}
 .path-frontpage .feature-view-button {
   font-weight: bold;
   text-decoration: underline !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003210}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003212}}
 .path-frontpage .layout-highlighted2 .kyanite-block > h2, .path-frontpage #block-views-block-kyanite-events-home > h2, .path-frontpage #block-twitterfeed > h2, .path-frontpage #block-edreflections > h2, .path-frontpage #block-networknews > h2, .path-frontpage #block-facebook > h2 {
   color: #999;
   border-bottom: 1px solid #ccc;
@@ -3656,31 +3661,31 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   padding-bottom: .5em;
   letter-spacing: 1px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003220}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003222}}
 .path-frontpage main {
   background-color: transparent;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003223}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003225}}
 .path-frontpage #block-contactblock {
   background-color: #e4e4e4;
   padding: 3%;
   padding: 3vw;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003227}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003229}}
 .path-frontpage #block-contactblock h2 {
   margin: 0;
   display: block;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003236}}
 .path-frontpage .cards .kyanite-views-rows .views-row .field-node-post-date {
   font-size: .8em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003237}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003239}}
 .path-frontpage .cards .view-mode-small_card .field-field-list-title, .path-frontpage .cards .view-mode-small_card .field-node-title, .path-frontpage .cards .view-mode-small_card .views-field-title, .path-frontpage .cards .cards .field-field-list-title, .path-frontpage .cards .cards .field-node-title, .path-frontpage .cards .cards .views-field-title {
   padding-top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003241}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003243}}
 .path-frontpage .layout-content.bottom > div {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3691,40 +3696,40 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   align-items: stretch;
 }
 @media (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003245}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003247}}
   .path-frontpage .layout-content.bottom > div > div {
     width: 100%;
   }
 }
 @media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003250}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003252}}
   .path-frontpage .layout-content.bottom > div > div {
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003252}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003254}}
   .path-frontpage .layout-content.bottom > div > div:nth-child(2n+2) {
     margin-right: 0;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003263}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003265}}
 #block-views-block-home-page-featured-content-block-1 .views-field-view-node {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003266}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003268}}
 #block-views-block-home-page-featured-content-block-1 a.featurecontentlink {
   display: block;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003269}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003271}}
 #block-views-block-home-page-featured-content-block-1 a.featurecontentlink img {
   display: block;
   width: 100%;
   max-width: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003275}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003277}}
 #block-views-block-home-page-featured-content-block-1 a.featurecontentlink:hover img {
   -moz-transform: scale(1.08);
   -o-transform: scale(1.08);
@@ -3733,11 +3738,11 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   transform: scale(1.08);
   /*opacity: .8;*/
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003284}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003286}}
 #block-views-block-home-page-featured-content-block-1 a.featurecontentlink .views-field-field-featured-image {
   overflow: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003286}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003288}}
 #block-views-block-home-page-featured-content-block-1 a.featurecontentlink .views-field-field-featured-image img {
   -webkit-transition: all 250ms ease-in-out;
   -moz-transition: all 250ms ease-in-out;
@@ -3745,7 +3750,7 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   -o-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003294}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003296}}
 #block-views-block-home-page-featured-content-block-1 a.featurecontentlink .views-field-nothing {
   position: absolute;
   bottom: 0;
@@ -3754,7 +3759,7 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   padding: 1em;
   background: rgba(255, 255, 255, 0.7);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003302}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003304}}
 #block-views-block-home-page-featured-content-block-1 a.featurecontentlink h2 {
   display: block;
   text-align: center;
@@ -3764,21 +3769,21 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   font-size: 1em;
   font-weight: bold;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003313}}
 #block-views-block-home-page-featured-content-block-1 a.featurecontentlink .featuredcaption {
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003316}}
 #block-views-block-home-page-featured-content-block-1 a.featurecontentlink .featuredreadmore {
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003320}}
 #block-views-block-home-page-featured-content-block-1 .flexslider {
   margin: 0;
   border: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_front\.scss}line{font-family:\00003326}}
 #block-twitterfeed .field-body {
   overflow-x: hidden;
   overflow-y: scroll;
