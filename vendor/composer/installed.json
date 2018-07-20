@@ -293,67 +293,6 @@
         ]
     },
     {
-        "name": "commerceguys/addressing",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/commerceguys/addressing.git",
-            "reference": "8290e3eed5170554915e1d1d8e5a7fdad526261b"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/commerceguys/addressing/zipball/8290e3eed5170554915e1d1d8e5a7fdad526261b",
-            "reference": "8290e3eed5170554915e1d1d8e5a7fdad526261b",
-            "shasum": ""
-        },
-        "require": {
-            "doctrine/collections": "~1.0",
-            "php": ">=5.5.0"
-        },
-        "require-dev": {
-            "mikey179/vfsstream": "1.*",
-            "phpunit/phpunit": "~4.0",
-            "squizlabs/php_codesniffer": "2.*",
-            "symfony/validator": ">=3.2"
-        },
-        "suggest": {
-            "symfony/validator": "to validate addresses"
-        },
-        "time": "2018-06-29T10:27:32+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "CommerceGuys\\Addressing\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Bojan Zivanovic"
-            },
-            {
-                "name": "Damien Tournoud"
-            }
-        ],
-        "description": "Addressing library powered by CLDR and Google's address data.",
-        "keywords": [
-            "address",
-            "internationalization",
-            "localization",
-            "postal"
-        ]
-    },
-    {
         "name": "composer/installers",
         "version": "v1.5.0",
         "version_normalized": "1.5.0.0",
@@ -1211,7 +1150,7 @@
         "source": {
             "type": "git",
             "url": "https://git.drupal.org/project/admin_toolbar",
-            "reference": "df74bd2e427d33b9f0dc28af8618d96189ff4db1"
+            "reference": "62f41ed15bc876335cbdc832bd5b09c5a470e6fa"
         },
         "require": {
             "drupal/core": "*"
@@ -1222,8 +1161,8 @@
                 "dev-1.x": "1.x-dev"
             },
             "drupal": {
-                "version": "8.x-1.23+19-dev",
-                "datestamp": "1527522184",
+                "version": "8.x-1.24+2-dev",
+                "datestamp": "1531764521",
                 "security-coverage": {
                     "status": "not-covered",
                     "message": "Dev releases are not covered by Drupal security advisories."
@@ -8955,71 +8894,6 @@
         ]
     },
     {
-        "name": "zendframework/zend-diactoros",
-        "version": "1.8.1",
-        "version_normalized": "1.8.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/zendframework/zend-diactoros.git",
-            "reference": "63d920d1c9ebc009d860c3666593a66298727dd6"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/63d920d1c9ebc009d860c3666593a66298727dd6",
-            "reference": "63d920d1c9ebc009d860c3666593a66298727dd6",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^5.6 || ^7.0",
-            "psr/http-message": "^1.0"
-        },
-        "provide": {
-            "psr/http-message-implementation": "1.0"
-        },
-        "require-dev": {
-            "ext-dom": "*",
-            "ext-libxml": "*",
-            "phpunit/phpunit": "^5.7.16 || ^6.0.8",
-            "zendframework/zend-coding-standard": "~1.0"
-        },
-        "time": "2018-07-09T21:17:27+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.8.x-dev",
-                "dev-develop": "1.9.x-dev",
-                "dev-release-2.0": "2.0.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "files": [
-                "src/functions/create_uploaded_file.php",
-                "src/functions/marshal_headers_from_sapi.php",
-                "src/functions/marshal_method_from_sapi.php",
-                "src/functions/marshal_protocol_version_from_sapi.php",
-                "src/functions/marshal_uri_from_sapi.php",
-                "src/functions/normalize_server.php",
-                "src/functions/normalize_uploaded_files.php",
-                "src/functions/parse_cookie_header.php"
-            ],
-            "psr-4": {
-                "Zend\\Diactoros\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-2-Clause"
-        ],
-        "description": "PSR HTTP Message implementations",
-        "homepage": "https://github.com/zendframework/zend-diactoros",
-        "keywords": [
-            "http",
-            "psr",
-            "psr-7"
-        ]
-    },
-    {
         "name": "symfony/translation",
         "version": "v3.4.12",
         "version_normalized": "3.4.12.0",
@@ -10218,58 +10092,6 @@
         }
     },
     {
-        "name": "drupal/geofield_map",
-        "version": "2.5.0",
-        "version_normalized": "2.5.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/geofield_map",
-            "reference": "8.x-2.5"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/geofield_map-8.x-2.5.zip",
-            "reference": "8.x-2.5",
-            "shasum": "30094ed94e51c4670b96fddc9f6692a747958298"
-        },
-        "require": {
-            "drupal/core": "*",
-            "drupal/geofield": "1.0.*@beta"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-2.5",
-                "datestamp": "1529772520",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Project has not opted into security advisory coverage!"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Italo Mairo",
-                "homepage": "https://www.drupal.org/u/itamair",
-                "role": "Creator/Maintainer"
-            }
-        ],
-        "description": "Geofield Map is an advanced, complete and easy-to-use Geo Mapping solution for Drupal 8, based on and fully compatible with the Geofield module.",
-        "homepage": "https://www.drupal.org/project/geofield_map",
-        "support": {
-            "source": "http://git.drupal.org/project/geofield_map.git",
-            "issues": "https://www.drupal.org/project/issues/geofield_map"
-        }
-    },
-    {
         "name": "symfony/var-dumper",
         "version": "v3.4.12",
         "version_normalized": "3.4.12.0",
@@ -11253,88 +11075,6 @@
         }
     },
     {
-        "name": "drupal/paragraphs",
-        "version": "1.3.0",
-        "version_normalized": "1.3.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/paragraphs",
-            "reference": "8.x-1.3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.3.zip",
-            "reference": "8.x-1.3",
-            "shasum": "24c6d2153127f9d783a03c05baf3b9beb219113f"
-        },
-        "require": {
-            "drupal/core": "~8",
-            "drupal/entity_reference_revisions": "~1.3"
-        },
-        "require-dev": {
-            "drupal/block_field": "~1.0",
-            "drupal/ctools": "3.x-dev",
-            "drupal/diff": "~1.0",
-            "drupal/entity_browser": "1.x-dev",
-            "drupal/entity_usage": "2.x-dev",
-            "drupal/field_group": "~1.0",
-            "drupal/inline_entity_form": "~1.0",
-            "drupal/paragraphs-paragraphs_library": "*",
-            "drupal/replicate": "~1.0",
-            "drupal/search_api": "~1.0",
-            "drupal/search_api_db": "*"
-        },
-        "suggest": {
-            "drupal/entity_browser": "Recommended for an improved user experience when using the Paragraphs library module"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.3",
-                "datestamp": "1527502684",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0"
-        ],
-        "authors": [
-            {
-                "name": "Berdir",
-                "homepage": "https://www.drupal.org/user/214652"
-            },
-            {
-                "name": "Frans",
-                "homepage": "https://www.drupal.org/user/514222"
-            },
-            {
-                "name": "Primsi",
-                "homepage": "https://www.drupal.org/user/282629"
-            },
-            {
-                "name": "jeroen.b",
-                "homepage": "https://www.drupal.org/user/1853532"
-            },
-            {
-                "name": "miro_dietiker",
-                "homepage": "https://www.drupal.org/user/227761"
-            }
-        ],
-        "description": "Enables the creation of Paragraphs entities.",
-        "homepage": "https://www.drupal.org/project/paragraphs",
-        "support": {
-            "source": "http://cgit.drupalcode.org/paragraphs"
-        }
-    },
-    {
         "name": "drupal/paragraphs_asymmetric_translation_widgets",
         "version": "1.0.0-alpha2",
         "version_normalized": "1.0.0.0-alpha2",
@@ -11495,6 +11235,317 @@
         }
     },
     {
+        "name": "drupal/varnish_purge",
+        "version": "1.11.0",
+        "version_normalized": "1.11.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/varnish_purge",
+            "reference": "8.x-1.11"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.11.zip",
+            "reference": "8.x-1.11",
+            "shasum": "fbfa2eeb52e402775185f9069d0c8c34c7d4f1d8"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "require-dev": {
+            "drupal/purge": "*",
+            "drupal/purge_tokens": "*",
+            "drupal/varnish_purger": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.11",
+                "datestamp": "1530614920",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "MiSc",
+                "homepage": "https://www.drupal.org/user/382892"
+            },
+            {
+                "name": "deadbeef",
+                "homepage": "https://www.drupal.org/user/93644"
+            }
+        ],
+        "homepage": "https://www.drupal.org/project/varnish_purge",
+        "support": {
+            "source": "http://cgit.drupalcode.org/varnish_purge"
+        }
+    },
+    {
+        "name": "zendframework/zend-diactoros",
+        "version": "1.8.2",
+        "version_normalized": "1.8.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/zendframework/zend-diactoros.git",
+            "reference": "273c18bf6aaab20be9667a3aa4e7702e1e4e7ced"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/273c18bf6aaab20be9667a3aa4e7702e1e4e7ced",
+            "reference": "273c18bf6aaab20be9667a3aa4e7702e1e4e7ced",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.6 || ^7.0",
+            "psr/http-message": "^1.0"
+        },
+        "provide": {
+            "psr/http-message-implementation": "1.0"
+        },
+        "require-dev": {
+            "ext-dom": "*",
+            "ext-libxml": "*",
+            "phpunit/phpunit": "^5.7.16 || ^6.0.8",
+            "zendframework/zend-coding-standard": "~1.0"
+        },
+        "time": "2018-07-19T18:38:31+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.8.x-dev",
+                "dev-develop": "1.9.x-dev",
+                "dev-release-2.0": "2.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/functions/create_uploaded_file.php",
+                "src/functions/marshal_headers_from_sapi.php",
+                "src/functions/marshal_method_from_sapi.php",
+                "src/functions/marshal_protocol_version_from_sapi.php",
+                "src/functions/marshal_uri_from_sapi.php",
+                "src/functions/normalize_server.php",
+                "src/functions/normalize_uploaded_files.php",
+                "src/functions/parse_cookie_header.php"
+            ],
+            "psr-4": {
+                "Zend\\Diactoros\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-2-Clause"
+        ],
+        "description": "PSR HTTP Message implementations",
+        "homepage": "https://github.com/zendframework/zend-diactoros",
+        "keywords": [
+            "http",
+            "psr",
+            "psr-7"
+        ]
+    },
+    {
+        "name": "drupal/paragraphs",
+        "version": "dev-1.x",
+        "version_normalized": "dev-1.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/paragraphs",
+            "reference": "2cb2c5c1451f7a4904e613e2c4d3c6c96b32e377"
+        },
+        "require": {
+            "drupal/core": "~8",
+            "drupal/entity_reference_revisions": "~1.3"
+        },
+        "require-dev": {
+            "drupal/block_field": "~1.0",
+            "drupal/ctools": "3.x-dev",
+            "drupal/diff": "~1.0",
+            "drupal/entity_browser": "1.x-dev",
+            "drupal/entity_usage": "2.x-dev",
+            "drupal/field_group": "~1.0",
+            "drupal/inline_entity_form": "~1.0",
+            "drupal/paragraphs-paragraphs_library": "*",
+            "drupal/replicate": "~1.0",
+            "drupal/search_api": "~1.0",
+            "drupal/search_api_db": "*"
+        },
+        "suggest": {
+            "drupal/entity_browser": "Recommended for an improved user experience when using the Paragraphs library module"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.3+3-dev",
+                "datestamp": "1531492121",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Dev releases are not covered by Drupal security advisories."
+                }
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Berdir",
+                "homepage": "https://www.drupal.org/user/214652"
+            },
+            {
+                "name": "Frans",
+                "homepage": "https://www.drupal.org/user/514222"
+            },
+            {
+                "name": "Primsi",
+                "homepage": "https://www.drupal.org/user/282629"
+            },
+            {
+                "name": "jeroen.b",
+                "homepage": "https://www.drupal.org/user/1853532"
+            },
+            {
+                "name": "miro_dietiker",
+                "homepage": "https://www.drupal.org/user/227761"
+            }
+        ],
+        "description": "Enables the creation of Paragraphs entities.",
+        "homepage": "https://www.drupal.org/project/paragraphs",
+        "support": {
+            "source": "http://cgit.drupalcode.org/paragraphs"
+        }
+    },
+    {
+        "name": "drupal/geofield_map",
+        "version": "2.6.0",
+        "version_normalized": "2.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/geofield_map",
+            "reference": "8.x-2.6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/geofield_map-8.x-2.6.zip",
+            "reference": "8.x-2.6",
+            "shasum": "9ff7c7f3c6feeaf28aa438123496ec82771b733e"
+        },
+        "require": {
+            "drupal/core": "*",
+            "drupal/geofield": "1.0.*@beta"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-2.x": "2.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-2.6",
+                "datestamp": "1531797824",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Project has not opted into security advisory coverage!"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Italo Mairo",
+                "homepage": "https://www.drupal.org/u/itamair",
+                "role": "Creator/Maintainer"
+            }
+        ],
+        "description": "Geofield Map is an advanced, complete and easy-to-use Geo Mapping solution for Drupal 8, based on and fully compatible with the Geofield module.",
+        "homepage": "https://www.drupal.org/project/geofield_map",
+        "support": {
+            "source": "http://git.drupal.org/project/geofield_map.git",
+            "issues": "https://www.drupal.org/project/issues/geofield_map"
+        }
+    },
+    {
+        "name": "commerceguys/addressing",
+        "version": "v1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/commerceguys/addressing.git",
+            "reference": "ef34ba9f6e5378e56cceb9f45798b464878db031"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/commerceguys/addressing/zipball/ef34ba9f6e5378e56cceb9f45798b464878db031",
+            "reference": "ef34ba9f6e5378e56cceb9f45798b464878db031",
+            "shasum": ""
+        },
+        "require": {
+            "doctrine/collections": "~1.0",
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "mikey179/vfsstream": "1.*",
+            "phpunit/phpunit": "~4.0",
+            "squizlabs/php_codesniffer": "2.*",
+            "symfony/validator": ">=3.2"
+        },
+        "suggest": {
+            "symfony/validator": "to validate addresses"
+        },
+        "time": "2018-05-23T13:00:47+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "CommerceGuys\\Addressing\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bojan Zivanovic"
+            },
+            {
+                "name": "Damien Tournoud"
+            }
+        ],
+        "description": "Addressing library powered by CLDR and Google's address data.",
+        "keywords": [
+            "address",
+            "internationalization",
+            "localization",
+            "postal"
+        ]
+    },
+    {
         "name": "drupal/address",
         "version": "dev-1.x",
         "version_normalized": "dev-1.x",
@@ -11594,63 +11645,6 @@
         "homepage": "https://drupal.org/project/imce",
         "support": {
             "source": "http://cgit.drupalcode.org/imce"
-        }
-    },
-    {
-        "name": "drupal/varnish_purge",
-        "version": "1.11.0",
-        "version_normalized": "1.11.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/varnish_purge",
-            "reference": "8.x-1.11"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/varnish_purge-8.x-1.11.zip",
-            "reference": "8.x-1.11",
-            "shasum": "fbfa2eeb52e402775185f9069d0c8c34c7d4f1d8"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "require-dev": {
-            "drupal/purge": "*",
-            "drupal/purge_tokens": "*",
-            "drupal/varnish_purger": "*"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.11",
-                "datestamp": "1530614920",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0-or-later"
-        ],
-        "authors": [
-            {
-                "name": "MiSc",
-                "homepage": "https://www.drupal.org/user/382892"
-            },
-            {
-                "name": "deadbeef",
-                "homepage": "https://www.drupal.org/user/93644"
-            }
-        ],
-        "homepage": "https://www.drupal.org/project/varnish_purge",
-        "support": {
-            "source": "http://cgit.drupalcode.org/varnish_purge"
         }
     }
 ]
