@@ -1051,3 +1051,8 @@ body.specialprojects #maincontainer {
   /* because for some reason the Updates view's translations don't save: */
   display: none;
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003786}}
+.paragraph--id--1376 {
+  background: rgba(0, 188, 212, 0.1);
+}
