@@ -5303,12 +5303,17 @@ body.has-background-image .site-footer {
   position: relative;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\000036}}
+.slideshow .views-field-field-slide {
+  max-height: 50vmin;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000310}}
 .slideshow img {
   display: block;
   width: 100%;
   max-width: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000315}}
 .slideshow .slidecaption {
   position: absolute;
   bottom: 0;
@@ -5318,12 +5323,12 @@ body.has-background-image .site-footer {
   padding-bottom: 2em;
 }
 @media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000315}}
   .slideshow .slidecaption {
     padding-bottom: 4em;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000325}}
 .slideshow .slidecaption h1 {
   font-weight: bold;
   color: #fff;
@@ -5331,32 +5336,34 @@ body.has-background-image .site-footer {
   text-shadow: 0px 0px 20px black;
 }
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000325}}
   .slideshow .slidecaption h1 {
     font-size: 3.5em;
     font-size: 6vw;
   }
 }
 @media (min-width: 700px) and (max-width: 1099px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000325}}
   .slideshow .slidecaption h1 {
     font-size: 3.5em;
     font-size: 3.5vw;
   }
 }
 @media (min-width: 1100px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000325}}
   .slideshow .slidecaption h1 {
     font-size: 3em;
+    font-size: 3vw;
+    /* might need to comment this out again*/
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000344}}
 .slideshow .slidecaption h2 {
   margin: auto;
   text-shadow: 0px 0px 10px black;
 }
 @media (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000344}}
   .slideshow .slidecaption h2 {
     font-size: 2em;
     font-size: 3vw;
@@ -5364,7 +5371,7 @@ body.has-background-image .site-footer {
   }
 }
 @media (min-width: 700px) and (max-width: 1099px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000344}}
   .slideshow .slidecaption h2 {
     font-size: 2em;
     font-size: 2vw;
@@ -5372,9 +5379,11 @@ body.has-background-image .site-footer {
   }
 }
 @media (min-width: 1100px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_slideshow\.scss}line{font-family:\0000344}}
   .slideshow .slidecaption h2 {
     font-size: 1.5em;
+    font-size: 1.7vw;
+    /* might need to comment this out again*/
     max-width: 70%;
   }
 }
