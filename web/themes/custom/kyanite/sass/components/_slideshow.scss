@@ -4,7 +4,12 @@
 		position: relative;
 	}
 	.views-field-field-slide{
-		max-height: 50vmin;
+		@media (max-width: 1099px){
+			max-height: 50vmin;
+		}
+		@media (min-width: 1100px){
+			max-height: 40vmin;
+		}
 		overflow: hidden;
 	}
 	img{
