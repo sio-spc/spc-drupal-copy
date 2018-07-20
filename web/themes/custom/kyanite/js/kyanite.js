@@ -1592,6 +1592,10 @@
     });
   }
 
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+
 
 
   $(window).on("load scroll resize orientationchange", resizingTweaks);
@@ -1659,6 +1663,8 @@
 	});
 	$(window).load(function(){
 		$('body').addClass('window-loaded');
+
+    resizeiframe("resizeiframe");
 
     //mapInitialize();
     
