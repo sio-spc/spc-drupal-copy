@@ -53,8 +53,8 @@ footer.site-footer > *:after, .layout-highlighted2:after {
 @media (min-width: 700px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_general\.scss}line{font-family:\0000318}}
   #header {
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 /*body.no-sidebars .layout-container .layout-content, body.has-sidebar .layout-container .layout-content.fullwidth{
@@ -522,7 +522,7 @@ body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor {
 @media (min-width: 700px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\00003150}}
   body.divisionsite #fixed-header, body.divisionsite #fixed-header-anchor {
-    padding-right: 2%;
+    padding-right: 15px;
   }
 }
 
