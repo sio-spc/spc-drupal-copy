@@ -1664,7 +1664,10 @@
 	$(window).load(function(){
 		$('body').addClass('window-loaded');
 
-    resizeIframe("resizeiframe");
+    
+    $(".resizeiframe").each(function(){
+      resizeIframe(this);
+    });
 
     //mapInitialize();
     
