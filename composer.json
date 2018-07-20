@@ -36,6 +36,7 @@
         "drupal/core": "8.5.5",
         "drupal/devel": "^1.2",
         "drupal/easy_breadcrumb": "1.6",
+        "drupal/easy_install": "^10.1",
         "drupal/editor_advanced_link": "^1.4",
         "drupal/entity_clone": "1.x-dev",
         "drupal/entityqueue": "1.0-alpha7",
