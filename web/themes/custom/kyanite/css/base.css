@@ -1053,6 +1053,7 @@ body.specialprojects #maincontainer {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003786}}
-.paragraph--id--1376 {
-  background: rgba(0, 188, 212, 0.1);
+.paragraph.paragraph--color > .paragraph__column {
+  padding-top: 0;
+  padding-bottom: 0;
 }

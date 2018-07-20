@@ -783,6 +783,7 @@ body.specialprojects{
 .actualite h1, .communiques h1, .french-web-stories h1{/* because for some reason the Updates view's translations don't save: */
   display: none;
 }
-.paragraph--id--1376{
-  background: rgba(0,188,212,.1);
+.paragraph.paragraph--color>.paragraph__column{
+  padding-top:0;
+  padding-bottom: 0;
 }
