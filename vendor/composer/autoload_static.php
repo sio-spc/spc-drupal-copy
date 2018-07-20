@@ -161,6 +161,7 @@ class ComposerStaticInitfef2afb14ff205ce5aaa2fe27a73a1c2
             'Composer\\Semver\\' => 16,
             'Composer\\Installers\\' => 20,
             'CommerceGuys\\Addressing\\' => 24,
+            'CloudFlarePhpSdk\\' => 17,
         ),
         'B' => 
         array (
@@ -483,6 +484,10 @@ class ComposerStaticInitfef2afb14ff205ce5aaa2fe27a73a1c2
         'CommerceGuys\\Addressing\\' => 
         array (
             0 => __DIR__ . '/..' . '/commerceguys/addressing/src',
+        ),
+        'CloudFlarePhpSdk\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/d8-contrib-modules/cloudflarephpsdk/src',
         ),
         'Behat\\Mink\\Driver\\' => 
         array (
