@@ -49,8 +49,6 @@ $search-block-form-icon-size : 1.4em;
 			-ms-transition: none; //oh IE, why do you plague me so?
 		}
 		@media (max-width: $bp-mobile-max){
-			//display: block;
-			//width: 100%;
 			position: relative;
 		    z-index: 1;
 	    	transition: width 0.5s, border 0.5s;
@@ -128,4 +126,10 @@ $search-block-form-icon-size : 1.4em;
 		line-height: $search-block-form-icon-size; // not sure how to get it to center without a number like this 
 	}
 }
-
+html[lang='fr']{
+	input[type=search]{
+		@media (min-width: $bp-tablet-min){
+			width: 8.5em!important;
+		}
+	}
+}

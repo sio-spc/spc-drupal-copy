@@ -1,6 +1,6 @@
 (function (window, $, Drupal) {
   // Custom javascript
-  var consoleLogEnabled = true, allowFixedHeader = false;
+  var consoleLogEnabled = false, allowFixedHeader = false;
 
   var textLengthSelectors = {
     '.views_slideshow_slide .views-field-body': {
