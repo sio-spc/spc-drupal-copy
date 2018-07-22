@@ -1550,6 +1550,9 @@
     $("aside.layout-sidebar").addClass("desktop");
     $("aside.layout-sidebar").clone().addClass("mobile").appendTo("#main");
     $("aside.layout-sidebar.mobile").removeClass("desktop");
+    if($("html[lang='fr'] .field-field-location-name").text().trim().length){
+      $(".field-field-geolocation-for-event").hide();
+    }
   }
 
   function memberDefaultInfo(){
@@ -1599,7 +1602,7 @@
 
   function resizeIframe(obj) {
     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-  }
+  } 
 
 
 
