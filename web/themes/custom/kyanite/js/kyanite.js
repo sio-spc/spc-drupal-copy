@@ -79,6 +79,7 @@
       	consoleLog("styleSearchBlockForm: adding placeholder and such");
 
       	$(this).find('input.form-search').each(function(){
+          consoleLog("lang = " + $("html").attr("lang") + ".");
           if($("html").attr("lang") == "fr"){
         		$(this).attr('placeholder','rechercher...');
           }
