@@ -79,8 +79,12 @@
       	consoleLog("styleSearchBlockForm: adding placeholder and such");
 
       	$(this).find('input.form-search').each(function(){
-      		$(this).attr('placeholder','search...'); //does this need translation?
-      		//$('<i class="fa fa-search"></i>').insertAfter($(this)); //done via CSS now...
+          if($("html[lang]") == "fr"){
+        		$(this).attr('placeholder','rechercher...');
+          }
+          else{
+            $(this).attr('placeholder','search...');
+          }
       	});
      });
 
