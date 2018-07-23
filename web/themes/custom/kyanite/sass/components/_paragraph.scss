@@ -208,9 +208,9 @@
 }
 .paragraph--type--bp-columns__2col, .paragraph--type--bp-columns__3col, .paragraph--type--bp-columns__4col, .paragraph--type--bp-columns__5col, .paragraph--type--bp-columns__6col{
 	&:first-child{
-		padding-left: 0;
+		padding-left: 0!important;
 	}
 	&:last-child{
-		padding-right: 0;
+		padding-right: 0!important;
 	}
 }
