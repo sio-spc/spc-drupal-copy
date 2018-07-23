@@ -1625,7 +1625,7 @@
 
 	$(document).ready(function(){
    //$("#logoanimation")[0].play();
-   logoanimation();
+
 
     //because for some reason the Updates view's translations don't save:
     //$(".actualite h1").text("Actualité");
@@ -1684,6 +1684,8 @@
 	});
 	$(window).load(function(){
 		$('body').addClass('window-loaded');
+
+    logoanimation();
 
     
     $(".resizeiframe").each(function(){
