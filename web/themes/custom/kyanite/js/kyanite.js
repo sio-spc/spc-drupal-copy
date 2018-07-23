@@ -1609,10 +1609,7 @@
 
   function logoanimation(){
     var video = $("#logoanimation");
-    video.oncanplaythrough = function() {
-        video.muted = true;
-        video.play();
-    }
+    $(video).trigger("click");
   }
   
 
