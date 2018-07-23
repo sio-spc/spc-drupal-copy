@@ -658,6 +658,7 @@ img.align-center, img.aligncenter, img[align="center"]{
   border: 2px solid;
   border-radius: 3px;
   transition: all 0.2s;
+  cursor: pointer;
   &:hover{
     background: $global-color-main-menu-hover;
   }
