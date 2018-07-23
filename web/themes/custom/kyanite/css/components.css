@@ -4658,6 +4658,15 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   padding-top: .5em;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_paragraph\.scss}line{font-family:\00003210}}
+.paragraph--type--bp-columns__2col::first-child, .paragraph--type--bp-columns__3col::first-child, .paragraph--type--bp-columns__4col::first-child, .paragraph--type--bp-columns__5col::first-child, .paragraph--type--bp-columns__6col::first-child {
+  padding-left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_paragraph\.scss}line{font-family:\00003213}}
+.paragraph--type--bp-columns__2col::last-child, .paragraph--type--bp-columns__3col::last-child, .paragraph--type--bp-columns__4col::last-child, .paragraph--type--bp-columns__5col::last-child, .paragraph--type--bp-columns__6col::last-child {
+  padding-right: 0;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_partners\.scss}line{font-family:\000031}}
 #block-views-block-partners-block-1 {
   padding-bottom: 3em;
