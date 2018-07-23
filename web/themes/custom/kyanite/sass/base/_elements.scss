@@ -658,6 +658,9 @@ img.align-center, img.aligncenter, img[align="center"]{
   border: 2px solid;
   border-radius: 3px;
   transition: all 0.2s;
+  &:hover{
+    background: $global-color-main-menu-hover;
+  }
 }
 .more-link > a{
   display: inline-block!important;

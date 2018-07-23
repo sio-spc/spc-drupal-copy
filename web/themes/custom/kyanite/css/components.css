@@ -6636,3 +6636,12 @@ table.people-grid td img, table.people-grid th img, table.stafflist td img, tabl
   width: 100% !important;
   height: auto !important;
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_webform\.scss}line{font-family:\000032}}
+.webform-submission-form .form-item {
+  margin-bottom: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_webform\.scss}line{font-family:\000034}}
+.webform-submission-form .form-item input, .webform-submission-form .form-item textarea {
+  padding: .25em;
+}
