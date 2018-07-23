@@ -748,8 +748,8 @@ a.tabledrag-handle .handle {
   .align-left, .alignleft, img[data-align="left"], img[data-align=" left"], img[align="left"], img[align=" left"], img[style="float:left"], img[style="float: left"] {
     max-width: 40%;
     margin-right: 2em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    /*margin-top: 1em;
+    margin-bottom: 1em;*/
     float: left;
   }
 }
@@ -763,8 +763,8 @@ a.tabledrag-handle .handle {
   .align-right, .alignright, img[data-align="right"], img[data-align=" right"], img[align="right"], img[align=" right"], img[style="float:right"], img[style="float: right"] {
     max-width: 40%;
     margin-left: 2em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    /*margin-top: 1em;
+    margin-bottom: 1em;*/
     float: right;
   }
 }
