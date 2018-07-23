@@ -4666,12 +4666,12 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_paragraph\.scss}line{font-family:\00003215}}
 .paragraph--type--bp-columns__2col:first-child, .paragraph--type--bp-columns__3col:first-child, .paragraph--type--bp-columns__4col:first-child, .paragraph--type--bp-columns__5col:first-child, .paragraph--type--bp-columns__6col:first-child,
-.paragraph--type--bp-columns-two-uneven > .paragraph__column:first-child, .paragraph--type--bp-columns-three-uneven > .paragraph__column:first-child {
+.paragraph--type--bp-columns-two-uneven > .paragraph__column > div:first-child, .paragraph--type--bp-columns-three-uneven > .paragraph__column > div:first-child {
   padding-left: 0 !important;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_paragraph\.scss}line{font-family:\00003218}}
 .paragraph--type--bp-columns__2col:last-child, .paragraph--type--bp-columns__3col:last-child, .paragraph--type--bp-columns__4col:last-child, .paragraph--type--bp-columns__5col:last-child, .paragraph--type--bp-columns__6col:last-child,
-.paragraph--type--bp-columns-two-uneven > .paragraph__column:last-child, .paragraph--type--bp-columns-three-uneven > .paragraph__column:last-child {
+.paragraph--type--bp-columns-two-uneven > .paragraph__column > div:last-child, .paragraph--type--bp-columns-three-uneven > .paragraph__column > div:last-child {
   padding-right: 0 !important;
 }
 
