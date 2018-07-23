@@ -11719,110 +11719,6 @@
         }
     },
     {
-        "name": "drupal/address",
-        "version": "dev-1.x",
-        "version_normalized": "dev-1.x",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/address",
-            "reference": "a29a522821025127519fc816e19105d9b220a45d"
-        },
-        "require": {
-            "commerceguys/addressing": "^1.0.0",
-            "drupal/core": "*"
-        },
-        "require-dev": {
-            "drupal/token": "*"
-        },
-        "time": "2018-05-24T14:39:08+00:00",
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.4+2-dev",
-                "datestamp": "1527153784",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Dev releases are not covered by Drupal security advisories."
-                }
-            },
-            "patches_applied": []
-        },
-        "installation-source": "source",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "bojanz",
-                "homepage": "https://www.drupal.org/user/86106"
-            },
-            {
-                "name": "googletorp",
-                "homepage": "https://www.drupal.org/user/386230"
-            },
-            {
-                "name": "rszrama",
-                "homepage": "https://www.drupal.org/user/49344"
-            }
-        ],
-        "description": "Provides functionality for storing, validating and displaying international postal addresses.",
-        "homepage": "http://drupal.org/project/address",
-        "support": {
-            "source": "http://cgit.drupalcode.org/address"
-        }
-    },
-    {
-        "name": "drupal/imce",
-        "version": "dev-1.x",
-        "version_normalized": "dev-1.x",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/imce",
-            "reference": "efc101f649795ff2762df67f5809525bbd44d6bd"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "time": "2018-03-13T19:53:09+00:00",
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.6+4-dev",
-                "datestamp": "1520963280",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Dev releases are not covered by Drupal security advisories."
-                }
-            },
-            "patches_applied": {
-                "Make IMCE work with managed files": "https://www.drupal.org/files/issues/2018-03-20/imce-managed-2762473-30.patch"
-            }
-        },
-        "installation-source": "source",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "ufku",
-                "homepage": "https://www.drupal.org/user/9910"
-            }
-        ],
-        "description": "Provides a file manager supporting personal folders.",
-        "homepage": "https://drupal.org/project/imce",
-        "support": {
-            "source": "http://cgit.drupalcode.org/imce"
-        }
-    },
-    {
         "name": "d8-contrib-modules/cloudflarephpsdk",
         "version": "1.0.0-alpha5",
         "version_normalized": "1.0.0.0-alpha5",
@@ -11999,6 +11895,163 @@
         ],
         "support": {
             "source": "http://cgit.drupalcode.org/cloudflare"
+        }
+    },
+    {
+        "name": "drupal/better_field_descriptions",
+        "version": "1.3.0",
+        "version_normalized": "1.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/better_field_descriptions",
+            "reference": "8.x-1.3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/better_field_descriptions-8.x-1.3.zip",
+            "reference": "8.x-1.3",
+            "shasum": "6610793a8930a10bd62990382aafcbfbb288f6ab"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.3",
+                "datestamp": "1522333684",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Yogesh Pawar",
+                "homepage": "https://www.drupal.org/user/2922907"
+            },
+            {
+                "name": "odegard",
+                "homepage": "https://www.drupal.org/user/703222"
+            }
+        ],
+        "description": "Allows users with certain roles to add themeable descriptions to fields in forms",
+        "homepage": "https://www.drupal.org/project/better_field_descriptions",
+        "support": {
+            "source": "http://cgit.drupalcode.org/better_field_descriptions"
+        }
+    },
+    {
+        "name": "drupal/address",
+        "version": "dev-1.x",
+        "version_normalized": "dev-1.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/address",
+            "reference": "a29a522821025127519fc816e19105d9b220a45d"
+        },
+        "require": {
+            "commerceguys/addressing": "^1.0.0",
+            "drupal/core": "*"
+        },
+        "require-dev": {
+            "drupal/token": "*"
+        },
+        "time": "2018-05-24T14:39:08+00:00",
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.4+2-dev",
+                "datestamp": "1527153784",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Dev releases are not covered by Drupal security advisories."
+                }
+            },
+            "patches_applied": []
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "bojanz",
+                "homepage": "https://www.drupal.org/user/86106"
+            },
+            {
+                "name": "googletorp",
+                "homepage": "https://www.drupal.org/user/386230"
+            },
+            {
+                "name": "rszrama",
+                "homepage": "https://www.drupal.org/user/49344"
+            }
+        ],
+        "description": "Provides functionality for storing, validating and displaying international postal addresses.",
+        "homepage": "http://drupal.org/project/address",
+        "support": {
+            "source": "http://cgit.drupalcode.org/address"
+        }
+    },
+    {
+        "name": "drupal/imce",
+        "version": "dev-1.x",
+        "version_normalized": "dev-1.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/imce",
+            "reference": "efc101f649795ff2762df67f5809525bbd44d6bd"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "time": "2018-03-13T19:53:09+00:00",
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.6+4-dev",
+                "datestamp": "1520963280",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Dev releases are not covered by Drupal security advisories."
+                }
+            },
+            "patches_applied": {
+                "Make IMCE work with managed files": "https://www.drupal.org/files/issues/2018-03-20/imce-managed-2762473-30.patch"
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "ufku",
+                "homepage": "https://www.drupal.org/user/9910"
+            }
+        ],
+        "description": "Provides a file manager supporting personal folders.",
+        "homepage": "https://drupal.org/project/imce",
+        "support": {
+            "source": "http://cgit.drupalcode.org/imce"
         }
     }
 ]
