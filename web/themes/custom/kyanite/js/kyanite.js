@@ -1609,7 +1609,7 @@
 
   function logoanimation(){
     var video = $("#logoanimation");
-    $(video).trigger("click");
+    $(video).click();
   }
   
 
