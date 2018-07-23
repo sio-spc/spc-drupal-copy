@@ -225,5 +225,8 @@
 .field-bp-text{
 	ul, ol{
 		padding-left: 15px;
+		li{
+			list-style-position: outside;
+		}
 	}
 }
