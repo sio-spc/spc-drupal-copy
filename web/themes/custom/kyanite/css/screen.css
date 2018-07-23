@@ -1054,9 +1054,9 @@ body.specialprojects #maincontainer {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003789}}
-.paragraph.paragraph--color > .paragraph__column {
-  padding-top: 0;
-  padding-bottom: 0;
+#logoanimation {
+  width: 100%;
+  height: auto;
 }
 
 /* Layout ------------------------------------------------------------------*/

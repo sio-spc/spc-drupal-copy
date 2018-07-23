@@ -4689,6 +4689,12 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
   padding-left: 15px;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_paragraph\.scss}line{font-family:\00003237}}
+.paragraph.paragraph--color > .paragraph__column {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_partners\.scss}line{font-family:\000031}}
 #block-views-block-partners-block-1 {
   padding-bottom: 3em;
