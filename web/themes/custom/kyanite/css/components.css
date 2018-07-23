@@ -4680,12 +4680,13 @@ body.no-explore #explore, body.no-explore .explore-button, body.no-explore .layo
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_paragraph\.scss}line{font-family:\00003226}}
-.field-bp-text ul, .field-bp-text ol {
-  padding-left: 15px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_paragraph\.scss}line{font-family:\00003228}}
-.field-bp-text ul li, .field-bp-text ol li {
+.field-bp-text li {
   list-style-position: outside !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_paragraph\.scss}line{font-family:\00003232}}
+.paragraph--type--bp-columns ul:first-of-type, .paragraph--type--bp-columns ol:first-of-type {
+  padding-left: 15px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_partners\.scss}line{font-family:\000031}}

@@ -223,10 +223,14 @@
 	padding-right: 0!important;
 }
 .field-bp-text{
+	li{
+		list-style-position: outside!important;
+	}
+}
+.paragraph--type--bp-columns{
 	ul, ol{
-		padding-left: 15px;
-		li{
-			list-style-position: outside!important;
+		&:first-of-type{
+			padding-left: 15px;
 		}
 	}
 }
