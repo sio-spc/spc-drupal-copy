@@ -1607,6 +1607,15 @@
     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
   } 
 
+  function logoanimation(){
+    var video = $("#logoanimation");
+    video.oncanplaythrough = function() {
+        video.muted = true;
+        video.play();
+    }
+  }
+  
+
 
 
   $(window).on("load scroll resize orientationchange", resizingTweaks);
@@ -1615,8 +1624,9 @@
   
 
 	$(document).ready(function(){
+   //$("#logoanimation")[0].play();
+   logoanimation();
 
-    
     //because for some reason the Updates view's translations don't save:
     //$(".actualite h1").text("Actualité");
     //$(".communiques h1").text("Communiqués");
