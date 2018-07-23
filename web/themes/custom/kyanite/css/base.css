@@ -1058,3 +1058,7 @@ body.specialprojects #maincontainer {
   width: 100%;
   height: auto;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003792}}
+#logoanimation::-webkit-media-controls-start-playback-button {
+  display: none;
+}

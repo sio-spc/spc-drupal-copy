@@ -789,4 +789,7 @@ body.specialprojects{
 #logoanimation{
   width: 100%;
   height: auto;
+  &::-webkit-media-controls-start-playback-button {
+      display: none;
+  }
 }

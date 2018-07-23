@@ -1558,9 +1558,9 @@
     }
   }
 
-  function memberDefaultInfo(){
+  /*function memberDefaultInfo(){
     $("p.autocomplete-instructions").append($(".kyanite-block.logoanimation"));
-  }
+  }*/
 
   function mapInitialize(){
     consoleLog("height: " + $("#plethora-map-container").height());
@@ -1636,7 +1636,7 @@
 
     eventPageInit();
 
-    memberDefaultInfo();
+    //memberDefaultInfo();
 
     ccestweaks();
     
