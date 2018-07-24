@@ -12,19 +12,19 @@ leaflet:
       https://unpkg.com/leaflet@1.0.3/dist/leaflet.css: {}
 
 geofield_map_general:
-  version: 1.1
+  version: 1.x
   css:
     component:
       css/geofield_map_general.css: {}
 
 geofield_map_settings:
-  version: 1.1
+  version: 1.x
   css:
     component:
       css/geofield_map_settings.css: {}
 
 geofield_map_widget:
-  version: 1.1
+  version: 1.x
   css:
     component:
       css/geofield_map_widget.css: {}
@@ -39,24 +39,24 @@ geofield_map_widget:
       - core/drupal.autocomplete
 
 geofield_map_view_display_settings:
-  version: 1.1
+  version: 1.x
   css:
     component:
       css/geofield_map_view_display_settings.css: {}
 
 geofield_map_legend:
-  version: 1.1
+  version: 1.x
   css:
     component:
       css/geofield_map_legend.css: {}
 
 geolocation:
-  version: 1.1
+  version: 1.x
   js:
     js/geolocation.js: {}
 
 geofield_gmap:
-  version: 1.1
+  version: 1.x
   css:
     component:
       css/geofield_google_map.css: {}
@@ -70,7 +70,7 @@ geofield_gmap:
       - core/drupalSettings
 
 geojson:
-  version: 1.1
+  version: 1.x
   js:
     js/geojson.js: {}
 
@@ -89,7 +89,7 @@ marker_cluster:
 # External OverlappingMarkerSpiderfier
 overlappingmarkerspiderfier:
   remote: https://github.com/jawj/OverlappingMarkerSpiderfier
-  version: 1.1
+  version: 1.x
   license:
     name: MIT licence
     url: http://www.opensource.org/licenses/mit-license.php

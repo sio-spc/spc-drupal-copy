@@ -2197,75 +2197,6 @@
         }
     },
     {
-        "name": "drupal/easy_breadcrumb",
-        "version": "1.6.0",
-        "version_normalized": "1.6.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/easy_breadcrumb",
-            "reference": "8.x-1.6"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/easy_breadcrumb-8.x-1.6.zip",
-            "reference": "8.x-1.6",
-            "shasum": "d7e4fcbb76a65bc33230d45c3bf41c4689b8e1a2"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.6",
-                "datestamp": "1523293380",
-                "security-coverage": {
-                    "status": "covered",
-                    "message": "Covered by Drupal's security advisory policy"
-                }
-            }
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Greg Boggs",
-                "homepage": "https://www.drupal.org/user/153069"
-            },
-            {
-                "name": "RenatoG",
-                "homepage": "https://www.drupal.org/user/3326031"
-            },
-            {
-                "name": "loopduplicate",
-                "homepage": "https://www.drupal.org/user/717290"
-            },
-            {
-                "name": "sonemonu",
-                "homepage": "https://www.drupal.org/user/1667988"
-            },
-            {
-                "name": "tatarbj",
-                "homepage": "https://www.drupal.org/user/649590"
-            },
-            {
-                "name": "volkswagenchick",
-                "homepage": "https://www.drupal.org/user/3332522"
-            }
-        ],
-        "description": "Adds configuration to the system breadcrumbs.",
-        "homepage": "https://www.drupal.org/project/easy_breadcrumb",
-        "support": {
-            "source": "http://cgit.drupalcode.org/easy_breadcrumb"
-        }
-    },
-    {
         "name": "drupal/editor_advanced_link",
         "version": "1.4.0",
         "version_normalized": "1.4.0.0",
@@ -11903,59 +11834,6 @@
         }
     },
     {
-        "name": "drupal/geofield_map",
-        "version": "2.5.0",
-        "version_normalized": "2.5.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/geofield_map",
-            "reference": "8.x-2.5"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/geofield_map-8.x-2.5.zip",
-            "reference": "8.x-2.5",
-            "shasum": "30094ed94e51c4670b96fddc9f6692a747958298"
-        },
-        "require": {
-            "drupal/core": "*",
-            "drupal/geofield": "1.0.*@beta"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-2.5",
-                "datestamp": "1529772520",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Project has not opted into security advisory coverage!"
-                }
-            },
-            "patches_applied": []
-        },
-        "installation-source": "dist",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Italo Mairo",
-                "homepage": "https://www.drupal.org/u/itamair",
-                "role": "Creator/Maintainer"
-            }
-        ],
-        "description": "Geofield Map is an advanced, complete and easy-to-use Geo Mapping solution for Drupal 8, based on and fully compatible with the Geofield module.",
-        "homepage": "https://www.drupal.org/project/geofield_map",
-        "support": {
-            "source": "http://git.drupal.org/project/geofield_map.git",
-            "issues": "https://www.drupal.org/project/issues/geofield_map"
-        }
-    },
-    {
         "name": "drupal/imce",
         "version": "dev-1.x",
         "version_normalized": "dev-1.x",
@@ -12000,6 +11878,122 @@
         "homepage": "https://drupal.org/project/imce",
         "support": {
             "source": "http://cgit.drupalcode.org/imce"
+        }
+    },
+    {
+        "name": "drupal/easy_breadcrumb",
+        "version": "dev-1.x",
+        "version_normalized": "dev-1.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/easy_breadcrumb",
+            "reference": "eb8d0db0a9620fe13e94d11ea3047e0556611373"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.8+1-dev",
+                "datestamp": "1531511621",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Dev releases are not covered by Drupal security advisories."
+                }
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Greg Boggs",
+                "homepage": "https://www.drupal.org/user/153069"
+            },
+            {
+                "name": "RenatoG",
+                "homepage": "https://www.drupal.org/user/3326031"
+            },
+            {
+                "name": "loopduplicate",
+                "homepage": "https://www.drupal.org/user/717290"
+            },
+            {
+                "name": "sonemonu",
+                "homepage": "https://www.drupal.org/user/1667988"
+            },
+            {
+                "name": "tatarbj",
+                "homepage": "https://www.drupal.org/user/649590"
+            },
+            {
+                "name": "volkswagenchick",
+                "homepage": "https://www.drupal.org/user/3332522"
+            }
+        ],
+        "description": "Adds configuration to the system breadcrumbs.",
+        "homepage": "https://www.drupal.org/project/easy_breadcrumb",
+        "support": {
+            "source": "http://cgit.drupalcode.org/easy_breadcrumb"
+        }
+    },
+    {
+        "name": "drupal/geofield_map",
+        "version": "2.5.0",
+        "version_normalized": "2.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/geofield_map",
+            "reference": "8.x-2.5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/geofield_map-8.x-2.5.zip",
+            "reference": "8.x-2.5",
+            "shasum": "30094ed94e51c4670b96fddc9f6692a747958298"
+        },
+        "require": {
+            "drupal/core": "*",
+            "drupal/geofield": "1.0.*@beta"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-2.x": "2.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-2.5",
+                "datestamp": "1531797824",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Project has not opted into security advisory coverage!"
+                }
+            },
+            "patches_applied": []
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Italo Mairo",
+                "homepage": "https://www.drupal.org/u/itamair",
+                "role": "Creator/Maintainer"
+            }
+        ],
+        "description": "Geofield Map is an advanced, complete and easy-to-use Geo Mapping solution for Drupal 8, based on and fully compatible with the Geofield module.",
+        "homepage": "https://www.drupal.org/project/geofield_map",
+        "support": {
+            "source": "http://git.drupal.org/project/geofield_map.git",
+            "issues": "https://www.drupal.org/project/issues/geofield_map"
         }
     }
 ]
