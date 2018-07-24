@@ -74,6 +74,7 @@
     // Lead Google Maps library.
     loadGoogle: function (mapid, callback) {
       var self = this;
+      var language = $("html").attr("lang");
 
       // Add the callback.
       self.addCallback(callback);
@@ -88,7 +89,7 @@
         // Google maps isn't loaded so lazy load google maps.
 
         // Default script path.
-        var scriptPath = '//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places';
+        var scriptPath = '//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&language='+language;
 
         // If a Google API key is set, use it.
         if (typeof self.map_data[mapid]['gmap_api_key'] !== 'undefined' && self.map_data[mapid]['gmap_api_key'] !== null) {
