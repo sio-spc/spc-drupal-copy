@@ -10,6 +10,9 @@
 .bottom, .bottomfullwidth{
   display: none;
 }
+.bottomfullwidth{
+  clear: both;
+}
 body:not(.context-resources) #main, 
 .context-resources #block-pagetitle, 
 .context-resources #block-kyanite-content, 
