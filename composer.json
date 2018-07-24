@@ -150,6 +150,9 @@
             },
             "drupal/menu_block": {
                 "Add option to show block if menu tree contains no links - https://www.drupal.org/project/menu_block/issues/2757215#comment-12606721": "https://www.drupal.org/files/issues/2018-05-08/menu_block-hide_block_if_no_links-2757215-9.patch"
+            },
+            "drupal/geofield_map": {
+                "Google Map language / multilingual / translation - https://www.drupal.org/project/geofield/issues/2987711": "https://www.drupal.org/files/issues/2018-07-23/geofield_map-language_support-2987711-2.patch"
             }
         }
     }
