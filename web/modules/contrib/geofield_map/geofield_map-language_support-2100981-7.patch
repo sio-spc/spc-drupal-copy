@@ -1,0 +1,48 @@
+diff --git a/web/modules/contrib/geofield_map/js/geofield_google_map.js b/web/modules/contrib/geofield_map/js/geofield_google_map.js
+index 3e89456..9aa15cb 100644
+--- a/web/modules/contrib/geofield_map/js/geofield_google_map.js
++++ b/web/modules/contrib/geofield_map/js/geofield_google_map.js
+@@ -70,6 +70,7 @@
+     // Lead Google Maps library.
+     loadGoogle: function (mapid, gmap_api_key, callback) {
+       var self = this;
++      var language = $("html").attr("lang");
+ 
+       // Add the callback.
+       self.addCallback(callback);
+@@ -84,7 +85,7 @@
+         // Google maps isn't loaded so lazy load google maps.
+ 
+         // Default script path.
+-        var scriptPath = '//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false';
++        var scriptPath = '//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&language='+language;
+ 
+         // If a Google API key is set, use it.
+         if (typeof gmap_api_key !== 'undefined' && gmap_api_key !== null) {
+diff --git a/web/modules/contrib/geofield_map/js/geofield_map.js b/web/modules/contrib/geofield_map/js/geofield_map.js
+index b4cb570..b4fca27 100644
+--- a/web/modules/contrib/geofield_map/js/geofield_map.js
++++ b/web/modules/contrib/geofield_map/js/geofield_map.js
+@@ -74,6 +74,7 @@
+     // Lead Google Maps library.
+     loadGoogle: function (mapid, callback) {
+       var self = this;
++      var language = $("html").attr("lang");
+ 
+       // Add the callback.
+       self.addCallback(callback);
+@@ -88,7 +89,7 @@
+         // Google maps isn't loaded so lazy load google maps.
+ 
+         // Default script path.
+-        var scriptPath = '//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places';
++        var scriptPath = '//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&language='+language;
+ 
+         // If a Google API key is set, use it.
+         if (typeof self.map_data[mapid]['gmap_api_key'] !== 'undefined' && self.map_data[mapid]['gmap_api_key'] !== null) {
+diff --git a/web/modules/contrib/menu_block b/web/modules/contrib/menu_block
+--- a/web/modules/contrib/menu_block
++++ b/web/modules/contrib/menu_block
+@@ -1 +1 @@
+-Subproject commit d88297c51179b4ab1b01175521239866506daee5
++Subproject commit d88297c51179b4ab1b01175521239866506daee5-dirty
