@@ -54,6 +54,15 @@ body.divisionsite{
 		}
 	}
 }
+@mixin activeicon{
+	background-color: #5cbec7;
+	a{
+		opacity: .4;
+	}
+}
+.division-cces .divisioniconsheader li.tid-1429{
+	@include activeicon();
+}
 .divisionfront{
 	.relatedinner{
 		.contenttype, .created{
