@@ -60,7 +60,9 @@ body.divisionsite{
 		opacity: .4;
 	}
 }
-.division-cces .divisioniconsheader li.tid-1429{
+.division-cces .divisioniconsheader li.tid-1429, 
+.division-sdp .divisioniconsheader li.tid-1437, 
+.specialprojects .divisioniconsheader li.tid-1440{
 	@include activeicon();
 }
 .divisionfront{

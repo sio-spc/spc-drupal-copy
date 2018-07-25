@@ -1523,7 +1523,7 @@
 
    function frieze(){
     $(".divisionsite .headertitle, .divisionsite .layout-primary-menu").appendTo(".divisionsite .frieze > div");
-    var newURL = window.location.protocol + "://" + window.location.host + "/" + window.location.pathname;
+    /*var newURL = window.location.protocol + "://" + window.location.host + "/" + window.location.pathname;
     var pathArray = window.location.pathname.split( '/' );
     if($("html").attr("lang") == "fr"){
       var firstfragment = pathArray[2];
@@ -1542,7 +1542,7 @@
           $(this).closest("li").addClass("active");
         }
       });
-    }
+    }*/
     
   }
 

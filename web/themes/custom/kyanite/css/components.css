@@ -1752,19 +1752,23 @@ body.divisionsite.path-cces h1 {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000363}}
-.division-cces .divisioniconsheader li.tid-1429 {
+.division-cces .divisioniconsheader li.tid-1429,
+.division-sdp .divisioniconsheader li.tid-1437,
+.specialprojects .divisioniconsheader li.tid-1440 {
   background-color: #5cbec7;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000359}}
-.division-cces .divisioniconsheader li.tid-1429 a {
+.division-cces .divisioniconsheader li.tid-1429 a,
+.division-sdp .divisioniconsheader li.tid-1437 a,
+.specialprojects .divisioniconsheader li.tid-1440 a {
   opacity: .4;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000370}}
 .divisionfront .relatedinner .contenttype, .divisionfront .relatedinner .created {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000375}}
 .divisionfront.division-cces .paragraph--type--bp-carousel {
   margin: auto;
   margin-top: 2em;
@@ -1772,7 +1776,7 @@ body.divisionsite.path-cces h1 {
   float: none;
 }
 @media (min-width: 778px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000375}}
   .divisionfront.division-cces .paragraph--type--bp-carousel {
     max-width: 70%;
   }
