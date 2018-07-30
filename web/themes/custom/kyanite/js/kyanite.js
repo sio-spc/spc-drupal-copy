@@ -1340,6 +1340,9 @@
     }
     );
   }
+  function spcResources(){
+    $(".spcgrid.resources .views-row a").attr("target","_blank");
+  }
 
   Drupal.behaviors.kyanite = {
     attach: function (context, settings) {
@@ -1361,6 +1364,7 @@
       YouTubeModal();
       paragraphAccordion();
       spcGridView();   
+      spcResources();
       authorTweaks(); 
       eventView();  
 
@@ -1723,7 +1727,7 @@
     $(".page-node-type-news #block-simplesocialiconsblock").insertBefore(".field-node-post-date");
     $(".page-node-type-events #block-simplesocialiconsblock").insertBefore(".field-field-event-date");
 
-    $(".spc-grid.resources .views-row a,a[href*='publications-content']").attr("target","_blank");
+    $("a[href*='publications-content']").attr("target","_blank");
 
 
     
