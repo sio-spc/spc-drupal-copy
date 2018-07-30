@@ -1612,11 +1612,6 @@
     $(video).click();
   }
 
-  function spcResources(){
-    $(".spcgrid.resources .views-row a").attr("target","_blank");
-  }
-  
-
 
 
   $(window).on("load scroll resize orientationchange", resizingTweaks);
@@ -1643,7 +1638,6 @@
     memberDefaultInfo();
 
     ccestweaks();
-    spcResources();
     
 
 // please do not try to optimize this by putting it into another document ready event handler
@@ -1729,7 +1723,7 @@
     $(".page-node-type-news #block-simplesocialiconsblock").insertBefore(".field-node-post-date");
     $(".page-node-type-events #block-simplesocialiconsblock").insertBefore(".field-field-event-date");
 
-    $("a[href*='publications-content']").attr("target","_blank");
+    $(".spc-grid.resources .views-row a,a[href*='publications-content']").attr("target","_blank");
 
 
     
