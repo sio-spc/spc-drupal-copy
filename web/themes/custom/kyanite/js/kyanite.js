@@ -1341,7 +1341,7 @@
     );
   }
   function spcResources(){
-    $(".spcgrid.resources .views-row a").attr("target","_blank");
+    $(".spcgrid.resources .views-row a, .contenttype-resource.views-row a").attr("target","_blank");
   }
 
   Drupal.behaviors.kyanite = {
