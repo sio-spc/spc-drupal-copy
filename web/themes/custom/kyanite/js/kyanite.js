@@ -1611,6 +1611,10 @@
     var video = $("#logoanimation");
     $(video).click();
   }
+
+  function spcResources(){
+    $(".spcgrid.resources .views-row a").attr("target","_blank");
+  }
   
 
 
@@ -1639,6 +1643,7 @@
     memberDefaultInfo();
 
     ccestweaks();
+    spcResources();
     
 
 // please do not try to optimize this by putting it into another document ready event handler
