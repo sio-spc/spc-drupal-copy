@@ -1089,15 +1089,19 @@
   function spcGridView(){
     consoleLog("function spcGridView");
     
-    $(".updates .kyanite-views-row-inner, .relatedcontent .item-list li, .resources .kyanite-views-row-inner, .relatedcontent .kyanite-views-row-inner, .paragraphfeaturedcontent ul.slides li").each(function(){
+    $(".updates .kyanite-views-row-inner, 
+      .relatedcontent .item-list li, 
+      .resources .kyanite-views-row-inner, 
+      .relatedcontent .kyanite-views-row-inner, 
+      .paragraphfeaturedcontent ul.slides li").each(function(){
       
       var thislink = $(this).find(".views-field-title a").attr("href");
       //$(this).find(".views-field-title a").hide();//hidden with css
       if($(this).find("> a").length){
         //do nothing.. it already has a link 
       }
-      else{
-        $(this).wrapInner('<a href="'+thislink+'"></a>');
+      else{/*disabled..  */
+        //$(this).wrapInner('<a href="'+thislink+'"></a>');
       }
 
     });
