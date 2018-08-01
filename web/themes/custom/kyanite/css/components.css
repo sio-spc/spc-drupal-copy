@@ -5788,7 +5788,7 @@ body.has-background-image .site-footer {
   text-decoration: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003247}}
-.spcgrid .views-row .kyanite-views-row-inner .views-field-nothing-1, .spcgrid .views-row .kyanite-views-row-inner .relatedinnertext, .spcgrid .item-list li .views-field-nothing-1, .spcgrid .item-list li .relatedinnertext {
+.spcgrid .views-row .kyanite-views-row-inner .bottomcaption, .spcgrid .views-row .kyanite-views-row-inner .relatedinnertext, .spcgrid .item-list li .bottomcaption, .spcgrid .item-list li .relatedinnertext {
   padding: 1em;
   display: block;
   position: relative;
