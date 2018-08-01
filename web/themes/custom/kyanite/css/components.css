@@ -6119,7 +6119,7 @@ body.has-background-image .site-footer {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_spcgrid\.scss}line{font-family:\00003520}}
-.bottomcaption {
+.bottomcaptioninner {
   position: absolute;
   bottom: 5px;
   width: 100%;
