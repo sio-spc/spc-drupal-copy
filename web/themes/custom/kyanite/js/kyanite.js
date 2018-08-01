@@ -1087,7 +1087,7 @@
   
 
   function spcGridView(){
-    consoleLog("function spcGridView");
+    /*consoleLog("function spcGridView");
     
     $(".updates .kyanite-views-row-inner, 
       .relatedcontent .item-list li, 
@@ -1100,11 +1100,11 @@
       if($(this).find("> a").length){
         //do nothing.. it already has a link 
       }
-      else{/*disabled..  */
+      else{
         //$(this).wrapInner('<a href="'+thislink+'"></a>');
       }
 
-    });
+    });*/
   }
   function relatedContentView(){
     var pagelanguage = $("html").attr("lang");
