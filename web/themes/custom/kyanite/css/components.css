@@ -5220,17 +5220,18 @@ body::-webkit-scrollbar-track:horizontal {
   z-index: 4;
   position: relative;
   top: .25em;
+  margin-left: .25em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_simplesocialiconsblock\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_simplesocialiconsblock\.scss}line{font-family:\0000310}}
 #block-simplesocialiconsblock ul.soc {
   display: inline-block;
   margin: 0 auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_simplesocialiconsblock\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_simplesocialiconsblock\.scss}line{font-family:\0000313}}
 #block-simplesocialiconsblock ul.soc li {
   margin-right: .25em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_simplesocialiconsblock\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_simplesocialiconsblock\.scss}line{font-family:\0000315}}
 #block-simplesocialiconsblock ul.soc li a {
   width: 25px;
   height: 25px;
@@ -5239,6 +5240,22 @@ body::-webkit-scrollbar-track:horizontal {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_simplesocialiconsblock\.scss}line{font-family:\0000321}}
+#block-simplesocialiconsblock ul.soc li a.soc-twitter {
+  background-color: #1da1f2 !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_simplesocialiconsblock\.scss}line{font-family:\0000324}}
+#block-simplesocialiconsblock ul.soc li a.soc-linkedin {
+  background-color: #0076b5 !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_simplesocialiconsblock\.scss}line{font-family:\0000327}}
+#block-simplesocialiconsblock ul.soc li a.soc-facebook {
+  background-color: #3d5a9b !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_simplesocialiconsblock\.scss}line{font-family:\0000330}}
+#block-simplesocialiconsblock ul.soc li a.soc-google {
+  background-color: #db4437 !important;
 }
 @media (max-width: 767px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_simplesocialiconsblock\.scss}line{font-family:\000035}}

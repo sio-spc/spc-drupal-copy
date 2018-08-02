@@ -18,6 +18,18 @@
 				line-height: 25px;
 				font-size: 14px;
 				@include radius(50%);
+				&.soc-twitter{
+					background-color:#1da1f2!important;
+				}
+				&.soc-linkedin{
+					background-color:#0076b5!important;
+				}
+				&.soc-facebook{
+					background-color:#3d5a9b!important;
+				}
+				&.soc-google{
+					background-color:#db4437!important;
+				}
 			}
 		}
 	}
