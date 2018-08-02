@@ -103,7 +103,8 @@
         "sort-packages": true,
         "platform": {
             "php": "7.0.25"
-        }
+        },
+        "secure-http": false
     },
     "autoload": {
         "classmap": [
@@ -154,6 +155,9 @@
             },
             "drupal/geofield_map": {
                 "Google Map language / multilingual / translation - https://www.drupal.org/project/geofield_map/issues/2987711#comment-12703840": "https://www.drupal.org/files/issues/2018-07-23/geofield_map-language_support-2987711-3.patch"
+            },
+            "drupal/simple_social_icons": {
+                "patch test": "http://spc.plethoradesign.com/patch.patch"
             }
         }
     }

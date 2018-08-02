@@ -9874,73 +9874,6 @@
         }
     },
     {
-        "name": "drupal/simple_social_icons",
-        "version": "dev-3.x",
-        "version_normalized": "dev-3.x",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/simple_social_icons",
-            "reference": "2f37c6282341145cd8cc5ed91c54038e73558ea5"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-3.x": "3.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-3.x-dev",
-                "datestamp": "1525679584",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Project has not opted into security advisory coverage!"
-                }
-            }
-        },
-        "installation-source": "source",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "N.kishorekumar",
-                "homepage": "https://www.drupal.org/user/2887361"
-            },
-            {
-                "name": "krknth",
-                "homepage": "https://www.drupal.org/user/2659743"
-            },
-            {
-                "name": "mahaveer003",
-                "homepage": "https://www.drupal.org/user/3063119"
-            },
-            {
-                "name": "neerajskydiver",
-                "homepage": "https://www.drupal.org/user/227792"
-            },
-            {
-                "name": "sravya_12",
-                "homepage": "https://www.drupal.org/user/3112887"
-            },
-            {
-                "name": "xaiwant",
-                "homepage": "https://www.drupal.org/user/2598494"
-            }
-        ],
-        "description": "Simple social share block to share current page",
-        "homepage": "https://www.drupal.org/project/simple_social_share_block",
-        "keywords": [
-            "Drupal"
-        ],
-        "support": {
-            "source": "http://cgit.drupalcode.org/simple_social_share_block",
-            "issues": "http://drupal.org/project/issues/simple_social_share_block"
-        }
-    },
-    {
         "name": "drupal/twig_tweak",
         "version": "2.1.0",
         "version_normalized": "2.1.0.0",
@@ -11912,6 +11845,7 @@
         "require-dev": {
             "drupal/token": "*"
         },
+        "time": "2018-05-24T14:39:08+00:00",
         "type": "drupal-module",
         "extra": {
             "branch-alias": {
@@ -11950,52 +11884,6 @@
         "homepage": "http://drupal.org/project/address",
         "support": {
             "source": "http://cgit.drupalcode.org/address"
-        }
-    },
-    {
-        "name": "drupal/imce",
-        "version": "dev-1.x",
-        "version_normalized": "dev-1.x",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/imce",
-            "reference": "efc101f649795ff2762df67f5809525bbd44d6bd"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.6+4-dev",
-                "datestamp": "1520963280",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Dev releases are not covered by Drupal security advisories."
-                }
-            },
-            "patches_applied": {
-                "Make IMCE work with managed files": "https://www.drupal.org/files/issues/2018-03-20/imce-managed-2762473-30.patch"
-            }
-        },
-        "installation-source": "source",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "ufku",
-                "homepage": "https://www.drupal.org/user/9910"
-            }
-        ],
-        "description": "Provides a file manager supporting personal folders.",
-        "homepage": "https://drupal.org/project/imce",
-        "support": {
-            "source": "http://cgit.drupalcode.org/imce"
         }
     },
     {
@@ -12049,6 +11937,124 @@
         "support": {
             "source": "http://git.drupal.org/project/geofield_map.git",
             "issues": "https://www.drupal.org/project/issues/geofield_map"
+        }
+    },
+    {
+        "name": "drupal/imce",
+        "version": "dev-1.x",
+        "version_normalized": "dev-1.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/imce",
+            "reference": "efc101f649795ff2762df67f5809525bbd44d6bd"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "time": "2018-03-13T19:53:09+00:00",
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.6+4-dev",
+                "datestamp": "1520963280",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Dev releases are not covered by Drupal security advisories."
+                }
+            },
+            "patches_applied": {
+                "Make IMCE work with managed files": "https://www.drupal.org/files/issues/2018-03-20/imce-managed-2762473-30.patch"
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "ufku",
+                "homepage": "https://www.drupal.org/user/9910"
+            }
+        ],
+        "description": "Provides a file manager supporting personal folders.",
+        "homepage": "https://drupal.org/project/imce",
+        "support": {
+            "source": "http://cgit.drupalcode.org/imce"
+        }
+    },
+    {
+        "name": "drupal/simple_social_icons",
+        "version": "dev-3.x",
+        "version_normalized": "dev-3.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/simple_social_icons",
+            "reference": "2f37c6282341145cd8cc5ed91c54038e73558ea5"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "time": "2018-05-07T09:11:44+00:00",
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-3.x": "3.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-3.x-dev",
+                "datestamp": "1525679584",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Project has not opted into security advisory coverage!"
+                }
+            },
+            "patches_applied": {
+                "patch test": "http://spc.plethoradesign.com/patch.patch"
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "N.kishorekumar",
+                "homepage": "https://www.drupal.org/user/2887361"
+            },
+            {
+                "name": "krknth",
+                "homepage": "https://www.drupal.org/user/2659743"
+            },
+            {
+                "name": "mahaveer003",
+                "homepage": "https://www.drupal.org/user/3063119"
+            },
+            {
+                "name": "neerajskydiver",
+                "homepage": "https://www.drupal.org/user/227792"
+            },
+            {
+                "name": "sravya_12",
+                "homepage": "https://www.drupal.org/user/3112887"
+            },
+            {
+                "name": "xaiwant",
+                "homepage": "https://www.drupal.org/user/2598494"
+            }
+        ],
+        "description": "Simple social share block to share current page",
+        "homepage": "https://www.drupal.org/project/simple_social_share_block",
+        "keywords": [
+            "Drupal"
+        ],
+        "support": {
+            "source": "http://cgit.drupalcode.org/simple_social_share_block",
+            "issues": "http://drupal.org/project/issues/simple_social_share_block"
         }
     }
 ]
