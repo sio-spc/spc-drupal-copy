@@ -55,12 +55,21 @@
 	&.paragraph--type--bp-columns{
 		> .paragraph__column{
 			display: flex;
+			justify-content: space-between;
 			float: none;
 			padding-bottom: 0;
+			@media (max-width: 767px){/*matches Paragraphs breakpoint*/
+				flex-wrap: wrap;
+			}
 			> div{
 				padding-bottom: 3em;
 				float: none!important;
 				box-sizing: content-box;
+				&.paragraph--type--bp-columns__4col, &.paragraph--type--bp-columns__5col, &.paragraph--type--bp-columns__6col{
+					@media (min-width: 480px) and (max-width: 767px){
+						width: 45%;
+					}
+				}
 			}
 		}
 	}
