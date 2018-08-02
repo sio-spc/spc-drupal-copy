@@ -157,7 +157,7 @@
                 "Google Map language / multilingual / translation - https://www.drupal.org/project/geofield_map/issues/2987711#comment-12703840": "https://www.drupal.org/files/issues/2018-07-23/geofield_map-language_support-2987711-3.patch"
             },
             "drupal/simple_social_icons": {
-                "patch test": "http://spc.plethoradesign.com/patch.patch"
+                "Uncaught TypeError: Cannot read property 'checked' of null - https://www.drupal.org/project/simple_social_icons/issues/2990246#comment-12715733": "https://www.drupal.org/files/issues/2018-08-02/simple_social_icons-2990246-12715730.patch"
             }
         }
     }

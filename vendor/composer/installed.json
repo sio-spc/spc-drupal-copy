@@ -12013,7 +12013,7 @@
                 }
             },
             "patches_applied": {
-                "patch test": "http://spc.plethoradesign.com/patch.patch"
+                "Uncaught TypeError: Cannot read property 'checked' of null - https://www.drupal.org/project/simple_social_icons/issues/2990246#comment-12715733": "https://www.drupal.org/files/issues/2018-08-02/simple_social_icons-2990246-12715730.patch"
             }
         },
         "installation-source": "source",
