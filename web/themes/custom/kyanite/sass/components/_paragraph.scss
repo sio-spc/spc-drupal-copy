@@ -68,6 +68,8 @@
 				&.paragraph--type--bp-columns__4col, &.paragraph--type--bp-columns__5col, &.paragraph--type--bp-columns__6col{
 					@media (min-width: 480px) and (max-width: 767px){
 						width: 45%;
+						padding-left: 0;
+						padding-right: 0;
 					}
 				}
 				.field-bp-image-field{
