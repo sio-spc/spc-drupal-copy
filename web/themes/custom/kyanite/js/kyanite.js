@@ -1087,13 +1087,9 @@
   
 
   function spcGridView(){
-    /*consoleLog("function spcGridView");
+    consoleLog("function spcGridView");
     
-    $(".updates .kyanite-views-row-inner, 
-      .relatedcontent .item-list li, 
-      .resources .kyanite-views-row-inner, 
-      .relatedcontent .kyanite-views-row-inner, 
-      .paragraphfeaturedcontent ul.slides li").each(function(){
+    $(".paragraphfeaturedcontent ul.slides li").each(function(){
       
       var thislink = $(this).find(".views-field-title a").attr("href");
       //$(this).find(".views-field-title a").hide();//hidden with css
@@ -1101,10 +1097,10 @@
         //do nothing.. it already has a link 
       }
       else{
-        //$(this).wrapInner('<a href="'+thislink+'"></a>');
+        $(this).wrapInner('<a href="'+thislink+'"></a>');
       }
 
-    });*/
+    });
   }
   function relatedContentView(){
     var pagelanguage = $("html").attr("lang");
@@ -1725,8 +1721,6 @@
     
 
     $("#block-simplesocialiconsblock").clone().attr("id","block-simplesocialiconsblock-mobile").prependTo("#maincontainer").parent();
-    $("#block-simplesocialiconsblock-mobile .kyanite-yammershare").removeClass("kyanite-yammershare").addClass("kyanite-yammershare-mobile");
-
 
     $(".page-node-type-news #block-simplesocialiconsblock").insertBefore(".field-node-post-date");
     $(".page-node-type-events #block-simplesocialiconsblock").insertBefore(".field-field-event-date");

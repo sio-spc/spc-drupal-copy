@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b41fcdbbb969a401efcc017089b8d54d",
+    "content-hash": "3bb249d7bbd83e1976e0a861633cca3e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1349,8 +1349,7 @@
             "homepage": "http://drupal.org/project/address",
             "support": {
                 "source": "http://cgit.drupalcode.org/address"
-            },
-            "time": "2018-05-24T14:39:08+00:00"
+            }
         },
         {
             "name": "drupal/addtocalendar",
@@ -3920,8 +3919,7 @@
             "homepage": "https://drupal.org/project/imce",
             "support": {
                 "source": "http://cgit.drupalcode.org/imce"
-            },
-            "time": "2018-03-13T19:53:09+00:00"
+            }
         },
         {
             "name": "drupal/inline_responsive_images",
@@ -5214,11 +5212,11 @@
         },
         {
             "name": "drupal/simple_social_icons",
-            "version": "dev-2.x",
+            "version": "dev-3.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/simple_social_icons",
-                "reference": "a77549b679ab697f776e4197a3b2c13392d61d8e"
+                "reference": "2f37c6282341145cd8cc5ed91c54038e73558ea5"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -5226,11 +5224,11 @@
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-2.x": "2.x-dev"
+                    "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.x-dev",
-                    "datestamp": "1520406184",
+                    "version": "8.x-3.x-dev",
+                    "datestamp": "1525679584",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -5275,7 +5273,8 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/simple_social_share_block",
                 "issues": "http://drupal.org/project/issues/simple_social_share_block"
-            }
+            },
+            "time": "2018-05-07 09:11:44"
         },
         {
             "name": "drupal/superfish",
@@ -5439,6 +5438,61 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "http://cgit.drupalcode.org/token"
+            }
+        },
+        {
+            "name": "drupal/twig_tweak",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/twig_tweak",
+                "reference": "8.x-2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/twig_tweak-8.x-2.1.zip",
+                "reference": "8.x-2.1",
+                "shasum": "ce1534d3270d916b55902c686057c0b5038d6b1d"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "suggest": {
+                "symfony/var-dumper": "better dump() function for debugging Twig variables"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.1",
+                    "datestamp": "1531889025",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Chi",
+                    "homepage": "https://www.drupal.org/user/556138"
+                }
+            ],
+            "description": "A Twig extension with some useful functions and filters for Drupal development.",
+            "homepage": "https://www.drupal.org/project/twig_tweak",
+            "keywords": [
+                "Drupal",
+                "Twig"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/twig_tweak",
+                "issues": "https://www.drupal.org/project/issues/twig_tweak"
             }
         },
         {
