@@ -1718,12 +1718,6 @@
     $("#block-views-block-featured-articles-block-1 header, #block-views-block-featured-articles-block-2 header, #block-views-block-publications-home-page-block-1 header, #block-views-block-publications-home-page-block-2 header, #block-views-block-kyanite-events-home header").each(function(){
       $(this).insertBefore($(this).parent().parent());
     });
-    
-
-    $("#block-simplesocialiconsblock").clone().attr("id","block-simplesocialiconsblock-mobile").prependTo("#maincontainer").parent();
-
-    $(".page-node-type-news #block-simplesocialiconsblock").insertBefore(".field-node-post-date");
-    $(".page-node-type-events #block-simplesocialiconsblock").insertBefore(".field-field-event-date");
 
     $("a[href*='publications-content']").attr("target","_blank");
 
