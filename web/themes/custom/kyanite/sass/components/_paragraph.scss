@@ -60,6 +60,7 @@
 			> div{
 				padding-bottom: 3em;
 				float: none!important;
+				box-sizing: content-box;
 			}
 		}
 	}
@@ -220,6 +221,9 @@
 	}
 	&:last-child{
 		padding-right: 0!important;
+	}
+	img{
+		display: block;
 	}
 }
 .paragraph--type--bp-blank .paragraph__column{
