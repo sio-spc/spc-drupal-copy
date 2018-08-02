@@ -2,3 +2,25 @@
 	position: absolute;
 	padding: 3vw;
 }
+#block-simplesocialiconsblock{
+	z-index: 4;
+	position: relative;
+	top: .25em;
+	ul.soc{
+		display: inline-block;
+		margin:0 auto;
+		li{
+			margin-right: .25em;
+			a{
+				width:25px;
+				height:25px;
+				line-height: 25px;
+				font-size: 14px;
+				@include radius(50%);
+			}
+		}
+	}
+	@media (max-width: 767px){
+		display: none;
+	}
+}

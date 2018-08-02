@@ -98,10 +98,10 @@
 }
 .field-field-city{
 	display: inline;
-	div{
-		display: inline;
-		border-right: 2px solid #ccc;
-	    padding-right: .75em;
-	    margin-right: .5em;
-	}
+}
+.field-field-city div, span.post-date{
+	display: inline;
+	border-right: 2px solid #ccc;
+    padding-right: .75em;
+    margin-right: .5em;
 }
