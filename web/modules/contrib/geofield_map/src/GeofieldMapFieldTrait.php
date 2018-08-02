@@ -269,7 +269,7 @@ trait GeofieldMapFieldTrait {
       if (is_a($item, '\Drupal\geofield\Plugin\Field\FieldType\GeofieldItem') && isset($item->value)) {
         $geometry = $this->geoPhpWrapper->load($item->value);
       }
-      elseif (preg_match('/^(POINT).*\(.*.*\)$/', $item)) {
+      elseif (preg_match('/^(POINT|LINESTRING|POLYGON|MULTIPOINT|MULTILINESTRING|MULTIPOLYGON|GEOMETRYCOLLECTION).*\(.*.*\)$/', $item)) {
         $geometry = $this->geoPhpWrapper->load($item);
       }
       if (isset($geometry)) {
@@ -756,7 +756,7 @@ trait GeofieldMapFieldTrait {
       ];
     }
     else {
-      $elements['map_marker_and_infowindow']['multivalue_split']['#description'] = $this->t('If checked, each field value will be split into each matching infowindow /geofield , following the same progressive order<br>(The Multiple Field settings from the View Display will be used otherwise)');
+      $elements['map_marker_and_infowindow']['multivalue_split']['#description'] = $this->t('If checked, each field value will be split into each matching infowindow /geofield value (as simple text), following the same progressive order. Note: No rewrite, links or replacements patterns might be applied.<br>(The Multiple Field settings from the View Display will be used otherwise).');
       $elements['map_marker_and_infowindow']['multivalue_split']['#states'] = [
         'visible' => [
           ':input[name="style_options[map_marker_and_infowindow][infowindow_field]"]' => $multivalue_fields_states,

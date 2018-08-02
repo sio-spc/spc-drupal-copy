@@ -92,7 +92,7 @@
     </footer>
   {% endif %}
 
-  <div class="blog-date-city">{{ content.field_city }} {{ node.getCreatedTime|format_date('14_nov_2017') }}</div>
+  <div class="blog-date-city">{{ content.field_city }} <span class="post-date">{{ node.getCreatedTime|format_date('14_nov_2017') }}</span><span class="simplesocialicons">{{ drupal_entity('block', 'simplesocialiconsblock') }}</span>
 
   <div{{ content_attributes }}>
   {{ content|without('field_city') }}

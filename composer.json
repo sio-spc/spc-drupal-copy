@@ -34,7 +34,7 @@
         "drupal/config_update": "1.5",
         "drupal/context_active_trail": "^1.0@RC",
         "drupal/convert_bundles": "^1.0@alpha",
-        "drupal/core": "8.5.5",
+        "drupal/core": "8.5.6",
         "drupal/devel": "^1.2",
         "drupal/easy_breadcrumb": "1.x-dev",
         "drupal/easy_install": "^10.1",

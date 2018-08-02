@@ -25,4 +25,14 @@ geofield_map.settings:
         markers_filesize:
           type: string
           label: 'Maximum file size'
-
+    geocoder:
+      type: mapping
+      label: 'Geocoder Settings'
+      mapping:
+        caching:
+          type: mapping
+          label: 'Cache Settings'
+          mapping:
+            clientside:
+              type: string
+              label: 'Type of Client Side Storage (None, Local or Session Storage)'
