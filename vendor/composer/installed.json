@@ -11748,77 +11748,6 @@
         ]
     },
     {
-        "name": "drupal/simple_social_icons",
-        "version": "dev-3.x",
-        "version_normalized": "dev-3.x",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/simple_social_icons",
-            "reference": "2f37c6282341145cd8cc5ed91c54038e73558ea5"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "time": "2018-05-07T09:11:44+00:00",
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-3.x": "3.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-3.x-dev",
-                "datestamp": "1525679584",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Project has not opted into security advisory coverage!"
-                }
-            },
-            "patches_applied": {
-                "Uncaught TypeError: Cannot read property 'checked' of null - https://www.drupal.org/project/simple_social_icons/issues/2990246#comment-12715733": "https://www.drupal.org/files/issues/2018-08-02/simple_social_icons-2990246-12715730.patch"
-            }
-        },
-        "installation-source": "source",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "N.kishorekumar",
-                "homepage": "https://www.drupal.org/user/2887361"
-            },
-            {
-                "name": "krknth",
-                "homepage": "https://www.drupal.org/user/2659743"
-            },
-            {
-                "name": "mahaveer003",
-                "homepage": "https://www.drupal.org/user/3063119"
-            },
-            {
-                "name": "neerajskydiver",
-                "homepage": "https://www.drupal.org/user/227792"
-            },
-            {
-                "name": "sravya_12",
-                "homepage": "https://www.drupal.org/user/3112887"
-            },
-            {
-                "name": "xaiwant",
-                "homepage": "https://www.drupal.org/user/2598494"
-            }
-        ],
-        "description": "Simple social share block to share current page",
-        "homepage": "https://www.drupal.org/project/simple_social_share_block",
-        "keywords": [
-            "Drupal"
-        ],
-        "support": {
-            "source": "http://cgit.drupalcode.org/simple_social_share_block",
-            "issues": "http://drupal.org/project/issues/simple_social_share_block"
-        }
-    },
-    {
         "name": "drupal/address",
         "version": "dev-1.x",
         "version_normalized": "dev-1.x",
@@ -12022,9 +11951,6 @@
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
                 }
-            },
-            "patches_applied": {
-                "[Suggestion] Let Editors add/delete/clone paragraphs When [Editing a translation] for already translated node which uses paragraphs field - https://www.drupal.org/project/paragraphs/issues/2924774": "https://www.drupal.org/files/issues/2018-06-03/2924774-29.patch"
             }
         },
         "installation-source": "dist",
@@ -12058,6 +11984,78 @@
         "homepage": "https://www.drupal.org/project/paragraphs",
         "support": {
             "source": "http://cgit.drupalcode.org/paragraphs"
+        }
+    },
+    {
+        "name": "drupal/simple_social_icons",
+        "version": "dev-3.x",
+        "version_normalized": "dev-3.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/simple_social_icons",
+            "reference": "2f37c6282341145cd8cc5ed91c54038e73558ea5"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "time": "2018-05-07T09:11:44+00:00",
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-3.x": "3.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-3.x-dev",
+                "datestamp": "1525679584",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Project has not opted into security advisory coverage!"
+                }
+            },
+            "patches_applied": {
+                "Uncaught TypeError: Cannot read property 'checked' of null - https://www.drupal.org/project/simple_social_icons/issues/2990246#comment-12715733": "https://www.drupal.org/files/issues/2018-08-02/simple_social_icons-2990246-12715730.patch",
+                "Double @ in Twitter 'via' - https://www.drupal.org/project/simple_social_icons/issues/2990361": "https://www.drupal.org/files/issues/2018-08-03/simple_social_icons-2990361-12716288.patch"
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "N.kishorekumar",
+                "homepage": "https://www.drupal.org/user/2887361"
+            },
+            {
+                "name": "krknth",
+                "homepage": "https://www.drupal.org/user/2659743"
+            },
+            {
+                "name": "mahaveer003",
+                "homepage": "https://www.drupal.org/user/3063119"
+            },
+            {
+                "name": "neerajskydiver",
+                "homepage": "https://www.drupal.org/user/227792"
+            },
+            {
+                "name": "sravya_12",
+                "homepage": "https://www.drupal.org/user/3112887"
+            },
+            {
+                "name": "xaiwant",
+                "homepage": "https://www.drupal.org/user/2598494"
+            }
+        ],
+        "description": "Simple social share block to share current page",
+        "homepage": "https://www.drupal.org/project/simple_social_share_block",
+        "keywords": [
+            "Drupal"
+        ],
+        "support": {
+            "source": "http://cgit.drupalcode.org/simple_social_share_block",
+            "issues": "http://drupal.org/project/issues/simple_social_share_block"
         }
     }
 ]

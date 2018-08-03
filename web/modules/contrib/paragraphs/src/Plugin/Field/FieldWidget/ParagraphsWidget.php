@@ -2508,7 +2508,7 @@ class ParagraphsWidget extends WidgetBase {
    *   TRUE if we can allow reference changes, otherwise FALSE.
    */
   protected function allowReferenceChanges() {
-    return !$this->isTranslating || \Drupal::configFactory()->getEditable('paragraphs.settings')->get('allow_reference_changes');
+    return !$this->isTranslating;
   }
 
   /**
