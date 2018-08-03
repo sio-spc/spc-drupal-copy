@@ -1242,6 +1242,7 @@
     $(".field-field-alignment").each(
       function(){
         $(this).closest(".paragraph").addClass("align-"+$(this).text().trim());
+        $(this).insertAfter($(this).closest(".paragraph"));
       });
   }
 
