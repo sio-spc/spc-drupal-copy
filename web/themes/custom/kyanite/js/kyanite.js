@@ -1238,6 +1238,13 @@
     $(".paragraph--type--bp-accordion .card-header.panel-heading:first-child a").trigger("click");
   }
 
+  function paragraphColumnEqualTweaks(){
+    $(".field-field-alignment").each(
+      function(){
+        $(this).closest(".paragraph").addClass("align-"+$(this).text());
+      });
+  }
+
   function authorTweaks(){
     //consoleLog("authorTweaks");
     if($("#block-views-block-author-block-1 .views-row").length){
@@ -1653,8 +1660,8 @@
     paragraphCarouselTweaks();
     paragraphGalleryTweaks();
     paragraphImageTweaks();
-
     paragraphtabs();
+    paragraphColumnEqualTweaks();
 
     spcFeaturedImageTweaks();
 
