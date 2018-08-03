@@ -1067,3 +1067,8 @@ body.specialprojects #maincontainer {
 span.simplesocialicons div {
   display: inline-block;
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003799}}
+.field-field-division {
+  clear: both;
+}
