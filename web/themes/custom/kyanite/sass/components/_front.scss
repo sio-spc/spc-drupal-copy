@@ -267,6 +267,9 @@
 	}
 }
 #block-views-block-home-page-featured-content-block-1{
+	> div{
+		height: 100%;
+	}
 	.views-field-view-node{
 		display: none;
 	}
