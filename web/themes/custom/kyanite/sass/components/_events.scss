@@ -335,6 +335,26 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 			padding-top: 0;
 			padding-bottom: .5em;
 			border-bottom: none;
+			@media (min-width: 1600px) and (max-width: 1699px){
+				&:nth-child(4){
+					display: none;
+				}
+			}
+			@media (min-width: 1700px) and (max-width: 1799px){
+				&:nth-child(5){
+					display: none;
+				}
+			}
+			@media (min-width: 1800px) and (max-width: 1899px){
+				&:nth-child(6){
+					display: none;
+				}
+			}
+			@media (min-width: 1900px) and (max-width: 1999px){
+				&:nth-child(7){
+					display: none;
+				}
+			}
 			&:first-child{
 				padding-top:0;
 			}
