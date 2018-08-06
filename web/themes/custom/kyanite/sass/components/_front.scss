@@ -94,6 +94,11 @@
 					background-color: #fff;
 				}
 			}
+			.layout-content-66-33 > div{
+				div:last-child{
+					background-color: #c5edf0;
+				}
+			}
 			.layout-content-66-33, .updates, #block-views-block-divisions-block-1, .layout-content-bottom-66-33 > div{
 				@media (max-width: 1279px){
 					max-width: 95%;
