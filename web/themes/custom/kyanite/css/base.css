@@ -1072,3 +1072,8 @@ span.simplesocialicons div {
 .field-field-division {
   clear: both;
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/base\/_elements\.scss}line{font-family:\00003802}}
+#block-tags, #block-countries {
+  margin-bottom: 1em;
+}
