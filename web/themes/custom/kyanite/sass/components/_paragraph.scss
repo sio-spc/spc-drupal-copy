@@ -85,6 +85,9 @@
 	}
 }
 .paragraph--bp-accordion--container{
+  .card-header{
+  	clear: both;
+  }
   .paragraph--type--bp-simple{
     .field-type-text-long{
       padding: 1em;
