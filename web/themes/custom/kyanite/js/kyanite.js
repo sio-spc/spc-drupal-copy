@@ -1677,7 +1677,7 @@
       
       $(".eventsdateragepager .nav.next").click(function(){
         var min = $("#edit-field-event-dates-value-min").val().split(" ");
-        if(max.includes("+")){
+        if(min.includes("+")){
           var minval = min[0].split("+");
           var minval = parseFloat(minval[1]);
         }
