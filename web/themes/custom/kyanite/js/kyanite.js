@@ -1639,8 +1639,12 @@
         var max = $("#edit-field-event-dates-value-max").val().split(" ");
         var maxval = max[0].split("+");
         var maxval = parseFloat(maxval[1])-1;
+        var plusminus = "+";
+        if(maxval < 0){
+          plusminus = "-";
+        }
         consoleLog("maxval: " + maxval); 
-        $("#edit-field-event-dates-value-max").val("+"+maxval+" months");
+        $("#edit-field-event-dates-value-max").val(plusminus+maxval+" months");
       });
       
       $(".eventsdateragepager .nav.next").click(function(){
