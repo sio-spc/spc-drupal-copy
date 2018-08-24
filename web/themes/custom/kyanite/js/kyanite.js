@@ -1694,7 +1694,7 @@
         else{
           var minplusminus = "";
         }
-        $("#edit-field-event-dates-value-min").val(minplusminus+minval+" months");
+        $("#edit-field-event-dates-value-min").val(minplusminus+minval+" months").change();
 
         //max
         var max = $("#edit-field-event-dates-value-max").val().split(" ");
@@ -1714,10 +1714,10 @@
         else{
           var maxplusminus = "";
         }
-        $("#edit-field-event-dates-value-max").val(maxplusminus+maxval+" months");
+        $("#edit-field-event-dates-value-max").val(maxplusminus+maxval+" months").change();
 
         
-        $("form#views-exposed-form-events-page-1").submit();
+        //$("form#views-exposed-form-events-page-1").submit();
 
       });
       
