@@ -1682,7 +1682,7 @@
           var minval = parseFloat(minval[1]);
         }
         else{
-          var maxval = max[0];
+          var minval = min[0];
         }
         var minval = minval+1;
         consoleLog("minval: " + minval); 
