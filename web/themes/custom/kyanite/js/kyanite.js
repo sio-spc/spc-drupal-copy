@@ -1626,7 +1626,7 @@
 
   function eventDateRangePager(){
     $(".eventsdateragepager").each(function(){
-      $(this).find(".views-exposed-form").append("<a class='nav prev'>Prev</a><a class='nav next'>Next</a>");
+      $(this).find(".views-exposed-form").append("<a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a>");
       $(".eventsdateragepager .nav.next").click(function(){
         var min = $("#edit-field-event-dates-value-min").val().split(" ");
         var minval = min[0].split("+");
