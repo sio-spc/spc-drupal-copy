@@ -1639,7 +1639,7 @@
           var minplusminus = "+";
         }
         else{
-          var minplusminus = "-";
+          var minplusminus = "";
         }
         consoleLog("minval: " + minval); 
         consoleLog(minplusminus+minval+" months");
@@ -1654,7 +1654,7 @@
           var maxplusminus = "+";
         }
         else{
-          var maxplusminus = "-";
+          var maxplusminus = "";
         }
         
         consoleLog("maxval: " + maxval); 
