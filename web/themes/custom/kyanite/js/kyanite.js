@@ -1634,15 +1634,18 @@
     consoleLog("active year: " + activeyear + ", active month: " + activemonth);
 
     if((activemonth > 1) && (activemonth < 12)) {
+      consoleLog("between 1 and 12");
       $(".eventsdateragepager .nav.prev").attr("href","/events?date="+activeyear+"-"+parseFloat(activemonth)-1);
       $(".eventsdateragepager .nav.next").attr("href","/events?date="+activeyear+"-"+parseFloat(activemonth)+1);
     }
     if(activemonth == 1){
+      consoleLog("January");
       var previousyear = activeyear-1;
       $(".eventsdateragepager .nav.prev").attr("href","/events?date="+previousyear+"-12");
       $(".eventsdateragepager .nav.next").attr("href","/events?date="+activeyear+"-02");
     }
     if(activemonth == 12){
+      consoleLog("December");
       var nextyear = activeyear+1;
       $(".eventsdateragepager .nav.prev").attr("href","/events?date="+activeyear+"-11");
       $(".eventsdateragepager .nav.next").attr("href","/events?date="+nextyear+"-01");
