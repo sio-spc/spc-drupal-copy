@@ -1633,10 +1633,11 @@
         var min = $("#edit-field-event-dates-value-min").val().split(" ");
         var minval = min[0].split("+");
         var minplusminus = "";
+        
+        var minval = parseFloat(minval[1])-1;
         if(minval >= 0){
           minplusminus = "+";
         }
-        var minval = parseFloat(minval[1])-1;
         consoleLog("minval: " + minval); 
         consoleLog(minplusminus+minval+" months");
         $("#edit-field-event-dates-value-min").val(minplusminus+minval+" months");
@@ -1644,10 +1645,11 @@
         var max = $("#edit-field-event-dates-value-max").val().split(" ");
         var maxval = max[0].split("+");
         var maxplusminus = "";
+        
+        var maxval = parseFloat(maxval[1])-1;
         if(maxval >= 0){
           maxplusminus = "+";
         }
-        var maxval = parseFloat(maxval[1])-1;
         
         consoleLog("maxval: " + maxval); 
         consoleLog(maxplusminus+maxval+" months");
