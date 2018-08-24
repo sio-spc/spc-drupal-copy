@@ -1684,9 +1684,18 @@
         else{
           var minval = min[0];
         }
-        var minval = minval+1;
+        var minval = parseFloat(minval)+1;
         consoleLog("minval: " + minval); 
-        $("#edit-field-event-dates-value-min").val("+"+minval+" months");
+
+
+        if(minval >= 0){
+          var minplusminus = "+";
+        }
+        else{
+          var minplusminus = "";
+        }
+
+        $("#edit-field-event-dates-value-min").val(minplusminus+minval+" months");
 
         var max = $("#edit-field-event-dates-value-max").val().split(" ");
         var maxval = max[0].split("+");
