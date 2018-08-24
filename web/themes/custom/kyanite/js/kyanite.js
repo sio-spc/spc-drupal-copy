@@ -1634,7 +1634,7 @@
         var minval = minval[1];
         consoleLog("minval: " + minval);
          
-        //$("#edit-field-event-dates-value-min").val("+"+minval+" months");
+        $("#edit-field-event-dates-value-min").val("+"+minval+" months");
       });
     });
   }
