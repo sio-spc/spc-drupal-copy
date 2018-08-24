@@ -1626,14 +1626,15 @@
 
   function eventDateRangePager(){
     $(".eventsdateragepager").each(function(){
-      $(this).find(".views-exposed-form").append("<a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a>");
+      $(this).find(".views-exposed-form").append("<a href='#' class='nav prev'>Prev</a><a href='#' class='nav next'>Next</a>");
       $(".eventsdateragepager .nav.next").click(function(){
+        consoleLog("next");
         var min = $("#edit-field-event-dates-value-min").val().split(" ");
         var minval = min[0].split("+");
         var minval = minval[1];
         consoleLog("minval: " + minval);
          
-        $("#edit-field-event-dates-value-min").val("+"+minval+" months");
+        //$("#edit-field-event-dates-value-min").val("+"+minval+" months");
       });
     });
   }
