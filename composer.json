@@ -35,7 +35,6 @@
         "drupal/context_active_trail": "^1.0@RC",
         "drupal/convert_bundles": "^1.0@alpha",
         "drupal/core": "8.5.6",
-        "drupal/date_pager": "1.x-dev",
         "drupal/devel": "^1.2",
         "drupal/easy_breadcrumb": "1.x-dev",
         "drupal/easy_install": "^10.1",
@@ -142,7 +141,8 @@
                 "Entity Links fields does not have translation support - https://www.drupal.org/project/drupal/issues/2877994#comment-12539299": "https://www.drupal.org/files/issues/2018-03-22/2877994-19.patch",
                 "HTML head has alternate hreflang links to unpublished translations - https://www.drupal.org/project/drupal/issues/2521782": "https://www.drupal.org/files/issues/2018-03-14/drupal-alternate_hreflang_unpublished_with_test-2521782-57.patch",
                 "The Views integration Datetime Range fields should extend the views integration for regular Datetime fields - https://www.drupal.org/node/2786577": "https://www.drupal.org/files/issues/2786577-270_0.patch",
-                "View output is not used for entityreference options - https://www.drupal.org/project/drupal/issues/2174633#comment-12518942": "https://www.drupal.org/files/issues/2018-03-09/drupal-use_view_output_for_entityreference_options-2174633-206.patch"
+                "View output is not used for entityreference options - https://www.drupal.org/project/drupal/issues/2174633#comment-12518942": "https://www.drupal.org/files/issues/2018-03-09/drupal-use_view_output_for_entityreference_options-2174633-206.patch",
+                "The Views integration Datetime Range fields should extend the views integration for regular Datetime fields - https://www.drupal.org/project/drupal/issues/2786577": "https://www.drupal.org/files/issues/2786577-270_0.patch"
             },
             "drupal/imce": {
                 "Make IMCE work with managed files": "https://www.drupal.org/files/issues/2018-03-20/imce-managed-2762473-30.patch",
