@@ -1629,40 +1629,27 @@
     
     //consoleLog("active year and month: " + $(".date-pager .pager__item__month.is-active time").attr("datetime"));
     var activedate = $(".date-pager .pager__item__month.is-active time").attr("datetime").split("-");
-    var activeyear = activedate[0];
-    var activemonth = activedate[1];
+    var activeyear = parseFloat(activedate[0]);
+    var activemonth = parseFloat(activedate[1]);
     consoleLog("active year: " + activeyear + ", active month: " + activemonth);
 
-//   $(".eventsdateragepager .nav.prev")
+    if((activemonth > 1) && (activemonth < 12)) {
+      $(".eventsdateragepager .nav.prev").attr("href","/events?date="+activeyear+"-"+parseFloat(activemonth)-1);
+      $(".eventsdateragepager .nav.next").attr("href","/events?date="+activeyear+"-"+parseFloat(activemonth)+1);
+    }
+    if(activemonth == 1){
+      var previousyear = activeyear-1;
+      $(".eventsdateragepager .nav.prev").attr("href","/events?date="+previousyear+"-12");
+      $(".eventsdateragepager .nav.next").attr("href","/events?date="+activeyear+"-02");
+    }
+    if(activemonth == 12){
+      var nextyear = activeyear+1;
+      $(".eventsdateragepager .nav.prev").attr("href","/events?date="+activeyear+"-11");
+      $(".eventsdateragepager .nav.next").attr("href","/events?date="+nextyear+"-01");
+    }
+  
     
 
-    
-
-
-    $(".eventsdateragepager .nav.prev").click(function(){
-
-      monthincremented = parseFloat(monthincremented)-1;
-      consoleLog("monthbefore: " + monthincremented);
-      if (0 <= monthincremented && monthincremented <= 11) {
-      }
-      else{
-        monthincremented = 11;
-        $('.eventmonth').text(months[11]);
-      }
-      
-    });
-    
-    $(".eventsdateragepager .nav.next").click(function(){
-      monthincremented = parseFloat(monthincremented)+1;
-      if (0 <= monthincremented && monthincremented <= 11) {
-        $('.eventmonth').text(months[monthincremented]);
-      }
-      else{
-        monthincremented = 0;
-        $('.eventmonth').text(months[0]);
-      }
-
-    });
   }
 
 
