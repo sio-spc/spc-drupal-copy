@@ -1628,13 +1628,20 @@
     $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div><div class='eventmonth'></div>");
     var months    = ['January','February','March','April','May','June','July','August','September','October','November','December'];
     var now       = new Date();
-    var thisMonth = months[now.getMonth()]; // getMonth method returns the month of the date (0-January :: 11-December)
-    $('.eventmonth').text(thisMonth);
-    consoleLog(thisMonth);
-    consoleLog("June: " + months[5]);
+    var selectedmonth = months[now.getMonth()];//default / initial view
+    $('.eventmonth').text(months[selectedmonth]);
+    //consoleLog("June: " + months[5]);
 
 
     $(".eventsdateragepager .nav.prev").click(function(){
+
+      var monthbefore = parseFloat(selectedmonth)-1;
+      if (0 <= monthbefore && monthbefore <= 11) {
+        $('.eventmonth').text(months[monthbefore]);
+      }
+      else{
+        $('.eventmonth').text(months[11]);
+      }
 
       //min
       var min = $("input[name='field_event_dates_value[min]']").val().split(" ");
@@ -1681,6 +1688,14 @@
     });
     
     $(".eventsdateragepager .nav.next").click(function(){
+      var monthafter = parseFloat(selectedmonth)+1;
+      if (0 <= monthafter && monthafter <= 11) {
+        $('.eventmonth').text(months[monthafter]);
+      }
+      else{
+        $('.eventmonth').text(months[0]);
+      }
+
       //min
       var min = $("input[name='field_event_dates_value[min]']").val().split(" ");
       if(min.includes("+")){
