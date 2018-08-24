@@ -1627,15 +1627,35 @@
   function eventDateRangePager(){
     $(".eventsdateragepager").each(function(){
       $(this).find(".views-exposed-form").append("<a href='#' class='nav prev'>Prev</a><a href='#' class='nav next'>Next</a>");
+      
+      $(".eventsdateragepager .nav.prev").click(function(){
+        var min = $("#edit-field-event-dates-value-min").val().split(" ");
+        var minval = min[0].split("+");
+        var minval = parseFloat(minval[1])-1;
+        consoleLog("minval: " + minval); 
+        $("#edit-field-event-dates-value-min").val("+"+minval+" months");
+
+        var max = $("#edit-field-event-dates-value-max").val().split(" ");
+        var maxval = min[0].split("+");
+        var axval = parseFloat(maxval[1])-1;
+        consoleLog("maxval: " + maxval); 
+        $("#edit-field-event-dates-value-max").val("+"+maxval+" months");
+      });
+
       $(".eventsdateragepager .nav.next").click(function(){
-        consoleLog("next");
         var min = $("#edit-field-event-dates-value-min").val().split(" ");
         var minval = min[0].split("+");
         var minval = parseFloat(minval[1])+1;
-        consoleLog("minval: " + minval);
-         
+        consoleLog("minval: " + minval); 
         $("#edit-field-event-dates-value-min").val("+"+minval+" months");
+
+        var max = $("#edit-field-event-dates-value-max").val().split(" ");
+        var maxval = min[0].split("+");
+        var axval = parseFloat(maxval[1])+1;
+        consoleLog("maxval: " + maxval); 
+        $("#edit-field-event-dates-value-max").val("+"+maxval+" months");
       });
+      
     });
   }
 
