@@ -1692,9 +1692,9 @@
     });
     
     $(".eventsdateragepager .nav.next").click(function(){
-      var monthafter = parseFloat(monthincremented)+1;
-      if (0 <= monthafter && monthafter <= 11) {
-        $('.eventmonth').text(months[monthafter]);
+      monthincremented = parseFloat(monthincremented)+1;
+      if (0 <= monthincremented && monthincremented <= 11) {
+        $('.eventmonth').text(months[monthincremented]);
       }
       else{
         $('.eventmonth').text(months[0]);
