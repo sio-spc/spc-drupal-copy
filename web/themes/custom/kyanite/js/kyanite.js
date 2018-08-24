@@ -1629,8 +1629,8 @@
     
     //consoleLog("active year and month: " + $(".date-pager .pager__item__month.is-active time").attr("datetime"));
     var activedate = $(".date-pager .pager__item__month.is-active time").attr("datetime").split("-");
-    var activeyear = activatedate[0];
-    var activemonth = activatedate[1];
+    var activeyear = activedate[0];
+    var activemonth = activedate[1];
     consoleLog("active year: " + activeyear + ", active month: " + activemonth);
 
 //   $(".eventsdateragepager .nav.prev")
