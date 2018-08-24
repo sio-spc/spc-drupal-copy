@@ -1632,9 +1632,9 @@
       $(".eventsdateragepager .nav.prev").click(function(){
         var min = $("#edit-field-event-dates-value-min").val().split(" ");
         var minval = min[0].split("+");
-        var minplusminus = "+";
-        if(minval < 0){
-          minplusminus = "-";
+        var minplusminus = "";
+        if(minval >= 0){
+          minplusminus = "+";
         }
         var minval = parseFloat(minval[1])-1;
         consoleLog("minval: " + minval); 
@@ -1643,9 +1643,9 @@
 
         var max = $("#edit-field-event-dates-value-max").val().split(" ");
         var maxval = max[0].split("+");
-        var maxplusminus = "+";
-        if(maxval < 0){
-          maxplusminus = "-";
+        var maxplusminus = "";
+        if(maxval >= 0){
+          maxplusminus = "+";
         }
         var maxval = parseFloat(maxval[1])-1;
         
