@@ -1638,10 +1638,10 @@
 
     $(".eventsdateragepager .nav.prev").click(function(){
 
-      var monthbefore = parseFloat(monthincremented)-1;
-      consoleLog("monthbefore: " + monthbefore);
-      if (0 <= monthbefore && monthbefore <= 11) {
-        $('.eventmonth').text(months[monthbefore]);
+      monthincremented = parseFloat(monthincremented)-1;
+      consoleLog("monthbefore: " + monthincremented);
+      if (0 <= monthincremented && monthincremented <= 11) {
+        $('.eventmonth').text(months[monthincremented]);
       }
       else{
         $('.eventmonth').text(months[11]);
