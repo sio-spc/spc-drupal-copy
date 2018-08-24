@@ -1631,14 +1631,15 @@
 
       $(".eventsdateragepager .nav.prev").click(function(){
         var min = $("#edit-field-event-dates-value-min").val().split(" ");
-        var minval = min[0].split("+");
         
-        
-        var minval = parseFloat(minval[1])-1;
         if(minval >= 0){
+          var minval = min[0].split("+");
+          var minval = parseFloat(minval[1])-1;
           var minplusminus = "+";
         }
         else{
+          var minval = min[0];
+          var minval = parseFloat(minval[1])-1;
           var minplusminus = "";
         }
         consoleLog("minval: " + minval); 
