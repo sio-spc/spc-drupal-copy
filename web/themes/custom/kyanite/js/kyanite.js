@@ -1626,7 +1626,7 @@
 
   function eventDateRangePager(){
     $(".eventsdateragepager").each(function(){
-      $(this).find(".views-exposed-form").before("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
+      $(this).find("#block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
 
 
       $(".eventsdateragepager .nav.prev").click(function(){
