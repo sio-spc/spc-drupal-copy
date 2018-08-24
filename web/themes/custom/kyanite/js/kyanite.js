@@ -1644,6 +1644,7 @@
         $('.eventmonth').text(months[monthincremented]);
       }
       else{
+        monthincremented = 11;
         $('.eventmonth').text(months[11]);
       }
 
@@ -1697,6 +1698,7 @@
         $('.eventmonth').text(months[monthincremented]);
       }
       else{
+        monthincremented = 0;
         $('.eventmonth').text(months[0]);
       }
 
