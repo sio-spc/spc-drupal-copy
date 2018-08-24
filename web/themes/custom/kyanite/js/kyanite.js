@@ -1628,9 +1628,10 @@
     $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
     
     //consoleLog("active year and month: " + $(".date-pager .pager__item__month.is-active time").attr("datetime"));
-    var activedate = $(".date-pager .pager__item__month.is-active time").attr("datetime").split("-");
-    var activeyear = parseFloat(activedate[0]);
-    var activemonth = parseFloat(activedate[1]);
+    //var activedate = $(".date-pager .pager__item__month.is-active time").attr("datetime").split("-");
+    var date = new Date();
+    var activeyear = date.getFullYear();
+    var activemonth = date.getMonth()+1;
     consoleLog("active year: " + activeyear + ", active month: " + activemonth);
 
     if((activemonth > 1) && (activemonth < 12)) {
