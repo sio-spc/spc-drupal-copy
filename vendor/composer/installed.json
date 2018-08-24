@@ -11658,6 +11658,110 @@
         }
     },
     {
+        "name": "drupal/address",
+        "version": "dev-1.x",
+        "version_normalized": "dev-1.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/address",
+            "reference": "a29a522821025127519fc816e19105d9b220a45d"
+        },
+        "require": {
+            "commerceguys/addressing": "^1.0.0",
+            "drupal/core": "*"
+        },
+        "require-dev": {
+            "drupal/token": "*"
+        },
+        "time": "2018-05-24T14:39:08+00:00",
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.4+2-dev",
+                "datestamp": "1527153784",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Dev releases are not covered by Drupal security advisories."
+                }
+            },
+            "patches_applied": []
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "bojanz",
+                "homepage": "https://www.drupal.org/user/86106"
+            },
+            {
+                "name": "googletorp",
+                "homepage": "https://www.drupal.org/user/386230"
+            },
+            {
+                "name": "rszrama",
+                "homepage": "https://www.drupal.org/user/49344"
+            }
+        ],
+        "description": "Provides functionality for storing, validating and displaying international postal addresses.",
+        "homepage": "http://drupal.org/project/address",
+        "support": {
+            "source": "http://cgit.drupalcode.org/address"
+        }
+    },
+    {
+        "name": "drupal/imce",
+        "version": "dev-1.x",
+        "version_normalized": "dev-1.x",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/imce",
+            "reference": "efc101f649795ff2762df67f5809525bbd44d6bd"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "time": "2018-03-13T19:53:09+00:00",
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.6+4-dev",
+                "datestamp": "1520963280",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Dev releases are not covered by Drupal security advisories."
+                }
+            },
+            "patches_applied": {
+                "Make IMCE work with managed files": "https://www.drupal.org/files/issues/2018-03-20/imce-managed-2762473-30.patch"
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "ufku",
+                "homepage": "https://www.drupal.org/user/9910"
+            }
+        ],
+        "description": "Provides a file manager supporting personal folders.",
+        "homepage": "https://drupal.org/project/imce",
+        "support": {
+            "source": "http://cgit.drupalcode.org/imce"
+        }
+    },
+    {
         "name": "drupal/core",
         "version": "8.5.6",
         "version_normalized": "8.5.6.0",
@@ -11902,36 +12006,30 @@
         "description": "Drupal is an open source content management platform powering millions of websites and applications."
     },
     {
-        "name": "drupal/address",
+        "name": "drupal/date_pager",
         "version": "dev-1.x",
         "version_normalized": "dev-1.x",
         "source": {
             "type": "git",
-            "url": "https://git.drupal.org/project/address",
-            "reference": "a29a522821025127519fc816e19105d9b220a45d"
+            "url": "https://git.drupal.org/project/date_pager",
+            "reference": "b5bcfe42cf642faabebce761e543facf0a09ed95"
         },
         "require": {
-            "commerceguys/addressing": "^1.0.0",
-            "drupal/core": "*"
+            "drupal/core": "~8.0"
         },
-        "require-dev": {
-            "drupal/token": "*"
-        },
-        "time": "2018-05-24T14:39:08+00:00",
         "type": "drupal-module",
         "extra": {
             "branch-alias": {
                 "dev-1.x": "1.x-dev"
             },
             "drupal": {
-                "version": "8.x-1.4+2-dev",
-                "datestamp": "1527153784",
+                "version": "8.x-1.0-beta1+1-dev",
+                "datestamp": "1513690085",
                 "security-coverage": {
                     "status": "not-covered",
-                    "message": "Dev releases are not covered by Drupal security advisories."
+                    "message": "Project has not opted into security advisory coverage!"
                 }
-            },
-            "patches_applied": []
+            }
         },
         "installation-source": "source",
         "notification-url": "https://packages.drupal.org/8/downloads",
@@ -11940,22 +12038,18 @@
         ],
         "authors": [
             {
-                "name": "bojanz",
-                "homepage": "https://www.drupal.org/user/86106"
-            },
-            {
-                "name": "googletorp",
-                "homepage": "https://www.drupal.org/user/386230"
-            },
-            {
-                "name": "rszrama",
-                "homepage": "https://www.drupal.org/user/49344"
+                "name": "Kate Heinlein",
+                "homepage": "https://www.drupal.org/user/3541310"
             }
         ],
-        "description": "Provides functionality for storing, validating and displaying international postal addresses.",
-        "homepage": "http://drupal.org/project/address",
+        "description": "A date pager views plugin",
+        "homepage": "https://www.drupal.org/project/date_pager",
+        "keywords": [
+            "Drupal"
+        ],
         "support": {
-            "source": "http://cgit.drupalcode.org/address"
+            "source": "http://cgit.drupalcode.org/date_pager",
+            "issues": "http://drupal.org/project/issues/date_pager"
         }
     },
     {
@@ -12009,53 +12103,6 @@
         "support": {
             "source": "http://git.drupal.org/project/geofield_map.git",
             "issues": "https://www.drupal.org/project/issues/geofield_map"
-        }
-    },
-    {
-        "name": "drupal/imce",
-        "version": "dev-1.x",
-        "version_normalized": "dev-1.x",
-        "source": {
-            "type": "git",
-            "url": "https://git.drupal.org/project/imce",
-            "reference": "efc101f649795ff2762df67f5809525bbd44d6bd"
-        },
-        "require": {
-            "drupal/core": "~8.0"
-        },
-        "time": "2018-03-13T19:53:09+00:00",
-        "type": "drupal-module",
-        "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
-            "drupal": {
-                "version": "8.x-1.6+4-dev",
-                "datestamp": "1520963280",
-                "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Dev releases are not covered by Drupal security advisories."
-                }
-            },
-            "patches_applied": {
-                "Make IMCE work with managed files": "https://www.drupal.org/files/issues/2018-03-20/imce-managed-2762473-30.patch"
-            }
-        },
-        "installation-source": "source",
-        "notification-url": "https://packages.drupal.org/8/downloads",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "ufku",
-                "homepage": "https://www.drupal.org/user/9910"
-            }
-        ],
-        "description": "Provides a file manager supporting personal folders.",
-        "homepage": "https://drupal.org/project/imce",
-        "support": {
-            "source": "http://cgit.drupalcode.org/imce"
         }
     }
 ]
