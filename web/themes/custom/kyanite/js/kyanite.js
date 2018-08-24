@@ -1676,6 +1676,7 @@
       });
       
       $(".eventsdateragepager .nav.next").click(function(){
+        //min
         var min = $("#edit-field-event-dates-value-min").val().split(" ");
         if(min.includes("+")){
           var minval = min[0].split("+");
@@ -1687,21 +1688,35 @@
         var minval = parseFloat(minval)+1;
         consoleLog("minval: " + minval); 
 
-
         if(minval >= 0){
           var minplusminus = "+";
         }
         else{
           var minplusminus = "";
         }
-
         $("#edit-field-event-dates-value-min").val(minplusminus+minval+" months");
 
+        //max
         var max = $("#edit-field-event-dates-value-max").val().split(" ");
-        var maxval = max[0].split("+");
-        var maxval = parseFloat(maxval[1])+1;
+        if(max.includes("+")){
+          var maxval = max[0].split("+");
+          var maxval = parseFloat(maxval[1]);
+        }
+        else{
+          var maxval = max[0];
+        }
+        var maxval = parseFloat(maxval)+1;
         consoleLog("maxval: " + maxval); 
-        $("#edit-field-event-dates-value-max").val("+"+maxval+" months");
+
+        if(maxval >= 0){
+          var maxplusminus = "+";
+        }
+        else{
+          var maxplusminus = "";
+        }
+        $("#edit-field-event-dates-value-max").val(maxplusminus+maxval+" months");
+
+        
       });
       
     });
