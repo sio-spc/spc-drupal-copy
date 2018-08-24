@@ -1630,6 +1630,8 @@
 
 
       $(".eventsdateragepager .nav.prev").click(function(){
+
+        //min
         var min = $("#edit-field-event-dates-value-min").val().split(" ");
         if(min.includes("+")){
           var minval = min[0].split("+");
@@ -1649,6 +1651,27 @@
         consoleLog("minval: " + minval); 
         consoleLog(minplusminus+minval+" months");
         $("#edit-field-event-dates-value-min").val(minplusminus+minval+" months");
+
+        //max
+        var max = $("#edit-field-event-dates-value-max").val().split(" ");
+        if(max.includes("+")){
+          var maxval = max[0].split("+");
+          var maxval = parseFloat(maxval[1]);
+        }
+        else{
+          var maxval = max[0];
+        }
+        maxval = maxval-1;
+        
+        if(maxval >= 0){
+          var maxplusminus = "+";
+        }
+        else{
+          var maxplusminus = "";
+        }
+        consoleLog("maxval: " + maxval); 
+        consoleLog(maxplusminus+maxval+" months");
+        $("#edit-field-event-dates-value-max").val(maxplusminus+maxval+" months");
         
       });
       
