@@ -1624,14 +1624,31 @@
     $(video).click();
   }
 
+  function getQueryVariable(variable){
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+  }
+
   function eventDateRangePager(){
     $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
     
     //consoleLog("active year and month: " + $(".date-pager .pager__item__month.is-active time").attr("datetime"));
     //var activedate = $(".date-pager .pager__item__month.is-active time").attr("datetime").split("-");
     var date = new Date();
-    var activeyear = date.getFullYear();
-    var activemonth = date.getMonth()+1;
+    if(getQueryVariable("date") != false){//get vars
+      var activedate = getQueryVariable("date").split("-");
+      var activeyear = parseFloat(activedate[0]);
+      var activemonth = parseFloat(activedate[1]);
+    }
+    else{//default to today's date
+      var activeyear = date.getFullYear();
+      var activemonth = date.getMonth()+1;
+    }
     consoleLog("active year: " + activeyear + ", active month: " + activemonth);
 
     if((activemonth > 1) && (activemonth < 12)) {
