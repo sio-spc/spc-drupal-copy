@@ -1628,9 +1628,8 @@
     $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div><div class='eventmonth'></div>");
     var months    = ['January','February','March','April','May','June','July','August','September','October','November','December'];
     var now       = new Date();
-    var selectedmonth = months[now.getMonth()];//default / initial view
     consoleLog("this month: "+ selectedmonth);
-    $('.eventmonth').text(months[selectedmonth]);
+    $('.eventmonth').text(months[now.getMonth()]);
     //consoleLog("June: " + months[5]);
 
 
