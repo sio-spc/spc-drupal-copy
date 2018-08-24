@@ -1630,8 +1630,8 @@
     var now       = new Date();
     var thisMonth = months[now.getMonth()]; // getMonth method returns the month of the date (0-January :: 11-December)
     $('.eventmonth').text(thisMonth);
-    console.log(thisMonth);
-
+    consoleLog(thisMonth);
+    consoleLog("June: " + months[5]);
 
 
     $(".eventsdateragepager .nav.prev").click(function(){
