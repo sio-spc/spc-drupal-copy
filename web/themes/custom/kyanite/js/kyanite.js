@@ -1629,7 +1629,7 @@
     $(".eventsdateragepager .nav.prev").click(function(){
 
       //min
-      var min = $("#edit-field-event-dates-value-min").val().split(" ");
+      var min = $("input[name='field_event_dates_value[min]']").val().split(" ");
       if(min.includes("+")){
         var minval = min[0].split("+");
         var minval = parseFloat(minval[1]);
@@ -1647,7 +1647,7 @@
       }
       consoleLog("minval: " + minval); 
       consoleLog(minplusminus+minval+" months");
-      $("#edit-field-event-dates-value-min").val(minplusminus+minval+" months").change();
+      $("input[name='field_event_dates_value[min]']").val(minplusminus+minval+" months").change();
 
       //max
       var max = $("#edit-field-event-dates-value-max").val().split(" ");
