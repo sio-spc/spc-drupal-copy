@@ -1717,6 +1717,8 @@
         $("#edit-field-event-dates-value-max").val(maxplusminus+maxval+" months");
 
         
+        $("form#views-exposed-form-events-page-1").submit();
+
       });
       
     });
