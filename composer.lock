@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a99ad3e363fcfa75305cd2507b21a6a3",
+    "content-hash": "fea2ed2ddf532355fa0677f82f89045e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1350,7 +1350,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/address"
             },
-            "time": "2018-05-24 14:39:08"
+            "time": "2018-05-24T14:39:08+00:00"
         },
         {
             "name": "drupal/addtocalendar",
@@ -2775,6 +2775,52 @@
             }
         },
         {
+            "name": "drupal/date_pager",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/date_pager",
+                "reference": "b5bcfe42cf642faabebce761e543facf0a09ed95"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1+1-dev",
+                    "datestamp": "1513690085",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Kate Heinlein",
+                    "homepage": "https://www.drupal.org/user/3541310"
+                }
+            ],
+            "description": "A date pager views plugin",
+            "homepage": "https://www.drupal.org/project/date_pager",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/date_pager",
+                "issues": "http://drupal.org/project/issues/date_pager"
+            },
+            "time": "2017-12-19 13:24:51"
+        },
+        {
             "name": "drupal/devel",
             "version": "1.2.0",
             "source": {
@@ -3694,7 +3740,7 @@
                 },
                 "drupal": {
                     "version": "8.x-2.10",
-                    "datestamp": "1533031984",
+                    "datestamp": "1534863781",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3921,7 +3967,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/imce"
             },
-            "time": "2018-03-13 19:53:09"
+            "time": "2018-03-13T19:53:09+00:00"
         },
         {
             "name": "drupal/inline_responsive_images",
@@ -5235,6 +5281,10 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "Uncaught TypeError: Cannot read property 'checked' of null - https://www.drupal.org/project/simple_social_icons/issues/2990246#comment-12715733": "https://www.drupal.org/files/issues/2018-08-02/simple_social_icons-2990246-12715730.patch",
+                    "Double @ in Twitter 'via' - https://www.drupal.org/project/simple_social_icons/issues/2990361": "https://www.drupal.org/files/issues/2018-08-03/simple_social_icons-2990361-12716288.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -9652,7 +9702,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2018-07-23T10:51:47+00:00"
+            "time": "2018-07-23 10:51:47"
         },
         {
             "name": "doctrine/instantiator",
@@ -11683,6 +11733,7 @@
         "drupal/cloudflare": 15,
         "drupal/context_active_trail": 5,
         "drupal/convert_bundles": 15,
+        "drupal/date_pager": 20,
         "drupal/easy_breadcrumb": 20,
         "drupal/entity_clone": 20,
         "drupal/imce": 20,
