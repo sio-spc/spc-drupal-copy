@@ -1627,8 +1627,11 @@
   function eventDateRangePager(){
     $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
     
-    consoleLog("active year and month: " + $(".date-pager .pager__item__month.is-active time").attr("datetime"));
-
+    //consoleLog("active year and month: " + $(".date-pager .pager__item__month.is-active time").attr("datetime"));
+    var activedate = $(".date-pager .pager__item__month.is-active time").attr("datetime").split("-");
+    var activeyear = activatedate[0];
+    var activemonth = activatedate[1];
+    consoleLog("active year: " + activeyear + ", active month: " + activemonth);
 
 //   $(".eventsdateragepager .nav.prev")
     
