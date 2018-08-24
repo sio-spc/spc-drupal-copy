@@ -1625,15 +1625,15 @@
   }
 
   function eventDateRangePager(){
-    $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div><div class='eventmonth'></div>");
-    var months    = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    var now       = new Date();
-    var selectedmonth = months[now.getMonth()];
-    //consoleLog("this month: "+ selectedmonth);
-    $('.eventmonth').text(selectedmonth);
-    //consoleLog("June: " + months[5]);
+    $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
+    
+    consoleLog("active year: " + $(".date-pager .pager__item__month time").attr("datetime"));
 
-    var monthincremented = now.getMonth();
+
+//   $(".eventsdateragepager .nav.prev")
+    
+
+    
 
 
     $(".eventsdateragepager .nav.prev").click(function(){
@@ -1641,54 +1641,11 @@
       monthincremented = parseFloat(monthincremented)-1;
       consoleLog("monthbefore: " + monthincremented);
       if (0 <= monthincremented && monthincremented <= 11) {
-        $('.eventmonth').text(months[monthincremented]);
       }
       else{
         monthincremented = 11;
         $('.eventmonth').text(months[11]);
       }
-
-      //min
-      var min = $("input[name='field_event_dates_value[min]']").val().split(" ");
-      if(min.includes("+")){
-        var minval = min[0].split("+");
-        var minval = parseFloat(minval[1]);
-      }
-      else{
-        var minval = min[0];
-      }
-      minval = minval-1;
-      
-      if(minval >= 0){
-        var minplusminus = "+";
-      }
-      else{
-        var minplusminus = "";
-      }
-      consoleLog("minval: " + minval); 
-      consoleLog(minplusminus+minval+" months");
-      $("input[name='field_event_dates_value[min]']").val(minplusminus+minval+" months").change();
-
-      //max
-      var max = $("input[name='field_event_dates_value[max]']").val().split(" ");
-      if(max.includes("+")){
-        var maxval = max[0].split("+");
-        var maxval = parseFloat(maxval[1]);
-      }
-      else{
-        var maxval = max[0];
-      }
-      maxval = maxval-1;
-      
-      if(maxval >= 0){
-        var maxplusminus = "+";
-      }
-      else{
-        var maxplusminus = "";
-      }
-      consoleLog("maxval: " + maxval); 
-      consoleLog(maxplusminus+maxval+" months");
-      $("input[name='field_event_dates_value[max]']").val(maxplusminus+maxval+" months").change();
       
     });
     
@@ -1701,49 +1658,6 @@
         monthincremented = 0;
         $('.eventmonth').text(months[0]);
       }
-
-      //min
-      var min = $("input[name='field_event_dates_value[min]']").val().split(" ");
-      if(min.includes("+")){
-        var minval = min[0].split("+");
-        var minval = parseFloat(minval[1]);
-      }
-      else{
-        var minval = min[0];
-      }
-      var minval = parseFloat(minval)+1;
-      consoleLog("minval: " + minval); 
-
-      if(minval >= 0){
-        var minplusminus = "+";
-      }
-      else{
-        var minplusminus = "";
-      }
-      $("input[name='field_event_dates_value[min]']").val(minplusminus+minval+" months").change();
-
-      //max
-      var max = $("input[name='field_event_dates_value[max]']").val().split(" ");
-      if(max.includes("+")){
-        var maxval = max[0].split("+");
-        var maxval = parseFloat(maxval[1]);
-      }
-      else{
-        var maxval = max[0];
-      }
-      var maxval = parseFloat(maxval)+1;
-      consoleLog("maxval: " + maxval); 
-
-      if(maxval >= 0){
-        var maxplusminus = "+";
-      }
-      else{
-        var maxplusminus = "";
-      }
-      $("input[name='field_event_dates_value[max]']").val(maxplusminus+maxval+" months").change();
-
-      
-      //$("form#views-exposed-form-events-page-1").submit();
 
     });
   }
