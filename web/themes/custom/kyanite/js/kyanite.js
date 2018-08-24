@@ -1633,10 +1633,12 @@
     $('.eventmonth').text(selectedmonth);
     //consoleLog("June: " + months[5]);
 
+    var monthincremented = now.getMonth();
+
 
     $(".eventsdateragepager .nav.prev").click(function(){
 
-      var monthbefore = parseFloat(now.getMonth())-1;
+      var monthbefore = parseFloat(monthincremented)-1;
       if (0 <= monthbefore && monthbefore <= 11) {
         $('.eventmonth').text(months[monthbefore]);
       }
@@ -1689,7 +1691,7 @@
     });
     
     $(".eventsdateragepager .nav.next").click(function(){
-      var monthafter = parseFloat(now.getMonth())+1;
+      var monthafter = parseFloat(monthincremented)+1;
       if (0 <= monthafter && monthafter <= 11) {
         $('.eventmonth').text(months[monthafter]);
       }
