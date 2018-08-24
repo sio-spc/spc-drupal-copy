@@ -1624,6 +1624,12 @@
     $(video).click();
   }
 
+  function eventDateRangePager(){
+    $(".eventsdateragepager").each(function(){
+      $(this).find(".views-exposed-form").append("<a class='nav prev'>Prev</a><a class='nav next'>Next</a>");
+    });
+  }
+
 
 
   $(window).on("load scroll resize orientationchange", resizingTweaks);
@@ -1650,6 +1656,8 @@
     memberDefaultInfo();
 
     ccestweaks();
+
+    eventDateRangePager();
     
 
 // please do not try to optimize this by putting it into another document ready event handler
