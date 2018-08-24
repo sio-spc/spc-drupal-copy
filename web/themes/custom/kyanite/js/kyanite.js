@@ -1636,7 +1636,7 @@
 
     $(".eventsdateragepager .nav.prev").click(function(){
 
-      var monthbefore = parseFloat(selectedmonth)-1;
+      var monthbefore = parseFloat(now.getMonth())-1;
       if (0 <= monthbefore && monthbefore <= 11) {
         $('.eventmonth').text(months[monthbefore]);
       }
@@ -1689,7 +1689,7 @@
     });
     
     $(".eventsdateragepager .nav.next").click(function(){
-      var monthafter = parseFloat(selectedmonth)+1;
+      var monthafter = parseFloat(now.getMonth())+1;
       if (0 <= monthafter && monthafter <= 11) {
         $('.eventmonth').text(months[monthafter]);
       }
