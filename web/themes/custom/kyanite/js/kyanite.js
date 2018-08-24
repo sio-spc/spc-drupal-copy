@@ -1677,8 +1677,14 @@
       
       $(".eventsdateragepager .nav.next").click(function(){
         var min = $("#edit-field-event-dates-value-min").val().split(" ");
-        var minval = min[0].split("+");
-        var minval = parseFloat(minval[1])+1;
+        if(max.includes("+")){
+          var minval = min[0].split("+");
+          var minval = parseFloat(minval[1]);
+        }
+        else{
+          var maxval = max[0];
+        }
+        var minval = minval+1;
         consoleLog("minval: " + minval); 
         $("#edit-field-event-dates-value-min").val("+"+minval+" months");
 
