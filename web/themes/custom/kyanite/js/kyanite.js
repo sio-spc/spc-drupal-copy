@@ -1635,8 +1635,10 @@
 
     if((activemonth > 1) && (activemonth < 12)) {
       consoleLog("between 1 and 12");
-      $(".eventsdateragepager .nav.prev").attr("href","/events?date="+activeyear+"-"+parseFloat(activemonth)-1);
-      $(".eventsdateragepager .nav.next").attr("href","/events?date="+activeyear+"-"+parseFloat(activemonth)+1);
+      var prevmonth = activemonth-1;
+      var nextmonth = activemonth+1;
+      $(".eventsdateragepager .nav.prev").attr("href","/events?date="+activeyear+"-"+String(prevmonth).padStart(2,0));
+      $(".eventsdateragepager .nav.next").attr("href","/events?date="+activeyear+"-"+String(nextmonth).padStart(2,0));
     }
     if(activemonth == 1){
       consoleLog("January");
