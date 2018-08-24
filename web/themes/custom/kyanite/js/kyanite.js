@@ -1629,6 +1629,7 @@
     var months    = ['January','February','March','April','May','June','July','August','September','October','November','December'];
     var now       = new Date();
     var selectedmonth = months[now.getMonth()];//default / initial view
+    consoleLog("this month: "+ selectedmonth);
     $('.eventmonth').text(months[selectedmonth]);
     //consoleLog("June: " + months[5]);
 
