@@ -3,7 +3,7 @@ body.divisionsite:not(.division-sdp) .langswitcherblock{
 		display: none!important;
 	}
 }
-body.divisionsite{
+body.divisionsite:not(.hasfrieze){
 	#explore{
 		@media (min-width: $bp-tablet-min){
 			top: 50px!important;

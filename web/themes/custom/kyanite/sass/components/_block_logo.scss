@@ -15,7 +15,7 @@
 #block-kyanite-branding {
 	text-align: $global-layout-logo-direction;
 	position: relative;
-
+	z-index: 99;
 	
 	@media (max-width: $bp-mobile-max){
 		margin-left: 1em;

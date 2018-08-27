@@ -1534,6 +1534,9 @@
   }
 
    function frieze(){
+    if($(".frieze.kyanite-block").length){
+      $("body").addClass("hasfrieze");
+    }
     $(".divisionsite .headertitle, .divisionsite .layout-primary-menu").appendTo(".divisionsite .frieze > div");
     /*var newURL = window.location.protocol + "://" + window.location.host + "/" + window.location.pathname;
     var pathArray = window.location.pathname.split( '/' );
@@ -1674,6 +1677,7 @@
     
 
   }
+
 
 
 

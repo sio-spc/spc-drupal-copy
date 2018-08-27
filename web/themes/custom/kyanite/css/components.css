@@ -1005,6 +1005,7 @@ body.fixed-header-is-fixed .layout-fixed-header .layout-primary-menu .superfishd
 #block-kyanite-branding {
   text-align: left;
   position: relative;
+  z-index: 99;
 }
 @media (max-width: 699px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_block_logo\.scss}line{font-family:\0000315}}
@@ -1621,64 +1622,64 @@ figure.card-content {
 
 @media (min-width: 700px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\000037}}
-  body.divisionsite #explore {
+  body.divisionsite:not(.hasfrieze) #explore {
     top: 50px !important;
   }
 }
 @media (max-width: 699px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000312}}
-  body.divisionsite #header > .region-header > div:nth-child(2), body.divisionsite .frieze {
+  body.divisionsite:not(.hasfrieze) #header > .region-header > div:nth-child(2), body.divisionsite:not(.hasfrieze) .frieze {
     position: relative;
     margin-top: 1em;
     right: 0;
   }
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000319}}
-body.divisionsite .divisioniconsheader.spcgrid > .item-list > ul {
+body.divisionsite:not(.hasfrieze) .divisioniconsheader.spcgrid > .item-list > ul {
   justify-content: center;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000322}}
-body.divisionsite .frieze {
+body.divisionsite:not(.hasfrieze) .frieze {
   text-align: center;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000324}}
-body.divisionsite .frieze .layout-primary-menu {
+body.divisionsite:not(.hasfrieze) .frieze .layout-primary-menu {
   display: inline-block;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000327}}
-body.divisionsite .frieze .divisioniconsheader .item-list li {
+body.divisionsite:not(.hasfrieze) .frieze .divisioniconsheader .item-list li {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000331}}
-body.divisionsite .frieze .divisioniconsheader .item-list li.active {
+body.divisionsite:not(.hasfrieze) .frieze .divisioniconsheader .item-list li.active {
   background-color: #5cbec7;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000333}}
-body.divisionsite .frieze .divisioniconsheader .item-list li.active a {
+body.divisionsite:not(.hasfrieze) .frieze .divisioniconsheader .item-list li.active a {
   opacity: .4;
 }
 @media (min-width: 700px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000322}}
-  body.divisionsite .frieze {
+  body.divisionsite:not(.hasfrieze) .frieze {
     padding-right: 1em !important;
     padding-left: 1em !important;
   }
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000343}}
-body.divisionsite .headertitle {
+body.divisionsite:not(.hasfrieze) .headertitle {
   font-size: 2em;
   text-align: center;
   margin-right: 40px;
   /* needed to keep hamburger icon from overlapping with this */
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000347}}
-body.divisionsite .headertitle .field-body {
+body.divisionsite:not(.hasfrieze) .headertitle .field-body {
   padding-bottom: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_divisionsite\.scss}line{font-family:\0000352}}
-body.divisionsite.path-cces h1 {
+body.divisionsite:not(.hasfrieze).path-cces h1 {
   text-align: center;
 }
 
