@@ -3,12 +3,14 @@ body.divisionsite:not(.division-sdp) .langswitcherblock{
 		display: none!important;
 	}
 }
-body.divisionsite:not(.hasfrieze){
+body.divisionsite.hasfrieze{
 	#explore{
 		@media (min-width: $bp-tablet-min){
 			top: 50px!important;
 		}
 	}
+}
+body.divisionsite{
 	#header > .region-header > div:nth-child(2), .frieze{
 		@media (max-width: $bp-mobile-max){
 			position: relative;
