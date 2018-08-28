@@ -121,6 +121,12 @@ body.divisionsite{
 body.divisionsite.hasfrieze #header{
 	padding-bottom: 0!important;
 }
+body.divisionsite.langswitcherhidden{
+	#block-searchform{
+		flex-grow: 1;
+		justify-content: flex-end;
+	}
+}
 body.divisionsite #header{
 	width: 100%!important;/* because the division sites have no explore menu */
 	> .region-header > div:nth-child(2){

@@ -1404,6 +1404,7 @@
       if($(this).attr("href").includes("/node/",0)){
         //console.log("hide link with url " + $(this).attr("href"));
         $(".langswitcherblock").hide();
+        $("body").addClass("langswitcherhidden");
       }
     });
   }  
