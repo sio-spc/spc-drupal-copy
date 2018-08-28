@@ -1149,6 +1149,7 @@
   }
   function bottomcontent(){
     if($(".bottom").length){
+      consoleLog("bottom div html:" + $(".bottom > div").html().trim());
       if(($(".bottom").html().trim() != "") && $(".bottom > div").html().trim() != ""){
         $(".bottom").fadeIn();
       }
