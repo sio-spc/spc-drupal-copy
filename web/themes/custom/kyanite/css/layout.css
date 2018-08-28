@@ -439,13 +439,13 @@ body.divisionsite #header {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\00003121}}
-body.divisionsite #header {
+body.divisionsite.hasfrieze #header {
   width: 100% !important;
   /* because the division sites have no explore menu */
   padding-bottom: 0 !important;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/layout\/_header\.scss}line{font-family:\00003124}}
-body.divisionsite #header > .region-header > div:nth-child(2) {
+body.divisionsite.hasfrieze #header > .region-header > div:nth-child(2) {
   padding-right: 0;
   justify-content: center;
 }

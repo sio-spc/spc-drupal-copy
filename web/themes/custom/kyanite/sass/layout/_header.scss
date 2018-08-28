@@ -118,7 +118,7 @@ body.divisionsite{
 		padding: 0;
 	}
 }
-body.divisionsite #header{
+body.divisionsite.hasfrieze #header{
 	width: 100%!important;/* because the division sites have no explore menu */
 	padding-bottom: 0!important;
 	> .region-header > div:nth-child(2){
