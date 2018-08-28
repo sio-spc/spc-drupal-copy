@@ -119,8 +119,10 @@ body.divisionsite{
 	}
 }
 body.divisionsite.hasfrieze #header{
-	width: 100%!important;/* because the division sites have no explore menu */
 	padding-bottom: 0!important;
+}
+body.divisionsite #header{
+	width: 100%!important;/* because the division sites have no explore menu */
 	> .region-header > div:nth-child(2){
 		padding-right: 0;
 		justify-content: center;
