@@ -465,13 +465,19 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
     	position: absolute;
     	width: 30px;
     	height: 30px;
-    	text-indent: 99999px;
+    	line-height: 30px;
     	overflow: hidden;
     	border-radius: 15px;
-    	background-color: red;
     	color: #fff;
+    	transition: all .3s;
     	&:before{
     		font-family: FontAwesome;
+    		color: $global-color-main-menu-hover;
+    	}
+    	&:hover{
+    		&:before{
+    			color: $global-color-link;
+    		}
     	}
 
     	&.prev{
