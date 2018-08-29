@@ -462,10 +462,10 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
     width: 100%;
     a.nav{
     	position: absolute;
-    	&.vorige{
+    	&.prev{
     		left: 0;
     	}
-    	&.volgende{
+    	&.next{
     		right: 0;
     	}
     }

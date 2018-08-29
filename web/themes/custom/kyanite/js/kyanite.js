@@ -1672,27 +1672,27 @@
     }
     consoleLog("active year: " + activeyear + ", active month: " + activemonth);
 
-    $(".path-events #block-pagetitle").after("<div class='eventsdaterangepager'><a href='javascript:;' class='nav vorige'>Prev</a><a href='javascript:;' class='nav volgende'>Next</a></div>");
+    $(".path-events #block-pagetitle").after("<div class='eventsdaterangepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
     $("h1").text($("h1").text()+" - "+monthNumToName(activemonth)+", "+activeyear);
 
     if((activemonth > 1) && (activemonth < 12)) {
       consoleLog("between 1 and 12");
       var prevmonth = activemonth-1;
       var nextmonth = activemonth+1;
-      $(".eventsdateragepager .nav.vorige").attr("href",eventspath+"?date="+activeyear+"-"+String(prevmonth).padStart(2,0));
-      $(".eventsdateragepager .nav.volgende").attr("href",eventspath+"?date="+activeyear+"-"+String(nextmonth).padStart(2,0));
+      $(".eventsdateragepager .nav.prev").attr("href",eventspath+"?date="+activeyear+"-"+String(prevmonth).padStart(2,0));
+      $(".eventsdateragepager .nav.next").attr("href",eventspath+"?date="+activeyear+"-"+String(nextmonth).padStart(2,0));
     }
     if(activemonth == 1){
       consoleLog("January");
       var previousyear = activeyear-1;
-      $(".eventsdateragepager .nav.vorige").attr("href",eventspath+"?date="+previousyear+"-12");
-      $(".eventsdateragepager .nav.volgende").attr("href",eventspath+"?date="+activeyear+"-02");
+      $(".eventsdateragepager .nav.prev").attr("href",eventspath+"?date="+previousyear+"-12");
+      $(".eventsdateragepager .nav.next").attr("href",eventspath+"?date="+activeyear+"-02");
     }
     if(activemonth == 12){
       consoleLog("December");
       var nextyear = activeyear+1;
-      $(".eventsdateragepager .nav.vorige").attr("href",eventspath+"?date="+activeyear+"-11");
-      $(".eventsdateragepager .nav.volgende").attr("href",eventspath+"?date="+nextyear+"-01");
+      $(".eventsdateragepager .nav.prev").attr("href",eventspath+"?date="+activeyear+"-11");
+      $(".eventsdateragepager .nav.next").attr("href",eventspath+"?date="+nextyear+"-01");
     }
   
     
