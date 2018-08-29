@@ -1655,7 +1655,7 @@
     }
     consoleLog("active year: " + activeyear + ", active month: " + activemonth);
 
-    $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div><h2>"++"</h2>");
+    $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div><h2>"+activemonth+"</h2>");
 
     if((activemonth > 1) && (activemonth < 12)) {
       consoleLog("between 1 and 12");
