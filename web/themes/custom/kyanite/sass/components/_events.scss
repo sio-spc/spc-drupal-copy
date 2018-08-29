@@ -458,6 +458,9 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 }
 
 .eventsdaterangepager{
+	#views-exposed-form-events-page-1{
+		padding-bottom: 2em;
+	}
 	nav.pager{
 		display: none;
 	}
