@@ -1639,6 +1639,14 @@
        return(false);
   }
 
+  var months = [
+    'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+
+  function monthNumToName(monthnum) {
+      return months[monthnum - 1] || '';
+  }
+
   function eventDateRangePager(){
     
     //consoleLog("active year and month: " + $(".date-pager .pager__item__month.is-active time").attr("datetime"));
@@ -1655,7 +1663,7 @@
     }
     consoleLog("active year: " + activeyear + ", active month: " + activemonth);
 
-    $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div><h2>"+activemonth+"</h2>");
+    $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div><h2 class='text-align-center'>"+monthNumToName(activemonth)+"</h2>");
 
     if((activemonth > 1) && (activemonth < 12)) {
       consoleLog("between 1 and 12");
