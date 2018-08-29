@@ -1638,10 +1638,16 @@
        }
        return(false);
   }
-
-  var months = [
-    'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
-    ];
+  if($("html[lang]" == "fr")){//fr
+    var months = [
+      'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'
+      ];
+  }
+  else{//en
+    var months = [
+      'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+  }
 
   function monthNumToName(monthnum) {
       return months[monthnum - 1] || '';
@@ -1663,7 +1669,8 @@
     }
     consoleLog("active year: " + activeyear + ", active month: " + activemonth);
 
-    $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div><h2 class='text-align-center'>"+monthNumToName(activemonth)+"</h2>");
+    $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
+    $("h1").text($("h1").text()+" - "+monthNumToName(activemonth)+", "+activeyear);
 
     if((activemonth > 1) && (activemonth < 12)) {
       consoleLog("between 1 and 12");
