@@ -550,7 +550,7 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 					margin-right: 6%;
 					margin-bottom: 4.8em;
 					margin-bottom: 10vw;
-					@media (max-width: 767px){
+					@media (max-width: 959px){
 						&:nth-child(2n+1){
 							margin-left: 0;
 						}
@@ -565,14 +565,13 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 					margin-right: 2.5%;
 					margin-bottom: 2.3em;
 					margin-bottom: 4.5vw;
-					@media (max-width: 959px){
-						&:nth-child(3n+1){
-							margin-left: 0;
-						}
-						&:nth-child(3n+3), &:last-child{
-							margin-right: 0;
-						}
+					&:nth-child(3n+1){
+						margin-left: 0;
 					}
+					&:nth-child(3n+3), &:last-child{
+						margin-right: 0;
+					}
+				
 				}
 			}
 		}
