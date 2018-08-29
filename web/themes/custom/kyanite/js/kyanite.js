@@ -1,6 +1,6 @@
 (function (window, $, Drupal) {
   // Custom javascript
-  var consoleLogEnabled = false, allowFixedHeader = false;
+  var consoleLogEnabled = true, allowFixedHeader = false;
 
   var textLengthSelectors = {
     '.views_slideshow_slide .views-field-body': {
@@ -1640,7 +1640,6 @@
   }
 
   function eventDateRangePager(){
-    $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
     
     //consoleLog("active year and month: " + $(".date-pager .pager__item__month.is-active time").attr("datetime"));
     //var activedate = $(".date-pager .pager__item__month.is-active time").attr("datetime").split("-");
@@ -1655,6 +1654,8 @@
       var activemonth = date.getMonth()+1;
     }
     consoleLog("active year: " + activeyear + ", active month: " + activemonth);
+
+    $(".path-events #block-pagetitle").after("<div class='eventsdateragepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div><h2>"++"</h2>");
 
     if((activemonth > 1) && (activemonth < 12)) {
       consoleLog("between 1 and 12");
