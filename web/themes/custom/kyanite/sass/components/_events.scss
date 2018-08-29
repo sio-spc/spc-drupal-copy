@@ -458,6 +458,17 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 }
 
 .eventsdaterangepager{
+	position: absolute;
+    width: 100%;
+    a.nav{
+    	position: absolute;
+    	&.vorige{
+    		left: 0;
+    	}
+    	&.volgende{
+    		right: 0;
+    	}
+    }
 	#views-exposed-form-events-page-1{
 		padding-bottom: 2em;
 	}
