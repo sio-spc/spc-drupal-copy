@@ -522,6 +522,9 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 	text-align: center;
 	#views-exposed-form-events-page-1{
 		padding-bottom: 3em;
+		select{
+			max-width: 100%;
+		}
 	}
 	nav.pager{
 		display: none;
