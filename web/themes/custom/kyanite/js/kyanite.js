@@ -1638,7 +1638,7 @@
        }
        return(false);
   }
-  if($("html[lang]" == "fr")){//fr
+  if($("html[lang]") == "fr"){//fr
     var months = [
       'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'
       ];
