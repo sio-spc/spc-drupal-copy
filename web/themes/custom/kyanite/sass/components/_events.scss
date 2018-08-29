@@ -463,12 +463,12 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
     z-index: 2;
     a.nav{
     	position: absolute;
-    	font-size: 30px;
-    	width: 30px;
-    	height: 30px;
-    	line-height: 30px;
+    	font-size: 40px;
+    	width: 40px;
+    	height: 40px;
+    	line-height: 40px;
     	overflow: hidden;
-    	border-radius: 15px;
+    	border-radius: 20px;
     	color: #fff;
     	transition: all .3s;
     	&:before{
