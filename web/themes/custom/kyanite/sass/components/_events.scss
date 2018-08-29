@@ -466,11 +466,18 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 }
 
 .eventsdaterangepager{
-	position: absolute;
-    width: 100%;
-    z-index: 2;
+	@media (min-width: 640px){
+		position: absolute;
+	    width: 100%;
+	    z-index: 2;
+	}
     a.nav{
-    	position: absolute;
+    	@media (max-width: 639px){
+	    	display: inline-block;
+	    }
+    	@media (min-width: 640px){
+	    	position: absolute;
+	    }
     	font-size: 40px;
     	width: 40px;
     	height: 40px;
@@ -491,13 +498,17 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
     	}
 
     	&.prev{
-    		left: 0;
+    		@media (min-width: 640px){
+	    		left: 0;
+	    	}
     		&:before{
 	    		content: "\f137";
 	    	}
     	}
     	&.next{
-    		right: 0;
+    		@media (min-width: 640px){
+	    		right: 0;
+	    	}
     		&:before{
 	    		content: "\f138";
 	    	}
