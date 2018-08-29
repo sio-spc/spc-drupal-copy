@@ -521,19 +521,20 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 		padding: 1em;
 		text-align: center;
 	}
-	.kyanite-views-rows, > .item-list{
-		&, > ul{
+	> .item-list{
+		ul{
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
-			.views-row, li{
+			li{
+				list-style-type: none;
+				list-style: none;
 				@media (min-width: 640px){
 					width: 44%;
 					margin-left: 6%;
 					margin-right: 6%;
-					margin-top: 4.8em;
-					margin-top: 10vw;
-					margin-bottom: 0;
+					margin-bottom: 4.8em;
+					margin-bottom: 10vw;
 					@media (max-width: 767px){
 						&:nth-child(2n+1){
 							margin-left: 0;
@@ -547,9 +548,8 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 					width: 30%;
 					margin-left: 2.5%;
 					margin-right: 2.5%;
-					margin-top: 2.3em;
-					margin-top: 4.5vw;
-					margin-bottom: 0;
+					margin-bottom: 2.3em;
+					margin-bottom: 4.5vw;
 					@media (max-width: 959px){
 						&:nth-child(3n+1){
 							margin-left: 0;
