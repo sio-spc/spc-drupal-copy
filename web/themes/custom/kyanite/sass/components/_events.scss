@@ -460,13 +460,31 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 .eventsdaterangepager{
 	position: absolute;
     width: 100%;
+    z-index: 2;
     a.nav{
     	position: absolute;
+    	width: 30px;
+    	height: 30px;
+    	text-indent: 99999px;
+    	overflow: hidden;
+    	border-radius: 15px;
+    	background-color: red;
+    	color: #fff;
+    	&:before{
+    		font-family: FontAwesome;
+    	}
+
     	&.prev{
     		left: 0;
+    		&:before{
+	    		content: "\f137";
+	    	}
     	}
     	&.next{
     		right: 0;
+    		&:before{
+	    		content: "\f138";
+	    	}
     	}
     }
 }
