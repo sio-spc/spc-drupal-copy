@@ -544,6 +544,10 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 			li{
 				list-style-type: none;
 				list-style: none;
+				@media (max-width: 639px){
+					margin-bottom: 4.8em;
+					margin-bottom: 10vw;
+				}
 				@media (min-width: 640px){
 					width: 44%;
 					margin-left: 6%;
