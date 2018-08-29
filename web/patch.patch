@@ -1,0 +1,44 @@
+diff --git a/js/simple_social_icons.js b/js/simple_social_icons.js
+index 7dea027..6798eb4 100644
+--- a/js/simple_social_icons.js
++++ b/js/simple_social_icons.js
+@@ -13,7 +13,7 @@
+   update_icons();
+ 
+   function update_icons() {
+-    var alignment = document.getElementById('edit-settings-icon-placement-1').checked;
++    var alignment = $('edit-settings-icon-placement-1').checked;
+     if (alignment === true) {
+       var display = 'inline';
+       var margin = '10px';
+@@ -30,7 +30,7 @@
+     var font_size = $("#edit-settings-font-size").val() + 'px';
+     // var default_style = $('#edit-settings-use-default-style-ignore-colors').is(':checked');
+     // var default_style = $('#edit-settings-use-default-style-ignore-colors').prop('checked');
+-    var default_style = document.getElementById('edit-settings-use-default-style-ignore-colors').checked;
++    var default_style = $('#edit-settings-use-default-style-ignore-colors').checked;
+     console.log(default_style + '--' + color);
+     if (default_style === true) {
+       var color = '#ffffff';
+diff --git a/simple_social_icons.libraries.yml b/simple_social_icons.libraries.yml
+index a180ee3..8798f8c 100644
+--- a/simple_social_icons.libraries.yml
++++ b/simple_social_icons.libraries.yml
+@@ -5,3 +5,5 @@ simple_social_icons:
+       styles/simple_social_icons.css: {}
+   js:
+     js/simple_social_icons.js: {}
++  dependencies:
++    - core/jquery
+\ No newline at end of file
+diff --git a/styles/simple_social_icons.css b/styles/simple_social_icons.css
+index 0a21ef2..f88610c 100644
+--- a/styles/simple_social_icons.css
++++ b/styles/simple_social_icons.css
+@@ -266,4 +266,4 @@
+ .soc-email1:before,
+ .soc_ver-email1:before {
+   content: '<';
+-}
++}
+\ No newline at end of file

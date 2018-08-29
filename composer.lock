@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ebad8af7c4ebe87d095872ec06a5ecf9",
+    "content-hash": "7d0d00ba738aedbe3ac60d311e0e1997",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1492,8 +1492,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
-            },
-            "time": "2018-07-31 17:09:12"
+            }
         },
         {
             "name": "drupal/ape",
@@ -2817,8 +2816,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/date_pager",
                 "issues": "http://drupal.org/project/issues/date_pager"
-            },
-            "time": "2017-12-19 13:24:51"
+            }
         },
         {
             "name": "drupal/devel",
@@ -2961,8 +2959,7 @@
             "homepage": "https://www.drupal.org/project/easy_breadcrumb",
             "support": {
                 "source": "http://cgit.drupalcode.org/easy_breadcrumb"
-            },
-            "time": "2018-07-13 20:34:26"
+            }
         },
         {
             "name": "drupal/easy_install",
@@ -3098,7 +3095,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/entity_clone"
             },
-            "time": "2018-04-16 08:16:37"
+            "time": "2018-04-16T08:16:37+00:00"
         },
         {
             "name": "drupal/entity_reference_revisions",
@@ -4247,8 +4244,7 @@
             "homepage": "https://www.drupal.org/project/menu_block",
             "support": {
                 "source": "http://cgit.drupalcode.org/menu_block"
-            },
-            "time": "2018-07-21 19:11:54"
+            }
         },
         {
             "name": "drupal/menu_trail_by_path",
@@ -4409,7 +4405,8 @@
             "homepage": "https://www.drupal.org/project/migrate_devel",
             "support": {
                 "source": "http://cgit.drupalcode.org/migrate_devel"
-            }
+            },
+            "time": "2017-06-25T23:46:13+00:00"
         },
         {
             "name": "drupal/migrate_manifest",
@@ -4649,6 +4646,57 @@
                 "source": "http://cgit.drupalcode.org/migrate_tools",
                 "issues": "http://drupal.org/project/migrate_tools",
                 "irc": "irc://irc.freenode.org/drupal-migrate"
+            }
+        },
+        {
+            "name": "drupal/nodeaccess",
+            "version": "1.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/nodeaccess",
+                "reference": "8.x-1.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/nodeaccess-8.x-1.0-beta2.zip",
+                "reference": "8.x-1.0-beta2",
+                "shasum": "78dc8387129abb13442549e855aa03ecd57e1915"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta2",
+                    "datestamp": "1520259485",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mukila",
+                    "homepage": "https://www.drupal.org/user/3223526"
+                },
+                {
+                    "name": "vlad.pavlovic",
+                    "homepage": "https://www.drupal.org/user/92673"
+                }
+            ],
+            "description": "Provides per node access control.",
+            "homepage": "https://www.drupal.org/project/nodeaccess",
+            "support": {
+                "source": "http://cgit.drupalcode.org/nodeaccess"
             }
         },
         {
@@ -5326,7 +5374,7 @@
                 "source": "http://cgit.drupalcode.org/simple_social_share_block",
                 "issues": "http://drupal.org/project/issues/simple_social_share_block"
             },
-            "time": "2018-05-07 09:11:44"
+            "time": "2018-05-07T09:11:44+00:00"
         },
         {
             "name": "drupal/superfish",
@@ -5952,7 +6000,8 @@
             "homepage": "https://www.drupal.org/project/views_infinite_scroll",
             "support": {
                 "source": "http://cgit.drupalcode.org/views_infinite_scroll"
-            }
+            },
+            "time": "2018-04-24T00:28:45+00:00"
         },
         {
             "name": "drupal/viewsreference",
@@ -9530,7 +9579,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2018-06-24 20:08:51"
+            "time": "2018-06-24T20:08:51+00:00"
         },
         {
             "name": "behat/mink-browserkit-driver",
@@ -9702,7 +9751,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2018-07-23 10:51:47"
+            "time": "2018-07-23T10:51:47+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -11739,6 +11788,7 @@
         "drupal/imce": 20,
         "drupal/menu_block": 20,
         "drupal/migrate_devel": 20,
+        "drupal/nodeaccess": 10,
         "drupal/simple_social_icons": 20,
         "drupal/views_infinite_scroll": 20
     },
