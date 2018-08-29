@@ -1643,11 +1643,13 @@
     var months = [
       'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'
       ];
+    var eventspath = "/fr/a-l-agenda";
   }
   else{//en
     var months = [
       'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
       ];
+    var eventspath = "/eventspath";
   }
 
   function monthNumToName(monthnum) {
@@ -1677,20 +1679,20 @@
       consoleLog("between 1 and 12");
       var prevmonth = activemonth-1;
       var nextmonth = activemonth+1;
-      $(".eventsdateragepager .nav.prev").attr("href","/events?date="+activeyear+"-"+String(prevmonth).padStart(2,0));
-      $(".eventsdateragepager .nav.next").attr("href","/events?date="+activeyear+"-"+String(nextmonth).padStart(2,0));
+      $(".eventsdateragepager .nav.prev").attr("href",eventspath+"?date="+activeyear+"-"+String(prevmonth).padStart(2,0));
+      $(".eventsdateragepager .nav.next").attr("href",eventspath+"?date="+activeyear+"-"+String(nextmonth).padStart(2,0));
     }
     if(activemonth == 1){
       consoleLog("January");
       var previousyear = activeyear-1;
-      $(".eventsdateragepager .nav.prev").attr("href","/events?date="+previousyear+"-12");
-      $(".eventsdateragepager .nav.next").attr("href","/events?date="+activeyear+"-02");
+      $(".eventsdateragepager .nav.prev").attr("href",eventspath+"?date="+previousyear+"-12");
+      $(".eventsdateragepager .nav.next").attr("href",eventspath+"?date="+activeyear+"-02");
     }
     if(activemonth == 12){
       consoleLog("December");
       var nextyear = activeyear+1;
-      $(".eventsdateragepager .nav.prev").attr("href","/events?date="+activeyear+"-11");
-      $(".eventsdateragepager .nav.next").attr("href","/events?date="+nextyear+"-01");
+      $(".eventsdateragepager .nav.prev").attr("href",eventspath+"?date="+activeyear+"-11");
+      $(".eventsdateragepager .nav.next").attr("href",eventspath+"?date="+nextyear+"-01");
     }
   
     
