@@ -2330,7 +2330,7 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
 .eventsview nav.pager {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003516}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003517}}
 .eventsview .more-link {
   position: relative;
   right: auto;
@@ -2338,12 +2338,14 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
   padding: 1em;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003524}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003525}}
 .eventsview .kyanite-views-rows, .eventsview .kyanite-views-rows > ul, .eventsview > .item-list, .eventsview > .item-list > ul {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 @media (min-width: 640px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003526}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003529}}
   .eventsview .kyanite-views-rows .views-row, .eventsview .kyanite-views-rows li, .eventsview .kyanite-views-rows > ul .views-row, .eventsview .kyanite-views-rows > ul li, .eventsview > .item-list .views-row, .eventsview > .item-list li, .eventsview > .item-list > ul .views-row, .eventsview > .item-list > ul li {
     width: 44%;
     margin-left: 6%;
@@ -2354,18 +2356,18 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
   }
 }
 @media (min-width: 640px) and (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003535}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003538}}
   .eventsview .kyanite-views-rows .views-row:nth-child(2n+1), .eventsview .kyanite-views-rows li:nth-child(2n+1), .eventsview .kyanite-views-rows > ul .views-row:nth-child(2n+1), .eventsview .kyanite-views-rows > ul li:nth-child(2n+1), .eventsview > .item-list .views-row:nth-child(2n+1), .eventsview > .item-list li:nth-child(2n+1), .eventsview > .item-list > ul .views-row:nth-child(2n+1), .eventsview > .item-list > ul li:nth-child(2n+1) {
     margin-left: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003538}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003541}}
   .eventsview .kyanite-views-rows .views-row:nth-child(2n+2), .eventsview .kyanite-views-rows .views-row:last-child, .eventsview .kyanite-views-rows li:nth-child(2n+2), .eventsview .kyanite-views-rows li:last-child, .eventsview .kyanite-views-rows > ul .views-row:nth-child(2n+2), .eventsview .kyanite-views-rows > ul .views-row:last-child, .eventsview .kyanite-views-rows > ul li:nth-child(2n+2), .eventsview .kyanite-views-rows > ul li:last-child, .eventsview > .item-list .views-row:nth-child(2n+2), .eventsview > .item-list .views-row:last-child, .eventsview > .item-list li:nth-child(2n+2), .eventsview > .item-list li:last-child, .eventsview > .item-list > ul .views-row:nth-child(2n+2), .eventsview > .item-list > ul .views-row:last-child, .eventsview > .item-list > ul li:nth-child(2n+2), .eventsview > .item-list > ul li:last-child {
     margin-right: 0;
   }
 }
 
 @media (min-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003526}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003529}}
   .eventsview .kyanite-views-rows .views-row, .eventsview .kyanite-views-rows li, .eventsview .kyanite-views-rows > ul .views-row, .eventsview .kyanite-views-rows > ul li, .eventsview > .item-list .views-row, .eventsview > .item-list li, .eventsview > .item-list > ul .views-row, .eventsview > .item-list > ul li {
     width: 30%;
     margin-left: 2.5%;
@@ -2376,11 +2378,11 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
   }
 }
 @media (min-width: 960px) and (max-width: 959px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003551}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003554}}
   .eventsview .kyanite-views-rows .views-row:nth-child(3n+1), .eventsview .kyanite-views-rows li:nth-child(3n+1), .eventsview .kyanite-views-rows > ul .views-row:nth-child(3n+1), .eventsview .kyanite-views-rows > ul li:nth-child(3n+1), .eventsview > .item-list .views-row:nth-child(3n+1), .eventsview > .item-list li:nth-child(3n+1), .eventsview > .item-list > ul .views-row:nth-child(3n+1), .eventsview > .item-list > ul li:nth-child(3n+1) {
     margin-left: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003554}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003557}}
   .eventsview .kyanite-views-rows .views-row:nth-child(3n+3), .eventsview .kyanite-views-rows .views-row:last-child, .eventsview .kyanite-views-rows li:nth-child(3n+3), .eventsview .kyanite-views-rows li:last-child, .eventsview .kyanite-views-rows > ul .views-row:nth-child(3n+3), .eventsview .kyanite-views-rows > ul .views-row:last-child, .eventsview .kyanite-views-rows > ul li:nth-child(3n+3), .eventsview .kyanite-views-rows > ul li:last-child, .eventsview > .item-list .views-row:nth-child(3n+3), .eventsview > .item-list .views-row:last-child, .eventsview > .item-list li:nth-child(3n+3), .eventsview > .item-list li:last-child, .eventsview > .item-list > ul .views-row:nth-child(3n+3), .eventsview > .item-list > ul .views-row:last-child, .eventsview > .item-list > ul li:nth-child(3n+3), .eventsview > .item-list > ul li:last-child {
     margin-right: 0;
   }

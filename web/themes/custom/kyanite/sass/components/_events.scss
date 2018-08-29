@@ -512,6 +512,7 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 		display: none;
 	}
 
+
 	clear: both;
 	.more-link{
 		position: relative;
@@ -522,6 +523,8 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 	}
 	.kyanite-views-rows, > .item-list{
 		&, > ul{
+			display: flex;
+			flex-wrap: wrap;
 			justify-content: center;
 			.views-row, li{
 				@media (min-width: 640px){
