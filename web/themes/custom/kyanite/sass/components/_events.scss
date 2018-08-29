@@ -475,9 +475,11 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
     		font-family: FontAwesome;
     		color: $global-color-main-menu-hover;
     		transition: all .3s;
-    		&:hover{
-    			color: $global-color-link;
-	    	}
+    	}
+    	&:hover{
+    		&:before{
+				color: $global-color-link;
+			}
     	}
 
     	&.prev{
