@@ -10,6 +10,9 @@
 .bottom, .bottomfullwidth{
   display: none;
 }
+.page-node-type-member-listing .bottomfullwidth{
+  display: block;
+}
 .bottomfullwidth{
   clear: both;
 }
