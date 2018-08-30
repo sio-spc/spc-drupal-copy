@@ -1673,7 +1673,7 @@
     consoleLog("active year: " + activeyear + ", active month: " + activemonth);
 
     $(".path-events #block-pagetitle").after("<div class='eventsdaterangepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
-    $("h1").text($("h1").text()+" - "+monthNumToName(activemonth)+", "+activeyear);
+    $(".path-events h1").text($("h1").text()+" - "+monthNumToName(activemonth)+", "+activeyear);
 
     if((activemonth > 1) && (activemonth < 12)) {
       consoleLog("between 1 and 12");
@@ -1727,7 +1727,7 @@
 
     ccestweaks();
 
-    eventDateRangePager();
+    //eventDateRangePager();
     
 
 // please do not try to optimize this by putting it into another document ready event handler
