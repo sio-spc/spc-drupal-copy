@@ -1727,7 +1727,7 @@
 
     ccestweaks();
 
-    //eventDateRangePager();
+    eventDateRangePager();
     
 
 // please do not try to optimize this by putting it into another document ready event handler
