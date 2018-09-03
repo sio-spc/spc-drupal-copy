@@ -31,6 +31,7 @@
     db_offline ? 'db-offline',
     background_image ? 'has-background-image',
     color_scheme ? 'color-scheme-' ~ color_scheme|clean_class,
+
   ]
 %}
 <!DOCTYPE html>
@@ -75,7 +76,7 @@
     </script> 
     
   </head>
-  <body{{ attributes.addClass(body_classes) }} >
+  <body{{ attributes.addClass(body_classes) }} data-uid="{% user.id %}">
 
   
 
