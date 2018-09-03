@@ -1706,6 +1706,7 @@
     for (var i = 0; i < arrayLength; i++) {
       consoleLog("body class: "+bodyclasses[i]);
       if (bodyclasses[i].match("^user-")) {
+        consoleLog("user- match");
         var uid = bodyclasses[i].split("-");
         uid = uid[1];
       }
