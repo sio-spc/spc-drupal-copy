@@ -1702,6 +1702,7 @@
   function hideEditTools(){
     var bodyclasses = $("body").attr("class");
     bodyclasses = bodyclasses.split(" ");
+    var arrayLength = bodyclasses.length;
     for (var i = 0; i < arrayLength; i++) {
       if (bodyclasses[i].match("^user-")) {
         var uid = bodyclasses[i].split(" ");
