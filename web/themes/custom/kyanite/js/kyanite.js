@@ -1711,8 +1711,10 @@
         uid = uid[1];
         consoleLog("uid: " + uid);
         if((uid == "915") || (uid == "918") || (uid == "929")){
-          $("#block-kyanite-local-tasks, div.contextual, #toolbar-administration").hide();
-          $("body").removeAttr("style");
+          if($("#maincontainer").attr("data-nid") != 10200){
+            $("#block-kyanite-local-tasks, div.contextual, #toolbar-administration").hide();
+            $("body").removeAttr("style");
+          }
         }
       }
     }
