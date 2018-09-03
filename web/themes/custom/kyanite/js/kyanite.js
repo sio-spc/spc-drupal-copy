@@ -1705,7 +1705,7 @@
     var arrayLength = bodyclasses.length;
     for (var i = 0; i < arrayLength; i++) {
       consoleLog("body class: "+bodyclasses[i]);
-      if (bodyclasses[i].match("^user-")) {
+      if (bodyclasses[i].match("^user-") && (bodyclasses[i] != "user-logged-in")) {
         consoleLog("user- match: " + bodyclasses[i]);
         var uid = bodyclasses[i].split("-");
         uid = uid[1];
