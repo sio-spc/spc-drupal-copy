@@ -1700,7 +1700,18 @@
   }
 
   function hideEditTools(){
-    if(($("body").attr("data-uid") == "915") || ($("body").attr("data-uid") == "918") || ($("body").attr("data-uid") == "929")){
+    var bodyclasses = $("body").attr("class");
+    bodyclasses = bodyclasses.split(" ");
+    for (var i = 0; i < arrayLength; i++) {
+      if (bodyclasses[i].match("^user-")) {
+        var uid = bodyclasses[i].split(" ");
+        uid = uid[1];
+      }
+      else{
+        var uid = "";
+      }
+    }
+    if((uid == "915") || (uid == "918") || (uid == "929")){
       $("#block-kyanite-local-tasks, div.contextual, #toolbar-administration").hide();
       $("body").style("padding-top","0");
     }
