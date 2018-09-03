@@ -1709,17 +1709,15 @@
         consoleLog("uid- match: " + bodyclasses[i]);
         var uid = bodyclasses[i].split("-");
         uid = uid[1];
-        consoleLog("uid: " + uid)
-      }
-      else{
-        var uid = "";
+        consoleLog("uid: " + uid);
+        if((uid == "915") || (uid == "918") || (uid == "929")){
+          $("#block-kyanite-local-tasks, div.contextual, #toolbar-administration").hide();
+          $("body").style("padding-top","0");
+        }
       }
     }
-    consoleLog("uid: " + uid);
-    if((uid == "915") || (uid == "918") || (uid == "929")){
-      $("#block-kyanite-local-tasks, div.contextual, #toolbar-administration").hide();
-      $("body").style("padding-top","0");
-    }
+    
+    
   }
 
 
