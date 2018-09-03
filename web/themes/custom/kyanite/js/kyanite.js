@@ -1712,7 +1712,7 @@
         consoleLog("uid: " + uid);
         if((uid == "915") || (uid == "918") || (uid == "929")){
           $("#block-kyanite-local-tasks, div.contextual, #toolbar-administration").hide();
-          $("body").style("padding-top","0");
+          $("body").removeAttr("style");
         }
       }
     }
