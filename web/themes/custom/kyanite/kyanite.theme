@@ -33,6 +33,11 @@ function kyanite_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'no-explore';
   }
 
+  $uid = \Drupal::currentUser()->id();
+  if(!empty($uid)){
+    $variables['attributes']['class'][] = 'uid-'.$uid;
+  }
+
 
   // add special library just for developers (administrator role)
   $roles = \Drupal::currentUser()->getRoles();
