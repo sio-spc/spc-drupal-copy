@@ -1704,6 +1704,7 @@
     bodyclasses = bodyclasses.split(" ");
     var arrayLength = bodyclasses.length;
     for (var i = 0; i < arrayLength; i++) {
+      consoleLog("body class: ".bodyclasses[i]);
       if (bodyclasses[i].match("^user-")) {
         var uid = bodyclasses[i].split(" ");
         uid = uid[1];
@@ -1712,6 +1713,7 @@
         var uid = "";
       }
     }
+    consoleLog("uid: ").uid;
     if((uid == "915") || (uid == "918") || (uid == "929")){
       $("#block-kyanite-local-tasks, div.contextual, #toolbar-administration").hide();
       $("body").style("padding-top","0");
