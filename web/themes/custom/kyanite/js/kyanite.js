@@ -1709,6 +1709,7 @@
         consoleLog("uid- match: " + bodyclasses[i]);
         var uid = bodyclasses[i].split("-");
         uid = uid[1];
+        consoleLog("uid: " + uid)
       }
       else{
         var uid = "";
