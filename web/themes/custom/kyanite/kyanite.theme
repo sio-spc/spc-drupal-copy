@@ -35,7 +35,7 @@ function kyanite_preprocess_html(&$variables) {
 
   $uid = \Drupal::currentUser()->id();
   if(!empty($uid)){
-    $variables['attributes']['class'][] = 'uid-'.$uid;
+    $variables['attributes']['data-uid'][] = $uid;
   }
 
 

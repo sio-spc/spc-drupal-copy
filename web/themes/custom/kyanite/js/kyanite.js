@@ -1699,6 +1699,12 @@
 
   }
 
+  function hideEditTools(){
+    if(($("body").attr("data-uid") == "915") || ($("body").attr("data-uid") == "918")){
+      $("#block-kyanite-local-tasks, div.contextual").hide();
+    }
+  }
+
 
 
 
@@ -1727,7 +1733,9 @@
 
     ccestweaks();
 
-    eventDateRangePager();
+    //eventDateRangePager();
+
+    hideEditTools();
     
 
 // please do not try to optimize this by putting it into another document ready event handler
