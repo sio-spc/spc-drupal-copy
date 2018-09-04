@@ -217,14 +217,6 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 					display: none;
 				}
 			}
-			.dates{
-				position: absolute;
-			    background: rgba(255,255,255,.8);
-			    padding: .25em;
-			    font-weight: bold;
-			    width: 5em;
-			    text-align: center;
-			}
 			.views-field-nothing{
 				@media (max-width: 767px){
 				}
@@ -587,6 +579,14 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 						margin-right: 0;
 					}
 				
+				}
+				.dates{
+					position: absolute;
+				    background: rgba(255,255,255,.8);
+				    padding: .25em;
+				    font-weight: bold;
+				    width: 5em;
+				    text-align: center;
 				}
 			}
 		}
