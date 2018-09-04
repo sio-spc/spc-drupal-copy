@@ -2434,7 +2434,7 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003591}}
 .eventsview > .item-list ul li h2 {
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore\.scss}line{font-family:\000033}}
