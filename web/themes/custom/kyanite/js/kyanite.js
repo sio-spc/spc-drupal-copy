@@ -1750,7 +1750,7 @@
 
     ccestweaks();
 
-    //eventDateRangePager();
+    eventDateRangePager();
 
     hideEditTools();
     
