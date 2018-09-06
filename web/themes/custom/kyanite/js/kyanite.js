@@ -1665,12 +1665,16 @@
       var activedate = getQueryVariable("date").split("-");
       var activeyear = parseFloat(activedate[0]);
       var activemonth = parseFloat(activedate[1]);
+      if((date.getFullYear() == activeyear) && ((date.getMonth()+1) == activemonth)){
+        $("#block-views-block-events-featured").fadeIn();
+      }
     }
     else{//default to today's date
       var activeyear = date.getFullYear();
       var activemonth = date.getMonth()+1;
       $("#block-views-block-events-featured").fadeIn();
     }
+    
 
 
     consoleLog("active year: " + activeyear + ", active month: " + activemonth);
