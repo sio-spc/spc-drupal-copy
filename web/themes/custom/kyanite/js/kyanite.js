@@ -1667,6 +1667,12 @@
       var activemonth = parseFloat(activedate[1]);
       consoleLog("current year: " + date.getFullYear() + ", active year: " + activeyear);
       consoleLog("current month: " + date.getMonth() + ", active month: " + activemonth);
+      if(date.getFullYear().trim() == activeyear.trim()){
+        consoleLog("year is current");
+      }
+      if((date.getMonth()+1).trim() == activemonth.trim()){
+        consoleLog("month is current");
+      }
       if((date.getFullYear().trim() == activeyear.trim()) && ((date.getMonth()+1).trim() == activemonth.trim())){
         $("#block-views-block-events-featured").fadeIn();
       }
