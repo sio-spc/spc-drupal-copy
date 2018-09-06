@@ -1667,13 +1667,13 @@
       var activemonth = parseFloat(activedate[1]);
       consoleLog("current year: " + date.getFullYear() + ", active year: " + activeyear);
       consoleLog("current month: " + date.getMonth() + ", active month: " + activemonth);
-      if(date.getFullYear().trim() == activeyear.trim()){
+      if(date.getFullYear() == activeyear){
         consoleLog("year is current");
       }
-      if((date.getMonth()+1).trim() == activemonth.trim()){
+      if((date.getMonth()+1) == activemonth){
         consoleLog("month is current");
       }
-      if((date.getFullYear().trim() == activeyear.trim()) && ((date.getMonth()+1).trim() == activemonth.trim())){
+      if((date.getFullYear() == activeyear) && ((date.getMonth()+1) == activemonth)){
         $("#block-views-block-events-featured").fadeIn();
       }
     }
