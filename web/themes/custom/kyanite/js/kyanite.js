@@ -1669,7 +1669,10 @@
     else{//default to today's date
       var activeyear = date.getFullYear();
       var activemonth = date.getMonth()+1;
+      $("#block-views-block-events-featured").fadeIn();
     }
+
+
     consoleLog("active year: " + activeyear + ", active month: " + activemonth);
 
     $(".path-events #block-pagetitle").after("<div class='eventsdaterangepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
