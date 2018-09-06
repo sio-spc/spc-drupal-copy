@@ -1666,7 +1666,7 @@
       var activeyear = parseFloat(activedate[0]);
       var activemonth = parseFloat(activedate[1]);
       consoleLog("current year: " + date.getFullYear() + ", active year: " + activeyear);
-      consoleLog("current month: " + date.getMonth() + ", active year: " + activemonth);
+      consoleLog("current month: " + date.getMonth() + ", active month: " + activemonth);
       if((date.getFullYear() == activeyear) && ((date.getMonth()+1) == activemonth)){
         $("#block-views-block-events-featured").fadeIn();
       }
@@ -1679,7 +1679,7 @@
     
 
 
-    consoleLog("active year: " + activeyear + ", active month: " + activemonth);
+    //consoleLog("active year: " + activeyear + ", active month: " + activemonth);
 
     $(".path-events #block-pagetitle").after("<div class='eventsdaterangepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
     $(".path-events h1").text($("h1").text()+" - "+monthNumToName(activemonth)+", "+activeyear);
