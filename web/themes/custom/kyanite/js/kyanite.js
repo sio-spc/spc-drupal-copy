@@ -1672,14 +1672,14 @@
       consoleLog("current month: " + date.getMonth() + ", active month: " + activemonth);
       
       if((date.getFullYear() == activeyear) && ((date.getMonth()+1) == activemonth)){
-        $("#block-views-block-events-featured").fadeIn();
+        $(".path-events .layout-highlighted").fadeIn();
       }
     }
     else{//default to today's date
       var activeyear = date.getFullYear();
       var activemonth = date.getMonth()+1;
       consoleLog("else line 1678");
-      $("#block-views-block-events-featured").fadeIn();
+      $(".path-events .layout-highlighted").fadeIn();
     }
     
 
