@@ -594,11 +594,12 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
     font-weight: bold;
     width: 5em;
     text-align: center;
+    z-index: 1;
 }
 #block-views-block-events-featured{
 	display: none;
 	margin-top: 30px;
 	.featuredevents.spcgrid .item-list li{
-		background-color: none;
+		background-color: transparent;
 	}
 }
