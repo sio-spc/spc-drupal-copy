@@ -596,6 +596,9 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
     text-align: center;
     z-index: 1;
 }
+.path-events .layout-highlighted{
+	display: none;
+}
 #block-views-block-events-featured{
 	margin-top: 30px;
     max-width: 80%;
