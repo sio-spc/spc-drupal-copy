@@ -1662,6 +1662,7 @@
     //var activedate = $(".date-pager .pager__item__month.is-active time").attr("datetime").split("-");
     var date = new Date();
     consoleLog("eventDateRangePager");
+    consoleLog("getQueryVariable: "+getQueryVariable("date"));
 
     if(getQueryVariable("date") != false){//get vars
       var activedate = getQueryVariable("date").split("-");
