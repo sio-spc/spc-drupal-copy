@@ -580,14 +580,6 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 					}
 				
 				}
-				.dates{
-					position: absolute;
-				    background: rgba(255,255,255,.8);
-				    padding: .25em;
-				    font-weight: bold;
-				    width: 5em;
-				    text-align: center;
-				}
 				h2{
 					font-size: 1em;
 				}
@@ -595,7 +587,18 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 		}
 	}
 }
+.eventsviewdates{
+	position: absolute;
+    background: rgba(255,255,255,.8);
+    padding: .25em;
+    font-weight: bold;
+    width: 5em;
+    text-align: center;
+}
 #block-views-block-events-featured{
 	display: none;
 	margin-top: 30px;
+	.featuredevents.spcgrid .item-list li{
+		background-color: none;
+	}
 }
