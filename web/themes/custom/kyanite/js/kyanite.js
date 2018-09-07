@@ -1764,7 +1764,6 @@
 
     ccestweaks();
 
-    eventDateRangePager();
 
     hideEditTools();
     
@@ -1811,6 +1810,8 @@
 		$('body').addClass('window-loaded');
 
     logoanimation();
+
+    eventDateRangePager();
 
     
     $(".resizeiframe").each(function(){
