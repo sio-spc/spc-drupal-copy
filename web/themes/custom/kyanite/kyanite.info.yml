@@ -2,7 +2,7 @@ name: Kyanite Theme
 description: 'A slick theme by Plethora Design'
 package: Custom
 type: theme
-version: 0.3
+version: 0.4
 core: 8.x
 #base theme: false
 libraries:
