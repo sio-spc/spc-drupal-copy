@@ -1661,6 +1661,8 @@
     //consoleLog("active year and month: " + $(".date-pager .pager__item__month.is-active time").attr("datetime"));
     //var activedate = $(".date-pager .pager__item__month.is-active time").attr("datetime").split("-");
     var date = new Date();
+    consoleLog("eventDateRangePager");
+
     if(getQueryVariable("date") != false){//get vars
       var activedate = getQueryVariable("date").split("-");
       var activeyear = parseFloat(activedate[0]);
