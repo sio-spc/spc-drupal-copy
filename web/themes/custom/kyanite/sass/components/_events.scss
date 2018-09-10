@@ -465,7 +465,11 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 		/*display: none;*/
 	}
 }
-
+.division-sdp .eventsdaterangepager{
+	@media (min-width: 640px){
+		top: 0;
+	}
+}
 .eventsdaterangepager{
 	@media (max-width: 639px){
 		text-align: center;
