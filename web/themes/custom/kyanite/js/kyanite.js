@@ -1643,13 +1643,23 @@
     var months = [
       'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'
       ];
-    var eventspath = "/fr/a-l-agenda";
+    if($("body").hasClass("division-sdp")){
+      var eventspath = "/fr/a-l-agenda/sdp";
+    }
+    else{
+      var eventspath = "/fr/a-l-agenda";
+    }
   }
   else{//en
     var months = [
       'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
       ];
-    var eventspath = "/events";
+    if($("body").hasClass("division-sdp")){
+      var eventspath = "/events/sdp";
+    }
+    else{
+      var eventspath = "/events";
+    }
   }
 
   function monthNumToName(monthnum) {
