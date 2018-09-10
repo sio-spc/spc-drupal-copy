@@ -2450,14 +2450,16 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003607}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003608}}
 #block-views-block-events-featured h2 {
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003610}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003611}}
 #block-views-block-events-featured .featuredevents.spcgrid .item-list li {
   background-color: transparent;
+  width: 30%;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_explore\.scss}line{font-family:\000033}}
