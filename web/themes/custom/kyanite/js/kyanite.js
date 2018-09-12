@@ -1691,13 +1691,14 @@
       consoleLog("else line 1678");
       $(".path-events .layout-highlighted").fadeIn();
     }
-    
-
-
-    //consoleLog("active year: " + activeyear + ", active month: " + activemonth);
-
-    $(".path-events #block-pagetitle").after("<div class='eventsdaterangepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
-    $(".path-events h1").text($("h1").text()+" - "+monthNumToName(activemonth)+", "+activeyear);
+    if($("html").attr("lang") == "fr"){
+      $(".path-events #block-pagetitle").after("<div class='eventsdaterangepager'><a href='javascript:;' class='nav prev'>précédent</a><a href='javascript:;' class='nav next'>suivant</a></div>");
+      $(".path-events h1").text($("h1").text()+" - "+monthNumToName(activemonth)+" "+activeyear);
+    }
+    else{
+      $(".path-events #block-pagetitle").after("<div class='eventsdaterangepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
+      $(".path-events h1").text($("h1").text()+" - "+monthNumToName(activemonth)+", "+activeyear);
+    }
 
     if((activemonth > 1) && (activemonth < 12)) {
       consoleLog("between 1 and 12");
