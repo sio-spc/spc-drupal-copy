@@ -2355,109 +2355,11 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003529}}
-.eventsview {
-  text-align: center;
-  clear: both;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003531}}
-.eventsview #views-exposed-form-events-page-1 {
-  padding-bottom: 3em;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003533}}
-.eventsview #views-exposed-form-events-page-1 select {
-  max-width: 100%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003537}}
-.eventsview nav.pager {
-  display: none;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003543}}
-.eventsview .more-link {
-  position: relative;
-  right: auto;
-  margin-top: auto;
-  padding: 1em;
-  text-align: center;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003551}}
-.eventsview > .item-list ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003555}}
-.eventsview > .item-list ul li {
-  list-style-type: none;
-  list-style: none;
-}
-@media (max-width: 639px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003555}}
-  .eventsview > .item-list ul li {
-    margin-bottom: 4.8em;
-    margin-bottom: 10vw;
-  }
-}
-@media (min-width: 640px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003555}}
-  .eventsview > .item-list ul li {
-    width: 44%;
-    margin-left: 6%;
-    margin-right: 6%;
-    margin-bottom: 4.8em;
-    margin-bottom: 10vw;
-  }
-}
-@media (min-width: 640px) and (max-width: 959px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003569}}
-  .eventsview > .item-list ul li:nth-child(2n+1) {
-    margin-left: 0;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003572}}
-  .eventsview > .item-list ul li:nth-child(2n+2), .eventsview > .item-list ul li:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003555}}
-  .eventsview > .item-list ul li {
-    width: 30%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    margin-bottom: 2.3em;
-    margin-bottom: 4.5vw;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003583}}
-  .eventsview > .item-list ul li:nth-child(3n+1) {
-    margin-left: 0;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003586}}
-  .eventsview > .item-list ul li:nth-child(3n+3), .eventsview > .item-list ul li:last-child {
-    margin-right: 0;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003591}}
-.eventsview > .item-list ul li h2 {
-  font-size: 1em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003598}}
-.eventsviewdates {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.8);
-  padding: .25em;
-  font-weight: bold;
-  width: 5em;
-  text-align: center;
-  z-index: 1;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003607}}
 .path-events .layout-highlighted {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003610}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003532}}
 #block-views-block-events-featured {
   margin-top: 30px;
   max-width: 80%;
@@ -2465,17 +2367,21 @@ body.has-sidebar.page-node-type-event .layout-sidebar .kyanite-block, body.has-s
   margin-right: auto;
   margin-bottom: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003616}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003538}}
 #block-views-block-events-featured h2 {
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003619}}
-#block-views-block-events-featured .featuredevents.spcgrid .item-list li {
-  background-color: transparent;
-  width: 30%;
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003543}}
+.eventsview #views-exposed-form-events-page-1 {
+  padding-bottom: 3em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003545}}
+.eventsview #views-exposed-form-events-page-1 select {
+  max-width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003625}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cvoogt\/_repos\/spc-redesign\/web\/themes\/custom\/kyanite\/sass\/components\/_events\.scss}line{font-family:\00003551}}
 .basiceventinfo .field-field-event-date-start, .basiceventinfo .field-field-event-date-end {
   display: inline-block;
 }

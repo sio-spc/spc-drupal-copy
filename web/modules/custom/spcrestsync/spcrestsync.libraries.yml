@@ -2,6 +2,9 @@ general:
   version: VERSION
   js:
     js/spcrestsync.js: {minified: true}
+  css:
+    theme:
+      stylesheets/spcrestsync.css: {}
   dependencies:
     - core/jquery
     - core/drupalSettings
