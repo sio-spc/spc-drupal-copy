@@ -7,16 +7,16 @@ use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Provides an SPC Events feed.
+ * Provides an SPC News feed.
  *
  * @Block(
- *   id = "spcrestsync_eventsblock",
- *   admin_label = @Translation("SPC Events"),
- *   category = @Translation("SPC Events REST Sync"),
+ *   id = "spcrestsync_newsblock",
+ *   admin_label = @Translation("SPC News"),
+ *   category = @Translation("SPC News REST Sync"),
  * )
  */
 
-class spcrestsyncEventsBlock extends BlockBase {
+class spcrestsyncNewsBlock extends BlockBase {
 
   /**
   * {@inheritdoc}
@@ -126,7 +126,7 @@ class spcrestsyncEventsBlock extends BlockBase {
     return array(
         '#theme' => 'spcrestsync',
         '#title' => $config['title'],
-        '#description' => 'events from SPC site, with option to limit these to a specific division',
+        '#description' => 'news from SPC site, with option to limit these to a specific division',
         '#attached' => array(
           'library' => array(
             'spcrestsync/general',
