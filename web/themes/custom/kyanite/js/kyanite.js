@@ -1723,8 +1723,13 @@
     
 
   }
+  function hideEditingTools(){
+    $("#block-kyanite-local-tasks, div.contextual, #toolbar-administration").hide();
+    $("body").removeAttr("style");
+  }
 
   function hideEditTools(){
+    /* Tried Node Access, but it caused problems with pages becoming inaccessible. */
     var bodyclasses = $("body").attr("class");
     bodyclasses = bodyclasses.split(" ");
     var arrayLength = bodyclasses.length;
@@ -1737,8 +1742,12 @@
         consoleLog("uid: " + uid);
         if((uid == "915") || (uid == "918") || (uid == "929")){
           if($("#maincontainer").attr("data-nid") != 10200){
-            $("#block-kyanite-local-tasks, div.contextual, #toolbar-administration").hide();
-            $("body").removeAttr("style");
+            hideEditingTools();
+          }
+        }
+        if((uid == "1514") || (uid == "1515")){
+          if(!$("body").hasClass("pacfishlead")){
+            hideEditingTools();
           }
         }
       }
