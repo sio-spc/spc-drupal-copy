@@ -20,12 +20,18 @@
             
             var limit = this.limit;
             var blockid = this.blockid;
-            var image = "";
-            var html = "<div class='spcgrid updates center spcrestsync-updates'><div class='kyanite-views-rows'>";
+            var image = "";            
+            
 
             var arrayLength = json.length;
+            if(arrayLength > 0){
+              var html = "<div class='spcgrid updates center spcrestsync-updates'><div class='kyanite-views-rows'>";
+            }
+            else{
+              var html = "<div class='spscrestsyncnoresults'>No results.</div>";
+            }
             if(limit < arrayLength){
-                var limit = limit
+                var limit = limit;
             }
             else{  
                 var limit = arrayLength;
@@ -78,10 +84,15 @@
             var limit = this.limit;
             var blockid = this.blockid;
             var image = "";
-            var html = "<div class='eventsview spcrestsync-events'><div class='item-list'><ul>";
 
 
             var arrayLength = json.length;
+            if(arrayLength > 0){
+              var html = "<div class='eventsview spcrestsync-events'><div class='item-list'><ul>";
+            }
+            else{
+              var html = "<div class='spscrestsyncnoresults'>No results.</div>";
+            }
             if(limit < arrayLength){
                 var limit = limit
             }
@@ -140,10 +151,14 @@
             var limit = this.limit;
             var blockid = this.blockid;
             var image = "";
-            var html = "<div class='spcgrid updates center spcrestsync-news'><div class='kyanite-views-rows'>";
-
 
             var arrayLength = json.length;
+            if(arrayLength > 0){
+              var html = "<div class='spcgrid updates center spcrestsync-news'><div class='kyanite-views-rows'>";
+            }
+            else{
+              var html = "<div class='spscrestsyncnoresults'>No results.</div>";
+            }
             if(limit < arrayLength){
                 var limit = limit
             }
@@ -200,10 +215,15 @@
             var limit = this.limit;
             var blockid = this.blockid;
             var image = "";
-            var html = "<div class='spcgrid updates center spcrestsync-blog'><div class='kyanite-views-rows'>";
 
 
             var arrayLength = json.length;
+            if(arrayLength > 0){
+              var html = "<div class='spcgrid updates center spcrestsync-blog'><div class='kyanite-views-rows'>";
+            }
+            else{
+              var html = "<div class='spscrestsyncnoresults'>No results.</div>";
+            }
             if(limit < arrayLength){
                 var limit = limit
             }
@@ -260,10 +280,15 @@
             var limit = this.limit;
             var blockid = this.blockid;
             var image = "";
-            var html = "<div class='spcgrid updates center spcrestsync-videos'><div class='kyanite-views-rows'>";
 
 
             var arrayLength = json.length;
+            if(arrayLength > 0){
+              var html = "<div class='spcgrid updates center spcrestsync-videos'><div class='kyanite-views-rows'>";
+            }
+            else{
+              var html = "<div class='spscrestsyncnoresults'>No results.</div>";
+            }
             if(limit < arrayLength){
                 var limit = limit
             }

@@ -68,42 +68,42 @@ function spcrestsyncDivisionArray($lang){//lang = en or fr
   if($lang === "fr"){
     $array = array(
         "all" => "Tous (aucune division sélectionnée)",
-        "CCES" => "DECC (Durabilité environnementale et changement climatique)", 
-        "EQAP" => "EQAP (Evaluation et qualité de l’enseignement)",
-        "FAME" => "FAME (Pêches, Aquaculture et écosystèmes marins)",
-        "GEM" => "GEM (Géosciences)",
-        "LRD" => "Ressources terrestres",
-        "PHD" => "Santé Publique",
-        "RRRT" => "Droits de la personne",
-        "SDP" => "SDP (Développement social)",
-        "SDD" => "SDD (Statistiques pour le développement)",
-        "SPECIALPROJECTS" => "Projets spéciaux",
+        1429 => "DECC (Durabilité environnementale et changement climatique)", 
+        1430 => "EQAP (Evaluation et qualité de l’enseignement)",
+        1433 => "FAME (Pêches, Aquaculture et écosystèmes marins)",
+        1432 => "GEM (Géosciences)",
+        1434 => "Ressources terrestres",
+        1435 => "Santé Publique",
+        1436 => "Droits de la personne",
+        1437 => "SDP (Développement social)",
+        1438 => "SDD (Statistiques pour le développement)",
+        1440 => "Projets spéciaux",
         "Ou sélectionnez un projet spécial spécifique:" => [
-          "CCCPIR" => "CCCPIR",
-          "RESCCUE" => "RESCCUE",
-          "SP" => "Projets de sucre",
-          "PFLP" => "The Pacific Fisheries Leadership Programme"
+          1443 => "CCCPIR",
+          1442 => "RESCCUE",
+          1441 => "Projets de sucre",
+          1551 => "The Pacific Fisheries Leadership Programme"
         ]
       );
   }
   else{
     $array = array(
         "all" => "All (no division selected)",
-        "CCES" => "CCES (Climate Change and Environmental Sustainability)", 
-        "EQAP" => "EQAP (Educational Quality and Assessment Programme)",
-        "FAME" => "FAME (Fisheries, Aquaculture & Marine Ecosystems)",
-        "GEM" => "GEM (Geoscience and Economic Development)",
-        "LRD" => "LRD (Land Resources)",
-        "PHD" => "PHD Public Health Division",
-        "RRRT" => "RRRT (Regional Rights Resource Team)",
-        "SDP" => "SDP (Social Development Programme)",
-        "SDD" => "SDD (Statistics for Development)",
-        "SPECIALPROJECTS" => "Special Projects",
+        1429 => "CCES (Climate Change and Environmental Sustainability)", 
+        1430 => "EQAP (Educational Quality and Assessment Programme)",
+        1433 => "FAME (Fisheries, Aquaculture & Marine Ecosystems)",
+        1432 => "GEM (Geoscience and Economic Development)",
+        1434 => "LRD (Land Resources)",
+        1435 => "PHD Public Health Division",
+        1436 => "RRRT (Regional Rights Resource Team)",
+        1437 => "SDP (Social Development Programme)",
+        1438 => "SDD (Statistics for Development)",
+        1440 => "Special Projects",
         "Or select a specific special project:" => [
-          "CCCPIR" => "CCCPIR",
-          "RESCCUE" => "RESCCUE",
-          "SP" => "Sugar Projects",
-          "PFLP" => "The Pacific Fisheries Leadership Programme"
+          1443 => "CCCPIR",
+          1442 => "RESCCUE",
+          1441 => "Sugar Projects",
+          1551 => "The Pacific Fisheries Leadership Programme"
         ]
       );
   }
