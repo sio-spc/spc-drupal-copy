@@ -21,7 +21,6 @@
             var limit = this.limit;
             var blockid = this.blockid;
             var image = "";            
-            
 
             var arrayLength = json.length;
             if(arrayLength > 0){
