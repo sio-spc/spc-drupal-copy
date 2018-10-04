@@ -551,4 +551,7 @@ body.has-sidebar.page-node-type-event, body.has-sidebar.path-events{
 	.field-field-event-date-start, .field-field-event-date-end{
 		display: inline-block;
 	}
+	.field-field-event-date-end time:before{
+		content: "- ";
+	}
 }
