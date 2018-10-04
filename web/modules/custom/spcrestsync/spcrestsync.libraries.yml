@@ -1,7 +1,7 @@
 general:
-  version: 1.2
+  version: 1.55
   js:
-    js/spcrestsync.js: {minified: true, attributes: { defer: true}}
+    js/spcrestsync.js: {minified: true, attributes: { async: true}}
   css:
     theme:
       stylesheets/spcrestsync.css: {}

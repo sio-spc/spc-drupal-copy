@@ -4,7 +4,6 @@
  * Contains \Drupal\spcrestsync\Controller\spcrestsyncController.
  */
 
-
 function spcrestsync_theme($existing, $type, $theme, $path) {
 
 	$variables = array(
@@ -42,4 +41,71 @@ function spcrestsync_preprocess_html(&$variables) {
   $variables['#attached']['drupalSettings']['spcblocks'] = $spcblocks;
   $variables['#attached']['drupalSettings']['limit'] = $limit;
   $variables['#attached']['drupalSettings']['divisionid'] = $divisionid;
+}
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+function spcrestsync_preprocess_block(&$variables) {
+  $variables['attributes']['data-divisionid'][] = $variables['elements']['#configuration']['divisionid'];
+  $variables['attributes']['data-limit'][] = $variables['elements']['#configuration']['limit'];
+  if ($variables['plugin_id'] == 'spcrestsync_block') {
+    $variables['attributes']['class'][] = 'spcrestsync-updates';    
+  }
+  if ($variables['plugin_id'] == 'spcrestsync_blogblock') {
+    $variables['attributes']['class'][] = 'spcrestsync-blog';
+  }
+  if ($variables['plugin_id'] == 'spcrestsync_eventsblock') {
+    $variables['attributes']['class'][] = 'spcrestsync-events';
+  }
+  if ($variables['plugin_id'] == 'spcrestsync_newsblock') {
+    $variables['attributes']['class'][] = 'spcrestsync-news';
+  }
+  if ($variables['plugin_id'] == 'spcrestsync_videosblock') {
+    $variables['attributes']['class'][] = 'spcrestsync-videos';
+  }
+}
+function spcrestsyncDivisionArray($lang){//lang = en or fr
+  if($lang === "fr"){
+    $array = array(
+        "all" => "Tous (aucune division sélectionnée)",
+        "CCES" => "DECC (Durabilité environnementale et changement climatique)", 
+        "EQAP" => "EQAP (Evaluation et qualité de l’enseignement)",
+        "FAME" => "FAME (Pêches, Aquaculture et écosystèmes marins)",
+        "GEM" => "GEM (Géosciences)",
+        "LRD" => "Ressources terrestres",
+        "PHD" => "Santé Publique",
+        "RRRT" => "Droits de la personne",
+        "SDP" => "SDP (Développement social)",
+        "SDD" => "SDD (Statistiques pour le développement)",
+        "SPECIALPROJECTS" => "Projets spéciaux",
+        "Ou sélectionnez un projet spécial spécifique:" => [
+          "CCCPIR" => "CCCPIR",
+          "RESCCUE" => "RESCCUE",
+          "SP" => "Projets de sucre",
+          "PFLP" => "The Pacific Fisheries Leadership Programme"
+        ]
+      );
+  }
+  else{
+    $array = array(
+        "all" => "All (no division selected)",
+        "CCES" => "CCES (Climate Change and Environmental Sustainability)", 
+        "EQAP" => "EQAP (Educational Quality and Assessment Programme)",
+        "FAME" => "FAME (Fisheries, Aquaculture & Marine Ecosystems)",
+        "GEM" => "GEM (Geoscience and Economic Development)",
+        "LRD" => "LRD (Land Resources)",
+        "PHD" => "PHD Public Health Division",
+        "RRRT" => "RRRT (Regional Rights Resource Team)",
+        "SDP" => "SDP (Social Development Programme)",
+        "SDD" => "SDD (Statistics for Development)",
+        "SPECIALPROJECTS" => "Special Projects",
+        "Or select a specific special project:" => [
+          "CCCPIR" => "CCCPIR",
+          "RESCCUE" => "RESCCUE",
+          "SP" => "Sugar Projects",
+          "PFLP" => "The Pacific Fisheries Leadership Programme"
+        ]
+      );
+  }
+  return $array;
 }

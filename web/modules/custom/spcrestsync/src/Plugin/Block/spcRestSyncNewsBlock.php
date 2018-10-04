@@ -42,24 +42,7 @@ class spcrestsyncNewsBlock extends BlockBase {
         '#title' => t('Division ID'),
         '#description' => t('The ID of the division, as defined on the main SPC site. Ask web support for this number.'),
         '#default_value' => $config['divisionid'],
-        '#options' => [
-          "all" => "Tous (aucune division sélectionnée)",
-          1429 => "DECC (Durabilité environnementale et changement climatique)", 
-          1430 => "EQAP (Evaluation et qualité de l’enseignement)",
-          1433 => "FAME (Pêches, Aquaculture et écosystèmes marins)",
-          1432 => "GEM (Géosciences)",
-          1434 => "Ressources terrestres",
-          1435 => "Santé Publique",
-          1436 => "Droits de la personne",
-          1437 => "SDP (Développement social)",
-          1438 => "SDD (Statistiques pour le développement)",
-          1440 => "Projets spéciaux",
-          "Ou sélectionnez un projet spécial spécifique:" => [
-            1443 => "CCCPIR",
-            1442 => "RESCCUE",
-            1441 => "Projets de sucre"
-          ]
-        ],
+        '#options' => spcrestsyncDivisionArray("fr"),
       );
     }
     else{
@@ -68,24 +51,7 @@ class spcrestsyncNewsBlock extends BlockBase {
         '#title' => t('Division ID'),
         '#description' => t('The ID of the division, as defined on the main SPC site. Ask web support for this number.'),
         '#default_value' => $config['divisionid'],
-        '#options' => [
-          "all" => "All (no division selected)",
-          1429 => "CCES (Climate Change and Environmental Sustainability)", 
-          1430 => "EQAP (Educational Quality and Assessment Programme)",
-          1433 => "FAME (Fisheries, Aquaculture & Marine Ecosystems)",
-          1432 => "GEM (Geoscience and Economic Development)",
-          1434 => "LRD (Land Resources)",
-          1435 => "PHP (Public Health)",
-          1436 => "RRRT (Regional Rights Resource Team)",
-          1437 => "SDP (Social Development Programme)",
-          1438 => "SDD (Statistics for Development)",
-          1440 => "Special Projects",
-          "Or select a specific special project:" => [
-            1443 => "CCCPIR",
-            1442 => "RESCCUE",
-            1441 => "Sugar Projects"
-          ]
-        ],
+        '#options' => spcrestsyncDivisionArray("en"),
       );
     }
     
