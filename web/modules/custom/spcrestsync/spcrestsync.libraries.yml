@@ -1,5 +1,5 @@
 general:
-  version: 1.56
+  version: 1.58
   js:
     js/spcrestsync.js: {minified: true, attributes: { async: true}}
   css:
