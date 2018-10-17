@@ -32,7 +32,7 @@ class spcrestsyncBlock extends BlockBase {
         '#type' => 'number',
         '#title' => t('Limit'),
         '#description' => t('Limit of posts'),
-        '#default_value' => $config['divisionid']
+        '#default_value' => $config['limit']
     );
     $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
     if($language == "fr"){
