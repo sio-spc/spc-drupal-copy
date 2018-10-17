@@ -34,8 +34,10 @@ function spcrestsync_preprocess_html(&$variables) {
     }
   }
 
-  $limit = 4;
-  $divisionid = NULL;
+  //$limit = 4;
+  $limit = $settings["limit"];
+  //$divisionid = NULL;
+  $divisionid = $settings["divisionid"];
 
   $variables['#attached']['library'][] = 'spcrestsync/general';
   $variables['#attached']['drupalSettings']['spcblocks'] = $spcblocks;
