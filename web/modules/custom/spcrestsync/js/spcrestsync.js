@@ -1,17 +1,16 @@
 (function ($, Drupal, drupalSettings) {
 
   $(window).load(function() {
+    if($("html").attr("lang") == "fr"){
+      var spclang = "-fr";
+    }
+    else{
+      var spclang = "";
+    }
     $(".spcrestsync-updates").each(function(){
 
       var divisionid = $(this).attr("data-divisionid");
       var limit = $(this).attr("data-limit");
-
-      if($("html").attr("lang") == "fr"){
-        var spclang = "-fr";
-      }
-      else{
-        var spclang = "";
-      }
               
       if(!$(this).find(".spcrestsync-content").hasClass("processed")){
         $(this).find(".spcrestsync-content").addClass("processed");
@@ -81,7 +80,7 @@
         var spcblocklimit = $(this).attr("data-limit");
         var spcblockid = $(this).attr("id");
         $.ajax({
-          url: 'https://www.spc.int/contentsync/events/'+divisionid+'?_format=json',
+          url: 'https://www.spc.int/contentsync/events'+spclang+'/'+divisionid+'?_format=json',
           async: false,
           method: 'GET',
           limit: spcblocklimit,
@@ -148,7 +147,7 @@
         var spcblocklimit = $(this).attr("data-limit");
         var spcblockid = $(this).attr("id");
         $.ajax({
-          url: 'https://www.spc.int/contentsync/news/'+divisionid+'?_format=json',
+          url: 'https://www.spc.int/contentsync/news'+spclang+'/'+divisionid+'?_format=json',
           async: false,
           method: 'GET',
           limit: spcblocklimit,
@@ -212,7 +211,7 @@
         var spcblocklimit = $(this).attr("data-limit");
         var spcblockid = $(this).attr("id");
         $.ajax({
-          url: 'https://www.spc.int/contentsync/webstories/'+divisionid+'?_format=json',
+          url: 'https://www.spc.int/contentsync/webstories'+spclang+'/'+divisionid+'?_format=json',
           async: false,
           method: 'GET',
           limit: spcblocklimit,
@@ -277,7 +276,7 @@
         var spcblocklimit = $(this).attr("data-limit");
         var spcblockid = $(this).attr("id");
         $.ajax({
-          url: 'https://www.spc.int/contentsync/videos/'+divisionid+'?_format=json',
+          url: 'https://www.spc.int/contentsync/videos'+spclang+'/'+divisionid+'?_format=json',
           async: false,
           method: 'GET',
           limit: spcblocklimit,
