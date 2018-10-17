@@ -5,13 +5,21 @@
 
       var divisionid = $(this).attr("data-divisionid");
       var limit = $(this).attr("data-limit");
+
+      if($("html").attr("lang") == "fr"){
+        var spclang = "-fr";
+      }
+      else{
+        var spclang = "";
+      }
               
       if(!$(this).find(".spcrestsync-content").hasClass("processed")){
         $(this).find(".spcrestsync-content").addClass("processed");
         var spcblocklimit = $(this).attr("data-limit");
         var spcblockid = $(this).attr("id");
+
         $.ajax({
-          url: 'https://www.spc.int/contentsync/updates/'+divisionid+'?_format=json',
+          url: 'https://www.spc.int/contentsync/updates'+spclang+'/'+divisionid+'?_format=json',
           async: false,
           method: 'GET',
           limit: spcblocklimit,
