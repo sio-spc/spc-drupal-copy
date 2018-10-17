@@ -9,7 +9,7 @@ spcrestsync.general:
       type: string
       label: 'Block Instance ID'
     limit:
-      type: int
+      type: string
       label: 'Limit (12 max)'
     divisionid:
       type: string

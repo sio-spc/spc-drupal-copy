@@ -35,7 +35,7 @@ function spcrestsync_preprocess_html(&$variables) {
   }
 
   //$limit = 4;
-  $limit = $settings["limit"];
+  $limit = (int)$settings["limit"];
   //$divisionid = NULL;
   $divisionid = $settings["divisionid"];
 
