@@ -1,7 +1,10 @@
 general:
-  version: VERSION
+  version: 1.59
   js:
-    js/spcrestsync.js: {minified: true}
+    js/spcrestsync.js: {minified: true, attributes: { async: true}}
+  css:
+    theme:
+      stylesheets/spcrestsync.css: {}
   dependencies:
     - core/jquery
     - core/drupalSettings

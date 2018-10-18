@@ -1643,13 +1643,23 @@
     var months = [
       'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'
       ];
-    var eventspath = "/fr/a-l-agenda";
+    if($("body").hasClass("division-sdp")){
+      var eventspath = "/fr/a-l-agenda/sdp";
+    }
+    else{
+      var eventspath = "/fr/a-l-agenda";
+    }
   }
   else{//en
     var months = [
       'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
       ];
-    var eventspath = "/events";
+    if($("body").hasClass("division-sdp")){
+      var eventspath = "/events/sdp";
+    }
+    else{
+      var eventspath = "/events";
+    }
   }
 
   function monthNumToName(monthnum) {
@@ -1681,13 +1691,14 @@
       consoleLog("else line 1678");
       $(".path-events .layout-highlighted").fadeIn();
     }
-    
-
-
-    //consoleLog("active year: " + activeyear + ", active month: " + activemonth);
-
-    $(".path-events #block-pagetitle").after("<div class='eventsdaterangepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
-    $(".path-events h1").text($("h1").text()+" - "+monthNumToName(activemonth)+", "+activeyear);
+    if($("html").attr("lang") == "fr"){
+      $(".path-events #block-pagetitle").after("<div class='eventsdaterangepager'><a href='javascript:;' class='nav prev'>précédent</a><a href='javascript:;' class='nav next'>suivant</a></div>");
+      $(".path-events h1").text($("h1").text()+" - "+monthNumToName(activemonth)+" "+activeyear);
+    }
+    else{
+      $(".path-events #block-pagetitle").after("<div class='eventsdaterangepager'><a href='javascript:;' class='nav prev'>Prev</a><a href='javascript:;' class='nav next'>Next</a></div>");
+      $(".path-events h1").text($("h1").text()+" - "+monthNumToName(activemonth)+", "+activeyear);
+    }
 
     if((activemonth > 1) && (activemonth < 12)) {
       consoleLog("between 1 and 12");
@@ -1712,8 +1723,13 @@
     
 
   }
+  function hideEditingTools(){
+    $("#block-kyanite-local-tasks, div.contextual, #toolbar-administration").hide();
+    $("body").removeAttr("style");
+  }
 
   function hideEditTools(){
+    /* Tried Node Access, but it caused problems with pages becoming inaccessible. */
     var bodyclasses = $("body").attr("class");
     bodyclasses = bodyclasses.split(" ");
     var arrayLength = bodyclasses.length;
@@ -1726,8 +1742,12 @@
         consoleLog("uid: " + uid);
         if((uid == "915") || (uid == "918") || (uid == "929")){
           if($("#maincontainer").attr("data-nid") != 10200){
-            $("#block-kyanite-local-tasks, div.contextual, #toolbar-administration").hide();
-            $("body").removeAttr("style");
+            hideEditingTools();
+          }
+        }
+        if((uid == "1514") || (uid == "1515")){
+          if(!$("body").hasClass("pacfishlead")){
+            hideEditingTools();
           }
         }
       }

@@ -7,15 +7,16 @@ use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Provides an SPC Updates.
+ * Provides an SPC Events feed.
  *
  * @Block(
- *   id = "spcrestsync_block",
- *   admin_label = @Translation("SPC Updates"),
- *   category = @Translation("SPC REST Sync"),
+ *   id = "spcrestsync_eventsblock",
+ *   admin_label = @Translation("SPC Events"),
+ *   category = @Translation("SPC Events REST Sync"),
  * )
  */
-class spcrestsyncBlock extends BlockBase {
+
+class spcrestsyncEventsBlock extends BlockBase {
 
   /**
   * {@inheritdoc}
@@ -32,7 +33,7 @@ class spcrestsyncBlock extends BlockBase {
         '#type' => 'number',
         '#title' => t('Limit'),
         '#description' => t('Limit of posts'),
-        '#default_value' => $config['limit']
+        '#default_value' => 12
     );
     $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
     if($language == "fr"){
@@ -46,12 +47,12 @@ class spcrestsyncBlock extends BlockBase {
     }
     else{
       $form['divisionid'] = array(
-      '#type' => 'select',
-      '#title' => t('Division ID'),
-      '#description' => t('The ID of the division, as defined on the main SPC site. Ask web support for this number.'),
-      '#default_value' => $config['divisionid'],
-      '#options' => spcrestsyncDivisionArray("en"),
-    );
+        '#type' => 'select',
+        '#title' => t('Division ID'),
+        '#description' => t('The ID of the division, as defined on the main SPC site. Ask web support for this number.'),
+        '#default_value' => $config['divisionid'],
+        '#options' => spcrestsyncDivisionArray("en"),
+      );
     }
     
 
@@ -91,7 +92,7 @@ class spcrestsyncBlock extends BlockBase {
     return array(
         '#theme' => 'spcrestsync',
         '#title' => $config['title'],
-        '#description' => 'updates from SPC site, with option to limit these to a specific division',
+        '#description' => 'events from SPC site, with option to limit these to a specific division',
         '#attached' => array(
           'library' => array(
             'spcrestsync/general',

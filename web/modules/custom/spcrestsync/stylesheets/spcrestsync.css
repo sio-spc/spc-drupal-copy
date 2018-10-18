@@ -1,0 +1,95 @@
+/* line 1, ../sass/spcrestsync.scss */
+.eventsview {
+  text-align: center;
+  clear: both;
+}
+/* line 3, ../sass/spcrestsync.scss */
+.eventsview nav.pager {
+  display: none;
+}
+/* line 9, ../sass/spcrestsync.scss */
+.eventsview .more-link {
+  position: relative;
+  right: auto;
+  margin-top: auto;
+  padding: 1em;
+  text-align: center;
+}
+/* line 17, ../sass/spcrestsync.scss */
+.eventsview > .item-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* line 21, ../sass/spcrestsync.scss */
+.eventsview > .item-list ul li {
+  list-style-type: none;
+  list-style: none;
+}
+@media (max-width: 639px) {
+  /* line 21, ../sass/spcrestsync.scss */
+  .eventsview > .item-list ul li {
+    margin-bottom: 4.8em;
+    margin-bottom: 10vw;
+  }
+}
+@media (min-width: 640px) {
+  /* line 21, ../sass/spcrestsync.scss */
+  .eventsview > .item-list ul li {
+    width: 44%;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-bottom: 4.8em;
+    margin-bottom: 10vw;
+  }
+}
+@media (min-width: 640px) and (max-width: 959px) {
+  /* line 35, ../sass/spcrestsync.scss */
+  .eventsview > .item-list ul li:nth-child(2n+1) {
+    margin-left: 0;
+  }
+  /* line 38, ../sass/spcrestsync.scss */
+  .eventsview > .item-list ul li:nth-child(2n+2), .eventsview > .item-list ul li:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  /* line 21, ../sass/spcrestsync.scss */
+  .eventsview > .item-list ul li {
+    width: 30%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 2.3em;
+    margin-bottom: 4.5vw;
+  }
+  /* line 49, ../sass/spcrestsync.scss */
+  .eventsview > .item-list ul li:nth-child(3n+1) {
+    margin-left: 0;
+  }
+  /* line 52, ../sass/spcrestsync.scss */
+  .eventsview > .item-list ul li:nth-child(3n+3), .eventsview > .item-list ul li:last-child {
+    margin-right: 0;
+  }
+}
+/* line 57, ../sass/spcrestsync.scss */
+.eventsview > .item-list ul li h2 {
+  font-size: 1em;
+}
+
+/* line 64, ../sass/spcrestsync.scss */
+.eventsviewdates {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  padding: .25em;
+  font-weight: bold;
+  width: 5em;
+  text-align: center;
+  z-index: 1;
+}
+
+/* line 73, ../sass/spcrestsync.scss */
+.featuredevents.spcgrid .item-list li {
+  background-color: transparent;
+  width: 30%;
+}
