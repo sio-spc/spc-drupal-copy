@@ -48,6 +48,21 @@
     maps_api_loading: false,
 
     /**
+     * Returns the re-coded google maps api language parameter, from html lang attribute.
+     */
+    googleMapsLanguage: function (html_language) {
+      switch (html_language) {
+        case 'zh-hans':
+          html_language = 'zh-CN'
+          break;
+        case 'zh-hant':
+          html_language = 'zh-TW'
+          break;
+      }
+      return html_language;
+    },
+
+    /**
      * Provides the callback that is called when maps loads.
      */
     googleCallback: function () {
@@ -89,10 +104,10 @@
         // Google maps isn't loaded so lazy load google maps.
 
         // Default script path.
-        var scriptPath = '//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&language=' + html_language;
+        var scriptPath = self.map_data[mapid]['gmap_api_localization'] + '?v=3.exp&sensor=false&libraries=places&language=' + self.googleMapsLanguage(html_language);
 
         // If a Google API key is set, use it.
-        if (typeof self.map_data[mapid]['gmap_api_key'] !== 'undefined' && self.map_data[mapid]['gmap_api_key'] !== null) {
+        if (self.map_data[mapid]['gmap_api_key']) {
           scriptPath += '&key=' + self.map_data[mapid]['gmap_api_key'];
         }
 
@@ -207,7 +222,14 @@
     // Reverse geocode.
     reverse_geocode: function (mapid, position) {
       var self = this;
-      var latlng = position.lat.toFixed(6) + ',' + position.lng.toFixed(6);
+      var latlng;
+      switch (self.map_data[mapid].map_library) {
+        case 'leaflet':
+          latlng = position.lat.toFixed(6) + ',' + position.lng.toFixed(6);
+          break;
+        default:
+          latlng = position.lat().toFixed(6) + ',' + position.lng().toFixed(6);
+      }
       // Check the result from the chosen client side storage, and use it eventually.
       var reverse_geocode_storage = self.get_reverse_geocode_storage(mapid, latlng);
       if (localStorage && self.map_data[mapid].geocode_cache.clientside && self.map_data[mapid].geocode_cache.clientside !== '_none_' && reverse_geocode_storage !== null) {
@@ -450,8 +472,8 @@
       // Define a map self property, so other code can interact with it.
       self.map_data[params.mapid].map = map;
 
-      // Add the Google Places Options, if requested/enabled.
-      if (params['gmap_places']) {
+      // Add the Google Places Options, if requested/enabled, and supported.
+      if (typeof google !== 'undefined' && (params.gmap_api_key && params.gmap_api_key.length > 0) && params['gmap_places']) {
         self.map_data[params.mapid].gmap_places = params['gmap_places'];
         // Extend defaults placesAutocompleteServiceOptions.
         self.map_data[params.mapid].gmap_places_options = params['gmap_places_options'].length > 0 ? $.extend({}, {placeIdOnly: true}, JSON.parse(params['gmap_places_options'])) : {placeIdOnly: true};

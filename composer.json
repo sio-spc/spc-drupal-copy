@@ -34,7 +34,7 @@
         "drupal/config_update": "1.5",
         "drupal/context_active_trail": "^1.0@RC",
         "drupal/convert_bundles": "^1.0@alpha",
-        "drupal/core": "8.5.6",
+        "drupal/core": "8.6.2",
         "drupal/date_pager": "1.x-dev",
         "drupal/devel": "^1.2",
         "drupal/easy_breadcrumb": "1.x-dev",
@@ -89,12 +89,12 @@
         "drupal/wordpress_migrate": "3.0-alpha2",
         "drupal/wp_migrate": "1.1.0",
         "drupal/wysiwyg_linebreaks": "1.9",
-        "drush/drush": "^9.2",
+        "drush/drush": "^9",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {
-        "webflo/drupal-core-require-dev": "~8.4"
+        "webflo/drupal-core-require-dev": "~8.6"
     },
     "conflict": {
         "drupal/drupal": "*"

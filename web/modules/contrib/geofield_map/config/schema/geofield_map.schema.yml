@@ -5,6 +5,9 @@ geofield_map.settings:
     gmap_api_key:
       type: string
       label: 'Google Maps API Key'
+    gmap_api_localization:
+      type: string
+      label: 'Gmap Api Localization Index'
     theming:
       type: mapping
       label: 'Geofield Map Theming Settings'

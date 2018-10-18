@@ -65,6 +65,8 @@ class GeofieldMap extends GeofieldElementBase {
     /* @var \Drupal\Core\Config\ConfigFactoryInterface $config */
     $config = \Drupal::configFactory();
     $geofield_map_settings = $config->get('geofield_map.settings');
+    /** @var \Drupal\geofield_map\Services\GoogleMapsService $google_maps_service */
+    $google_maps_service = \Drupal::service('geofield_map.google_maps');
 
     // Conditionally use the Leaflet library from the D8 Module, if enabled.
     if ($element['#map_library'] == 'leaflet') {
@@ -93,9 +95,9 @@ class GeofieldMap extends GeofieldElementBase {
 
       if (\Drupal::currentUser()->hasPermission('configure geofield_map')) {
         $element['map']['geocode']['#description'] .= '<div class="geofield-map-message">' . t('@google_places_autocomplete_message<br>@message_recipient', [
-          '@google_places_autocomplete_message' => !$element['#gmap_places'] ? 'Google Places Autocomplete Service disabled. Might be enabled in the Geofield Widget configuration.' : 'Google Places Autocomplete Service enabled.',
-          '@message_recipient' => t('(This message is only shown to the Geofield Map module administrator).'),
-        ]) . '</div>';
+            '@google_places_autocomplete_message' => !$element['#gmap_places'] ? 'Google Places Autocomplete Service disabled. Might be enabled in the Geofield Widget configuration.' : 'Google Places Autocomplete Service enabled.',
+            '@message_recipient' => t('(This message is only shown to the Geofield Map module administrator).'),
+          ]) . '</div>';
       }
 
     }
@@ -212,8 +214,7 @@ class GeofieldMap extends GeofieldElementBase {
     $entityForm = $form_state->getBuildInfo()['callback_object'];
     $entity_operation = method_exists($entityForm, 'getOperation') ? $entityForm->getOperation() : 'any';
 
-    // Geofield Map Element specific mapid settings.
-    $settings[$mapid] = [
+    $map_settings = [
       'entity_operation' => $entity_operation,
       'id' => $element['#id'],
       'name' => $element['#name'],
@@ -240,7 +241,8 @@ class GeofieldMap extends GeofieldElementBase {
       'click_to_find_marker' => $element['#click_to_find_marker'] ? TRUE : FALSE,
       'click_to_place_marker_id' => $element['#click_to_place_marker'] ? $element['map']['actions']['click_to_place_marker']['#attributes']['id'] : NULL,
       'click_to_place_marker' => $element['#click_to_place_marker'] ? TRUE : FALSE,
-      // Geofield Map Geocoder Settings.
+      // Geofield Map Google Maps and Geocoder Settings.
+      'gmap_api_localization' => $google_maps_service->getGmapApiLocalization($geofield_map_settings->get('gmap_api_localization')),
       'gmap_api_key' => $element['#gmap_api_key'] && strlen($element['#gmap_api_key']) > 0 ? $element['#gmap_api_key'] : NULL,
       'geocoder' => !empty($geofield_map_settings->get('geocoder')) ? $geofield_map_settings->get('geocoder') : [],
       'geocode_cache' => [
@@ -248,9 +250,16 @@ class GeofieldMap extends GeofieldElementBase {
       ],
     ];
 
+    // Allow other modules to add/alter the geofield map element settings.
+    \Drupal::moduleHandler()->alter('geofield_map_latlon_element', $map_settings, $complete_form, $form_state->getValues());
+
+    // Geofield Map Element specific mapid settings.
+    $settings[$mapid] = $map_settings;
+
     $element['#attached']['drupalSettings'] = [
       'geofield_map' => $settings,
     ];
+
 
     return $element;
   }

@@ -2,7 +2,6 @@
 
 namespace Drupal\Tests\easy_breadcrumb\Kernel;
 
-use Drupal\Core\Render\Markup;
 use Drupal\Core\Routing\RequestContext;
 use Drupal\Core\Routing\RouteMatch;
 use Drupal\Core\Url;
@@ -82,7 +81,7 @@ class EasyBreadcrumbBuilderTest extends KernelTestBase {
     $router = \Drupal::service('router.no_access_checks');
     $route_match = new RouteMatch($route_name, $router->match($url->getInternalPath())['_route_object']);
     $result = $breadcrumb_builder->getTitleString($request, $route_match, []);
-    $this->assertInstanceOf(Markup::class, $result);
+    $this->assertTrue(is_string($result));
   }
 
 }

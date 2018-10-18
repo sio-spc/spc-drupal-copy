@@ -1,4 +1,5 @@
 gmap_api_key: ''
+gmap_api_localization: default
 theming:
   markers_location:
     security: 'public://'

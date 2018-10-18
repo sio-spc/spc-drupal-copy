@@ -66,8 +66,24 @@ class GeofieldMapSettingsForm extends ConfigFormBase {
           'attributes' => ['target' => 'blank'],
         ])),
       ]),
-      '#description' => $this->t('Geofield Map requires a valid Google API key for his main features based on Google & Google Maps APIs.'),
+      '#description' => $this->t('A unique Gmap Api Key is required for both Google Mapping and Geocoding operations, all performed client-side by js.<br>@gmap_api_restrictions_link.', [
+        '@gmap_api_restrictions_link' => $this->link->generate(t('It might/should be restricted using the Website Domain / HTTP referrers method'), Url::fromUri('https://developers.google.com/maps/documentation/javascript/get-api-key#key-restrictions', [
+          'absolute' => TRUE,
+          'attributes' => ['target' => 'blank'],
+        ])),
+      ]),
       '#placeholder' => $this->t('Input a valid Gmap API Key'),
+    ];
+
+    $form['gmap_api_localization'] = [
+      '#type' => 'select',
+      '#default_value' => $config->get('gmap_api_localization') ?: 'default',
+      '#title' => $this->t('Gmap Api Localization'),
+      '#options' => [
+        'default' => t('Default - Normal international Google Maps API load'),
+        'china' => t('Chinese - API Load for specific use in China'),
+      ],
+      '#description' => $this->t('Possible alternative logic for Google Maps Api load, in specific countries (i.e: China).'),
     ];
 
     $form['theming'] = [
@@ -172,6 +188,7 @@ class GeofieldMapSettingsForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $config = $this->configFactory()->getEditable('geofield_map.settings');
     $config->set('gmap_api_key', $form_state->getValue('gmap_api_key'));
+    $config->set('gmap_api_localization', $form_state->getValue('gmap_api_localization'));
     $config->set('theming', $form_state->getValue('theming'));
     $config->set('geocoder', $form_state->getValue('geocoder'));
     $config->save();

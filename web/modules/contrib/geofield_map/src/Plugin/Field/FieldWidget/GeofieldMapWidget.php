@@ -298,6 +298,7 @@ class GeofieldMapWidget extends GeofieldLatLonWidget implements ContainerFactory
     $elements['map_google_places'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Google Places'),
+      '#description' => $this->t('<b>Note:</b> This option uses the Google Maps Geocoder for Geocoding operations (<u>a valid Gmap Api Key set is needed</u>).'),
     ];
     $elements['map_google_places']['places_control'] = [
       '#type' => 'checkbox',
@@ -330,6 +331,11 @@ class GeofieldMapWidget extends GeofieldLatLonWidget implements ContainerFactory
       ],
     ];
 
+    if (empty($gmap_api_key)) {
+      $elements['map_google_places']['places_control']['#disabled'] = TRUE;
+      $elements['map_google_places']['places_control']['#default_value'] = FALSE;
+    }
+
     $elements['map_library'] = [
       '#type' => 'select',
       '#title' => $this->t('Map Library'),
@@ -357,7 +363,12 @@ class GeofieldMapWidget extends GeofieldLatLonWidget implements ContainerFactory
       '#title' => $this->t('Map type'),
       '#default_value' => $this->getSetting('map_type_leaflet'),
       '#options' => $this->leafletTileManager->getLeafletTilesLayersOptions(),
-      '#description' => $this->currentUser->hasPermission('configure geofield_map') ? $this->t('Choose one among all the Leaflet Tiles Plugins defined for the Geofield Map module (@see LeafletTileLayerPlugin).<br>You can add your one into your custom module as a new LeafletTileLayer Plugin. (Free Leaflet Tile Layers definitions are available from <a href="@free_leaflet_tiles_link" target="_blank">this link.</a>)', ['@free_leaflet_tiles_link' => 'http://leaflet-extras.github.io/leaflet-providers/preview/index.html']) : '',
+      '#description' => $this->currentUser->hasPermission('configure geofield_map') ? $this->t('Choose one among all the Leaflet Tiles Plugins defined for the Geofield Map module (@see LeafletTileLayerPlugin).<br>You can add your one into your custom module as a new LeafletTileLayer Plugin. (Free Leaflet Tile Layers definitions are available from @free_leaflet_tiles_link).', [
+        '@free_leaflet_tiles_link' => $this->link->generate($this->t('leaflet-extras/leaflet-providers'), Url::fromUri('http://leaflet-extras.github.io/leaflet-providers/preview/index.html', [
+          'absolute' => TRUE,
+          'attributes' => ['target' => 'blank'],
+        ])),
+      ]) : '',
       '#states' => [
         'visible' => [
           ':input[name="fields[' . $this->fieldDefinition->getName() . '][settings_edit_form][settings][map_library]"]' => ['value' => 'leaflet'],
@@ -562,7 +573,7 @@ class GeofieldMapWidget extends GeofieldLatLonWidget implements ContainerFactory
     ];
 
     $map_google_places = [
-      '#markup' => $this->t('Google Places Autocomplete Service: @state', ['@state' => $this->getSetting('map_google_places')['places_control'] ? $this->t('enabled') : $this->t('disabled')]),
+      '#markup' => $this->t('Google Places Autocomplete Service: @state', ['@state' => $this->getSetting('map_google_places')['places_control'] && !empty($gmap_api_key) ? $this->t('enabled') : $this->t('disabled')]),
     ];
 
     $map_type_selector = [

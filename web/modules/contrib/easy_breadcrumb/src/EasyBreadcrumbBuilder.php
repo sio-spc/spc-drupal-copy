@@ -15,7 +15,6 @@ use Drupal\Core\Link;
 use Drupal\Core\ParamConverter\ParamNotConvertedException;
 use Drupal\Core\Path\CurrentPathStack;
 use Drupal\Core\PathProcessor\InboundPathProcessorInterface;
-use Drupal\Core\Render\Markup;
 use Drupal\Core\Routing\RequestContext;
 use Drupal\Core\Routing\RouteMatch;
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -174,13 +173,13 @@ class EasyBreadcrumbBuilder implements BreadcrumbBuilderInterface {
     $exclude[''] = !$keep_front;
     $exclude['/user'] = TRUE;
 
-
     $parameters = $route_match->getParameters();
     foreach ($parameters as $key => $parameter) {
       if ($key === 'view_id') {
         $breadcrumb->addCacheTags(['config:views.view.' . $parameter]);
       }
-      // TODO: only consider route parameters that actually are being used below!
+      // TODO: only consider route parameters that actually are being used
+      // below!
       if ($parameter instanceof CacheableDependencyInterface) {
         $breadcrumb->addCacheableDependency($parameter);
       }
@@ -235,9 +234,9 @@ class EasyBreadcrumbBuilder implements BreadcrumbBuilderInterface {
             $title = $this->getTitleString($route_request, $route_match, $replacedTitles);
 
             // If the title is to be replaced...
-            if ($title && array_key_exists((string)$title, $replacedTitles)) {
+            if ($title && array_key_exists($title, $replacedTitles)) {
               // Replaces the title.
-              $title = $replacedTitles[$title];
+              $title = $replacedTitles[(string) $title];
             }
           }
           if (!isset($title)) {
@@ -339,8 +338,7 @@ class EasyBreadcrumbBuilder implements BreadcrumbBuilderInterface {
    * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
    * @param array $replacedTitles
    *
-   *
-   * @return \Drupal\Core\Render\Markup|string|NULL
+   * @return string | NULL
    *   Either the current title string or NULL if unable to determine it.
    */
   public function getTitleString(Request $route_request, RouteMatchInterface $route_match, array $replacedTitles) {
@@ -368,7 +366,7 @@ class EasyBreadcrumbBuilder implements BreadcrumbBuilderInterface {
       \Drupal::logger('easy_breadcrumb')->notice('Easy Breadcrumb could not determine the title to use for @path', ['@path' => $route_match->getRouteObject()->getPath()]);
       return NULL;
     }
-    return Markup::create($title);
+    return $title;
   }
 
   /**
